@@ -1,0 +1,65 @@
+[
+  {
+    "id": "class-6",
+    "numeric": 6,
+    "name": "Class 6",
+    "nameBangla": "৬ষ্ঠ শ্রেণি",
+    "stage": "Junior Secondary",
+    "stageBangla": "নিম্ন মাধ্যমিক",
+    "subjectCount": 10
+  },
+  {
+    "id": "class-7",
+    "numeric": 7,
+    "name": "Class 7",
+    "nameBangla": "৭ম শ্রেণি",
+    "stage": "Junior Secondary",
+    "stageBangla": "নিম্ন মাধ্যমিক",
+    "subjectCount": 10
+  },
+  {
+    "id": "class-8",
+    "numeric": 8,
+    "name": "Class 8",
+    "nameBangla": "৮ম শ্রেণি",
+    "stage": "Junior Secondary",
+    "stageBangla": "নিম্ন মাধ্যমিক",
+    "subjectCount": 10
+  },
+  {
+    "id": "class-9",
+    "numeric": 9,
+    "name": "Class 9",
+    "nameBangla": "৯ম শ্রেণি",
+    "stage": "Secondary",
+    "stageBangla": "মাধ্যমিক",
+    "subjectCount": 10
+  },
+  {
+    "id": "class-10",
+    "numeric": 10,
+    "name": "Class 10",
+    "nameBangla": "১০ম শ্রেণি (SSC)",
+    "stage": "Secondary (SSC)",
+    "stageBangla": "মাধ্যমিক (এসএসসি)",
+    "subjectCount": 10
+  },
+  {
+    "id": "class-11",
+    "numeric": 11,
+    "name": "Class 11",
+    "nameBangla": "একাদশ শ্রেণি (HSC ১ম বর্ষ)",
+    "stage": "Higher Secondary (HSC)",
+    "stageBangla": "উচ্চ মাধ্যমিক",
+    "subjectCount": 8
+  },
+  {
+    "id": "class-12",
+    "numeric": 12,
+    "name": "Class 12",
+    "nameBangla": "দ্বাদশ শ্রেণি (HSC ২য় বর্ষ)",
+    "stage": "Higher Secondary (HSC)",
+    "stageBangla": "উচ্চ মাধ্যমিক",
+    "subjectCount": 7
+  }
+]

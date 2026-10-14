@@ -1,0 +1,501 @@
+{
+  "id": "class-9",
+  "numeric": 9,
+  "name": "Class 9",
+  "nameBangla": "৯ম শ্রেণি",
+  "stage": "Secondary",
+  "stageBangla": "মাধ্যমিক",
+  "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত নবম শ্রেণির সকল বই, অধ্যায় ও শিখনফল পয়েন্ট",
+  "subjects": [
+    {
+      "id": "c9-bangla",
+      "code": "BAN-09",
+      "name": "Bangla",
+      "nameBangla": "বাংলা",
+      "group": "General",
+      "coverColor": "from-emerald-600 to-teal-850",
+      "chapters": [
+        {
+          "id": "c9-ban-ch1",
+          "chapterNumber": 1,
+          "title": "Communication Across Media",
+          "titleBangla": "১ম অধ্যায়: বিভিন্ন মাধ্যমে যোগাযোগ করি",
+          "lessons": [
+            {
+              "id": "c9-ban-ch1-l1",
+              "point": "১.১",
+              "title": "Media Representation and Nuance",
+              "titleBangla": "১.১ মুদ্রিত ও ইলেকট্রনিক মিডিয়ায় তথ্য উপস্থাপন বিশ্লেষণ",
+              "summary": "সংবাদ, বিজ্ঞাপন ও সোশ্যাল মিডিয়ায় ভাষার বিশেষ কাঠামো ও উদ্দেশ্য বিচার।",
+              "keywords": [
+                "মিডিয়া",
+                "সংবাদ",
+                "ভাষা বিশ্লেষণ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-ban-ch2",
+          "chapterNumber": 2,
+          "title": "Word Formation and Morphology",
+          "titleBangla": "২য় অধ্যায়: প্রমিত ভাষা ও ব্যাকরণিক কাঠামো",
+          "lessons": [
+            {
+              "id": "c9-ban-ch2-l1",
+              "point": "২.১",
+              "title": "Prefix, Suffix and Sandhi in Bangla",
+              "titleBangla": "২.১ উপসর্গ, প্রত্যয় ও সন্ধির সাহায্যে শব্দ গঠন",
+              "summary": "বাংলা ভাষায় নতুন শব্দ সৃষ্টির ব্যাকরণিক প্রক্রিয়া ও প্রয়োগ।",
+              "keywords": [
+                "উপসর্গ",
+                "প্রত্যয়",
+                "সন্ধি",
+                "শব্দ গঠন"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-ban-ch3",
+          "chapterNumber": 3,
+          "title": "Literary Appreciation",
+          "titleBangla": "৩য় অধ্যায়: সাহিত্য পড়ি ও ভাব বুঝি",
+          "lessons": [
+            {
+              "id": "c9-ban-ch3-l1",
+              "point": "৩.১",
+              "title": "Bengali Poetry and Poetic Devices",
+              "titleBangla": "৩.১ আধুনিক কবিতা ও উপমা-উৎপ্রেক্ষা",
+              "summary": "মাইকেল মধুসূদন, রবীন্দ্রনাথ ও নজরুলের কবিতার ছন্দ ও অর্থগভীরতা।",
+              "keywords": [
+                "কবিতা",
+                "অলংকার",
+                "উপমা",
+                "নজরুল"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-english",
+      "code": "ENG-09",
+      "name": "English",
+      "nameBangla": "ইংরেজি",
+      "group": "General",
+      "coverColor": "from-blue-600 to-indigo-850",
+      "chapters": [
+        {
+          "id": "c9-eng-ch1",
+          "chapterNumber": 1,
+          "title": "Opinion Matters",
+          "titleBangla": "Experience 1: Opinion Matters (মতামত ও যুক্তি)",
+          "lessons": [
+            {
+              "id": "c9-eng-ch1-l1",
+              "point": "1.1",
+              "title": "Facts vs Opinions",
+              "titleBangla": "১.১ সত্য তথ্য (Fact) এবং মতামত (Opinion) পার্থক্যকরণ",
+              "summary": "Identifying subjective bias versus objective reality in written articles.",
+              "keywords": [
+                "fact",
+                "opinion",
+                "critical thinking"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-eng-ch2",
+          "chapterNumber": 2,
+          "title": "Nature's Tapestry",
+          "titleBangla": "Experience 2: Nature's Tapestry (প্রকৃতির বুনন)",
+          "lessons": [
+            {
+              "id": "c9-eng-ch2-l1",
+              "point": "2.1",
+              "title": "Sensory Imagery & Descriptive Writing",
+              "titleBangla": "২.১ সংবেদনশীল চিত্রকল্প ও বর্ণনামূলক রচনা",
+              "summary": "Appreciating imagery appealing to sight, sound, touch, and smell.",
+              "keywords": [
+                "imagery",
+                "nature",
+                "descriptive writing"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-eng-ch3",
+          "chapterNumber": 3,
+          "title": "The Power of Words",
+          "titleBangla": "Experience 3: The Power of Words (শব্দের শক্তি)",
+          "lessons": [
+            {
+              "id": "c9-eng-ch3-l1",
+              "point": "3.1",
+              "title": "Historic Speeches & Rhetoric",
+              "titleBangla": "৩.১ ঐতিহাসিক ভাষণ ও অলঙ্কারবহুল বক্তব্য বিশ্লেষণ",
+              "summary": "Studying Bangabandhu's 7th March Speech and MLK's 'I Have a Dream'.",
+              "keywords": [
+                "speech",
+                "rhetoric",
+                "inspiration"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-math",
+      "code": "MATH-09",
+      "name": "Mathematics",
+      "nameBangla": "গণিত",
+      "group": "General",
+      "coverColor": "from-amber-600 to-orange-850",
+      "chapters": [
+        {
+          "id": "c9-math-ch1",
+          "chapterNumber": 1,
+          "title": "Sets in Everyday Life",
+          "titleBangla": "১ম অধ্যায়: প্রাত্যহিক জীবনে সেট",
+          "lessons": [
+            {
+              "id": "c9-math-ch1-l1",
+              "point": "১.১",
+              "title": "Roster and Set-Builder Notation",
+              "titleBangla": "১.১ সেটের ধারণা ও প্রকাশের পদ্ধতি (তালিকা ও গঠন পদ্ধতি)",
+              "summary": "অসীম সেট, সসীম সেট ও ফাঁকা সেটের সংজ্ঞা ও উদাহরণ।",
+              "keywords": [
+                "সেট",
+                "তালিকা পদ্ধতি",
+                "গঠন পদ্ধতি"
+              ]
+            },
+            {
+              "id": "c9-math-ch1-l2",
+              "point": "১.২",
+              "title": "Venn Diagrams & Set Operations",
+              "titleBangla": "১.২ ভেনচিত্র এবং সংযোগ (∪) ও ছেদ (∩) সেট",
+              "summary": "সার্বিক সেট, পূরক সেট ও ভেনচিত্রের বাস্তব সমস্যা সমাধান।",
+              "keywords": [
+                "ভেনচিত্র",
+                "সংযোগ সেট",
+                "ছেদ সেট",
+                "পূরক সেট"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-math-ch2",
+          "chapterNumber": 2,
+          "title": "Sequences and Series",
+          "titleBangla": "২য় অধ্যায়: অনুক্রম ও ধারা",
+          "lessons": [
+            {
+              "id": "c9-math-ch2-l1",
+              "point": "২.১",
+              "title": "Arithmetic Sequences & nth Term",
+              "titleBangla": "২.১ সমান্তর অনুক্রম ও সাধারণ অন্তর",
+              "summary": "Tn = a + (n-1)d সূত্র ও ধারার সমষ্টি Sn = n/2 [2a + (n-1)d]।",
+              "keywords": [
+                "সমান্তর ধারা",
+                "সাধারণ অন্তর",
+                "সমষ্টি"
+              ]
+            },
+            {
+              "id": "c9-math-ch2-l2",
+              "point": "২.২",
+              "title": "Geometric Sequences & Ratio",
+              "titleBangla": "২.২ গুণোত্তর অনুক্রম ও সাধারণ অনুপাত",
+              "summary": "Tn = ar^(n-1) সূত্রের সাহায্যে বাস্তব জীবনের বৃদ্ধির হার নির্ণয়।",
+              "keywords": [
+                "গুণোত্তর ধারা",
+                "সাধারণ অনুপাত",
+                "বৃদ্ধি"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-math-ch3",
+          "chapterNumber": 3,
+          "title": "Logarithmic Concepts & Rules",
+          "titleBangla": "৩য় অধ্যায়: লগারিদমের ধারণা ও প্রয়োগ",
+          "lessons": [
+            {
+              "id": "c9-math-ch3-l1",
+              "point": "৩.১",
+              "title": "Exponential to Logarithmic Form",
+              "titleBangla": "৩.১ সূচকীয় সমীকরণ থেকে লগারিদমে রূপান্তর",
+              "summary": "a^x = N হলে x = log_a(N) এবং লগের মৌলিক সূত্রাবলি।",
+              "keywords": [
+                "লগারিদম",
+                "ভিত্তি",
+                "সূচকীয় রূপ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-math-ch4",
+          "chapterNumber": 4,
+          "title": "Trigonometry in Nature",
+          "titleBangla": "৪র্থ অধ্যায়: প্রকৃতিতে ত্রিকোণমিতি",
+          "lessons": [
+            {
+              "id": "c9-math-ch4-l1",
+              "point": "৪.১",
+              "title": "Sine, Cosine and Tangent Ratios",
+              "titleBangla": "৪.১ সমকোণী ত্রিভুজ ও ত্রিকোণমিতিক অনুপাত (sin, cos, tan)",
+              "summary": "গাছের উচ্চতা ও নদীর প্রস্থ নির্ণয়ে ত্রিকোণমিতিক কোণের প্রয়োগ।",
+              "keywords": [
+                "ত্রিকোণমিতি",
+                "উন্নতি কোণ",
+                "অবনতি কোণ",
+                "ট্যানজেন্ট"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-science-inquiry",
+      "code": "SCI-09-INQ",
+      "name": "Science (Inquiry)",
+      "nameBangla": "বিজ্ঞান (অনুসন্ধানী পাঠ)",
+      "group": "General",
+      "coverColor": "from-cyan-600 to-sky-850",
+      "chapters": [
+        {
+          "id": "c9-sci-inq-ch1",
+          "chapterNumber": 1,
+          "title": "Forces, Momentum and Collisions",
+          "titleBangla": "১ম অধ্যায়: বল, ভরবেগ ও সংঘর্ষ",
+          "lessons": [
+            {
+              "id": "c9-sci-inq-ch1-l1",
+              "point": "১.১",
+              "title": "Conservation of Linear Momentum",
+              "titleBangla": "১.১ ভরবেগের নিত্যতা সূত্র ও স্থিতিস্থাপক সংঘর্ষ",
+              "summary": "m1u1 + m2u2 = m1v1 + m2v2 সমীকরণের বাস্তব প্রমাণ।",
+              "keywords": [
+                "ভরবেগ",
+                "সংরক্ষণ সূত্র",
+                "সংঘর্ষ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c9-sci-inq-ch2",
+          "chapterNumber": 2,
+          "title": "Atomic Structure and Periodic Table",
+          "titleBangla": "২য় অধ্যায়: পদার্থের পারমাণবিক গঠন ও পর্যায় সারণি",
+          "lessons": [
+            {
+              "id": "c9-sci-inq-ch2-l1",
+              "point": "২.১",
+              "title": "Electronic Configuration and Valence",
+              "titleBangla": "২.১ ইলেকট্রন বিন্যাস ও যোজ্যতা ইলেকট্রন",
+              "summary": "মৌলের রাসায়নিক সক্রিয়তা ও অষ্টক নিয়মের ব্যাখ্যা।",
+              "keywords": [
+                "ইলেকট্রন বিন্যাস",
+                "যোজ্যতা",
+                "পর্যায় সারণি"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-science-practical",
+      "code": "SCI-09-PRAC",
+      "name": "Science (Practical/Activity)",
+      "nameBangla": "বিজ্ঞান (অনুশীলন পাঠ)",
+      "group": "General",
+      "coverColor": "from-teal-600 to-emerald-850",
+      "chapters": [
+        {
+          "id": "c9-sci-prac-ch1",
+          "chapterNumber": 1,
+          "title": "Hands-on Scientific Experiments",
+          "titleBangla": "১ম অধ্যায়: বৈজ্ঞানিক পরীক্ষণ ও মডেল তৈরি",
+          "lessons": [
+            {
+              "id": "c9-sci-prac-ch1-l1",
+              "point": "১.১",
+              "title": "Testing Water Quality & Soil pH",
+              "titleBangla": "১.১ পানির বিশুদ্ধতা ও মাটির অম্ল-ক্ষার (pH) পরীক্ষা",
+              "summary": "লিটমাস পেপার ও সার্বজনীন নির্দেশক দিয়ে স্থানীয় পরিবেশ পর্যবেক্ষণ।",
+              "keywords": [
+                "pH",
+                "লিটমাস",
+                "পরীক্ষণ",
+                "পরিবেশ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-history-social",
+      "code": "HIS-09",
+      "name": "History and Social Science",
+      "nameBangla": "ইতিহাস ও সামাজিক বিজ্ঞান",
+      "group": "General",
+      "coverColor": "from-amber-700 to-yellow-950",
+      "chapters": [
+        {
+          "id": "c9-his-ch1",
+          "chapterNumber": 1,
+          "title": "Political Structures and Governance",
+          "titleBangla": "১ম অধ্যায়: রাষ্ট্রব্যবস্থা ও সংবিধানের বিবর্তন",
+          "lessons": [
+            {
+              "id": "c9-his-ch1-l1",
+              "point": "১.১",
+              "title": "Democratic Principles & Rights",
+              "titleBangla": "১.১ নাগরিক অধিকার ও বাংলাদেশের সংবিধানের মূলনীতি",
+              "summary": "গণতন্ত্র, সমাজতন্ত্র, ধর্মনিরপেক্ষতা ও জাতীয়তাবাদের ব্যাখ্যা।",
+              "keywords": [
+                "সংবিধান",
+                "নাগরিক অধিকার",
+                "গণতন্ত্র"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-digital-tech",
+      "code": "DIG-09",
+      "name": "Digital Technology",
+      "nameBangla": "ডিজিটাল প্রযুক্তি",
+      "group": "General",
+      "coverColor": "from-violet-600 to-purple-850",
+      "chapters": [
+        {
+          "id": "c9-dig-ch1",
+          "chapterNumber": 1,
+          "title": "Python Programming Introduction",
+          "titleBangla": "১ম অধ্যায়: পাইথন প্রোগ্রামিং এর সূচনা",
+          "lessons": [
+            {
+              "id": "c9-dig-ch1-l1",
+              "point": "১.১",
+              "title": "Variables, Input/Output & Logic in Python",
+              "titleBangla": "১.১ পাইথনে ভেরিয়েবল, প্রিন্ট ও ইনপুট স্টেটমেন্ট",
+              "summary": "প্রাথমিক কোডিং সিনট্যাক্স ও ছোট ক্যালকুলেটর প্রোগ্রাম তৈরি।",
+              "keywords": [
+                "পাইথন",
+                "প্রোগ্রামিং",
+                "ভেরিয়েবল",
+                "কোডিং"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-life-livelihood",
+      "code": "LIFE-09",
+      "name": "Life and Livelihood",
+      "nameBangla": "জীবন ও জীবিকা",
+      "group": "General",
+      "coverColor": "from-teal-600 to-green-850",
+      "chapters": [
+        {
+          "id": "c9-life-ch1",
+          "chapterNumber": 1,
+          "title": "Entrepreneurship & Business Idea",
+          "titleBangla": "১ম অধ্যায়: উদ্যোক্তা উন্নয়ন ও ব্যবসায় উদ্যোগ",
+          "lessons": [
+            {
+              "id": "c9-life-ch1-l1",
+              "point": "১.১",
+              "title": "Market Survey and Business Feasibility",
+              "titleBangla": "১.১ বাজার জরিপ ও ক্ষুদ্র ব্যবসায়িক পরিকল্পনা",
+              "summary": "স্থানীয় পণ্যের বাজার চাহিদা নিরূপণ ও লাভ-ক্ষতির হিসাব।",
+              "keywords": [
+                "উদ্যোক্তা",
+                "বাজার জরিপ",
+                "ব্যবসা পরিকল্পনা"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-health-wellbeing",
+      "code": "HLT-09",
+      "name": "Health and Wellbeing",
+      "nameBangla": "স্বাস্থ্য সুরক্ষা",
+      "group": "General",
+      "coverColor": "from-rose-600 to-pink-850",
+      "chapters": [
+        {
+          "id": "c9-hlt-ch1",
+          "chapterNumber": 1,
+          "title": "Mental Health and Substance Abuse Prevention",
+          "titleBangla": "১ম অধ্যায়: মানসিক সুস্থতা ও মাদক প্রতিরোধ",
+          "lessons": [
+            {
+              "id": "c9-hlt-ch1-l1",
+              "point": "১.১",
+              "title": "Saying No to Harmful Peer Pressure",
+              "titleBangla": "১.১ নেতিবাচক প্ররোচনা দৃঢ়তার সাথে প্রত্যাখ্যান",
+              "summary": "মাদক ও সাইবার আসক্তি থেকে মুক্ত থাকার কৌশল।",
+              "keywords": [
+                "মানসিক স্বাস্থ্য",
+                "মাদক প্রতিরোধ",
+                "দৃঢ়তা"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-art-culture",
+      "code": "ART-09",
+      "name": "Art and Culture",
+      "nameBangla": "শিল্প ও সংস্কৃতি",
+      "group": "General",
+      "coverColor": "from-fuchsia-600 to-purple-850",
+      "chapters": [
+        {
+          "id": "c9-art-ch1",
+          "chapterNumber": 1,
+          "title": "Visual Media & Film Appreciation",
+          "titleBangla": "১ম অধ্যায়: চলচ্চিত্র ও দৃশ্যমাধ্যম পরিচিতি",
+          "lessons": [
+            {
+              "id": "c9-art-ch1-l1",
+              "point": "১.১",
+              "title": "Storyboarding and Camera Angles",
+              "titleBangla": "১.১ স্টোরিবোর্ড ও সিনেমাটিক ভাষা অনুধাবন",
+              "summary": "চিত্রনাট্য ও দৃশ্য পরিকল্পনার প্রাথমিক কলাকৌশল।",
+              "keywords": [
+                "চলচ্চিত্র",
+                "স্টোরিবোর্ড",
+                "ক্যামেরা অ্যাঙ্গেল"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

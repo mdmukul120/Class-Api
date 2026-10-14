@@ -1,0 +1,6 @@
+{
+  "name": "NCTB Curriculum JSON API (Class 6-12)",
+  "description": "ক্লাস ৬ থেকে ১২ পর্যন্ত সকল বই, অধ্যায় এবং লেসন পয়েন্টের পূর্ণাঙ্গ হাইয়ারার্কিক্যাল JSON ডেটাসেট ও ড্রপডাউন ফেচিং API হাব।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

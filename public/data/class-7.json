@@ -1,0 +1,622 @@
+{
+  "id": "class-7",
+  "numeric": 7,
+  "name": "Class 7",
+  "nameBangla": "৭ম শ্রেণি",
+  "stage": "Junior Secondary",
+  "stageBangla": "নিম্ন মাধ্যমিক",
+  "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত সপ্তম শ্রেণির সকল বই, পূর্ণাঙ্গ অধ্যায় ও শিখনফল পয়েন্ট",
+  "subjects": [
+    {
+      "id": "c7-bangla",
+      "code": "BAN-07",
+      "name": "Bangla",
+      "nameBangla": "বাংলা",
+      "group": "General",
+      "coverColor": "from-emerald-600 to-teal-850",
+      "chapters": [
+        {
+          "id": "c7-ban-ch1",
+          "chapterNumber": 1,
+          "title": "Contextual Communication",
+          "titleBangla": "১ম অধ্যায়: প্রসঙ্গের মধ্য থেকে যোগাযোগ করি",
+          "lessons": [
+            {
+              "id": "c7-ban-ch1-l1",
+              "point": "১.১",
+              "title": "Context and Purpose in Dialogue",
+              "titleBangla": "১.১ পরিস্থিতি ও প্রসঙ্গের ভিন্নতায় ভাববিনিময়",
+              "summary": "ব্যক্তি, অবস্থান ও প্রসঙ্গের ওপর নির্ভর করে ভাব বিনিময়ের নিয়ম।",
+              "keywords": [
+                "প্রসঙ্গ",
+                "যোগাযোগ",
+                "ভাববিনিময়"
+              ]
+            },
+            {
+              "id": "c7-ban-ch1-l2",
+              "point": "১.২",
+              "title": "Formal Speeches and Proposals",
+              "titleBangla": "১.২ প্রাতিষ্ঠানিক আলোচনা ও প্রস্তাবনা উপস্থাপন",
+              "summary": "বিতর্ক ও আনুষ্ঠানিকভাবে স্পষ্ট বক্তব্য উপস্থাপন।",
+              "keywords": [
+                "বক্তব্য",
+                "উপস্থাপনা",
+                "প্রস্তাবনা"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-ban-ch2",
+          "chapterNumber": 2,
+          "title": "Standard Pronunciation & Sounds",
+          "titleBangla": "২য় অধ্যায়: প্রমিত ভাষা শিখি ও ধ্বনি পরিবর্তন",
+          "lessons": [
+            {
+              "id": "c7-ban-ch2-l1",
+              "point": "২.১",
+              "title": "Bangla Intonation and Accent",
+              "titleBangla": "২.১ স্বরভঙ্গি ও বলায় শ্বাসাঘাত (Stress)",
+              "summary": "সুরতরঙ্গ ও শ্বাসাঘাতের সঠিক প্রয়োগ।",
+              "keywords": [
+                "স্বরভঙ্গি",
+                "শ্বাসাঘাত",
+                "উচ্চারণ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-ban-ch3",
+          "chapterNumber": 3,
+          "title": "Reading and Appreciating Poetry",
+          "titleBangla": "৩য় অধ্যায়: অর্থ বুঝে কবিতা পড়ি",
+          "lessons": [
+            {
+              "id": "c7-ban-ch3-l1",
+              "point": "৩.১",
+              "title": "Theme and Message of Poems",
+              "titleBangla": "৩.১ কবিতার মূলভাব ও অলংকার বিচার",
+              "summary": "কবিদের দৃষ্টিতে প্রকৃতি ও মানবপ্রেমের রূপক অন্বেষণ।",
+              "keywords": [
+                "কবিতা",
+                "অলংকার",
+                "মূলভাব"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-ban-ch4",
+          "chapterNumber": 4,
+          "title": "Writing Personal Essays and Narratives",
+          "titleBangla": "৪র্থ অধ্যায়: চারপাশের মানুষের কাজ নিয়ে লিখি",
+          "lessons": [
+            {
+              "id": "c7-ban-ch4-l1",
+              "point": "৪.১",
+              "title": "Observational Narrative Writing",
+              "titleBangla": "৪.১ শ্রমজীবী মানুষের অভিজ্ঞতা সাক্ষাৎকার ও বিবরণ",
+              "summary": "সাক্ষাৎকার গ্রহণের কৌশল ও তথ্যভিত্তিক প্রতিবেদন প্রণয়ন।",
+              "keywords": [
+                "সাক্ষাৎকার",
+                "প্রতিবেদন",
+                "বিবরণ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-english",
+      "code": "ENG-07",
+      "name": "English",
+      "nameBangla": "ইংরেজি",
+      "group": "General",
+      "coverColor": "from-blue-600 to-indigo-850",
+      "chapters": [
+        {
+          "id": "c7-eng-ch1",
+          "chapterNumber": 1,
+          "title": "A Dream School",
+          "titleBangla": "Experience 1: A Dream School (স্বপ্নের বিদ্যালয়)",
+          "lessons": [
+            {
+              "id": "c7-eng-ch1-l1",
+              "point": "1.1",
+              "title": "Describing Surroundings & Facilities",
+              "titleBangla": "১.১ বিদ্যালয়ের বিভিন্ন সুযোগ-সুবিধা বর্ণনা",
+              "summary": "Using adjectives and spatial prepositions to describe a dream school.",
+              "keywords": [
+                "dream school",
+                "description",
+                "adjectives"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-eng-ch2",
+          "chapterNumber": 2,
+          "title": "Playing with Words",
+          "titleBangla": "Experience 2: Playing with Words (শব্দ নিয়ে খেলা)",
+          "lessons": [
+            {
+              "id": "c7-eng-ch2-l1",
+              "point": "2.1",
+              "title": "Affixes: Prefix and Suffix",
+              "titleBangla": "২.১ প্রিফিক্স, সাফিক্স ও রুট ওয়ার্ড",
+              "summary": "Expanding vocabulary through prefixes and suffixes.",
+              "keywords": [
+                "prefix",
+                "suffix",
+                "vocabulary",
+                "word play"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-eng-ch3",
+          "chapterNumber": 3,
+          "title": "If (Poem)",
+          "titleBangla": "Experience 3: If (কবিতা ও জীবনদর্শন)",
+          "lessons": [
+            {
+              "id": "c7-eng-ch3-l1",
+              "point": "3.1",
+              "title": "Moral Guidance & Self-Confidence",
+              "titleBangla": "৩.১ আত্মবিশ্বাস ও চারিত্রিক দৃঢ়তা",
+              "summary": "Comprehending the timeless moral message of Kipling's poem 'If'.",
+              "keywords": [
+                "poem",
+                "if",
+                "character",
+                "confidence"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-eng-ch4",
+          "chapterNumber": 4,
+          "title": "The Good Reader",
+          "titleBangla": "Experience 4: The Good Reader (সচেতন পাঠক)",
+          "lessons": [
+            {
+              "id": "c7-eng-ch4-l1",
+              "point": "4.1",
+              "title": "Reading Strategies: Skimming & Scanning",
+              "titleBangla": "৪.১ দ্রুত পঠন ও প্রয়োজনীয় তথ্য অনুসন্ধান কৌশল",
+              "summary": "Techniques for finding key details quickly from essays and newspaper stories.",
+              "keywords": [
+                "reading",
+                "skimming",
+                "scanning"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-math",
+      "code": "MATH-07",
+      "name": "Mathematics",
+      "nameBangla": "গণিত",
+      "group": "General",
+      "coverColor": "from-amber-600 to-orange-850",
+      "chapters": [
+        {
+          "id": "c7-math-ch1",
+          "chapterNumber": 1,
+          "title": "Story of Exponents",
+          "titleBangla": "১ম অধ্যায়: সূচকের গল্প",
+          "lessons": [
+            {
+              "id": "c7-math-ch1-l1",
+              "point": "১.১",
+              "title": "Concept of Base and Exponent",
+              "titleBangla": "১.১ কাগজ ভাঁজের খেলায় ভিত্তি ও সূচকের বিস্তার",
+              "summary": "ঘাত ও ভিত্তির সম্পর্ক এবং সূচকের সূচকীয় শক্তি।",
+              "keywords": [
+                "সূচক",
+                "ভিত্তি",
+                "কাগজ ভাঁজ"
+              ]
+            },
+            {
+              "id": "c7-math-ch1-l2",
+              "point": "১.২",
+              "title": "Rules of Powers",
+              "titleBangla": "১.২ সূচকের গুণ, ভাগ ও শূন্য সূচক",
+              "summary": "a^m × a^n = a^(m+n) এবং a^0 = 1 এর প্রমাণ।",
+              "keywords": [
+                "সূচকের নিয়ম",
+                "শূন্য ঘাত",
+                "গুণ ভাগ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-math-ch2",
+          "chapterNumber": 2,
+          "title": "Story of Binary Numbers",
+          "titleBangla": "২য় অধ্যায়: বাইনারি সংখ্যার গল্প",
+          "lessons": [
+            {
+              "id": "c7-math-ch2-l1",
+              "point": "২.১",
+              "title": "Base-2 vs Base-10 Conversions",
+              "titleBangla": "২.১ দশমিক ও বাইনারি সংখ্যার রূপান্তর",
+              "summary": "০ ও ১ দিয়ে সব সংখ্যা লেখার কৌশল ও কার্ড গেম।",
+              "keywords": [
+                "বাইনারি",
+                "দশমিক",
+                "কম্পিউটার কোড"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-math-ch3",
+          "chapterNumber": 3,
+          "title": "Factors of Unknown Quantities",
+          "titleBangla": "৩য় অধ্যায়: অজানা রাশির উৎপাদক, গ.সা.গু. ও ল.সা.গু.",
+          "lessons": [
+            {
+              "id": "c7-math-ch3-l1",
+              "point": "৩.১",
+              "title": "Algebraic Factorization via Paper Cutting",
+              "titleBangla": "৩.১ কাগজ কেটে বীজগণিতীয় রাশির উৎপাদক নির্ণয়",
+              "summary": "জ্যামিতিক ক্ষেত্রফলের মাধ্যমে x² + bx + c এর উৎপাদক।",
+              "keywords": [
+                "উৎপাদক",
+                "কাগজ কাটা",
+                "বীজগণিত"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-math-ch4",
+          "chapterNumber": 4,
+          "title": "Ratio and Proportion",
+          "titleBangla": "৪র্থ অধ্যায়: অনুপাত ও সমানুপাত",
+          "lessons": [
+            {
+              "id": "c7-math-ch4-l1",
+              "point": "৪.১",
+              "title": "Equivalent and Compound Ratios",
+              "titleBangla": "৪.১ সমতুল অনুপাত, বহুরাশিক অনুপাত ও মিশ্র অনুপাত",
+              "summary": "বাস্তব জীবনের অংশীদারি ও মিশ্রণ অনুপাতে সমাধান।",
+              "keywords": [
+                "অনুপাত",
+                "সমানুপাত",
+                "বহুরাশিক"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-math-ch5",
+          "chapterNumber": 5,
+          "title": "Geometric Shapes and Angles",
+          "titleBangla": "৫ম অধ্যায়: জ্যামিতিক আকৃতির গল্প ও কোণের প্রকারভেদ",
+          "lessons": [
+            {
+              "id": "c7-math-ch5-l1",
+              "point": "৫.১",
+              "title": "Parallel Lines, Transversals & Alternate Angles",
+              "titleBangla": "৫.১ সমান্তরাল সরলরেখা, ছেদক ও একান্তর-অনুরূপ কোণ",
+              "summary": "দুই সমান্তরাল রেখাকে একটি ছেদক ছেদ করলে উৎপন্ন কোণসমূহের সম্পর্ক।",
+              "keywords": [
+                "সমান্তরাল রেখা",
+                "একান্তর কোণ",
+                "অনুরূপ কোণ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-science",
+      "code": "SCI-07",
+      "name": "Science",
+      "nameBangla": "বিজ্ঞান",
+      "group": "General",
+      "coverColor": "from-cyan-600 to-sky-850",
+      "chapters": [
+        {
+          "id": "c7-sci-ch1",
+          "chapterNumber": 1,
+          "title": "Microorganisms",
+          "titleBangla": "১ম অধ্যায়: ক্ষুদ্রাতিক্ষুদ্র অনুজীবের জগৎ",
+          "lessons": [
+            {
+              "id": "c7-sci-ch1-l1",
+              "point": "১.১",
+              "title": "Virus, Bacteria, Fungi Structure",
+              "titleBangla": "১.১ ভাইরাস, ব্যাকটেরিয়া ও ছত্রাকের অণুবীক্ষণিক গঠন",
+              "summary": "উপকারী ও অপকারী অণুজীবের জৈবিক প্রভাব।",
+              "keywords": [
+                "অণুজীব",
+                "ভাইরাস",
+                "ব্যাকটেরিয়া",
+                "ছত্রাক"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-sci-ch2",
+          "chapterNumber": 2,
+          "title": "Heat and Temperature",
+          "titleBangla": "২য় অধ্যায়: তাপ ও তাপমাত্রা",
+          "lessons": [
+            {
+              "id": "c7-sci-ch2-l1",
+              "point": "২.১",
+              "title": "Thermal Expansion & Thermometer",
+              "titleBangla": "২.১ সেলসিয়াস ও ফারেনহাইট স্কেল রূপান্তর",
+              "summary": "C/5 = (F-32)/9 সূত্রের প্রয়োগ ও তাপ সঞ্চালনের ৩ পদ্ধতি।",
+              "keywords": [
+                "তাপমাত্রা",
+                "থার্মোমিটার",
+                "পরিবহন",
+                "পরিচলন"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-sci-ch3",
+          "chapterNumber": 3,
+          "title": "Light and Reflection",
+          "titleBangla": "৩য় অধ্যায়: আলোর খেলা ও প্রতিফলন",
+          "lessons": [
+            {
+              "id": "c7-sci-ch3-l1",
+              "point": "৩.১",
+              "title": "Laws of Reflection & Plane Mirrors",
+              "titleBangla": "৩.১ আলোর নিয়মিত প্রতিফলন ও সমতল দর্পণে প্রতিবিম্ব",
+              "summary": "আপতন কোণ = প্রতিফলন কোণ সূত্র ও পেরিস্কোপ তৈরির কৌশল।",
+              "keywords": [
+                "আলো",
+                "প্রতিফলন",
+                "দর্পণ",
+                "পেরিস্কোপ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-history-social",
+      "code": "HIS-07",
+      "name": "History and Social Science",
+      "nameBangla": "ইতিহাস ও সামাজিক বিজ্ঞান",
+      "group": "General",
+      "coverColor": "from-amber-700 to-yellow-950",
+      "chapters": [
+        {
+          "id": "c7-his-ch1",
+          "chapterNumber": 1,
+          "title": "Evolution of Human Society",
+          "titleBangla": "১ম অধ্যায়: সমাজ ও রাষ্ট্রের বিবর্তন",
+          "lessons": [
+            {
+              "id": "c7-his-ch1-l1",
+              "point": "১.১",
+              "title": "Hunter-Gatherer to Agricultural Society",
+              "titleBangla": "১.১ শিকার-সংগ্রহ থেকে কৃষিসমাজে উত্তরণ",
+              "summary": "মানবসমাজের রূপান্তর ও স্থায়ী বসতি স্থাপন।",
+              "keywords": [
+                "কৃষিসমাজ",
+                "বিবর্তন",
+                "ইতিহাস"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-his-ch2",
+          "chapterNumber": 2,
+          "title": "Natural Resources and Environment of Bengal",
+          "titleBangla": "২য় অধ্যায়: বাংলার প্রাকৃতিক সম্পদ ও পরিবেশ",
+          "lessons": [
+            {
+              "id": "c7-his-ch2-l1",
+              "point": "২.১",
+              "title": "Rivers, Forests & Biodiversity of Bangladesh",
+              "titleBangla": "২.১ সুন্দরবন, নদনদী ও জীববৈচিত্র্য সংরক্ষণ",
+              "summary": "প্রাকৃতিক দুর্যোগ মোকাবেলা ও পরিবেশ সংরক্ষণে সচেতনতা।",
+              "keywords": [
+                "সুন্দরবন",
+                "নদনদী",
+                "পরিবেশ",
+                "দুর্যোগ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-digital-tech",
+      "code": "DIG-07",
+      "name": "Digital Technology",
+      "nameBangla": "ডিজিটাল প্রযুক্তি",
+      "group": "General",
+      "coverColor": "from-violet-600 to-purple-850",
+      "chapters": [
+        {
+          "id": "c7-dig-ch1",
+          "chapterNumber": 1,
+          "title": "Smart Citizen in Cyber Space",
+          "titleBangla": "১ম অধ্যায়: বুদ্ধিদীপ্ত সাইবার নাগরিক",
+          "lessons": [
+            {
+              "id": "c7-dig-ch1-l1",
+              "point": "১.১",
+              "title": "Digital Footprint & Privacy",
+              "titleBangla": "১.১ ডিজিটাল ফুটপ্রিন্ট ও ব্যক্তিগত তথ্যের নিরাপত্তা",
+              "summary": "অনলাইনে কোনো পোস্ট করার পরিণতি এবং প্রাইভেসি সেটিংস।",
+              "keywords": [
+                "ডিজিটাল ফুটপ্রিন্ট",
+                "প্রাইভেসি",
+                "নিরাপত্তা"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c7-dig-ch2",
+          "chapterNumber": 2,
+          "title": "Data Analysis and Spreadsheets",
+          "titleBangla": "২য় অধ্যায়: স্প্রেডশিট ও ডেটার গ্রাফিক্যাল উপস্থাপন",
+          "lessons": [
+            {
+              "id": "c7-dig-ch2-l1",
+              "point": "২.১",
+              "title": "Excel/Sheets Formulas (SUM, AVERAGE)",
+              "titleBangla": "২.১ স্প্রেডশিটে সূত্র প্রয়োগ ও কলাম চার্ট তৈরি",
+              "summary": "যোগফল, গড় নির্ণয় এবং চার্ট তৈরির বাস্তব অনুশীলন।",
+              "keywords": [
+                "স্প্রেডশিট",
+                "এক্সেল",
+                "চার্ট",
+                "ডেটা"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-life-livelihood",
+      "code": "LIFE-07",
+      "name": "Life and Livelihood",
+      "nameBangla": "জীবন ও জীবিকা",
+      "group": "General",
+      "coverColor": "from-teal-600 to-green-850",
+      "chapters": [
+        {
+          "id": "c7-life-ch1",
+          "chapterNumber": 1,
+          "title": "Family Budget and Savings",
+          "titleBangla": "১ম অধ্যায়: আর্থিক পরিকল্পনা ও কাজের রূপরেখা",
+          "lessons": [
+            {
+              "id": "c7-life-ch1-l1",
+              "point": "১.১",
+              "title": "Expense Log & Wise Buying",
+              "titleBangla": "১.১ পারিবারিক ব্যয় হিসাব ও মিতব্যয়িতা",
+              "summary": "প্রয়োজন ও শখের মধ্যে পার্থক্য নির্ণয়।",
+              "keywords": [
+                "বাজেট",
+                "মিতব্যয়িতা",
+                "পরিকল্পনা"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-health-wellbeing",
+      "code": "HLT-07",
+      "name": "Health and Wellbeing",
+      "nameBangla": "স্বাস্থ্য সুরক্ষা",
+      "group": "General",
+      "coverColor": "from-rose-600 to-pink-850",
+      "chapters": [
+        {
+          "id": "c7-hlt-ch1",
+          "chapterNumber": 1,
+          "title": "Adolescent Changes and Care",
+          "titleBangla": "১ম অধ্যায়: বয়ঃসন্ধির যত্ন ও মানসিক সুস্থতা",
+          "lessons": [
+            {
+              "id": "c7-hlt-ch1-l1",
+              "point": "১.১",
+              "title": "Physical and Emotional Growth",
+              "titleBangla": "১.১ শারীরিক ও আবেগীয় পরিবর্তন মোকাবেলা",
+              "summary": "বয়ঃসন্ধিকালীন স্বাভাবিক পরিবর্তন ও পরিচ্ছন্নতা বজায় রাখা।",
+              "keywords": [
+                "বয়ঃসন্ধি",
+                "মানসিক স্বাস্থ্য",
+                "বৃদ্ধি"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-art-culture",
+      "code": "ART-07",
+      "name": "Art and Culture",
+      "nameBangla": "শিল্প ও সংস্কৃতি",
+      "group": "General",
+      "coverColor": "from-fuchsia-600 to-purple-850",
+      "chapters": [
+        {
+          "id": "c7-art-ch1",
+          "chapterNumber": 1,
+          "title": "Folk Songs and Performing Arts",
+          "titleBangla": "১ম অধ্যায়: লোকসঙ্গীত ও নাট্যকলা",
+          "lessons": [
+            {
+              "id": "c7-art-ch1-l1",
+              "point": "১.১",
+              "title": "Bhatiali, Bhawaiya and Lalon Geeti",
+              "titleBangla": "১.১ ভাটিয়ালি, ভাওয়াইয়া ও লালনগীতির মাধুর্য",
+              "summary": "বাংলার ঐতিহ্যবাহী সঙ্গীতের সুর ও রাগ অনুধাবন।",
+              "keywords": [
+                "লোকসঙ্গীত",
+                "ভাটিয়ালি",
+                "ভাওয়াইয়া"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-islamic-studies",
+      "code": "ISL-07",
+      "name": "Islamic Studies",
+      "nameBangla": "ইসলাম শিক্ষা",
+      "group": "General",
+      "coverColor": "from-emerald-700 to-teal-950",
+      "chapters": [
+        {
+          "id": "c7-isl-ch1",
+          "chapterNumber": 1,
+          "title": "Asmaul Husna",
+          "titleBangla": "১ম অধ্যায়: আকাইদ ও আসমাউল হুসনা",
+          "lessons": [
+            {
+              "id": "c7-isl-ch1-l1",
+              "point": "১.১",
+              "title": "Attributes of Allah",
+              "titleBangla": "১.১ আল্লাহর সুন্দরতম গুণবাচক নাম ও অনুধাবন",
+              "summary": "রহমান, রহিম, আলিম ইত্যাদি নামের তাৎপর্য।",
+              "keywords": [
+                "আল্লাহর নাম",
+                "আসমাউল হুসনা",
+                "আকাইদ"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
