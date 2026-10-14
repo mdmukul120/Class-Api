@@ -15,7 +15,7 @@ apiRouter.use((req, res, next) => {
 });
 
 // 1. Full database JSON
-apiRouter.get('/api/curriculum', (req: Request, res: Response) => {
+apiRouter.get(['/api/curriculum', '/curriculum'], (req: Request, res: Response) => {
   let totalSubjects = 0;
   let totalChapters = 0;
   let totalLessons = 0;
@@ -51,7 +51,7 @@ apiRouter.get('/api/curriculum', (req: Request, res: Response) => {
 });
 
 // 2. Classes list (Dropdown 1)
-apiRouter.get('/api/classes', (req: Request, res: Response) => {
+apiRouter.get(['/api/classes', '/classes'], (req: Request, res: Response) => {
   const classes = CURRICULUM_DATA.map((c) => {
     let totalLessons = 0;
     let totalChapters = 0;
@@ -85,7 +85,7 @@ apiRouter.get('/api/classes', (req: Request, res: Response) => {
 });
 
 // 3. Subjects for a specific class (Dropdown 2)
-apiRouter.get('/api/subjects', (req: Request, res: Response) => {
+apiRouter.get(['/api/subjects', '/subjects'], (req: Request, res: Response) => {
   const classId = req.query.classId as string;
   if (!classId) {
     const allSubjects = CURRICULUM_DATA.flatMap((c) =>
@@ -132,7 +132,7 @@ apiRouter.get('/api/subjects', (req: Request, res: Response) => {
 });
 
 // 4. Chapters for a specific subject (Dropdown 3)
-apiRouter.get('/api/chapters', (req: Request, res: Response) => {
+apiRouter.get(['/api/chapters', '/chapters'], (req: Request, res: Response) => {
   const subjectId = req.query.subjectId as string;
   if (!subjectId) {
     return res.status(400).json({
@@ -184,7 +184,7 @@ apiRouter.get('/api/chapters', (req: Request, res: Response) => {
 });
 
 // 5. Lessons / Topic Points for a specific chapter (Dropdown 4)
-apiRouter.get('/api/lessons', (req: Request, res: Response) => {
+apiRouter.get(['/api/lessons', '/lessons'], (req: Request, res: Response) => {
   const chapterId = req.query.chapterId as string;
   if (!chapterId) {
     return res.status(400).json({
@@ -231,7 +231,7 @@ apiRouter.get('/api/lessons', (req: Request, res: Response) => {
 });
 
 // 6. Cascading query endpoint
-apiRouter.get('/api/cascade', (req: Request, res: Response) => {
+apiRouter.get(['/api/cascade', '/cascade'], (req: Request, res: Response) => {
   const { classId, subjectId, chapterId } = req.query as {
     classId?: string;
     subjectId?: string;
@@ -311,7 +311,7 @@ apiRouter.get('/api/cascade', (req: Request, res: Response) => {
 });
 
 // 7. Full search endpoint
-apiRouter.get('/api/search', (req: Request, res: Response) => {
+apiRouter.get(['/api/search', '/search'], (req: Request, res: Response) => {
   const query = ((req.query.q as string) || '').toLowerCase().trim();
   if (!query) {
     return res.json({ success: true, count: 0, results: [] });
@@ -402,7 +402,7 @@ apiRouter.get('/api/search', (req: Request, res: Response) => {
 });
 
 // 8. Raw Download / Export endpoint
-apiRouter.get('/api/download/curriculum.json', (req: Request, res: Response) => {
+apiRouter.get(['/api/download/curriculum.json', '/download/curriculum.json'], (req: Request, res: Response) => {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Content-Disposition', 'attachment; filename="nctb-curriculum-class-6-12.json"');
   res.send(JSON.stringify(CURRICULUM_DATA, null, 2));

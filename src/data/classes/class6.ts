@@ -7,8 +7,11 @@ export const CLASS_6_DATA: ClassGrade = {
   nameBangla: "৬ষ্ঠ শ্রেণি",
   stage: "Junior Secondary",
   stageBangla: "নিম্ন মাধ্যমিক",
-  description: "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত ষষ্ঠ শ্রেণির সকল বই, অধ্যায় ও শিখনফল পয়েন্ট",
+  description: "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত ষষ্ঠ শ্রেণির সকল পাঠ্যপুস্তক, পূর্ণাঙ্গ অধ্যায় ও সুনির্দিষ্ট লেসন পয়েন্টের পূর্ণাঙ্গ ডেটাসেট",
   subjects: [
+    // ----------------------------------------------------
+    // ১. বাংলা (Bangla)
+    // ----------------------------------------------------
     {
       id: "c6-bangla",
       code: "BAN-06",
@@ -26,26 +29,34 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-ban-ch1-l1",
               point: "১.১",
-              title: "Contextual Greeting and Respect",
-              titleBangla: "১.১ পরিস্থিতি অনুযায়ী যোগাযোগের উদ্দেশ্য ও মর্যাদা রক্ষা",
-              summary: "বয়স, সামাজিক সম্পর্ক ও স্থান বিবেচনায় সঠিক সম্বোধন ও বিনম্র ভাষা প্রয়োগের কৌশল।",
+              title: "Contextual Greeting and Age Appropriateness",
+              titleBangla: "১.১ পরিস্থিতি অনুযায়ী যোগাযোগের উদ্দেশ্য ও বয়সভেদে সম্বোধন",
+              summary: "বয়স, সামাজিক সম্পর্ক, পেশা ও স্থান বিবেচনায় সঠিক সম্বোধন ও বিনম্র ভাষার প্রয়োগ।",
               keywords: ["যোগাযোগ", "মর্যাদা", "সম্বোধন", "বাচনভঙ্গি"]
             },
             {
               id: "c6-ban-ch1-l2",
               point: "১.২",
-              title: "Verbal and Non-verbal Expressions",
+              title: "Verbal and Non-verbal Gestures",
               titleBangla: "১.২ বাচনিক ও অবাচনিক অঙ্গভঙ্গি বিশ্লেষণ",
-              summary: "শারীরিক ভাষা, চোখের দৃষ্টি এবং বাচনিক শব্দের সঠিক সমন্বয়।",
-              keywords: ["অবাচনিক", "শারীরিক ভাষা", "দৃষ্টিভঙ্গি"]
+              summary: "শারীরিক ভাষা, চোখের দৃষ্টি, কণ্ঠস্বরের ওঠা-নামা এবং বাচনিক শব্দের সমন্বয়।",
+              keywords: ["অবাচনিক", "শারীরিক ভাষা", "দৃষ্টিভঙ্গি", "বাচনিক"]
             },
             {
               id: "c6-ban-ch1-l3",
               point: "১.৩",
-              title: "Empathetic Communication",
-              titleBangla: "১.৩ সহানুভূতিশীল প্রতিক্রিয়া ও শ্রদ্ধাবোধ",
-              summary: "মনোযোগ দিয়ে অপরের বক্তব্য শোনা এবং ইতিবাচক প্রতিক্রিয়া প্রদান।",
-              keywords: ["সহানুভূতি", "শ্রবণ", "শ্রদ্ধাবোধ"]
+              title: "Active Listening and Empathetic Feedback",
+              titleBangla: "১.৩ সক্রিয় শ্রবণ ও সহানুভূতিশীল প্রতিক্রিয়া প্রদান",
+              summary: "বক্তার কথা মনোযোগ দিয়ে শোনা, বাধা না দেওয়া এবং গঠনমূলক মতামত প্রদান।",
+              keywords: ["শ্রবণ", "সহানুভূতি", "প্রতিক্রিয়া", "শ্রদ্ধাবোধ"]
+            },
+            {
+              id: "c6-ban-ch1-l4",
+              point: "১.৪",
+              title: "Avoiding Offensive and Biased Language",
+              titleBangla: "১.৪ আঘাতমূলক শব্দ পরিহার ও ভাষিক শিষ্টাচার",
+              summary: "কোনো ধরনের বৈষম্যমূলক বা আঘাতমূলক ভাষা ব্যবহার না করে ইতিবাচক ভাবপ্রকাশ।",
+              keywords: ["শিষ্টাচার", "ভাষার শালীনতা", "সম্পর্ক রক্ষা"]
             }
           ]
         },
@@ -58,193 +69,321 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-ban-ch2-l1",
               point: "২.১",
-              title: "Regional Words vs Standard Bangla",
-              titleBangla: "২.১ আঞ্চলিক রূপ ও প্রমিত রূপের তুলনা",
-              summary: "আঞ্চলিক শব্দাবলি চিহ্নিতকরণ ও মানসম্পন্ন প্রমিত বাংলা শব্দের উচ্চারণরীতি।",
-              keywords: ["আঞ্চলিক", "প্রমিত রূপ", "মান ভাষা"]
+              title: "Vocal Organs and Articulation Points",
+              titleBangla: "২.১ বাগযন্ত্রের বিভিন্ন অঙ্গ ও ধ্বনির উচ্চারণস্থান",
+              summary: "কণ্ঠ, তালু, মূর্ধা, দন্ত ও ওষ্ঠের সাহায্যে স্বর ও ব্যঞ্জনধ্বনির সঠিক উচ্চারণরীতি।",
+              keywords: ["বাগযন্ত্র", "ধ্বনি", "উচ্চারণস্থান", "স্বরধ্বনি"]
             },
             {
               id: "c6-ban-ch2-l2",
               point: "২.২",
-              title: "Vocal Organs and Phonetics",
-              titleBangla: "২.২ বাগযন্ত্রের বিভিন্ন অংশের কাজ ও উচ্চারণস্থান",
-              summary: "কণ্ঠ, তালু, মূর্ধা, দন্ত ও ওষ্ঠের সাহায্যে স্বর ও ব্যঞ্জনধ্বনির সঠিক উচ্চারণ।",
-              keywords: ["বাগযন্ত্র", "ধ্বনি", "উচ্চারণস্থান"]
+              title: "Regional Words vs Standard Forms",
+              titleBangla: "২.২ আঞ্চলিক রূপ ও প্রমিত রূপের তুলনা ও রূপান্তর",
+              summary: "আঞ্চলিক ভাষার বৈচিত্র্যকে সম্মান জানিয়ে প্রাতিষ্ঠানিক ক্ষেত্রে মানসম্মত প্রমিত রূপের ব্যবহার।",
+              keywords: ["আঞ্চলিক ভাষা", "প্রমিত রূপ", "শব্দকোষ", "মান ভাষা"]
+            },
+            {
+              id: "c6-ban-ch2-l3",
+              point: "২.৩",
+              title: "Reading Aloud with Correct Stress",
+              titleBangla: "২.৩ প্রমিত উচ্চারণে সরব পাঠ ও শ্বাসাঘাতের নিয়ম",
+              summary: "বিরামচিহ্ন লক্ষ্য রেখে স্পষ্ট ও সাবলীলভাবে রিডিং পড়ার কৌশল।",
+              keywords: ["সরব পাঠ", "শ্বাসাঘাত", "বিরামচিহ্ন", "উচ্চারণ"]
             }
           ]
         },
         {
           id: "c6-ban-ch3",
           chapterNumber: 3,
-          title: "Word Classes and Grammatical Categories",
-          titleBangla: "৩য় অধ্যায়: অর্থ বুঝে বাক্য লিখি ও শব্দের শ্রেণিবিভাগ",
+          title: "Parts of Speech and Grammar Categories",
+          titleBangla: "৩য় অধ্যায়: অর্থ বুঝে বাক্য লিখি (শব্দের শ্রেণিবিভাগ)",
           lessons: [
             {
               id: "c6-ban-ch3-l1",
               point: "৩.১",
-              title: "Noun, Pronoun, Adjective",
-              titleBangla: "৩.১ বিশেষ্য, সর্বনাম ও বিশেষণ",
-              summary: "বাক্যের মধ্যে বিভিন্ন পদের ভূমিকা ও বৈশিষ্ট্য বিশ্লেষণ।",
-              keywords: ["বিশেষ্য", "সর্বনাম", "বিশেষণ", "পদ"]
+              title: "Nouns and Classification",
+              titleBangla: "৩.১ বিশেষ্য পদ ও এর বিভিন্ন রূপ",
+              summary: "নামবাচক, জাতিবাচক, বস্তুবাচক, গুণবাচক ও ভাববাচক বিশেষ্যের ব্যবহার।",
+              keywords: ["বিশেষ্য", "পদ", "নামপদ", "ব্যাকরণ"]
             },
             {
               id: "c6-ban-ch3-l2",
               point: "৩.২",
-              title: "Verbs and Connectors",
-              titleBangla: "৩.২ ক্রিয়া, ক্রিয়া বিশেষণ ও যোজকের ব্যবহার",
-              summary: "বাক্য গঠনে যোজক ও ক্রিয়াপদের সঠিক গঠন ও প্রয়োগ।",
-              keywords: ["ক্রিয়া", "যোজক", "বাক্য গঠন"]
+              title: "Pronouns and Adjectives",
+              titleBangla: "৩.২ সর্বনাম ও বিশেষণ পদের বৈশিষ্ট্য ও প্রয়োগ",
+              summary: "ব্যক্তিবাচক, আত্মবাচক সর্বনাম এবং গুণ, পরিমাণ ও সংখ্যাবাচক বিশেষণ।",
+              keywords: ["সর্বনাম", "বিশেষণ", "পদ প্রকরণ"]
+            },
+            {
+              id: "c6-ban-ch3-l3",
+              point: "৩.৩",
+              title: "Verbs, Adverbs and Postpositions",
+              titleBangla: "৩.৩ ক্রিয়া, ক্রিয়া বিশেষণ ও অনুসর্গ",
+              summary: "সমাপিকা ও অসমাপিকা ক্রিয়া এবং বাক্যে অনুসর্গের অবস্থান।",
+              keywords: ["ক্রিয়া", "ক্রিয়া বিশেষণ", "অনুসর্গ"]
+            },
+            {
+              id: "c6-ban-ch3-l4",
+              point: "৩.৪",
+              title: "Connectors and Interjections",
+              titleBangla: "৩.৪ যোজক ও আবেগ শব্দের ভূমিকা",
+              summary: "বাক্যাংশ সংযুক্তকারী যোজক এবং আনন্দ, বেদনা ও বিস্ময়সূচক আবেগ শব্দ।",
+              keywords: ["যোজক", "আবেগ শব্দ", "বাক্য গঠন"]
             }
           ]
         },
         {
           id: "c6-ban-ch4",
           chapterNumber: 4,
-          title: "Surrounding Texts and Signs",
+          title: "Understanding Public Texts and Signboards",
           titleBangla: "৪র্থ অধ্যায়: চারপাশের লেখার সাথে পরিচয়",
           lessons: [
             {
               id: "c6-ban-ch4-l1",
               point: "৪.১",
-              title: "Signboards, Posters & Notices",
-              titleBangla: "৪.১ সাইনবোর্ড, পোস্টার, নোটিশ ও বিজ্ঞাপনের ভাষা",
-              summary: "জনসাধারণের উদ্দেশ্যে লিখিত তথ্যের বৈশিষ্ট্য অনুধাবন।",
-              keywords: ["বিজ্ঞাপন", "পোস্টার", "সাইনবোর্ড", "নোটিশ"]
+              title: "Public Announcements, Posters and Signboards",
+              titleBangla: "৪.১ সাইনবোর্ড, পোস্টার, ব্যানার ও নোটিশের ভাষা বিশ্লেষণ",
+              summary: "জনসাধারণের অবগতির জন্য সংক্ষিপ্ত ও স্পষ্ট তথ্য উপস্থাপনের নিয়মাবলী।",
+              keywords: ["সাইনবোর্ড", "পোস্টার", "বিজ্ঞাপন", "নোটিশ"]
+            },
+            {
+              id: "c6-ban-ch4-l2",
+              point: "৪.২",
+              title: "Forms, Invoices and Directional Guidelines",
+              titleBangla: "৪.২ দিকনির্দেশনামূলক লেখা ও ফরম পূরণের কৌশল",
+              summary: "হাসপাতাল, বিদ্যালয় ও সরকারি অফিসের নির্দেশনা ও তথ্য ফরম যথাযথভাবে পূরণ।",
+              keywords: ["ফরম পূরণ", "দিকনির্দেশনা", "তথ্য যোগাযোগ"]
             }
           ]
         },
         {
           id: "c6-ban-ch5",
           chapterNumber: 5,
-          title: "Appreciating Literature",
+          title: "Appreciating Literary Forms",
           titleBangla: "৫ম অধ্যায়: সাহিত্যের রূপ বুঝি ও আনন্দের সাথে পড়ি",
           lessons: [
             {
               id: "c6-ban-ch5-l1",
               point: "৫.১",
-              title: "Poetry and Rhymes",
-              titleBangla: "৫.১ কবিতা ও ছড়া: ছন্দ ও রূপক",
-              summary: "কবিতা পাঠে অনুভূতির প্রকাশ ও অন্ত্যমিলের বৈচিত্র্য।",
-              keywords: ["কবিতা", "ছন্দ", "রূপক", "সাহিত্য"]
+              title: "Poetry and Rhymes (Bachate Dao & Manush Jati)",
+              titleBangla: "৫.১ কবিতা: শামসুর রাহমানের 'বাঁচতে দাও' ও ছন্দ বিচার",
+              summary: "প্রকৃতিপ্রেম, অন্ত্যমিল, রূপক ও কবির আবেগময় অনুভূতির নান্দনিক বিচার।",
+              keywords: ["কবিতা", "বাঁচতে দাও", "ছন্দ", "শামসুর রাহমান"]
             },
             {
               id: "c6-ban-ch5-l2",
               point: "৫.২",
-              title: "Short Stories and Dramas",
-              titleBangla: "৫.২ গল্প ও নাটক: চরিত্র ও কাহিনী বিন্যাস",
-              summary: "ছোটগল্পের কাহিনীসূত্র এবং নাটকের সংলাপ পাঠের আনন্দ।",
-              keywords: ["গল্প", "নাটক", "চরিত্র", "সংলাপ"]
+              title: "Short Stories (Minu & Tolpar)",
+              titleBangla: "৫.২ গল্প: বনফুলের 'মিনু' ও শওকত ওসমানের 'তোলপাড়'",
+              summary: "প্রতিবন্ধী মিনুর নিজস্ব জগৎ এবং একাত্তরের মুক্তিযুদ্ধে সাধারণ মানুষের আত্মত্যাগ।",
+              keywords: ["মিনু", "বনফুল", "তোলপাড়", "মুক্তিযুদ্ধ", "ছোটগল্প"]
+            },
+            {
+              id: "c6-ban-ch5-l3",
+              point: "৫.৩",
+              title: "Drama and Dialogue (Sukhi Manush)",
+              titleBangla: "৫.৩ নাটক: মমতাজউদদীন আহমদের 'সুখী মানুষ'",
+              summary: "প্রকৃত সুখের সংজ্ঞা, লোভহীন জীবন এবং চরিত্রের সংলাপভিত্তিক অভিনয় কৌশল।",
+              keywords: ["সুখী মানুষ", "নাটক", "মমতাজউদদীন আহমদ", "সংলাপ"]
+            },
+            {
+              id: "c6-ban-ch5-l4",
+              point: "৫.৪",
+              title: "Essays and Travelogues",
+              titleBangla: "৫.৪ প্রবন্ধ ও ভ্রমণকাহিনী: ভাষার ইতিহাস ও প্রকৃতির রূপ",
+              summary: "অমর একুশে ও ভাষা আন্দোলনের ইতিহাস এবং ভ্রমণলিপির বিবরণভিত্তিক রচনা।",
+              keywords: ["প্রবন্ধ", "ভ্রমণকাহিনী", "অমর একুশে", "ভাষা আন্দোলন"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ২. ইংরেজি (English)
+    // ----------------------------------------------------
     {
       id: "c6-english",
       code: "ENG-06",
       name: "English",
       nameBangla: "ইংরেজি",
       group: "General",
-      coverColor: "from-blue-600 to-indigo-800",
+      coverColor: "from-blue-600 to-indigo-850",
       chapters: [
         {
-          id: "c6-eng-ch1",
+          id: "c6-eng-exp1",
           chapterNumber: 1,
           title: "Talking to People",
-          titleBangla: "Experience 1: Talking to People (কথোপকথন)",
+          titleBangla: "Experience 1: Talking to People (কথোপকথন ও শুভেচ্ছা বিনিময়)",
           lessons: [
             {
-              id: "c6-eng-ch1-l1",
+              id: "c6-eng-exp1-l1",
               point: "1.1",
               title: "Formal vs Informal Greetings",
-              titleBangla: "১.১ ফরমাল এবং ইনফরমাল অভিবাদন",
-              summary: "Appropriate ways of saying hello to teachers, strangers, and friends.",
+              titleBangla: "১.১ ফরমাল এবং ইনফরমাল অভিবাদন রীতি",
+              summary: "Learning how to greet teachers, strangers, and friends politely in different contexts.",
               keywords: ["greetings", "formal", "informal", "communication"]
             },
             {
-              id: "c6-eng-ch1-l2",
+              id: "c6-eng-exp1-l2",
               point: "1.2",
-              title: "Conversational Expressions",
-              titleBangla: "১.২ প্রাত্যহিক জীবনের প্রয়োজনীয় অভিব্যক্তি",
-              summary: "Practicing politely asking for help, directions, and thanking others.",
-              keywords: ["politeness", "help", "expressions"]
+              title: "Polite Requests and Courtesies",
+              titleBangla: "১.২ বিনম্র অনুরোধ ও সৌজন্যমূলক বাক্যচর্চা",
+              summary: "Practicing expressions like 'Could you please', 'May I', 'Thank you', and 'Excuse me'.",
+              keywords: ["politeness", "requests", "expressions", "manners"]
+            },
+            {
+              id: "c6-eng-exp1-l3",
+              point: "1.3",
+              title: "Situational Role Plays",
+              titleBangla: "১.৩ বাস্তব পরিস্থিতিভিত্তিক ডায়লগ রোল প্লে",
+              summary: "Enacting conversations at a bus stop, grocery shop, and school library.",
+              keywords: ["role play", "dialogue", "speaking skills"]
             }
           ]
         },
         {
-          id: "c6-eng-ch2",
+          id: "c6-eng-exp2",
           chapterNumber: 2,
           title: "Little Things",
-          titleBangla: "Experience 2: Little Things (ক্ষুদ্র প্রচেষ্টা)",
+          titleBangla: "Experience 2: Little Things (কবিতা ও ক্ষুদ্র মহত্ত্ব)",
           lessons: [
             {
-              id: "c6-eng-ch2-l1",
+              id: "c6-eng-exp2-l1",
               point: "2.1",
-              title: "Poem Recitation & Rhythm",
+              title: "Poem Recitation with Stress and Intonation",
               titleBangla: "২.১ কবিতা আবৃত্তি ও ছন্দ অনুধাবন",
-              summary: "Reading 'Little Things' with correct intonation, stress and rhythm.",
-              keywords: ["poetry", "recitation", "rhythm"]
+              summary: "Reading 'Little Things' by Julia Fletcher Carney with proper cadence and rhyme.",
+              keywords: ["poetry", "rhyme", "little things", "recitation"]
             },
             {
-              id: "c6-eng-ch2-l2",
+              id: "c6-eng-exp2-l2",
               point: "2.2",
               title: "Moral Reflection Writing",
               titleBangla: "২.২ ক্ষুদ্র উপকারের তাৎপর্য লিখে প্রকাশ",
-              summary: "Writing simple paragraphs describing small good deeds in school.",
-              keywords: ["writing", "reflection", "good deeds"]
+              summary: "Writing simple paragraphs describing how small acts of kindness bring happiness.",
+              keywords: ["kindness", "moral", "reflection", "writing"]
             }
           ]
         },
         {
-          id: "c6-eng-ch3",
+          id: "c6-eng-exp3",
           chapterNumber: 3,
           title: "Future Lies in Present",
-          titleBangla: "Experience 3: Future Lies in Present (বর্তমান ও ভবিষ্যৎ)",
+          titleBangla: "Experience 3: Future Lies in Present (বর্তমান ও ভবিষ্যৎ ভাবনা)",
           lessons: [
             {
-              id: "c6-eng-ch3-l1",
+              id: "c6-eng-exp3-l1",
               point: "3.1",
-              title: "Daily Activities and Habits",
-              titleBangla: "৩.১ দৈনন্দিন কাজ ও অভ্যাসের বর্ণনা",
-              summary: "Using Simple Present Tense to describe everyday chores and studies.",
-              keywords: ["habits", "present tense", "routine"]
+              title: "Daily Routine and Habits in Simple Present",
+              titleBangla: "৩.১ দৈনন্দিন অভ্যাস প্রকাশে সিম্পল প্রেজেন্ট টেন্স",
+              summary: "Using verbs to describe everyday morning routines, hobbies, and timetable.",
+              keywords: ["routine", "present tense", "verbs", "habits"]
+            },
+            {
+              id: "c6-eng-exp3-l2",
+              point: "3.2",
+              title: "Expressing Future Aspirations and Goals",
+              titleBangla: "৩.২ ভবিষ্যৎ স্বপ্ন ও পরিকল্পনা প্রকাশ",
+              summary: "Expressing intentions using 'I want to be', 'I will', and 'In future'.",
+              keywords: ["future goals", "aspirations", "planning"]
             }
           ]
         },
         {
-          id: "c6-eng-ch4",
+          id: "c6-eng-exp4",
           chapterNumber: 4,
           title: "Ask and Answer",
           titleBangla: "Experience 4: Ask and Answer (প্রশ্ন করা ও উত্তর প্রদান)",
           lessons: [
             {
-              id: "c6-eng-ch4-l1",
+              id: "c6-eng-exp4-l1",
               point: "4.1",
-              title: "Wh- Questions & Yes/No Questions",
-              titleBangla: "৪.১ ডব্লিউএইচ প্রশ্ন ও হ্যাঁ/না উত্তরের বাক্য গঠন",
-              summary: "Formulating questions using who, what, when, where, why and how.",
-              keywords: ["questions", "interrogative", "grammar"]
+              title: "Formulating Wh- Questions",
+              titleBangla: "৪.১ হু, হোয়াট, হোয়েন, হোয়ার ও হোয়াই দিয়ে প্রশ্ন গঠন",
+              summary: "Understanding interrogative structures using who, what, when, where, why, and how.",
+              keywords: ["wh-questions", "interrogative", "sentence structure"]
+            },
+            {
+              id: "c6-eng-exp4-l2",
+              point: "4.2",
+              title: "Yes/No Questions and Short Responses",
+              titleBangla: "৪.২ হ্যাঁ/না উত্তরের প্রশ্ন ও সংক্ষিপ্ত জবাব প্রদান",
+              summary: "Using auxiliary verbs (do, does, is, are, can) to ask and answer crisp questions.",
+              keywords: ["yes no questions", "auxiliary verbs", "answers"]
             }
           ]
         },
         {
-          id: "c6-eng-ch5",
+          id: "c6-eng-exp5",
           chapterNumber: 5,
           title: "Together We are One",
           titleBangla: "Experience 5: Together We are One (একতাই বল)",
           lessons: [
             {
-              id: "c6-eng-ch5-l1",
+              id: "c6-eng-exp5-l1",
               point: "5.1",
-              title: "Teamwork and Cooperation Stories",
-              titleBangla: "৫.১ সমবায় ও দলীয় কাজের গল্প",
-              summary: "Reading stories illustrating collaboration and writing short opinions.",
-              keywords: ["teamwork", "story", "unity"]
+              title: "Reading Fables on Unity and Teamwork",
+              titleBangla: "৫.১ ঐক্য ও সমবায় ভিত্তিক নীতিকথা পাঠ",
+              summary: "Reading stories illustrating the strength of togetherness and moral values.",
+              keywords: ["unity", "teamwork", "fable", "moral story"]
+            }
+          ]
+        },
+        {
+          id: "c6-eng-exp6",
+          chapterNumber: 6,
+          title: "The Missing Tenth Man",
+          titleBangla: "Experience 6: The Missing Tenth Man (মজার গল্প ও বুদ্ধিমত্তা)",
+          lessons: [
+            {
+              id: "c6-eng-exp6-l1",
+              point: "6.1",
+              title: "Humor, Wit and Logical Problem Solving",
+              titleBangla: "৬.১ কৌতুকপূর্ণ গল্প ও যুক্তিনির্ভর সমাধান",
+              summary: "Reading a humorous folk tale and analyzing how counting mistake was corrected.",
+              keywords: ["humor", "counting", "logic", "story"]
+            }
+          ]
+        },
+        {
+          id: "c6-eng-exp7",
+          chapterNumber: 7,
+          title: "A Day in the Life of Mina",
+          titleBangla: "Experience 7: A Day in the Life of Mina (মিনার একদিন)",
+          lessons: [
+            {
+              id: "c6-eng-exp7-l1",
+              point: "7.1",
+              title: "Connecting Words (Sequencers: First, Next, Then, Finally)",
+              titleBangla: "৭.১ ধারাবাহিকতা রক্ষাকারী যোজক (Sequencers) ব্যবহার",
+              summary: "Using connectives like First, Then, After that, Finally to sequence a story chronologically.",
+              keywords: ["sequencers", "chronology", "writing", "storyline"]
+            }
+          ]
+        },
+        {
+          id: "c6-eng-exp8",
+          chapterNumber: 8,
+          title: "Bangabandhu, My Inspiration",
+          titleBangla: "Experience 8: Bangabandhu, My Inspiration (বঙ্গবন্ধু, আমার অনুপ্রেরণা)",
+          lessons: [
+            {
+              id: "c6-eng-exp8-l1",
+              point: "8.1",
+              title: "Biography Reading and Heroic Qualities",
+              titleBangla: "৮.১ জীবনী পাঠ ও মানবিক গুণাবলি বিশ্লেষণ",
+              summary: "Reading incidents from the childhood of Bangabandhu Sheikh Mujibur Rahman.",
+              keywords: ["Bangabandhu", "biography", "inspiration", "hero"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ৩. গণিত (Mathematics)
+    // ----------------------------------------------------
     {
       id: "c6-math",
       code: "MATH-06",
@@ -262,25 +401,33 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-math-ch1-l1",
               point: "১.১",
-              title: "Ancient Number Systems",
-              titleBangla: "১.১ দাগ কেটে গণনা ও প্রাচীন সংখ্যা পদ্ধতি",
-              summary: "মিশরীয় হায়ারোগ্লিফিক, রোমান ও মায়ান সংখ্যা গণনার ইতিহাস।",
-              keywords: ["প্রাচীন সংখ্যা", "রোমান সংখ্যা", "টালি চিহ্ন"]
+              title: "Ancient Tally Marks & Egyptian Hieroglyphics",
+              titleBangla: "১.১ দাগ কেটে গণনা ও মিশরীয় হায়ারোগ্লিফিক সংখ্যা",
+              summary: "হাড়ে ও গুহায় দাগ কেটে গণনার সূচনা এবং হায়ারোগ্লিফিক প্রতীকের ব্যবহার।",
+              keywords: ["প্রাচীন সংখ্যা", "টালি চিহ্ন", "মিশরীয় সংখ্যা"]
             },
             {
               id: "c6-math-ch1-l2",
               point: "১.২",
-              title: "Decimal Place Value System",
-              titleBangla: "১.২ দশমিক সংখ্যা পদ্ধতি ও স্থানীয় মান",
-              summary: "১০ ভিত্তিক সংখ্যা পদ্ধতির উৎপত্তি, স্থানীয় ও স্বকীয় মানের সম্পর্ক।",
-              keywords: ["স্থানীয় মান", "দশমিক পদ্ধতি", "স্বকীয় মান"]
+              title: "Mayan and Roman Number Systems",
+              titleBangla: "১.২ মায়ান ও রোমান সংখ্যা পদ্ধতির নিয়ম",
+              summary: "বিন্দু ও দাগ দিয়ে মায়ান সংখ্যা এবং I, V, X, L, C, D, M দিয়ে রোমান সংখ্যা লেখা।",
+              keywords: ["মায়ান সংখ্যা", "রোমান সংখ্যা", "প্রতীক"]
             },
             {
               id: "c6-math-ch1-l3",
               point: "১.৩",
-              title: "Magic Squares and Puzzles",
-              titleBangla: "১.৩ সংখ্যার ধাঁধা ও ৩x৩ ম্যাজিক বর্গ",
-              summary: "সংখ্যার মজার প্যাটার্ন এবং ম্যাজিক বর্গ সমাধানের মূল কৌশল।",
+              title: "Decimal Place Value and Significance of Zero",
+              titleBangla: "১.৩ স্থানীয় মান, দশভিত্তিক পদ্ধতি ও শূন্যের আবিষ্কার",
+              summary: "ভারতীয় উপমহাদেশে শূন্যের আবিষ্কার এবং দশমিক স্থানীয় মানের সুবিধা।",
+              keywords: ["স্থানীয় মান", "দশমিক পদ্ধতি", "শূন্য", "স্বকীয় মান"]
+            },
+            {
+              id: "c6-math-ch1-l4",
+              point: "১.৪",
+              title: "Puzzles and 3x3 Magic Square",
+              titleBangla: "১.৪ সংখ্যার ধাঁধা ও ৩x৩ ম্যাজিক বর্গ তৈরি",
+              summary: "ম্যাজিক বর্গের প্রতিটি সারি, স্তম্ভ ও কর্ণের যোগফল ১৫ মেলানোর গাণিতিক কৌশল।",
               keywords: ["ম্যাজিক বর্গ", "সংখ্যার ধাঁধা", "প্যাটার্ন"]
             }
           ]
@@ -294,99 +441,271 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-math-ch2-l1",
               point: "২.১",
-              title: "Geometry of Triangles and Quadrilaterals",
-              titleBangla: "২.১ ত্রিভুজ ও চতুর্ভুজের বৈশিষ্ট্য এবং শ্রেণিবিন্যাস",
-              summary: "কোণ ও বাহুর ভিত্তিতে বিভিন্ন জ্যামিতিক চিত্রের বৈশিষ্ট্য নিরূপণ।",
-              keywords: ["ত্রিভুজ", "চতুর্ভুজ", "বাহু", "কোণ"]
+              title: "Triangles: Classification by Sides and Angles",
+              titleBangla: "২.১ বাহু ও কোণভেদে ত্রিভুজের প্রকারভেদ ও বৈশিষ্ট্য",
+              summary: "সমবাহু, সমদ্বিবাহু, বিষমবাহু এবং সূক্ষ্মকোণী, সমকোণী, স্থূলকোণী ত্রিভুজ।",
+              keywords: ["ত্রিভুজ", "সমকোণী", "সমবাহু", "জ্যামিতি"]
             },
             {
               id: "c6-math-ch2-l2",
               point: "২.২",
-              title: "Perimeter and Area of Polygons",
-              titleBangla: "২.২ পরিসীমা ও ক্ষেত্রফল নির্ণয়ের ধারণা",
-              summary: "আয়তক্ষেত্র, বর্গক্ষেত্র ও ত্রিভুজের বাস্তব ক্ষেত্রফল পরিমাপ।",
-              keywords: ["পরিসীমা", "ক্ষেত্রফল", "পরিমাপ"]
+              title: "Quadrilaterals and Polygons",
+              titleBangla: "২.২ চতুর্ভুজ (আয়ত, বর্গ, রম্বস, সামান্তরিক) ও বহুভুজ",
+              summary: "কর্ণ, বিপরীত বাহু এবং কোণসমূহের সম্পর্কের ভিত্তিতে চতুর্ভুজ চেনা।",
+              keywords: ["আয়তক্ষেত্র", "বর্গক্ষেত্র", "রম্বস", "সামান্তরিক"]
+            },
+            {
+              id: "c6-math-ch2-l3",
+              point: "২.৩",
+              title: "Perimeter and Paper-Cutting Area Formulas",
+              titleBangla: "২.৩ পরিসীমা পরিমাপ ও কাগজ কেটে ক্ষেত্রফল নির্ণয়",
+              summary: "বাস্তব বস্তু ফিতা দিয়ে মেপে পরিসীমা ও গ্রিড পেপারে ক্ষেত্রফল গণনা।",
+              keywords: ["পরিসীমা", "ক্ষেত্রফল", "গ্রিড পেপার", "পরিমাপ"]
             }
           ]
         },
         {
           id: "c6-math-ch3",
           chapterNumber: 3,
-          title: "Tree of Prime Factors",
-          titleBangla: "৩য় অধ্যায়: মৌলিক উৎপাদকের গাছ",
+          title: "Information Search and Analysis",
+          titleBangla: "৩য় অধ্যায়: তথ্য অনুসন্ধান ও বিশ্লেষণ",
           lessons: [
             {
               id: "c6-math-ch3-l1",
               point: "৩.১",
-              title: "Prime Factor Tree Creation",
-              titleBangla: "৩.১ মৌলিক উৎপাদকের গাছ তৈরি ও উৎপাদকে বিশ্লেষণ",
-              summary: "সংখ্যার মৌলিক উৎপাদক গাছের শাখা-প্রশাখা আকারে উপস্থাপন।",
-              keywords: ["মৌলিক সংখ্যা", "উৎপাদক গাছ", "গুণনীয়ক"]
+              title: "Data Collection and Frequency Distribution Table",
+              titleBangla: "৩.১ উপাত্ত সংগ্রহ ও গণসংখ্যা নিবেশন সারণি তৈরি",
+              summary: "শ্রেণিকক্ষের সহপাঠীদের তথ্য টালি চিহ্নের মাধ্যমে সুবিন্যস্ত করা।",
+              keywords: ["উপাত্ত", "গণসংখ্যা সারণি", "টালি চিহ্ন"]
             },
             {
               id: "c6-math-ch3-l2",
               point: "৩.২",
-              title: "HCF and LCM via Factor Tree",
-              titleBangla: "৩.২ গ.সা.গু. এবং ল.সা.গু. নির্ণয়ের কৌশল",
-              summary: "সাধারণ মৌলিক গুণনীয়ক ব্যবহার করে গ.সা.গু. ও ল.সা.গু. সমাধান।",
-              keywords: ["গসাগু", "লসাগু", "সাধারণ উৎপাদক"]
+              title: "Bar Charts and Interpretation",
+              titleBangla: "৩.২ স্তম্ভলেখ (Bar Chart) অঙ্কন ও চিত্র দেখে সিদ্ধান্ত",
+              summary: "গ্রাফ পেপারে এক্স ও ওয়াই অক্ষে স্তম্ভ এঁকে তথ্যের তুলনা করা।",
+              keywords: ["স্তম্ভলেখ", "বার চার্ট", "গ্রাফ পেপার"]
+            },
+            {
+              id: "c6-math-ch3-l3",
+              point: "৩.৩",
+              title: "Arithmetic Mean (Average)",
+              titleBangla: "৩.৩ গাণিতিক গড় নির্ণয়ের পদ্ধতি",
+              summary: "রাশিগুলোর যোগফলকে রাশির সংখ্যা দিয়ে ভাগ করে গড় বের করা।",
+              keywords: ["গড়", "পরিসংখ্যান", "গাণিতিক গড়"]
             }
           ]
         },
         {
           id: "c6-math-ch4",
           chapterNumber: 4,
-          title: "Realm of Integers",
-          titleBangla: "৪র্থ অধ্যায়: পূর্ণসংখ্যার জগৎ",
+          title: "Tree of Prime Factors",
+          titleBangla: "৪র্থ অধ্যায়: মৌলিক উৎপাদকের গাছ",
           lessons: [
             {
               id: "c6-math-ch4-l1",
               point: "৪.১",
-              title: "Negative Numbers and Number Line",
-              titleBangla: "৪.১ ঋণাত্মক সংখ্যা ও সংখ্যারেখায় স্থাপন",
-              summary: "শূন্যের চেয়ে ছোট সংখ্যার ধারণা এবং সংখ্যারেখায় অবস্থান প্রদর্শন।",
-              keywords: ["পূর্ণসংখ্যা", "সংখ্যারেখা", "ঋণাত্মক সংখ্যা"]
+              title: "Prime and Composite Numbers Identification",
+              titleBangla: "৪.১ মৌলিক ও যৌগিক সংখ্যা শনাক্তকরণ (ইরাটোস্থেনিসের চালুনি)",
+              summary: "১ থেকে ১০০ পর্যন্ত সংখ্যার মধ্যে মৌলিক সংখ্যা খুঁজে বের করার ছক।",
+              keywords: ["মৌলিক সংখ্যা", "যৌগিক সংখ্যা", "ইরাটোস্থেনিস"]
             },
             {
               id: "c6-math-ch4-l2",
               point: "৪.২",
-              title: "Addition & Subtraction of Integers",
-              titleBangla: "৪.২ সংখ্যারেখার সাহায্যে পূর্ণসংখ্যার যোগ ও বিয়োগ",
-              summary: "চিহ্নযুক্ত রাশির যোগ-বিয়োগের ব্যবহারিক নিয়ম।",
-              keywords: ["যোগ বিয়োগ", "চিহ্নযুক্ত রাশি"]
+              title: "Factor Tree Branching Method",
+              titleBangla: "৪.২ মৌলিক উৎপাদকের গাছ আঁকা ও গুণনীয়ক বিশ্লেষণ",
+              summary: "যৌগিক সংখ্যাকে মৌলিক উৎপাদকের ডালপালায় বিভক্ত করা।",
+              keywords: ["উৎপাদক গাছ", "মৌলিক উৎপাদক", "শাখা"]
+            },
+            {
+              id: "c6-math-ch4-l3",
+              point: "৪.৩",
+              title: "HCF (GCD) via Factor Tree & Division Algorithm",
+              titleBangla: "৪.৩ গরিষ্ঠ সাধারণ গুণনীয়ক (গ.সা.গু.) নির্ণয়",
+              summary: "গাছের সাধারণ শাখা থেকে এবং ইউক্লিডীয় ভাগ প্রক্রিয়ায় গ.সা.গু. নির্ণয়।",
+              keywords: ["গসাগু", "গরিষ্ঠ সাধারণ গুণনীয়ক", "ইউক্লিড"]
+            },
+            {
+              id: "c6-math-ch4-l4",
+              point: "৪.৪",
+              title: "LCM via Factor Tree & Real-Life Word Problems",
+              titleBangla: "৪.৪ লঘিষ্ট সাধারণ গুণিতক (ল.সা.গু.) ও বাস্তব সমস্যা সমাধান",
+              summary: "ঘণ্টা বাজার অংক ও লাইব্রেরির বই সাজানোর বাস্তব সমস্যা সমাধান।",
+              keywords: ["লসাগু", "বাস্তব সমস্যা", "গুণিতক"]
             }
           ]
         },
         {
           id: "c6-math-ch5",
           chapterNumber: 5,
-          title: "Linear Equations",
-          titleBangla: "৫ম অধ্যায়: সরল সমীকরণ",
+          title: "Measuring Length",
+          titleBangla: "৫ম অধ্যায়: দৈর্ঘ্য মাপি",
           lessons: [
             {
               id: "c6-math-ch5-l1",
               point: "৫.১",
-              title: "Concept of Variables and Balance",
-              titleBangla: "৫.১ অজানা রাশি (চলক) ও দাঁড়িপাল্লার সাম্যাবস্থা",
-              summary: "দাঁড়িপাল্লার দুই পাল্লার মাধ্যমে সমীকরণের ভারসাম্য নীতি অনুধাবন।",
-              keywords: ["চলক", "সমীকরণ", "দাঁড়িপাল্লা"]
+              title: "Metric Units of Length (mm, cm, m, km)",
+              titleBangla: "৫.১ দৈর্ঘ্যের মেট্রিক একক ও পারস্পরিক রূপান্তর",
+              summary: "মিটার স্কেল ব্যবহার করে মিলিমিটার থেকে কিলোমিটার রূপান্তর।",
+              keywords: ["মিটার", "সেন্টিমিটার", "কিলোমিটার", "স্কেল"]
             },
             {
               id: "c6-math-ch5-l2",
               point: "৫.২",
-              title: "Solving Linear Equations",
-              titleBangla: "৫.২ এক চলকবিশিষ্ট সরল সমীকরণ সমাধান",
-              summary: "পক্ষান্তর বিধি প্রয়োগ করে অজ্ঞাত রাশির মান নির্ণয়।",
-              keywords: ["পক্ষান্তর", "সমাধান", "বীজগণিত"]
+              title: "Measuring Curved Lines and Irregular Boundaries",
+              titleBangla: "৫.২ সুতা ও স্কেল দিয়ে বক্ররেখার দৈর্ঘ্য পরিমাপ",
+              summary: "বক্ররেখা ও আঁকাবাঁকা সীমানার সঠিক মাপ নেওয়ার কৌশল।",
+              keywords: ["বক্ররেখা", "সুতা", "পরিমাপ"]
+            }
+          ]
+        },
+        {
+          id: "c6-math-ch6",
+          chapterNumber: 6,
+          title: "Realm of Integers",
+          titleBangla: "৬ষ্ঠ অধ্যায়: পূর্ণসংখ্যার জগৎ",
+          lessons: [
+            {
+              id: "c6-math-ch6-l1",
+              point: "৬.১",
+              title: "Concept of Negative Numbers in Real Life",
+              titleBangla: "৬.১ বাস্তব জীবনে ঋণাত্মক সংখ্যার প্রয়োজন (লাভ-ক্ষতি, তাপমাত্রা)",
+              summary: "শূন্যের নিচে তাপমাত্রা ও ব্যাংকের ঋণ প্রকাশের চিহ্নযুক্ত সংখ্যা।",
+              keywords: ["ঋণাত্মক সংখ্যা", "লাভ ক্ষতি", "চিহ্নযুক্ত সংখ্যা"]
+            },
+            {
+              id: "c6-math-ch6-l2",
+              point: "৬.২",
+              title: "Number Line Placement of Integers",
+              titleBangla: "৬.২ সংখ্যারেখায় ধনাত্মক ও ঋণাত্মক সংখ্যার অবস্থান",
+              summary: "শূন্যের ডানে ধনাত্মক এবং বামে ঋণাত্মক সংখ্যার স্থাপন ও ক্রম তুলনা।",
+              keywords: ["সংখ্যারেখা", "ধনাত্মক", "ঋণাত্মক"]
+            },
+            {
+              id: "c6-math-ch6-l3",
+              point: "৬.৩",
+              title: "Addition and Subtraction on Number Line",
+              titleBangla: "৬.৩ সংখ্যারেখার লাফে পূর্ণসংখ্যার যোগ ও বিয়োগ",
+              summary: "(+৫) + (-৩) এবং ঋণাত্মক সংখ্যার বিয়োগের দিক পরিবর্তন।",
+              keywords: ["যোগ বিয়োগ", "সংখ্যারেখায় লাফ", "পূর্ণসংখ্যা"]
+            }
+          ]
+        },
+        {
+          id: "c6-math-ch7",
+          chapterNumber: 7,
+          title: "Game of Fractions",
+          titleBangla: "৭ম অধ্যায়: ভগ্নাংশের খেলা",
+          lessons: [
+            {
+              id: "c6-math-ch7-l1",
+              point: "৭.১",
+              title: "Proper, Improper, and Mixed Fractions",
+              titleBangla: "৭.১ প্রকৃত, অপ্রকৃত ও মিশ্র ভগ্নাংশের দৃশ্যমান রূপ",
+              summary: "বৃত্ত ও আয়তক্ষেত্র কেটে ভগ্নাংশের অংশ চিহ্নিতকরণ।",
+              keywords: ["প্রকৃত ভগ্নাংশ", "অপ্রকৃত ভগ্নাংশ", "মিশ্র ভগ্নাংশ"]
+            },
+            {
+              id: "c6-math-ch7-l2",
+              point: "৭.২",
+              title: "Equivalent Fractions and Common Denominator",
+              titleBangla: "৭.২ সমতুল ভগ্নাংশ তৈরি ও হর সমতাকরণ",
+              summary: "লব ও হরকে একই সংখ্যা দিয়ে গুণ বা ভাগ করে সমতুল ভগ্নাংশ পাওয়া।",
+              keywords: ["সমতুল ভগ্নাংশ", "লব", "হর"]
+            },
+            {
+              id: "c6-math-ch7-l3",
+              point: "৭.৩",
+              title: "Multiplication and Division of Fractions",
+              titleBangla: "৭.৩ কাগজ ভাঁজে ভগ্নাংশের গুণ এবং বিপরীত ভগ্নাংশে ভাগ",
+              summary: "কাগজ ভাঁজ খেলার মাধ্যমে ভগ্নাংশের গুণের অর্থ বোঝা ও ভাগ সমাধান।",
+              keywords: ["কাগজ ভাঁজ", "ভগ্নাংশের গুণ", "বিপরীত ভগ্নাংশ"]
+            }
+          ]
+        },
+        {
+          id: "c6-math-ch8",
+          chapterNumber: 8,
+          title: "World of Unknown Quantities",
+          titleBangla: "৮ম অধ্যায়: অজানা রাশির জগৎ",
+          lessons: [
+            {
+              id: "c6-math-ch8-l1",
+              point: "৮.১",
+              title: "Variables, Coefficients and Algebraic Terms",
+              titleBangla: "৮.১ চলক (x, y), সহগ ও বীজগণিতীয় পদ",
+              summary: "অজ্ঞাত সংখ্যাকে অক্ষর প্রতীক দিয়ে প্রকাশ করার নিয়মাবলী।",
+              keywords: ["চলক", "সহগ", "পদ", "বীজগণিত"]
+            },
+            {
+              id: "c6-math-ch8-l2",
+              point: "৮.২",
+              title: "Addition and Subtraction of Like Terms",
+              titleBangla: "৮.২ সদৃশ ও বিসদৃশ পদের যোগ এবং বিয়োগ",
+              summary: "একই চলকবিশিষ্ট পদের সহগ যোগ-বিয়োগের বিধি।",
+              keywords: ["সদৃশ পদ", "বিসদৃশ পদ", "যোগ বিয়োগ"]
+            }
+          ]
+        },
+        {
+          id: "c6-math-ch9",
+          chapterNumber: 9,
+          title: "Linear Equations",
+          titleBangla: "৯ম অধ্যায়: সরল সমীকরণ",
+          lessons: [
+            {
+              id: "c6-math-ch9-l1",
+              point: "৯.১",
+              title: "Balance Scales & Equation Equality Principle",
+              titleBangla: "৯.১ দাঁড়িপাল্লার সাম্যাবস্থা ও সমীকরণের উভয় পক্ষের বিধি",
+              summary: "দাঁড়িপাল্লার দুই পাশে একই ওজন যোগ বা বিয়োগের ধারণা।",
+              keywords: ["দাঁড়িপাল্লা", "সাম্যাবস্থা", "সমীকরণ"]
+            },
+            {
+              id: "c6-math-ch9-l2",
+              point: "৯.২",
+              title: "Transposition Method and Solving for Variable",
+              titleBangla: "৯.২ পক্ষান্তর বিধি প্রয়োগ করে অজ্ঞাত রাশির সমাধান",
+              summary: "ax + b = c সমীকরণ থেকে চলকের মান বের করা।",
+              keywords: ["পক্ষান্তর", "সমাধান", "সরল সমীকরণ"]
+            }
+          ]
+        },
+        {
+          id: "c6-math-ch10",
+          chapterNumber: 10,
+          title: "Story of 3D Objects",
+          titleBangla: "১০ম অধ্যায়: ত্রিমাত্রিক বস্তুর গল্প",
+          lessons: [
+            {
+              id: "c6-math-ch10-l1",
+              point: "১০.১",
+              title: "Faces, Edges, and Vertices of Cubes and Prisms",
+              titleBangla: "১০.১ ঘনক ও আয়তাকার ঘনবস্তুর তল, ধার ও শীর্ষবিন্দু",
+              summary: "দেশলাই বক্স ও কিউব দেখে ৬টি তল, ১২টি ধার ও ৮টি শীর্ষবিন্দু পর্যবেক্ষণ।",
+              keywords: ["ঘনক", "তল", "ধার", "শীর্ষবিন্দু", "ত্রিমাত্রিক"]
+            },
+            {
+              id: "c6-math-ch10-l2",
+              point: "১০.২",
+              title: "Unfolding 3D Nets and Surface Area Concept",
+              titleBangla: "১০.২ নেট (Net) তৈরি ও সমগ্রতলের ক্ষেত্রফল",
+              summary: "বাক্স কেটে সমতলে নেট তৈরি ও তলগুলোর ক্ষেত্রফল গণনা।",
+              keywords: ["নেট", "সমগ্রতল", "ক্ষেত্রফল", "বাক্স"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ৪. বিজ্ঞান - অনুসন্ধানী পাঠ (Science Inquiry)
+    // ----------------------------------------------------
     {
       id: "c6-science-inquiry",
       code: "SCI-06-INQ",
-      name: "Science (Inquiry Book)",
+      name: "Science (Inquiry)",
       nameBangla: "বিজ্ঞান (অনুসন্ধানী পাঠ)",
       group: "General",
       coverColor: "from-cyan-600 to-sky-850",
@@ -395,110 +714,222 @@ export const CLASS_6_DATA: ClassGrade = {
           id: "c6-sci-inq-ch1",
           chapterNumber: 1,
           title: "Scientific Inquiry and SI Units",
-          titleBangla: "১ম অধ্যায়: বৈজ্ঞানিক অনুসন্ধান ও পরিমাপের একক",
+          titleBangla: "১ম অধ্যায়: বৈজ্ঞানিক অনুসন্ধান ও পরিমাপের আন্তর্জাতিক একক",
           lessons: [
             {
               id: "c6-sci-inq-ch1-l1",
               point: "১.১",
-              title: "Steps of Inquiry Process",
+              title: "Inquiry Cycle Steps (Observation to Conclusion)",
               titleBangla: "১.১ বৈজ্ঞানিক অনুসন্ধানের যৌক্তিক ধাপসমূহ",
-              summary: "পর্যবেক্ষণ, প্রশ্ন তৈরি, অনুমান, পরীক্ষণ ও সিদ্ধান্তের ধাপ।",
-              keywords: ["অনুসন্ধান", "পরীক্ষণ", "বিজ্ঞান"]
+              summary: "প্রশ্ন উত্থাপন, অনুমান গঠন, নিয়ন্ত্রিত পরীক্ষণ, উপাত্ত বিশ্লেষণ ও সিদ্ধান্ত গ্রহণ।",
+              keywords: ["অনুসন্ধান", "পরীক্ষণ", "বিজ্ঞানসম্মত পদ্ধতি"]
             },
             {
               id: "c6-sci-inq-ch1-l2",
               point: "১.২",
-              title: "SI Units and Measuring Tools",
-              titleBangla: "১.২ আন্তর্জাতিক একক (SI Units) ও পরিমাপক যন্ত্র",
-              summary: "দৈর্ঘ্য (মিটার), ভর (কেজি) এবং সময় (সেকেন্ড) এর পরিমাপ।",
-              keywords: ["এসআই একক", "মিটার", "কেজি", "স্কেল"]
+              title: "SI System of Units (Meter, Kilogram, Second)",
+              titleBangla: "১.২ আন্তর্জাতিক একক (SI Units) ও পরিমাপক যন্ত্রপাতির ব্যবহার",
+              summary: "দৈর্ঘ্য, ভর ও সময় পরিমাপের মৌলিক একক এবং পরিমাপের নির্ভুলতা।",
+              keywords: ["এসআই একক", "মিটার", "কেজি", "সেকেন্ড"]
             }
           ]
         },
         {
           id: "c6-sci-inq-ch2",
           chapterNumber: 2,
-          title: "Living Cells and Structure",
-          titleBangla: "২য় অধ্যায়: জীবকোষের গঠন",
+          title: "Living World and Classification",
+          titleBangla: "২য় অধ্যায়: জীবজগৎ ও জীবের শ্রেণিবিন্যাস",
           lessons: [
             {
               id: "c6-sci-inq-ch2-l1",
               point: "২.১",
-              title: "Parts of Plant & Animal Cells",
-              titleBangla: "২.১ উদ্ভিদ ও প্রাণী কোষের বিভিন্ন অঙ্গাণুর কাজ",
-              summary: "কোষপ্রাচীর, কোষঝিল্লি, সাইটোপ্লাজম ও নিউক্লিয়াসের ভূমিকা।",
-              keywords: ["কোষ", "উদ্ভিদ কোষ", "প্রাণী কোষ", "নিউক্লিয়াস"]
+              title: "Margulis's Five Kingdom Classification",
+              titleBangla: "২.১ মারগুলিসের ৫ রাজ্য শ্রেণিবিন্যাস (মনেরা, প্রোটিস্টা, ফানজাই, প্ল্যান্টি, অ্যানিম্যালিয়া)",
+              summary: "কোষের গঠন ও পুষ্টিরীতির ভিত্তিতে জীবজগতের আধুনিক শ্রেণিবিন্যাস।",
+              keywords: ["শ্রেণিবিন্যাস", "মনেরা", "প্ল্যান্টি", "অ্যানিম্যালিয়া"]
+            },
+            {
+              id: "c6-sci-inq-ch2-l2",
+              point: "২.২",
+              title: "Flowering vs Non-flowering Plants & Vertebrates vs Invertebrates",
+              titleBangla: "২.২ অপুষ্পক-সপুষ্পক উদ্ভিদ ও অমেরুদণ্ডী-মেরুদণ্ডী প্রাণী",
+              summary: "স্পোর/বীজ এবং মেরুদণ্ডের উপস্থিতির ভিত্তিতে জীব শনাক্তকরণ।",
+              keywords: ["সপুষ্পক", "অপুষ্পক", "মেরুদণ্ডী", "অমেরুদণ্ডী"]
             }
           ]
         },
         {
           id: "c6-sci-inq-ch3",
           chapterNumber: 3,
-          title: "Nature and States of Matter",
-          titleBangla: "৩য় অধ্যায়: পদার্থের প্রকৃতি ও অবস্থা",
+          title: "Structure of Living Cells",
+          titleBangla: "৩য় অধ্যায়: উদ্ভিদ ও প্রাণী কোষের গঠন",
           lessons: [
             {
               id: "c6-sci-inq-ch3-l1",
               point: "৩.১",
-              title: "Solid, Liquid, Gas States",
-              titleBangla: "৩.১ কঠিন, তরল ও বায়বীয় অবস্থার কণা তত্ত্ব",
-              summary: "তাপমাত্রার প্রভাবে পদার্থের আন্তঃআণবিক দূরত্বের পরিবর্তন।",
-              keywords: ["কঠিন", "তরল", "বায়বীয়", "কণা তত্ত্ব"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "c6-digital-tech",
-      code: "DIG-06",
-      name: "Digital Technology",
-      nameBangla: "ডিজিটাল প্রযুক্তি",
-      group: "General",
-      coverColor: "from-violet-600 to-purple-850",
-      chapters: [
-        {
-          id: "c6-dig-ch1",
-          chapterNumber: 1,
-          title: "Verifying Information Online",
-          titleBangla: "১ম অধ্যায়: তথ্য যাচাই ও সত্য অনুসন্ধান",
-          lessons: [
-            {
-              id: "c6-dig-ch1-l1",
-              point: "১.১",
-              title: "Spotting Misinformation & Fake News",
-              titleBangla: "১.১ ভুয়া খবর ও বিভ্রান্তিকর তথ্য শনাক্তকরণ",
-              summary: "ইন্টারনেটের তথ্যের সত্যতা ফ্যাক্ট-চেক করার কৌশল।",
-              keywords: ["ফ্যাক্ট চেক", "ভুয়া খবর", "তথ্য যাচাই"]
+              title: "Organelles of Plant vs Animal Cells",
+              titleBangla: "৩.১ উদ্ভিদ ও প্রাণী কোষের প্রধান অঙ্গাণুসমূহ",
+              summary: "কোষপ্রাচীর, কোষঝিল্লি, সাইটোপ্লাজম ও প্লাস্টিডের তুলনামূলক কাজ।",
+              keywords: ["কোষপ্রাচীর", "প্লাস্টিড", "উদ্ভিদ কোষ", "প্রাণী কোষ"]
             },
             {
-              id: "c6-dig-ch1-l2",
-              point: "১.২",
-              title: "Password Strength & Safe Browsing",
-              titleBangla: "১.২ নিরাপদ ব্রাউজিং ও শক্তিশালী পাসওয়ার্ড তৈরি",
-              summary: "সাইবার হুমকি ও ফিশিং থেকে নিজের অ্যাকাউন্ট সুরক্ষিত রাখার নিয়ম।",
-              keywords: ["পাসওয়ার্ড", "নিরাপত্তা", "সাইবার ক্রাইম"]
+              id: "c6-sci-inq-ch3-l2",
+              point: "৩.২",
+              title: "Mitochondria and Nucleus Functions",
+              titleBangla: "৩.২ মাইটোকন্ড্রিয়া (শক্তির আধার) ও নিউক্লিয়াসের কাজ",
+              summary: "শ্বসনে মাইটোকন্ড্রিয়ার শক্তি উৎপাদন এবং বংশগতিতে নিউক্লিয়াসের ভূমিকা।",
+              keywords: ["মাইটোকন্ড্রিয়া", "নিউক্লিয়াস", "কোষীয় অঙ্গাণু"]
             }
           ]
         },
         {
-          id: "c6-dig-ch2",
-          chapterNumber: 2,
-          title: "Problem Solving via Algorithm",
-          titleBangla: "২য় অধ্যায়: অ্যালগরিদমের মাধ্যমে সমাধান",
+          id: "c6-sci-inq-ch4",
+          chapterNumber: 4,
+          title: "External Morphology of Plants",
+          titleBangla: "৪র্থ অধ্যায়: উদ্ভিদের বাহ্যিক বৈশিষ্ট্য",
           lessons: [
             {
-              id: "c6-dig-ch2-l1",
-              point: "২.১",
-              title: "Step-by-Step Instructions",
-              titleBangla: "২.১ ধারাবাহিক নির্দেশের মাধ্যমে সমস্যা সমাধান",
-              summary: "দৈনন্দিন কাজের অ্যালগরিদম তৈরি ও ফ্লোচার্ট অঙ্কন।",
-              keywords: ["অ্যালগরিদম", "ফ্লোচার্ট", "নির্দেশ"]
+              id: "c6-sci-inq-ch4-l1",
+              point: "৪.১",
+              title: "Root, Stem, and Leaf Anatomy",
+              titleBangla: "৪.১ মূলের বিভিন্ন অঞ্চল, কাণ্ডের রূপ এবং পাতার শিরাবিন্যাস",
+              summary: "প্রধান মূল, গুচ্ছ মূল এবং জালিকা ও সমান্তরাল শিরাবিন্যাসের কার্যকারিতা।",
+              keywords: ["মূল", "কাণ্ড", "পাতা", "শিরাবিন্যাস"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-inq-ch5",
+          chapterNumber: 5,
+          title: "States of Matter and Particle Theory",
+          titleBangla: "৫ম অধ্যায়: পদার্থের প্রকৃতি ও অবস্থা",
+          lessons: [
+            {
+              id: "c6-sci-inq-ch5-l1",
+              point: "৫.১",
+              title: "Solid, Liquid, Gas Molecular Model",
+              titleBangla: "৫.১ কঠিন, তরল ও বায়বীয় অবস্থায় কণার গতি ও ব্যবধান",
+              summary: "আন্তঃআণবিক আকর্ষণ বল এবং তাপ প্রয়োগে অবস্থার পরিবর্তন।",
+              keywords: ["কঠিন", "তরল", "বায়বীয়", "আন্তঃআণবিক বল"]
+            },
+            {
+              id: "c6-sci-inq-ch5-l2",
+              point: "৫.২",
+              title: "Metals and Non-metals Properties",
+              titleBangla: "৫.২ ধাতু ও অধাতুর ভৌত বৈশিষ্ট্য (উজ্জ্বলতা, পরিবাহিতা)",
+              summary: "তাপ ও বিদ্যুৎ সুপরিবাহী ধাতু এবং অপরিবাহী অধাতুর ব্যবহার।",
+              keywords: ["ধাতু", "অধাতু", "বিদ্যুৎ পরিবাহিতা"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-inq-ch6",
+          chapterNumber: 6,
+          title: "Motion and Forces",
+          titleBangla: "৬ষ্ঠ অধ্যায়: গতি ও বল",
+          lessons: [
+            {
+              id: "c6-sci-inq-ch6-l1",
+              point: "৬.১",
+              title: "Types of Motion (Linear, Rotational, Periodic)",
+              titleBangla: "৬.১ চলন গতি, ঘূর্ণন গতি ও পর্যায়বৃত্ত গতির পার্থক্য",
+              summary: "গাড়ির চাকা, ঘড়ির কাঁটা ও সরল পেন্ডুলামের গতির তুলনা।",
+              keywords: ["চলন গতি", "ঘূর্ণন গতি", "পর্যায়বৃত্ত গতি"]
+            },
+            {
+              id: "c6-sci-inq-ch6-l2",
+              point: "৬.২",
+              title: "Speed, Velocity, and Newton's First Law (Inertia)",
+              titleBangla: "৬.২ দ্রুতি, বেগ ও নিউটনের প্রথম গতিসূত্র (জড়তা)",
+              summary: "দূরত্ব ভাগ সময় = দ্রুতি এবং স্থির ও গতিশীল বস্তুর জড়তার নীতি।",
+              keywords: ["দ্রুতি", "বেগ", "জড়তা", "নিউটনের ১ম সূত্র"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-inq-ch7",
+          chapterNumber: 7,
+          title: "Energy and Conservation",
+          titleBangla: "৭ম অধ্যায়: শক্তি ও শক্তির রূপান্তর",
+          lessons: [
+            {
+              id: "c6-sci-inq-ch7-l1",
+              point: "৭.১",
+              title: "Kinetic & Potential Energy Forms",
+              titleBangla: "৭.১ গতিশক্তি, বিভব শক্তি ও শক্তির নিত্যতা নীতি",
+              summary: "উঁচুতে রাখা বস্তুর বিভব শক্তি পতনের সময় গতিশক্তিতে রূপান্তর।",
+              keywords: ["গতিশক্তি", "বিভব শক্তি", "রূপান্তর", "শক্তির নিত্যতা"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-inq-ch8",
+          chapterNumber: 8,
+          title: "Solar System and Universe",
+          titleBangla: "৮ম অধ্যায়: আকাশ কত বড় ও সৌরজগৎ",
+          lessons: [
+            {
+              id: "c6-sci-inq-ch8-l1",
+              point: "৮.১",
+              title: "Sun, Eight Planets, and Moon Phases",
+              titleBangla: "৮.১ সূর্য, ৮টি গ্রহ ও চাঁদের বিভিন্ন দশা",
+              summary: "সৌরজগতের কেন্দ্র সূর্য এবং গ্রহগুলোর আবর্তন ও অমাবস্যা-পূর্ণিমা।",
+              keywords: ["সৌরজগৎ", "গ্রহ", "সূর্য", "চাঁদের দশা"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ৫. বিজ্ঞান - অনুশীলন পাঠ (Science Activity)
+    // ----------------------------------------------------
+    {
+      id: "c6-science-practical",
+      code: "SCI-06-PRAC",
+      name: "Science (Practical/Activity)",
+      nameBangla: "বিজ্ঞান (অনুশীলন পাঠ)",
+      group: "General",
+      coverColor: "from-teal-600 to-emerald-850",
+      chapters: [
+        {
+          id: "c6-sci-prac-ch1",
+          chapterNumber: 1,
+          title: "Observing Plant Parts and Microscopic Slides",
+          titleBangla: "১ম অধ্যায়: অনুবীক্ষণ যন্ত্রে উদ্ভিদের কোষ ও পত্ররন্ধ্র দর্শন",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch1-l1",
+              point: "১.১",
+              title: "Onion Peel Cell Slide Preparation",
+              titleBangla: "১.১ পেঁয়াজের পাতলা ত্বকের কোষ স্লাইডে স্থাপন ও পর্যবেক্ষণ",
+              summary: "আইড্রপার, মিথিলিন ব্লু ও কভারস্লিপ দিয়ে মাইক্রোস্কোপে কোষ প্রাচীর দেখা।",
+              keywords: ["মাইক্রোস্কোপ", "স্লাইড", "পেঁয়াজের ত্বক", "কোষ"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch2",
+          chapterNumber: 2,
+          title: "Building Scale Models of Solar System",
+          titleBangla: "২য় অধ্যায়: সৌরজগতের স্কেল মডেল তৈরি ও দিন-রাত পরীক্ষণ",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch2-l1",
+              point: "২.১",
+              title: "Globe and Torch Earth Rotation Experiment",
+              titleBangla: "২.১ গ্লোব ও টর্চলাইটের সাহায্যে দিন-রাত ও ঋতু পরিবর্তনের মডেল",
+              summary: "পৃথিবীর আহ্নিক গতি ও বার্ষিক গতির কারণে দিন-রাত ও ঋতুর পালাবদল প্রদর্শন।",
+              keywords: ["গ্লোব", "টর্চলাইট", "আহ্নিক গতি", "দিন রাত"]
+            }
+          ]
+        }
+      ]
+    },
+
+    // ----------------------------------------------------
+    // ৬. ইতিহাস ও সামাজিক বিজ্ঞান (History and Social Science)
+    // ----------------------------------------------------
     {
       id: "c6-history-social",
       code: "HIS-06",
@@ -516,31 +947,185 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-his-ch1-l1",
               point: "১.১",
-              title: "Family, Society and Cultural Roots",
+              title: "Family, Social Environment and Cultural Roots",
               titleBangla: "১.১ পরিবার, সমাজ ও সাংস্কৃতিক বৈচিত্র্যের মেলবন্ধন",
-              summary: "নিজের পরিবার, গ্রাম/শহর ও সমাজের সাংস্কৃতিক ঐতিহ্য জানা।",
-              keywords: ["আত্মপরিচয়", "সংস্কৃতি", "ঐতিহ্য"]
+              summary: "নিজের পরিবার, ভৌগোলিক অবস্থান, ভাষা ও উৎসবের ঐতিহ্য আবিষ্কার।",
+              keywords: ["আত্মপরিচয়", "সংস্কৃতি", "পরিবার", "বৈচিত্র্য"]
             }
           ]
         },
         {
           id: "c6-his-ch2",
           chapterNumber: 2,
-          title: "Ancient Bengal and Heritage",
-          titleBangla: "২য় অধ্যায়: প্রাচীন বাংলার মানববসতি ও প্রকৃতি",
+          title: "Society and Rules",
+          titleBangla: "২য় অধ্যায়: সমাজ ও সামাজিক সম্পর্ক",
           lessons: [
             {
               id: "c6-his-ch2-l1",
               point: "২.১",
-              title: "Riverine Geography and Civilization",
-              titleBangla: "২.১ নদীমাতৃক বাংলায় সভ্যতার উন্মেষ",
-              summary: "নদীকে কেন্দ্র করে প্রাচীন জনপদ ও ব্যবসা-বাণিজ্যের প্রসার।",
-              keywords: ["নদীমাতৃক", "প্রাচীন জনপদ", "সভ্যতা"]
+              title: "Origin of Society and Mutual Cooperation",
+              titleBangla: "২.১ মানব সমাজের উৎপত্তি, সহযোগিতা ও সামাজিক নিয়মকানুন",
+              summary: "মিলেমিশে বসবাস করার প্রয়োজনীয়তা এবং সমাজের আইন ও রীতিনীতির মর্যাদা।",
+              keywords: ["সমাজ", "সহযোগিতা", "মূল্যবোধ", "আইন"]
+            }
+          ]
+        },
+        {
+          id: "c6-his-ch3",
+          chapterNumber: 3,
+          title: "Geography and Environment of Bengal",
+          titleBangla: "৩য় অধ্যায়: প্রাকৃতিক ও সামাজিক পরিবেশ",
+          lessons: [
+            {
+              id: "c6-his-ch3-l1",
+              point: "৩.১",
+              title: "River Networks and Human Settlements in Bengal",
+              titleBangla: "৩.১ নদীমাতৃক বাংলা ও মানববসতির বিস্তৃতি",
+              summary: "পদ্মা, মেঘনা, যমুনার পলিমাটি এবং নদীভিত্তিক কৃষি ও বাণিজ্যের ইতিহাস।",
+              keywords: ["নদীমাতৃক", "পলিমাটি", "মানববসতি", "কৃষি"]
+            }
+          ]
+        },
+        {
+          id: "c6-his-ch4",
+          chapterNumber: 4,
+          title: "Ancient Bengal and Archaeological Heritage",
+          titleBangla: "৪র্থ অধ্যায়: প্রাচীন বাংলা ও প্রত্নতাত্ত্বিক ঐতিহ্য",
+          lessons: [
+            {
+              id: "c6-his-ch4-l1",
+              point: "৪.১",
+              title: "Ancient Janapadas (Pundra, Varendra, Vanga, Samatata)",
+              titleBangla: "৪.১ প্রাচীন বাংলার জনপদসমূহ ও মহাস্থানগড়-পাহাড়পুর",
+              summary: "মহাস্থানগড় (পুণ্ড্রনগর), ময়নামতি ও পাহাড়পুর বৌদ্ধ বিহারের সমৃদ্ধ ঐতিহ্য।",
+              keywords: ["জনপদ", "মহাস্থানগড়", "পাহাড়পুর", "প্রত্নতত্ত্ব"]
+            }
+          ]
+        },
+        {
+          id: "c6-his-ch5",
+          chapterNumber: 5,
+          title: "Struggle for Freedom & Bangabandhu",
+          titleBangla: "৫ম অধ্যায়: মুক্তির সংগ্রাম ও স্বাধীন বাংলাদেশ",
+          lessons: [
+            {
+              id: "c6-his-ch5-l1",
+              point: "৫.১",
+              title: "1952 Language Movement to 1971 Liberation War",
+              titleBangla: "৫.১ ভাষা আন্দোলন, বঙ্গবন্ধুর ৭ই মার্চের ভাষণ ও মুক্তিযুদ্ধ",
+              summary: "বাঙালির স্বাধিকার আন্দোলন, গণঅভ্যুত্থান এবং ৩০ লক্ষ শহীদের রক্তে বিজয়।",
+              keywords: ["ভাষা আন্দোলন", "বঙ্গবন্ধু", "৭ই মার্চ", "মুক্তিযুদ্ধ", "বিজয়"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ৭. ডিজিটাল প্রযুক্তি (Digital Technology)
+    // ----------------------------------------------------
+    {
+      id: "c6-digital-tech",
+      code: "DIG-06",
+      name: "Digital Technology",
+      nameBangla: "ডিজিটাল প্রযুক্তি",
+      group: "General",
+      coverColor: "from-violet-600 to-purple-850",
+      chapters: [
+        {
+          id: "c6-dig-ch1",
+          chapterNumber: 1,
+          title: "Information Verification and Fact Checking",
+          titleBangla: "১ম অধ্যায়: তথ্য যাচাই ও সত্য অনুসন্ধান",
+          lessons: [
+            {
+              id: "c6-dig-ch1-l1",
+              point: "১.১",
+              title: "Identifying Reliable and Unreliable Sources",
+              titleBangla: "১.১ তথ্যের উৎস চিহ্নিতকরণ ও সত্য-মিথ্যা পার্থক্য",
+              summary: "ইন্টারনেটের কোনো সংবাদ বিশ্বাস করার আগে নির্ভরযোগ্য প্রাতিষ্ঠানিক উৎস খোঁজা।",
+              keywords: ["তথ্য যাচাই", "উৎস", "ফ্যাক্ট চেক", "সত্য অনুসন্ধান"]
+            },
+            {
+              id: "c6-dig-ch1-l2",
+              point: "১.২",
+              title: "Misinformation, Rumors and Deepfakes Awareness",
+              titleBangla: "১.২ গুজব, ভুয়া তথ্য ও অপপ্রচার প্রতিরোধ",
+              summary: "গুজব যাচাই না করে শেয়ার না করার দায়িত্বশীল সাইবার আচরণ।",
+              keywords: ["গুজব", "ভুয়া খবর", "অপপ্রচার", "দায়িত্বশীলতা"]
+            }
+          ]
+        },
+        {
+          id: "c6-dig-ch2",
+          chapterNumber: 2,
+          title: "Cyber Safety and Password Protection",
+          titleBangla: "২য় অধ্যায়: নিরাপদ সাইবার নাগরিকত্ব",
+          lessons: [
+            {
+              id: "c6-dig-ch2-l1",
+              point: "২.১",
+              title: "Strong Password Creation (Alphanumeric + Symbols)",
+              titleBangla: "২.১ শক্তিশালী পাসওয়ার্ড তৈরি ও গোপনীয়তা রক্ষা",
+              summary: "বড় হাতের অক্ষর, ছোট হাতের অক্ষর, সংখ্যা ও প্রতীকের সমন্বয়ে পাসওয়ার্ড গঠন।",
+              keywords: ["পাসওয়ার্ড", "নিরাপত্তা", "সাইবার সুরক্ষা"]
+            },
+            {
+              id: "c6-dig-ch2-l2",
+              point: "২.২",
+              title: "Phishing Links and Digital Device Protection",
+              titleBangla: "২.২ ফিশিং লিংক শনাক্তকরণ ও ডিভাইস সুরক্ষা",
+              summary: "অপরিচিত লিংক পরিহার এবং অ্যান্টিভাইরাস ও আপডেট নিশ্চিত করা।",
+              keywords: ["ফিশিং", "ম্যালওয়্যার", "ডিভাইস সুরক্ষা"]
+            }
+          ]
+        },
+        {
+          id: "c6-dig-ch3",
+          chapterNumber: 3,
+          title: "Problem Solving with Algorithms & Flowcharts",
+          titleBangla: "৩য় অধ্যায়: অ্যালগরিদম ও ফ্লোচার্ট দিয়ে সমাধান",
+          lessons: [
+            {
+              id: "c6-dig-ch3-l1",
+              point: "৩.১",
+              title: "Step-by-step Algorithms for Daily Tasks",
+              titleBangla: "৩.১ ধারাবাহিক নির্দেশের মাধ্যমে অ্যালগরিদম তৈরি",
+              summary: "চা তৈরি, বিদ্যালয়ে যাওয়া বা দুটি সংখ্যার যোগফলের ধাপভিত্তিক নির্দেশনা।",
+              keywords: ["অ্যালগরিদম", "ধাপ", "নির্দেশনা", "কম্পিউটিং"]
+            },
+            {
+              id: "c6-dig-ch3-l2",
+              point: "৩.২",
+              title: "Flowchart Symbols (Start, Process, Decision, End)",
+              titleBangla: "৩.২ ফ্লোচার্টের বিভিন্ন জ্যামিতিক প্রতীক ও প্রবাহচিত্র",
+              summary: "ওভাল (শুরু/শেষ), আয়তক্ষেত্র (প্রসেস), সামান্তরিক (ইনপুট/আউটপুট) ও রম্বস (সিদ্ধান্ত)।",
+              keywords: ["ফ্লোচার্ট", "প্রতীক", "প্রবাহচিত্র", "সিদ্ধান্ত"]
+            }
+          ]
+        },
+        {
+          id: "c6-dig-ch4",
+          chapterNumber: 4,
+          title: "Digital Document Creation & Presentation",
+          titleBangla: "৪র্থ অধ্যায়: ওয়ার্ড প্রসেসিং ও ডিজিটাল উপস্থাপনা",
+          lessons: [
+            {
+              id: "c6-dig-ch4-l1",
+              point: "৪.১",
+              title: "Typing, Formatting and Saving in Word Processors",
+              titleBangla: "৪.১ বাংলা ও ইংরেজি টাইপিং এবং ডকুমেন্ট ফরম্যাটিং",
+              summary: "ফন্ট সাইজ, বোল্ড, ইটালিক, বুলেট পয়েন্ট ও ফাইল সংরক্ষণ (Save/Save As)।",
+              keywords: ["ওয়ার্ড প্রসেসর", "টাইপিং", "ফরম্যাটিং", "ফাইল"]
+            }
+          ]
+        }
+      ]
+    },
+
+    // ----------------------------------------------------
+    // ৮. জীবন ও জীবিকা (Life and Livelihood)
+    // ----------------------------------------------------
     {
       id: "c6-life-livelihood",
       code: "LIFE-06",
@@ -558,9 +1143,9 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-life-ch1-l1",
               point: "১.১",
-              title: "Household Chores & Responsibility",
+              title: "Household Chores and Self-Reliance Habits",
               titleBangla: "১.১ নিজের কাজ নিজে করা ও পারিবারিক সহযোগিতা",
-              summary: "ঘর গোছানো, কাপড় ধোয়া ও পরিবারের কাজে দায়িত্বশীল হওয়া।",
+              summary: "নিজের বিছানা গোছানো, খাবার প্লেট ধোয়া এবং পরিবারের কাজে হাত লাগানো।",
               keywords: ["নিজের কাজ", "শ্রমের মর্যাদা", "সহযোগিতা"]
             }
           ]
@@ -568,21 +1153,57 @@ export const CLASS_6_DATA: ClassGrade = {
         {
           id: "c6-life-ch2",
           chapterNumber: 2,
-          title: "Financial Planning and Saving",
-          titleBangla: "২য় অধ্যায়: আর্থিক ভাবনা ও সঞ্চয়",
+          title: "Overview of Professions",
+          titleBangla: "২য় অধ্যায়: পেশার রূপরেখা ও অনুসন্ধান",
           lessons: [
             {
               id: "c6-life-ch2-l1",
               point: "২.১",
-              title: "Pocket Money Budget & Piggy Bank",
-              titleBangla: "২.১ মাটির ব্যাংকে সঞ্চয় ও পারিবারিক বাজেট তৈরি",
-              summary: "খরচ পরিকল্পনা এবং অপচয় রোধের কৌশল।",
-              keywords: ["বাজেট", "সঞ্চয়", "মাটির ব্যাংক"]
+              title: "Agriculture, Industry, Medical and Service Professions",
+              titleBangla: "২.১ কৃষি, শিল্প ও সেবা খাতের বিভিন্ন পেশার ভূমিকা",
+              summary: "কৃষক, কামার, কুমার, ডাক্তার, শিক্ষক ও প্রযুক্তিবিদদের সমাজ গঠনে অবদান।",
+              keywords: ["পেশা", "কৃষি", "শিল্প", "সেবা"]
+            }
+          ]
+        },
+        {
+          id: "c6-life-ch3",
+          chapterNumber: 3,
+          title: "Financial Planning and Saving",
+          titleBangla: "৩য় অধ্যায়: আর্থিক ভাবনা ও সঞ্চয়",
+          lessons: [
+            {
+              id: "c6-life-ch3-l1",
+              point: "৩.১",
+              title: "Family Budgeting & Avoiding Wastage",
+              titleBangla: "৩.১ পারিবারিক বাজেট প্রণয়ন ও সঞ্চয়ের উপায়",
+              summary: "মাটির ব্যাংকে সঞ্চয়, অপ্রয়োজনীয় খরচ কমানো ও খরচের হিসাব রাখা।",
+              keywords: ["বাজেট", "সঞ্চয়", "মিতব্যয়িতা", "মাটির ব্যাংক"]
+            }
+          ]
+        },
+        {
+          id: "c6-life-ch4",
+          chapterNumber: 4,
+          title: "Future Dreams and Career Vision",
+          titleBangla: "৪র্থ অধ্যায়: আগামীর স্বপ্ন ও ক্যারিয়ার রূপকল্প",
+          lessons: [
+            {
+              id: "c6-life-ch4-l1",
+              point: "৪.১",
+              title: "Identifying Personal Strengths and Interests",
+              titleBangla: "৪.১ নিজের দক্ষতা চিহ্নিতকরণ ও আগামীর প্রস্তুতি",
+              summary: "পছন্দের বিষয় ও ভবিষ্যতের সম্ভাব্য পেশার জন্য উপযোগী দক্ষতা অর্জন।",
+              keywords: ["দক্ষতা", "ক্যারিয়ার", "স্বপ্ন", "লক্ষ্য"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ৯. স্বাস্থ্য সুরক্ষা (Health and Wellbeing)
+    // ----------------------------------------------------
     {
       id: "c6-health-wellbeing",
       code: "HLT-06",
@@ -600,15 +1221,83 @@ export const CLASS_6_DATA: ClassGrade = {
             {
               id: "c6-hlt-ch1-l1",
               point: "১.১",
-              title: "Balanced Diet and Nutrition",
-              titleBangla: "১.১ সুষম খাবার ও স্থানীয় পুষ্টিকর খাদ্যাভ্যাস",
-              summary: "ভিটামিন, খনিজ লবণ ও নিরাপদ পানির অপরিহার্যতা।",
-              keywords: ["সুষম খাদ্য", "পুষ্টি", "স্বাস্থ্যবিধি"]
+              title: "Personal Hygiene and Handwashing Techniques",
+              titleBangla: "১.১ ব্যক্তিগত পরিচ্ছন্নতা ও সঠিক পদ্ধতিতে সাবান দিয়ে হাত ধোয়া",
+              summary: "নখ কাটা, দাঁত মাজা ও খাওয়ার আগে ২০ সেকেন্ড হাত ধোয়ার নিয়ম।",
+              keywords: ["পরিচ্ছন্নতা", "হাত ধোয়া", "স্বাস্থ্যবিধি"]
+            },
+            {
+              id: "c6-hlt-ch1-l2",
+              point: "১.২",
+              title: "Physical Exercise, Sports, and Sound Sleep",
+              titleBangla: "১.২ নিয়মিত শরীরচর্চা, খেলাধুলা ও পর্যাপ্ত ঘুম",
+              summary: "শারীরিক সুস্থতা ও মানসিক প্রফুল্লতায় প্রতিদিনের ব্যায়ামের ভূমিকা।",
+              keywords: ["ব্যায়াম", "খেলাধুলা", "ঘুম", "মানসিক স্বাস্থ্য"]
+            }
+          ]
+        },
+        {
+          id: "c6-hlt-ch2",
+          chapterNumber: 2,
+          title: "Balanced Diet and Nutrition",
+          titleBangla: "২য় অধ্যায়: পুষ্টি ও সুষম খাদ্যাভ্যাস",
+          lessons: [
+            {
+              id: "c6-hlt-ch2-l1",
+              point: "২.১",
+              title: "Six Nutrient Classes and Balanced Plate",
+              titleBangla: "২.১ খাদ্যের ছয়টি উপাদান ও সুষম খাবারের থালা",
+              summary: "শর্করা, আমিষ, স্নেহ, ভিটামিন, খনিজ লবণ ও নিরাপদ পানির অনুপাত।",
+              keywords: ["সুষম খাদ্য", "ভিটামিন", "আমিষ", "পুষ্টি"]
+            },
+            {
+              id: "c6-hlt-ch2-l2",
+              point: "২.২",
+              title: "Dangers of Junk Food and Street Food",
+              titleBangla: "২.২ জাঙ্ক ফুড পরিহার ও দেশীয় পুষ্টিকর খাবার গ্রহণ",
+              summary: "অতিরিক্ত চিনি ও চর্বিজাতীয় খাবারের স্বাস্থ্যঝুঁকি ও বিকল্প দেশীয় ফলমূল।",
+              keywords: ["জাঙ্ক ফুড", "স্বাস্থ্যঝুঁকি", "দেশীয় ফল"]
+            }
+          ]
+        },
+        {
+          id: "c6-hlt-ch3",
+          chapterNumber: 3,
+          title: "Adolescent Changes and Mental Health",
+          titleBangla: "৩য় অধ্যায়: কৈশোরের যত্ন ও আবেগীয় রূপান্তর",
+          lessons: [
+            {
+              id: "c6-hlt-ch3-l1",
+              point: "৩.১",
+              title: "Normal Changes during Puberty and Care",
+              titleBangla: "৩.১ বয়ঃসন্ধিকালীন শারীরিক পরিবর্তন ও স্বাস্থ্য সচেতনতা",
+              summary: "ভয় না পেয়ে স্বাভাবিক রূপান্তর মেনে নেওয়া ও নির্ভরযোগ্য অভিভাবকের পরামর্শ।",
+              keywords: ["বয়ঃসন্ধি", "শারীরিক পরিবর্তন", "স্বাস্থ্য সচেতনতা"]
+            }
+          ]
+        },
+        {
+          id: "c6-hlt-ch4",
+          chapterNumber: 4,
+          title: "First Aid and Safety Precautions",
+          titleBangla: "৪র্থ অধ্যায়: প্রাথমিক চিকিৎসা ও নিরাপত্তা",
+          lessons: [
+            {
+              id: "c6-hlt-ch4-l1",
+              point: "৪.১",
+              title: "First Aid Kit and Minor Injury Management",
+              titleBangla: "৪.১ ফার্স্ট এইড বক্স তৈরি এবং কাটা ও পোড়া ক্ষতের প্রাথমিক সেবা",
+              summary: "অ্যান্টিসেপ্টিক, ব্যান্ডেজ, তুলা ও পোড়া স্থানে পর্যাপ্ত পানি ঢালার নিয়ম।",
+              keywords: ["ফার্স্ট এইড", "প্রাথমিক চিকিৎসা", "ব্যান্ডেজ"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ১০. শিল্প ও সংস্কৃতি (Art and Culture)
+    // ----------------------------------------------------
     {
       id: "c6-art-culture",
       code: "ART-06",
@@ -620,21 +1309,81 @@ export const CLASS_6_DATA: ClassGrade = {
         {
           id: "c6-art-ch1",
           chapterNumber: 1,
-          title: "Colors, Lines and Clay Craft",
-          titleBangla: "১ম অধ্যায়: রেখা, রঙ ও মাটির গল্প",
+          title: "Lines, Colors and Nature's Forms",
+          titleBangla: "১ম অধ্যায়: রেখা, রঙ ও প্রকৃতির রূপ",
           lessons: [
             {
               id: "c6-art-ch1-l1",
               point: "১.১",
-              title: "Traditional Crafts of Bengal",
-              titleBangla: "১.১ বাংলার লোকশিল্প ও মাটির পাত্রের নকশা",
-              summary: "মাটি দিয়ে নানা তৈজসপত্র তৈরি এবং রঙতুলির রেখা অঙ্কন।",
-              keywords: ["লোকশিল্প", "টেরাকোটা", "মাটির কাজ"]
+              title: "Types of Lines and Natural Drawings",
+              titleBangla: "১.১ সরল, বক্র ও ঢেউ খেলানো রেখায় প্রকৃতি অঙ্কন",
+              summary: "গাছপালা, নদী ও পাখি দেখে বিভিন্ন ধরনের রেখার বিন্যাস।",
+              keywords: ["রেখা", "অঙ্কন", "প্রকৃতি", "দৃশ্যশিল্প"]
+            },
+            {
+              id: "c6-art-ch1-l2",
+              point: "১.২",
+              title: "Primary and Secondary Colors Mixing",
+              titleBangla: "১.২ মৌলিক রঙ ও যৌগিক রঙের মিশ্রণ কৌশল",
+              summary: "লাল, নীল, হলুদ মিলিয়ে সবুজ, কমলা ও বেগুনি রঙ তৈরি।",
+              keywords: ["মৌলিক রঙ", "যৌগিক রঙ", "রঙের মিশ্রণ"]
+            }
+          ]
+        },
+        {
+          id: "c6-art-ch2",
+          chapterNumber: 2,
+          title: "Clay Modeling and Traditional Crafts",
+          titleBangla: "২য় অধ্যায়: মাটির কাজ ও রূপক কারুশিল্প",
+          lessons: [
+            {
+              id: "c6-art-ch2-l1",
+              point: "২.১",
+              title: "Making Clay Dolls and Terracotta Motifs",
+              titleBangla: "২.১ মাটির পুতুল, ফলমূল ও নকশী পিঠার ছাঁচ তৈরি",
+              summary: "মাটি প্রস্তুতকরণ ও বাংলার ঐতিহ্যবাহী লোকজ পুতুলের নকশা।",
+              keywords: ["মাটির পুতুল", "টেরাকোটা", "লোকশিল্প", "কারুশিল্প"]
+            }
+          ]
+        },
+        {
+          id: "c6-art-ch3",
+          chapterNumber: 3,
+          title: "Melody, Rhythm and Folk Songs",
+          titleBangla: "৩য় অধ্যায়: সুর ও সঙ্গীতের ছন্দ",
+          lessons: [
+            {
+              id: "c6-art-ch3-l1",
+              point: "৩.১",
+              title: "Patriotic and Folk Songs (Taal and Laya)",
+              titleBangla: "৩.১ দেশের গান ও পল্লীগীতির সুর ও তাল অনুধাবন",
+              summary: "সমবেত কণ্ঠে গাওয়া এবং তবলার দাদরা ও কাহারবা তালের পরিচয়।",
+              keywords: ["দেশের গান", "পল্লীগীতি", "সুর", "তাল"]
+            }
+          ]
+        },
+        {
+          id: "c6-art-ch4",
+          chapterNumber: 4,
+          title: "Dramatic Expression and Mime",
+          titleBangla: "৪র্থ অধ্যায়: নাট্য পরিবেশনা ও মূকাভিনয়",
+          lessons: [
+            {
+              id: "c6-art-ch4-l1",
+              point: "৪.১",
+              title: "Body Language, Facial Expressions and Mime Acting",
+              titleBangla: "৪.১ মূকাভিনয় ও অভিব্যক্তির মাধ্যমে সমাজ সচেতনতা নাটক",
+              summary: "শব্দহীন অভিনয়ের মাধ্যমে আবেগ ও সামাজিক বার্তা পৌঁছে দেওয়া।",
+              keywords: ["মূকাভিনয়", "অভিনয়", "নাটিকা", "অভিব্যক্তি"]
             }
           ]
         }
       ]
     },
+
+    // ----------------------------------------------------
+    // ১১. ইসলাম ও নৈতিক শিক্ষা (Islamic Studies & Ethics)
+    // ----------------------------------------------------
     {
       id: "c6-islamic-studies",
       code: "ISL-06",
@@ -646,32 +1395,120 @@ export const CLASS_6_DATA: ClassGrade = {
         {
           id: "c6-isl-ch1",
           chapterNumber: 1,
-          title: "Aqeedah and Faith",
-          titleBangla: "১ম অধ্যায়: আকাইদ (বিশ্বাস)",
+          title: "Aqeedah (Faith & Belief)",
+          titleBangla: "১ম অধ্যায়: আকাইদ (ইসলামি বিশ্বাস)",
           lessons: [
             {
               id: "c6-isl-ch1-l1",
               point: "১.১",
-              title: "Tawhid, Risalat and Akhirat",
-              titleBangla: "১.১ তাওহিদ, রিসালাত ও আখিরাতের তাৎপর্য",
-              summary: "একত্ববাদ, নবীদের বার্তা ও পরকালের প্রতি অবিচল বিশ্বাস।",
-              keywords: ["তাওহিদ", "রিসালাত", "আখিরাত"]
+              title: "Tawhid (Oneness of Allah)",
+              titleBangla: "১.১ তাওহিদ: আল্লাহর একত্ববাদ ও কুফরি-শিরক পরিহার",
+              summary: "আল্লাহর কোনো অংশীদার নেই এবং সৃষ্টিজগতের একমাত্র মালিক তিনি।",
+              keywords: ["তাওহিদ", "একত্ববাদ", "শিরক", "আকাইদ"]
+            },
+            {
+              id: "c6-isl-ch1-l2",
+              point: "১.২",
+              title: "Risalat and Heavenly Books",
+              titleBangla: "১.২ রিসালাত, নবি-রাসুলগণের দায়িত্ব ও আসমানি কিতাব",
+              summary: "মানুষের পথপ্রদর্শক হিসেবে নবিদের ভূমিকা ও পবিত্র কুরআনের মর্যাদা।",
+              keywords: ["রিসালাত", "নবি রাসুল", "কুরআন", "আসমানি কিতাব"]
+            },
+            {
+              id: "c6-isl-ch1-l3",
+              point: "১.৩",
+              title: "Akhirat (Hereafter) and Accountability",
+              titleBangla: "১.৩ আখিরাত, কিয়ামত ও পরকালীন জবাবদিহিতা",
+              summary: "মৃত্যুর পরবর্তী জীবন এবং সৎকাজের পুরস্কার (জান্নাত) ও অসৎকাজের শাস্তি (জাহান্নাম)।",
+              keywords: ["আখিরাত", "কিয়ামত", "জান্নাত", "জাহান্নাম"]
             }
           ]
         },
         {
           id: "c6-isl-ch2",
           chapterNumber: 2,
-          title: "Ibadah (Worship)",
-          titleBangla: "২য় অধ্যায়: ইবাদত (নামাজ ও তাহরাত)",
+          title: "Ibadah (Worship & Practices)",
+          titleBangla: "২য় অধ্যায়: ইবাদত (পবিত্রতা ও সালাত)",
           lessons: [
             {
               id: "c6-isl-ch2-l1",
               point: "২.১",
-              title: "Rules of Taharah & Salah",
-              titleBangla: "২.১ পবিত্রতা অর্জন ও নিয়মিত সালাত কায়েম",
-              summary: "অজু, গোসল ও নামাজের ওয়াক্ত ও নিয়মকানুন।",
-              keywords: ["সালাত", "পবিত্রতা", "অজু"]
+              title: "Taharah (Cleanliness): Wudu and Tayammum",
+              titleBangla: "২.১ তাহারাত ও পবিত্রতা: অজু, তায়াম্মুম ও গোসলের ফরজ বিধান",
+              summary: "সালাতের পূর্বে শারীরিক ও আত্মিক পবিত্রতা অর্জনের সুনির্দিষ্ট নিয়মাবলী।",
+              keywords: ["তাহারাত", "অজু", "তায়াম্মুম", "পবিত্রতা"]
+            },
+            {
+              id: "c6-isl-ch2-l2",
+              point: "২.২",
+              title: "Five Daily Prayers (Salah) and Jumu'ah",
+              titleBangla: "২.২ পাঁচ ওয়াক্ত সালাত, জামায়াত ও জুমার গুরুত্ব",
+              summary: "সময়ের গুরুত্ব, নিয়মানুবর্তিতা এবং জামায়াতে সালাত আদায়ের সামাজিক ফজিলত।",
+              keywords: ["সালাত", "নামাজ", "জামায়াত", "জুমা"]
+            }
+          ]
+        },
+        {
+          id: "c6-isl-ch3",
+          chapterNumber: 3,
+          title: "Quran and Hadith Studies",
+          titleBangla: "৩য় অধ্যায়: কুরআন ও হাদিস শিক্ষা",
+          lessons: [
+            {
+              id: "c6-isl-ch3-l1",
+              point: "৩.১",
+              title: "Tajweed Principles and Surah Al-Fatihah",
+              titleBangla: "৩.১ তাজবিদসহ সূরা আল-ফাতিহা ও সূরা আল-ইখলাসের অর্থ ও শিক্ষা",
+              summary: "মাখরাজ ও গুন্নাহ মেনে সহিহ তিলাওয়াত এবং আয়াতসমূহের গভীর অর্থ অনুধাবন।",
+              keywords: ["তাজবিদ", "সূরা ফাতিহা", "সূরা ইখলাস", "কুরআন"]
+            },
+            {
+              id: "c6-isl-ch3-l2",
+              point: "৩.২",
+              title: "Selected Hadiths on Moral Character and Compassion",
+              titleBangla: "৩.২ চরিত্র গঠন ও মানবকল্যাণ সংক্রান্ত নির্বাচিত হাদিস",
+              summary: "অন্যের জন্য ভালো চাওয়া, সালামের প্রসার ও পরিষ্কার-পরিচ্ছন্নতার হাদিস।",
+              keywords: ["হাদিস", "নৈতিকতা", "সালাম", "মানবকল্যাণ"]
+            }
+          ]
+        },
+        {
+          id: "c6-isl-ch4",
+          chapterNumber: 4,
+          title: "Akhlaq (Morality & Character)",
+          titleBangla: "৪র্থ অধ্যায়: আখলাক (উত্তম চরিত্র ও নৈতিক মূল্যবোধ)",
+          lessons: [
+            {
+              id: "c6-isl-ch4-l1",
+              point: "৪.১",
+              title: "Duties to Parents, Teachers, and Neighbors",
+              titleBangla: "৪.১ পিতা-মাতা, শিক্ষক ও প্রতিবেশীর প্রতি সদাচরণ",
+              summary: "বড়দের সম্মান, ছোটদের স্নেহ এবং ধর্মবর্ণ নির্বিশেষে প্রতিবেশীর হক আদায়।",
+              keywords: ["পিতা মাতা", "শিক্ষক", "প্রতিবেশী", "সদাচরণ"]
+            },
+            {
+              id: "c6-isl-ch4-l2",
+              point: "৪.২",
+              title: "Truthfulness, Trust, and Avoiding Lies",
+              titleBangla: "৪.২ সত্যবাদিতা, আমানত রক্ষা ও মিথ্যা-প্রতারণা বর্জন",
+              summary: "সততার সুফল ও সামাজিক শান্তি রক্ষায় আমানতদারিতার অপরিহার্যতা।",
+              keywords: ["সত্যবাদিতা", "আমানত", "সততা"]
+            }
+          ]
+        },
+        {
+          id: "c6-isl-ch5",
+          chapterNumber: 5,
+          title: "Exemplary Lives of Prophets",
+          titleBangla: "৫ম অধ্যায়: আদর্শ জীবনচরিত",
+          lessons: [
+            {
+              id: "c6-isl-ch5-l1",
+              point: "৫.১",
+              title: "Childhood and Youth of Prophet Muhammad (PBUH)",
+              titleBangla: "৫.১ মহানবি হযরত মুহাম্মদ (সা.)-এর শৈশব, আল-আমিন উপাধি ও হিলফুল ফুজুল",
+              summary: "শান্তি প্রতিষ্ঠায় যুব সমাজের উদ্যোগ এবং চরম সততার অনন্য নজির।",
+              keywords: ["হযরত মুহাম্মদ", "আল আমিন", "হিলফুল ফুজুল", "আদর্শ"]
             }
           ]
         }
