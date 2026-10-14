@@ -142,25 +142,36 @@ git push -u origin main`;
         </div>
 
         <div className="space-y-3 text-xs">
-          {/* Issue 1 */}
-          <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
-            <div className="flex items-center space-x-2 text-rose-400 font-semibold">
-              <AlertTriangle className="w-4 h-4" />
-              <span>১. এরর: "Command 'npm run build' exited with 127" বা "command not found: tsx"</span>
+          {/* Issue: ERESOLVE esbuild */}
+          <div className="p-4 rounded-xl bg-slate-950 border border-emerald-500/40 space-y-1.5">
+            <div className="flex items-center space-x-2 text-emerald-400 font-semibold">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <span>১. সমাধানকৃত এরর: "npm error code ERESOLVE (esbuild@0.25 vs vite@8.3 peer dependency)"</span>
             </div>
             <p className="text-slate-300 pl-6">
-              <strong className="text-emerald-400">সমাধান করা হয়েছে:</strong> <code className="bg-slate-900 px-1 py-0.5 rounded text-slate-200">package.json</code> এ বিল্ড স্ক্রিপ্টটি সংশোধন করে সাধারণ ও স্ট্যান্ডার্ড <code className="text-emerald-300">"build": "vite build"</code> করা হয়েছে এবং <code className="text-emerald-300">tsx</code> প্যাকেজটিকে সরাসরি dependencies-এ স্থানান্তরিত করা হয়েছে। ফলে Vercel-এ কোনো অতিরিক্ত কমান্ড রান করার প্রয়োজন নেই।
+              <strong className="text-emerald-400">কীভাবে সমাধান করা হলো:</strong> <code className="bg-slate-900 px-1 py-0.5 rounded text-slate-200">package.json</code> থেকে অসামঞ্জস্যপূর্ণ <code className="text-rose-400">"esbuild": "^0.25.0"</code> অপসারিত করা হয়েছে (কারণ Vite ৮ নিজে থেকেই সঠিক esbuild সংস্করণ নিয়ন্ত্রণ করে) এবং একটি নতুন <code className="text-emerald-300">.npmrc</code> ফাইল তৈরি করা হয়েছে যাতে <code className="text-emerald-300">legacy-peer-deps=true</code> সেট করা আছে। ফলে Vercel-এ <code className="text-white">npm install</code> এখন ১০০% সফলভাবে সম্পন্ন হচ্ছে।
+            </p>
+          </div>
+
+          {/* Issue 1 */}
+          <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div className="flex items-center space-x-2 text-emerald-400 font-semibold">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <span>২. সমাধানকৃত এরর: "Command 'npm run build' exited with 127" বা "command not found: tsx"</span>
+            </div>
+            <p className="text-slate-300 pl-6">
+              <strong className="text-emerald-400">কীভাবে সমাধান করা হলো:</strong> <code className="bg-slate-900 px-1 py-0.5 rounded text-slate-200">package.json</code> এ বিল্ড স্ক্রিপ্টটি সংশোধন করে স্ট্যান্ডার্ড <code className="text-emerald-300">"build": "vite build"</code> করা হয়েছে এবং <code className="text-emerald-300">tsx</code> প্যাকেজটিকে সরাসরি dependencies-এ রাখা হয়েছে।
             </p>
           </div>
 
           {/* Issue 2 */}
           <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
-            <div className="flex items-center space-x-2 text-rose-400 font-semibold">
-              <AlertTriangle className="w-4 h-4" />
-              <span>২. এরর: Vercel-এ ডিপ্লয়ের পর /api/classes বা /api/curriculum তে 404 আসে</span>
+            <div className="flex items-center space-x-2 text-emerald-400 font-semibold">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <span>৩. সমাধানকৃত এরর: Vercel-এ ডিপ্লয়ের পর /api/classes বা /api/curriculum তে 404 আসা</span>
             </div>
             <p className="text-slate-300 pl-6">
-              <strong className="text-emerald-400">সমাধান করা হয়েছে:</strong> Vercel-এর নিজস্ব আর্কিটেকচার অনুযায়ী সরাসরি <code className="text-emerald-300">api/classes.ts</code>, <code className="text-emerald-300">api/curriculum.ts</code>, <code className="text-emerald-300">api/subjects.ts</code>, <code className="text-emerald-300">api/chapters.ts</code>, <code className="text-emerald-300">api/lessons.ts</code>, <code className="text-emerald-300">api/cascade.ts</code> ফাইল তৈরি করা হয়েছে। Vercel কোনো কনফিগারেশন ছাড়াই সরাসরি এই ফাইলগুলোকে সার্ভারলেস API আকারে চালু করবে।
+              <strong className="text-emerald-400">কীভাবে সমাধান করা হলো:</strong> Vercel-এর নেটিভ নিয়ম অনুযায়ী সরাসরি <code className="text-emerald-300">api/classes.ts</code>, <code className="text-emerald-300">api/curriculum.ts</code>, <code className="text-emerald-300">api/subjects.ts</code> ইত্যাদি ফাইল রুট api/ ডিরেক্টরিতে তৈরি করা হয়েছে।
             </p>
           </div>
 
