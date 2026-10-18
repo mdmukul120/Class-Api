@@ -903,8 +903,16 @@ export const CLASS_6_DATA: ClassGrade = {
               point: "১.১",
               title: "Onion Peel Cell Slide Preparation",
               titleBangla: "১.১ পেঁয়াজের পাতলা ত্বকের কোষ স্লাইডে স্থাপন ও পর্যবেক্ষণ",
-              summary: "আইড্রপার, মিথিলিন ব্লু ও কভারস্লিপ দিয়ে মাইক্রোস্কোপে কোষ প্রাচীর দেখা।",
-              keywords: ["মাইক্রোস্কোপ", "স্লাইড", "পেঁয়াজের ত্বক", "কোষ"]
+              summary: "আইড্রপার, মিথিলিন ব্লু ও কভারস্লিপ দিয়ে মাইক্রোস্কোপে কোষ প্রাচীর ও নিউক্লিয়াস দেখা।",
+              keywords: ["মাইক্রোস্কোপ", "স্লাইড", "পেঁয়াজের ত্বক", "কোষ প্রাচীর", "নিউক্লিয়াস"]
+            },
+            {
+              id: "c6-sci-prac-ch1-l2",
+              point: "১.২",
+              title: "Stomatal Guard Cell Observation",
+              titleBangla: "১.২ পাতার নিম্নত্বকের পত্ররন্ধ্র ও রক্ষীকোষ পর্যবেক্ষণ",
+              summary: "পান বা ডালিয়ার পাতার নিচের খোসা ছাড়িয়ে পত্ররন্ধ্রের গঠন অনুবীক্ষণ যন্ত্রে প্রদর্শন।",
+              keywords: ["পত্ররন্ধ্র", "রক্ষীকোষ", "অনুবীক্ষণ", "উদ্ভিদ অঙ্গসংস্থান"]
             }
           ]
         },
@@ -920,7 +928,143 @@ export const CLASS_6_DATA: ClassGrade = {
               title: "Globe and Torch Earth Rotation Experiment",
               titleBangla: "২.১ গ্লোব ও টর্চলাইটের সাহায্যে দিন-রাত ও ঋতু পরিবর্তনের মডেল",
               summary: "পৃথিবীর আহ্নিক গতি ও বার্ষিক গতির কারণে দিন-রাত ও ঋতুর পালাবদল প্রদর্শন।",
-              keywords: ["গ্লোব", "টর্চলাইট", "আহ্নিক গতি", "দিন রাত"]
+              keywords: ["গ্লোব", "টর্চলাইট", "আহ্নিক গতি", "দিন রাত", "ঋতু পরিবর্তন"]
+            },
+            {
+              id: "c6-sci-prac-ch2-l2",
+              point: "২.২",
+              title: "Planetary Proportions and Orbits Simulation",
+              titleBangla: "২.২ গ্রহসমূহের আপেক্ষিক দূরত্ব ও সূর্যকেন্দ্রিক কক্ষপথ সিমুলেশন",
+              summary: "বিভিন্ন মাপের বল ও বৃত্তাকার কক্ষপথের মাধ্যমে সৌরজগতের গঠন তৈরি।",
+              keywords: ["সৌরজগৎ", "কক্ষপথ", "গ্রহ", "আপেক্ষিক আকার"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch3",
+          chapterNumber: 3,
+          title: "Mixture Separation and Solution Preparation",
+          titleBangla: "৩য় অধ্যায়: মিশ্রণ পৃথকীকরণ ও দ্রবণ প্রস্তুতি পরীক্ষা",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch3-l1",
+              point: "৩.১",
+              title: "Filtration and Evaporation of Sand-Salt Mixture",
+              titleBangla: "৩.১ বালি ও লবণের মিশ্রণ থেকে উপাদান পৃথকীকরণ (পরিশ্রাবণ ও বাষ্পীভবন)",
+              summary: "ফিল্টার পেপার ও ফানেল দিয়ে বালি পৃথক এবং দ্রবণ তাপে বাষ্পীভূত করে লবণ উদ্ধার।",
+              keywords: ["পরিশ্রাবণ", "বাষ্পীভবন", "লবণ", "বালি", "মিশ্রণ"]
+            },
+            {
+              id: "c6-sci-prac-ch3-l2",
+              point: "৩.২",
+              title: "Saturated and Unsaturated Solutions",
+              titleBangla: "৩.২ সম্পৃক্ত ও অসম্পৃক্ত দ্রবণ তৈরির ব্যবহারিক অনুসন্ধান",
+              summary: "নির্দিষ্ট তাপমাত্রায় নির্দিষ্ট পরিমাণ পানিতে চিনির দ্রবণ তৈরির মাধ্যমে সম্পৃক্ততার পরীক্ষা।",
+              keywords: ["সম্পৃক্ত দ্রবণ", "অসম্পৃক্ত দ্রবণ", "দ্রাবক", "দ্রব্য"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch4",
+          chapterNumber: 4,
+          title: "Testing Food Nutrients and Iodine Test",
+          titleBangla: "৪র্থ অধ্যায়: খাদ্য উপাদানের উপস্থিতি পরীক্ষা ও পুষ্টি অনুসন্ধান",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch4-l1",
+              point: "৪.১",
+              title: "Starch Detection using Iodine Solution",
+              titleBangla: "৪.১ আয়োডিন দ্রবণের সাহায্যে শ্বেতসার বা শর্করা শনাক্তকরণ",
+              summary: "ভাত বা আলুর রসে আয়োডিন যোগ করে নীল-কালো বর্ণের পরিবর্তন দেখে শর্করা নিশ্চিতকরণ।",
+              keywords: ["শর্করা", "আয়োডিন দ্রবণ", "শ্বেতসার", "নীল বর্ণ"]
+            },
+            {
+              id: "c6-sci-prac-ch4-l2",
+              point: "৪.২",
+              title: "Fat and Protein Spot Test",
+              titleBangla: "৪.২ কাগজে তেল-চর্বি ও দুধে প্রোটিনের উপস্থিতি পরীক্ষা",
+              summary: "কাগজে তেলের স্বচ্ছ দাগ পরীক্ষা এবং বিউরেট দ্রবণ যোগে প্রোটিনের উপস্থিতি শনাক্তকরণ।",
+              keywords: ["স্নেহ পদার্থ", "প্রোটিন", "খাদ্য পরীক্ষা"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch5",
+          chapterNumber: 5,
+          title: "Simple Machines: Levers and Pulleys in Action",
+          titleBangla: "৫ম অধ্যায়: সরল যন্ত্রের কার্যকারিতা: লিভার ও কপিকল পরীক্ষা",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch5-l1",
+              point: "৫.১",
+              title: "Lever Balance and Mechanical Advantage",
+              titleBangla: "৫.১ ১ম, ২য় ও ৩য় শ্রেণির লিভার তৈরি ও যান্ত্রিক সুবিধা পরিমাপ",
+              summary: "দাঁড়িপাল্লা, কাঁচি ও সাঁড়াশি ব্যবহারের মাধ্যমে বল, ভার ও ফালক্রামের অবস্থান নির্ণয়।",
+              keywords: ["লিভার", "ফালক্রাম", "যান্ত্রিক সুবিধা", "সরল যন্ত্র"]
+            },
+            {
+              id: "c6-sci-prac-ch5-l2",
+              point: "৫.২",
+              title: "Fixed and Movable Pulley Force Comparison",
+              titleBangla: "৫.২ স্থির ও সচল কপিকল দিয়ে ভারী বস্তু উত্তোলনে বলের সাশ্রয়",
+              summary: "কপিকলের ব্যবহারে বলের দিক পরিবর্তন ও ভার বহনের সুবিধা হাতেকলমে পরীক্ষণ।",
+              keywords: ["কপিকল", "বল সাশ্রয়", "ভার উত্তোলন"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch6",
+          chapterNumber: 6,
+          title: "Electric Circuits and Conductor Identification",
+          titleBangla: "৬ষ্ঠ অধ্যায়: সহজ তড়িৎ বর্তনী তৈরি ও পরিবাহী-অপরিবাহী পদার্থ পরীক্ষণ",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch6-l1",
+              point: "৬.১",
+              title: "Constructing Battery, Switch and Bulb Circuit",
+              titleBangla: "৬.১ ব্যাটারি, চাবি ও বাল্ব সহযোগে পূর্ণাঙ্গ ও ছিন্ন বর্তনী তৈরি",
+              summary: "তড়িৎ প্রবাহের পথ তৈরি, সুইচ অন-অফে বাল্ব প্রজ্বলন ও বর্তনী পর্যবেক্ষণ।",
+              keywords: ["তড়িৎ বর্তনী", "ব্যাটারি", "সুইচ", "বাল্ব"]
+            },
+            {
+              id: "c6-sci-prac-ch6-l2",
+              point: "৬.২",
+              title: "Testing Conductors vs Insulators",
+              titleBangla: "৬.২ ধাতু, কাঠ, প্লাস্টিক ও গ্রাফাইট পেন্সিলের পরিবাহিতা পরীক্ষা",
+              summary: "বর্তনীতে বিভিন্ন বস্তু যুক্ত করে কোনটি বিদ্যুৎ পরিবাহী এবং কোনটি অপরিবাহী তা যাচাই।",
+              keywords: ["পরিবাহী", "অপরিবাহী", "গ্রাফাইট", "বিদ্যুৎ"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch7",
+          chapterNumber: 7,
+          title: "Air Composition and Oxygen in Combustion",
+          titleBangla: "৭ম অধ্যায়: বায়ুর উপাদান ও দহনে অক্সিজেনের ভূমিকা পরীক্ষা",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch7-l1",
+              point: "৭.১",
+              title: "Burning Candle under Inverted Glass Tumbler",
+              titleBangla: "৭.১ গ্লাসে ঢাকা জ্বলন্ত মোমবাতি ও অক্সিজেনের সীমাবদ্ধতা পরীক্ষা",
+              summary: "কাচের গ্লাস ঢেকে দিলে মোমবাতি নিভে যাওয়া ও পানির স্তর বৃদ্ধির মাধ্যমে অক্সিজেনের পরিমাণ নির্ণয়।",
+              keywords: ["অক্সিজেন", "দহন", "মোমবাতি পরীক্ষা", "বায়ুর উপাদান"]
+            }
+          ]
+        },
+        {
+          id: "c6-sci-prac-ch8",
+          chapterNumber: 8,
+          title: "Schoolyard Ecosystem & Waste Audit Project",
+          titleBangla: "৮ম অধ্যায়: বিদ্যালয় প্রাঙ্গণে জীববৈচিত্র্য ও বর্জ্য ব্যবস্থাপনা প্রকল্প",
+          lessons: [
+            {
+              id: "c6-sci-prac-ch8-l1",
+              point: "৮.১",
+              title: "Biodiversity Quadrat Sampling and Waste Segregation",
+              titleBangla: "৮.১ এক বর্গমিটার জমিতে উদ্ভিদের বৈচিত্র্য ও পচনশীল-অপচনশীল বর্জ্য পৃথকীকরণ",
+              summary: "ক্যাম্পাসের ক্ষুদ্র বাস্তুতন্ত্র জরিপ এবং প্লাস্টিক ও জৈব বর্জ্য পুনর্ব্যবহার পরিকল্পনা।",
+              keywords: ["বাস্তুতন্ত্র", "বর্জ্য ব্যবস্থাপনা", "রিসাইক্লিং", "পরিবেশ সুরক্ষা"]
             }
           ]
         }
@@ -1509,6 +1653,296 @@ export const CLASS_6_DATA: ClassGrade = {
               titleBangla: "৫.১ মহানবি হযরত মুহাম্মদ (সা.)-এর শৈশব, আল-আমিন উপাধি ও হিলফুল ফুজুল",
               summary: "শান্তি প্রতিষ্ঠায় যুব সমাজের উদ্যোগ এবং চরম সততার অনন্য নজির।",
               keywords: ["হযরত মুহাম্মদ", "আল আমিন", "হিলফুল ফুজুল", "আদর্শ"]
+            }
+          ]
+        }
+      ]
+    },
+
+    // ----------------------------------------------------
+    // ১২. হিন্দুধর্ম শিক্ষা ও নৈতিকতা (Hindu Religious Studies)
+    // ----------------------------------------------------
+    {
+      id: "c6-hindu-studies",
+      code: "HIN-06",
+      name: "Hindu Religious Studies and Ethics",
+      nameBangla: "হিন্দুধর্ম শিক্ষা ও নৈতিকতা",
+      group: "General",
+      coverColor: "from-amber-600 to-red-850",
+      chapters: [
+        {
+          id: "c6-hin-ch1",
+          chapterNumber: 1,
+          title: "Creator, Creation and Eternal Dharma",
+          titleBangla: "১ম অধ্যায়: স্রষ্টা ও সৃষ্টি এবং সনাতন ধর্মের স্বরূপ",
+          lessons: [
+            {
+              id: "c6-hin-ch1-l1",
+              point: "১.১",
+              title: "Brahman, Ishwar and Living Souls",
+              titleBangla: "১.১ ব্রহ্ম ও ঈশ্বরের ধারণা এবং জীব ও জগতের সম্পর্ক",
+              summary: "ঈশ্বর এক ও অদ্বিতীয়, নিরাকার ব্রহ্ম ও সাকার রূপ এবং সর্বভূতে ঈশ্বরের উপস্থিতি।",
+              keywords: ["ব্রহ্ম", "ঈশ্বর", "সাকার", "নিরাকার", "জীবাত্মা"]
+            },
+            {
+              id: "c6-hin-ch1-l2",
+              point: "১.২",
+              title: "Nature as Divine Manifestation",
+              titleBangla: "১.২ প্রকৃতি পূজা ও বৃক্ষ-নদী-পাহাড়ের প্রতি শ্রদ্ধাবোধ",
+              summary: "সনাতন ধর্মে প্রকৃতির প্রতিটি উপাদানে দেবত্বের উপলব্ধি ও পরিবেশ সংরক্ষণ।",
+              keywords: ["প্রকৃতি পূজা", "পরিবেশ", "শ্রদ্ধাবোধ"]
+            }
+          ]
+        },
+        {
+          id: "c6-hin-ch2",
+          chapterNumber: 2,
+          title: "Scriptures and Mantras",
+          titleBangla: "২য় অধ্যায়: ধর্মগ্রন্থ ও বৈদিক প্রার্থনা",
+          lessons: [
+            {
+              id: "c6-hin-ch2-l1",
+              point: "২.১",
+              title: "Introduction to Vedas, Upanishads and Gita",
+              titleBangla: "২.১ বেদ, উপনিষদ ও শ্রীমদ্ভগবদ্গীতার পরিচয়",
+              summary: "চার বেদ (ঋক, সাম, যজু, অথর্ব) এবং গীতার কর্মযোগের প্রাথমিক শিক্ষা।",
+              keywords: ["বেদ", "গীতা", "উপনিষদ", "কর্মযোগ"]
+            },
+            {
+              id: "c6-hin-ch2-l2",
+              point: "২.২",
+              title: "Gayatri Mantra and Daily Prayers",
+              titleBangla: "২.২ গায়ত্রী মন্ত্রের অর্থ ও প্রত্যহ শুভকামনা প্রার্থনা",
+              summary: "গায়ত্রী মন্ত্রের সরল বঙ্গানুবাদ, শুদ্ধ উচ্চারণ ও একাগ্র চিত্তে প্রার্থনা।",
+              keywords: ["গায়ত্রী মন্ত্র", "প্রার্থনা", "একাগ্রতা"]
+            }
+          ]
+        },
+        {
+          id: "c6-hin-ch3",
+          chapterNumber: 3,
+          title: "Deities and Festivals",
+          titleBangla: "৩য় অধ্যায়: দেব-দেবী ও উৎসব-পার্বণ",
+          lessons: [
+            {
+              id: "c6-hin-ch3-l1",
+              point: "৩.১",
+              title: "Saraswati, Lakshmi, and Ganesha Worship",
+              titleBangla: "৩.১ সরস্বতী পূজা, লক্ষ্মী পূজা ও গণেশ পূজার তাৎপর্য",
+              summary: "বিদ্যা, সম্পদ ও সিদ্ধিদাতা দেবতার প্রতীকী মাহাত্ম্য ও সামাজিক সম্প্রীতি।",
+              keywords: ["সরস্বতী পূজা", "লক্ষ্মী", "গণেশ", "উৎসব"]
+            },
+            {
+              id: "c6-hin-ch3-l2",
+              point: "৩.২",
+              title: "Durga Puja and Community Harmony",
+              titleBangla: "৩.২ শারদীয় দুর্গাপূজা ও সর্বজনীন সৌহার্দ্য",
+              summary: "অশুভের বিরুদ্ধে শুভর বিজয় এবং সার্বজনীন মিলনোৎসবের আনন্দ।",
+              keywords: ["দুর্গাপূজা", "সম্প্রীতি", "বিজয়"]
+            }
+          ]
+        },
+        {
+          id: "c6-hin-ch4",
+          chapterNumber: 4,
+          title: "Moral Virtues and Service to Humanity",
+          titleBangla: "৪র্থ অধ্যায়: সদাচার, অহিংসা ও মানবসেবা",
+          lessons: [
+            {
+              id: "c6-hin-ch4-l1",
+              point: "৪.১",
+              title: "Ahimsa and Compassion for Living Beings",
+              titleBangla: "৪.১ অহিংসা পরম ধর্ম ও সকল জীবের প্রতি দয়া",
+              summary: "কোনো প্রাণীকে অকারণে কষ্ট না দেওয়া এবং সৃষ্টির সেবায় নিজেকে নিয়োজিত করা।",
+              keywords: ["অহিংসা", "দয়া", "জীবসেবা"]
+            }
+          ]
+        },
+        {
+          id: "c6-hin-ch5",
+          chapterNumber: 5,
+          title: "Exemplary Moral Personalities",
+          titleBangla: "৫ম অধ্যায়: আদর্শ জীবনচরিত",
+          lessons: [
+            {
+              id: "c6-hin-ch5-l1",
+              point: "৫.১",
+              title: "Life and Teachings of Sri Ramakrishna & Swami Vivekananda",
+              titleBangla: "৫.১ শ্রীরামকৃষ্ণ পরমহংসদেব ও স্বামী বিবেকানন্দের জীবনী",
+              summary: "যত মত তত পথ দর্শন এবং নরনারায়ণ সেবায় যুবসমাজের আত্মনিয়োগ।",
+              keywords: ["শ্রীরামকৃষ্ণ", "বিবেকানন্দ", "যত মত তত পথ", "মানবকল্যাণ"]
+            }
+          ]
+        }
+      ]
+    },
+
+    // ----------------------------------------------------
+    // ১৩. খ্রিস্টধর্ম শিক্ষা ও নৈতিকতা (Christian Religious Studies)
+    // ----------------------------------------------------
+    {
+      id: "c6-christian-studies",
+      code: "CHR-06",
+      name: "Christian Religious Studies and Ethics",
+      nameBangla: "খ্রিস্টধর্ম শিক্ষা ও নৈতিকতা",
+      group: "General",
+      coverColor: "from-indigo-600 to-purple-850",
+      chapters: [
+        {
+          id: "c6-chr-ch1",
+          chapterNumber: 1,
+          title: "God the Creator and Human Stewardship",
+          titleBangla: "১ম অধ্যায়: স্রষ্টা ঈশ্বর ও প্রকৃতির যত্ন",
+          lessons: [
+            {
+              id: "c6-chr-ch1-l1",
+              point: "১.১",
+              title: "Creation of Universe and Role of Humanity",
+              titleBangla: "১.১ বিশ্বসৃষ্টি ও প্রকৃতির বিশ্বস্ত রক্ষক হিসেবে মানুষের ভূমিকা",
+              summary: "ঈশ্বরের ভালোবাসার বহিঃপ্রকাশ সৃষ্টিজগত এবং তা যত্ন সহকারে রক্ষা করার দায়িত্ব।",
+              keywords: ["সৃষ্টি", "ঈশ্বর", "প্রকৃতি রক্ষা", "দায়িত্বশীলতা"]
+            }
+          ]
+        },
+        {
+          id: "c6-chr-ch2",
+          chapterNumber: 2,
+          title: "Holy Bible and the Ten Commandments",
+          titleBangla: "২য় অধ্যায়: পবিত্র বাইবেল ও দশ আজ্ঞা",
+          lessons: [
+            {
+              id: "c6-chr-ch2-l1",
+              point: "২.১",
+              title: "Structure of Old and New Testaments",
+              titleBangla: "২.১ পুরাতন নিয়ম ও নতুন নিয়মের মৌলিক পরিচয়",
+              summary: "বাইবেলের ইতিহাস, ভাববাদীগণের বাণী এবং সুসমাচারসমূহের পরিচিতি।",
+              keywords: ["বাইবেল", "পুরাতন নিয়ম", "নতুন নিয়ম", "সুসমাচার"]
+            },
+            {
+              id: "c6-chr-ch2-l2",
+              point: "২.২",
+              title: "Ten Commandments as Rules for Peaceful Living",
+              titleBangla: "২.২ দশ আজ্ঞা এবং শান্তিপূর্ণ সহাবস্থানের নির্দেশনা",
+              summary: "পিতা-মাতাকে সম্মান, মিথ্যা না বলা, চুরি না করা ও প্রতিবেশীকে ভালোবাসার বিধান।",
+              keywords: ["দশ আজ্ঞা", "নৈতিকতা", "শান্তি", "সম্মান"]
+            }
+          ]
+        },
+        {
+          id: "c6-chr-ch3",
+          chapterNumber: 3,
+          title: "Life and Teachings of Jesus Christ",
+          titleBangla: "৩য় অধ্যায়: প্রভু যিশু খ্রিস্টের জীবন ও মানবপ্রেম",
+          lessons: [
+            {
+              id: "c6-chr-ch3-l1",
+              point: "৩.১",
+              title: "Nativity of Jesus and Sermon on the Mount",
+              titleBangla: "৩.১ যিশুর জন্ম, শৈশব এবং পাহাড়ি উপদেশ (করুণা ও ক্ষমা)",
+              summary: "দীন-দুঃখীর সেবা, শত্রুকেও ভালোবাসার আহ্বান ও ক্ষমার মহত্ত্ব।",
+              keywords: ["যিশু খ্রিস্ট", "পাহাড়ি উপদেশ", "ক্ষমা", "দয়া"]
+            }
+          ]
+        },
+        {
+          id: "c6-chr-ch4",
+          chapterNumber: 4,
+          title: "Christian Ethics and Community Service",
+          titleBangla: "৪র্থ অধ্যায়: খ্রিস্টীয় মূল্যবোধ ও সমাজসেবা",
+          lessons: [
+            {
+              id: "c6-chr-ch4-l1",
+              point: "৪.১",
+              title: "Mother Teresa's Selfless Service to the Poor",
+              titleBangla: "৪.১ মাদার তেরেসার নিঃস্বার্থ সেবা ও আর্তমানবতার কল্যাণ",
+              summary: "কলকাতার বস্তি ও কুষ্ঠরোগীদের সেবায় মিশনারিজ অব চ্যারিটির অবদান ও ত্যাগ।",
+              keywords: ["মাদার তেরেসা", "মানবসেবা", "ত্যাগের মহিমা"]
+            }
+          ]
+        }
+      ]
+    },
+
+    // ----------------------------------------------------
+    // ১৪. বৌদ্ধধর্ম শিক্ষা ও নৈতিকতা (Buddhist Religious Studies)
+    // ----------------------------------------------------
+    {
+      id: "c6-buddhist-studies",
+      code: "BUD-06",
+      name: "Buddhist Religious Studies and Ethics",
+      nameBangla: "বৌদ্ধধর্ম শিক্ষা ও নৈতিকতা",
+      group: "General",
+      coverColor: "from-yellow-600 to-amber-850",
+      chapters: [
+        {
+          id: "c6-bud-ch1",
+          chapterNumber: 1,
+          title: "Siddhartha Gautama and Enlightenment",
+          titleBangla: "১ম অধ্যায়: সিদ্ধার্থ গৌতমের জীবন ও বুদ্ধত্ব লাভ",
+          lessons: [
+            {
+              id: "c6-bud-ch1-l1",
+              point: "১.১",
+              title: "Prince Siddhartha's Renunciation and Four Sights",
+              titleBangla: "১.১ রাজকুমার সিদ্ধার্থের বৈরাগ্য ও চার দর্শন (বৃদ্ধ, রোগী, মৃত ও সন্ন্যাসী)",
+              summary: "সংসার ত্যাগের কারণ, কঠোর সাধনা ও বোধিবৃক্ষের নিচে বুদ্ধত্ব অর্জন।",
+              keywords: ["গৌতম বুদ্ধ", "চার দর্শন", "মহামুক্তির সাধনা", "বোধিজ্ঞান"]
+            }
+          ]
+        },
+        {
+          id: "c6-bud-ch2",
+          chapterNumber: 2,
+          title: "Triratna, Vandana, and Five Precepts",
+          titleBangla: "২য় অধ্যায়: ত্রিরত্ন বন্দনা ও পঞ্চশীল",
+          lessons: [
+            {
+              id: "c6-bud-ch2-l1",
+              point: "২.১",
+              title: "Buddha, Dhamma, Sangha Refuge and Daily Vandana",
+              titleBangla: "২.১ বুদ্ধ, ধর্ম ও সংঘের শরণ গ্রহণ এবং বন্দনার নিয়ম",
+              summary: "ত্রিরত্নের প্রতি গভীর শ্রদ্ধা এবং মনকে প্রশান্ত রাখার প্রত্যাহিক বন্দনা।",
+              keywords: ["বুদ্ধ", "ধর্ম", "সংঘ", "ত্রিরত্ন বন্দনা"]
+            },
+            {
+              id: "c6-bud-ch2-l2",
+              point: "২.২",
+              title: "Pancasila (Five Precepts) for Moral Life",
+              titleBangla: "২.২ পঞ্চশীল নীতি ও দৈনন্দিন জীবনে এর অনুশীলন",
+              summary: "প্রাণীহত্যা বর্জন, অদত্তা গ্রহণ না করা, অসদাচরণ পরিহার, মিথ্যা বর্জন ও মাদক বর্জন।",
+              keywords: ["পঞ্চশীল", "শীল পালন", "অহিংসা", "চরিত্র গঠন"]
+            }
+          ]
+        },
+        {
+          id: "c6-bud-ch3",
+          chapterNumber: 3,
+          title: "Four Noble Truths and Compassion",
+          titleBangla: "৩য় অধ্যায়: চতুরার্য সত্য ও সার্বজনীন মৈত্রী",
+          lessons: [
+            {
+              id: "c6-bud-ch3-l1",
+              point: "৩.১",
+              title: "Understanding Suffering and the Middle Path",
+              titleBangla: "৩.১ দুঃখবোধ, দুঃখের কারণ এবং মধ্যম পন্থার অপরিহার্যতা",
+              summary: "চরম ভোগবাদ বা কৃচ্ছ্রসাধন ত্যাগ করে সুষম মধ্যম মার্গ গ্রহণ।",
+              keywords: ["চতুরার্য সত্য", "মধ্যম পন্থা", "মৈত্রীভাবনা"]
+            }
+          ]
+        },
+        {
+          id: "c6-bud-ch4",
+          chapterNumber: 4,
+          title: "Jataka Tales and Noble Lessons",
+          titleBangla: "৪র্থ অধ্যায়: জাতকের নীতিশিক্ষা ও মহৎ ব্যক্তিত্ব",
+          lessons: [
+            {
+              id: "c6-bud-ch4-l1",
+              point: "৪.১",
+              title: "Tales of Self-Sacrifice and Gratitude in Jataka",
+              titleBangla: "৪.১ জাতকের আত্মত্যাগ ও কৃতজ্ঞতাবোধ সংক্রান্ত কাহিনির শিক্ষা",
+              summary: "বোধন সত্ব অবস্থায় বিভিন্ন প্রাণীর রূপে পরোপকার ও মৈত্রী প্রদর্শনের অনুপ্রেরণা।",
+              keywords: ["জাতক", "নীতিশিক্ষা", "আত্মত্যাগ", "কৃতজ্ঞতা"]
             }
           ]
         }

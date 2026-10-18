@@ -29,25 +29,37 @@ export const DropdownSimulator: React.FC = () => {
   const [copiedLink, setCopiedLink] = useState<boolean>(false);
   const [copiedJson, setCopiedJson] = useState<boolean>(false);
   const [apiResponseTime, setApiResponseTime] = useState<number | null>(null);
+  const [selectedGroup, setSelectedGroup] = useState<string>('all');
 
   // Available options derived from selection
   const currentClass = CURRICULUM_DATA.find((c) => c.id === selectedClassId);
-  const availableSubjects = currentClass?.subjects || [];
+  const rawSubjects = currentClass?.subjects || [];
+  const hasGroups = rawSubjects.some(s => s.group);
+
+  const availableSubjects = rawSubjects.filter(s => {
+    if (selectedGroup === 'all') return true;
+    if (selectedGroup === 'Science') return s.group === 'Science';
+    if (selectedGroup === 'Humanities') return s.group === 'Humanities';
+    if (selectedGroup === 'Business Studies') return s.group === 'Business Studies';
+    if (selectedGroup === 'General / Compulsory') return s.group === 'General / Compulsory';
+    if (selectedGroup === 'Optional') return s.group === 'Optional';
+    return s.group === selectedGroup;
+  });
   
-  const currentSubject = availableSubjects.find((s) => s.id === selectedSubjectId);
+  const currentSubject = availableSubjects.find((s) => s.id === selectedSubjectId) || availableSubjects[0];
   const availableChapters = currentSubject?.chapters || [];
 
-  const currentChapter = availableChapters.find((ch) => ch.id === selectedChapterId);
+  const currentChapter = availableChapters.find((ch) => ch.id === selectedChapterId) || availableChapters[0];
   const availableLessons = currentChapter?.lessons || [];
 
-  const currentLesson = availableLessons.find((l) => l.id === selectedLessonId);
+  const currentLesson = availableLessons.find((l) => l.id === selectedLessonId) || availableLessons[0];
 
   // Auto-select first item when parent changes
   useEffect(() => {
     if (availableSubjects.length > 0 && (!selectedSubjectId || !availableSubjects.some(s => s.id === selectedSubjectId))) {
       setSelectedSubjectId(availableSubjects[0].id);
     }
-  }, [selectedClassId, availableSubjects]);
+  }, [selectedClassId, selectedGroup, availableSubjects]);
 
   useEffect(() => {
     if (availableChapters.length > 0 && (!selectedChapterId || !availableChapters.some(ch => ch.id === selectedChapterId))) {
@@ -71,6 +83,7 @@ export const DropdownSimulator: React.FC = () => {
   let currentApiEndpoint = `${baseUrl}/api/cascade`;
   let queryParams = [];
   if (selectedClassId) queryParams.push(`classId=${selectedClassId}`);
+  if (selectedGroup !== 'all') queryParams.push(`group=${encodeURIComponent(selectedGroup)}`);
   if (selectedSubjectId) queryParams.push(`subjectId=${selectedSubjectId}`);
   if (selectedChapterId) queryParams.push(`chapterId=${selectedChapterId}`);
   if (queryParams.length > 0) {
@@ -175,6 +188,33 @@ export const DropdownSimulator: React.FC = () => {
           </div>
         </div>
 
+        {/* Stream / Department Selector for Secondary and Higher Secondary */}
+        {hasGroups && (
+          <div className="px-6 sm:px-8 pt-3 pb-2 flex items-center space-x-1.5 overflow-x-auto text-xs border-b border-slate-800/80 bg-slate-950/40">
+            <span className="text-slate-400 font-semibold whitespace-nowrap mr-1">বিভাগ বাছাই:</span>
+            {[
+              { id: 'all', label: 'সকল বিভাগ' },
+              { id: 'General / Compulsory', label: 'আবশ্যিক / সাধারণ' },
+              { id: 'Science', label: 'বিজ্ঞান (Science)' },
+              { id: 'Humanities', label: 'মানবিক (Humanities)' },
+              { id: 'Business Studies', label: 'ব্যবসায় শিক্ষা (Commerce)' },
+              { id: 'Optional', label: 'ঐচ্ছিক (Optional)' }
+            ].map((grp) => (
+              <button
+                key={grp.id}
+                onClick={() => setSelectedGroup(grp.id)}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition text-xs ${
+                  selectedGroup === grp.id
+                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm'
+                    : 'bg-slate-900/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800'
+                }`}
+              >
+                {grp.label}
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* The 4 Dropdowns Grid */}
         <div className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* 1. SELECT CLASS */}
@@ -271,7 +311,7 @@ export const DropdownSimulator: React.FC = () => {
             >
               {availableLessons.map((l) => (
                 <option key={l.id} value={l.id} className="bg-slate-900 text-white py-1">
-                  {l.point} - {l.titleBangla}
+                  {l.point} - {l.titleBangla.startsWith(l.point) ? l.titleBangla.slice(l.point.length).trim() : l.titleBangla}
                 </option>
               ))}
             </select>

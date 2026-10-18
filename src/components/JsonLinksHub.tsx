@@ -65,6 +65,15 @@ export const JsonLinksHub: React.FC<JsonLinksHubProps> = ({ onViewJson }) => {
       hasParamControl: 'class'
     },
     {
+      id: 'subjects-by-stream',
+      title: 'বিভাগভিত্তিক ফিল্টার (Subjects by Group / Stream - Science, Humanities, Business)',
+      description: '৯ম-১০ম ও একাদশ-দ্বাদশ (HSC) শ্রেণির বিজ্ঞান, মানবিক, ব্যবসায় শিক্ষা বা আবশ্যিক গ্রুপ ফিল্টার করার এন্ডপয়েন্ট। group=science, group=humanities, group=business, group=compulsory পাস করুন।',
+      method: 'GET',
+      path: `/api/subjects?classId=${selectedClassForQuery}&group=science`,
+      category: 'Stream Filter',
+      sampleParams: 'group=science'
+    },
+    {
       id: 'chapters-by-subject',
       title: 'বিষয়ভিত্তিক অধ্যায়সমূহের তালিকা (Chapters by Subject - Dropdown 3)',
       description: 'নির্বাচিত বইয়ের প্রতিটি অধ্যায়ের নাম, নম্বর ও লেসন কাউন্ট ফেচ করার এন্ডপয়েন্ট।',

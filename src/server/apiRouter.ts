@@ -87,14 +87,29 @@ apiRouter.get(['/api/classes', '/classes'], (req: Request, res: Response) => {
 // 3. Subjects for a specific class (Dropdown 2)
 apiRouter.get(['/api/subjects', '/subjects'], (req: Request, res: Response) => {
   const classId = req.query.classId as string;
+  const group = req.query.group ? String(req.query.group).toLowerCase().trim() : null;
+
+  const filterByGroup = (subGroup?: string) => {
+    if (!group) return true;
+    const g = (subGroup || '').toLowerCase();
+    if (group === 'science' || group === 'বিজ্ঞান') return g.includes('science');
+    if (group === 'humanities' || group === 'arts' || group === 'মানবিক') return g.includes('humanities');
+    if (group === 'business' || group === 'commerce' || group === 'ব্যবসায়') return g.includes('business');
+    if (group === 'compulsory' || group === 'general' || group === 'সাধারণ' || group === 'আবশ্যিক') return g.includes('general') || g.includes('compulsory');
+    if (group === 'optional' || group === 'ঐচ্ছিক') return g.includes('optional');
+    return g.includes(group);
+  };
+
   if (!classId) {
     const allSubjects = CURRICULUM_DATA.flatMap((c) =>
-      c.subjects.map((s) => ({
-        ...s,
-        classId: c.id,
-        classNameBangla: c.nameBangla,
-        chaptersUrl: `/api/chapters?subjectId=${s.id}`
-      }))
+      c.subjects
+        .filter((s) => filterByGroup(s.group))
+        .map((s) => ({
+          ...s,
+          classId: c.id,
+          classNameBangla: c.nameBangla,
+          chaptersUrl: `/api/chapters?subjectId=${s.id}`
+        }))
     );
     return res.json({ success: true, total: allSubjects.length, data: allSubjects });
   }
@@ -110,22 +125,25 @@ apiRouter.get(['/api/subjects', '/subjects'], (req: Request, res: Response) => {
     });
   }
 
-  const subjects = targetClass.subjects.map((s) => ({
-    id: s.id,
-    code: s.code,
-    name: s.name,
-    nameBangla: s.nameBangla,
-    group: s.group,
-    classId: targetClass.id,
-    classNameBangla: targetClass.nameBangla,
-    chapterCount: s.chapters.length,
-    chaptersUrl: `/api/chapters?subjectId=${s.id}`
-  }));
+  const subjects = targetClass.subjects
+    .filter((s) => filterByGroup(s.group))
+    .map((s) => ({
+      id: s.id,
+      code: s.code,
+      name: s.name,
+      nameBangla: s.nameBangla,
+      group: s.group,
+      classId: targetClass.id,
+      classNameBangla: targetClass.nameBangla,
+      chapterCount: s.chapters.length,
+      chaptersUrl: `/api/chapters?subjectId=${s.id}`
+    }));
 
   res.json({
     success: true,
     classId: targetClass.id,
     classNameBangla: targetClass.nameBangla,
+    groupFilter: group || null,
     total: subjects.length,
     data: subjects
   });
@@ -232,10 +250,11 @@ apiRouter.get(['/api/lessons', '/lessons'], (req: Request, res: Response) => {
 
 // 6. Cascading query endpoint
 apiRouter.get(['/api/cascade', '/cascade'], (req: Request, res: Response) => {
-  const { classId, subjectId, chapterId } = req.query as {
+  const { classId, subjectId, chapterId, group } = req.query as {
     classId?: string;
     subjectId?: string;
     chapterId?: string;
+    group?: string;
   };
 
   if (!classId) {
@@ -257,13 +276,28 @@ apiRouter.get(['/api/cascade', '/cascade'], (req: Request, res: Response) => {
   }
 
   if (!subjectId) {
+    const groupQuery = group ? group.toLowerCase().trim() : null;
+    const filterByGroup = (subGroup?: string) => {
+      if (!groupQuery) return true;
+      const g = (subGroup || '').toLowerCase();
+      if (groupQuery === 'science' || groupQuery === 'বিজ্ঞান') return g.includes('science');
+      if (groupQuery === 'humanities' || groupQuery === 'arts' || groupQuery === 'মানবিক') return g.includes('humanities');
+      if (groupQuery === 'business' || groupQuery === 'commerce' || groupQuery === 'ব্যবসায়') return g.includes('business');
+      if (groupQuery === 'compulsory' || groupQuery === 'general' || groupQuery === 'সাধারণ' || groupQuery === 'আবশ্যিক') return g.includes('general') || g.includes('compulsory');
+      if (groupQuery === 'optional' || groupQuery === 'ঐচ্ছিক') return g.includes('optional');
+      return g.includes(groupQuery);
+    };
+
+    const eligibleSubjects = c.subjects.filter((s) => filterByGroup(s.group));
+
     return res.json({
       step: "subjects",
       class: { id: c.id, name: c.name, nameBangla: c.nameBangla },
+      groupFilter: groupQuery || null,
       nextParam: "subjectId",
-      options: c.subjects.map((s) => ({
+      options: eligibleSubjects.map((s) => ({
         value: s.id,
-        label: `${s.nameBangla} - ${s.code}`,
+        label: `${s.nameBangla} - ${s.code}${s.group ? ` (${s.group})` : ''}`,
         code: s.code,
         group: s.group
       }))

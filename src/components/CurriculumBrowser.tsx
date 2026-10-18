@@ -17,6 +17,7 @@ import { CURRICULUM_DATA, ClassGrade, Subject, Chapter, LessonPoint } from '../d
 export const CurriculumBrowser: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedClassTab, setSelectedClassTab] = useState<string>('all');
+  const [selectedGroupTab, setSelectedGroupTab] = useState<string>('all');
   const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({
     'c6-ban-ch1': true,
     'c6-math-ch1': true
@@ -42,6 +43,20 @@ export const CurriculumBrowser: React.FC = () => {
 
     if (selectedClassTab !== 'all') {
       classes = classes.filter(c => c.id === selectedClassTab);
+    }
+
+    if (selectedGroupTab !== 'all') {
+      classes = classes.map(c => ({
+        ...c,
+        subjects: c.subjects.filter(s => {
+          if (selectedGroupTab === 'Science') return s.group === 'Science';
+          if (selectedGroupTab === 'Humanities') return s.group === 'Humanities';
+          if (selectedGroupTab === 'Business Studies') return s.group === 'Business Studies';
+          if (selectedGroupTab === 'General / Compulsory') return s.group === 'General / Compulsory';
+          if (selectedGroupTab === 'Optional') return s.group === 'Optional';
+          return s.group === selectedGroupTab;
+        })
+      })).filter(c => c.subjects.length > 0);
     }
 
     if (!searchQuery.trim()) {
@@ -102,7 +117,7 @@ export const CurriculumBrowser: React.FC = () => {
 
       return null;
     }).filter(Boolean) as ClassGrade[];
-  }, [searchQuery, selectedClassTab]);
+  }, [searchQuery, selectedClassTab, selectedGroupTab]);
 
   return (
     <div className="space-y-8">
@@ -113,7 +128,7 @@ export const CurriculumBrowser: React.FC = () => {
             পাঠ্যক্রম ব্রাউজার ও টপিক এক্সপ্লোরার
           </h2>
           <p className="mt-1 text-slate-300 text-sm">
-            ক্লাস ৬ থেকে ১২ পর্যন্ত সকল বই, অধ্যায় এবং অধ্যায়ের ভেতরের পয়েন্টগুলোর বিস্তারিত অনুসন্ধান করুন
+            ক্লাস ৬ থেকে ১২ পর্যন্ত সকল বই, বিভাগ (বিজ্ঞান, মানবিক, ব্যবসায় শিক্ষা), অধ্যায় এবং শিখনফল পয়েন্টের অনুসন্ধান
           </p>
         </div>
 
@@ -124,7 +139,7 @@ export const CurriculumBrowser: React.FC = () => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="যেকোনো বই, অধ্যায়, টপিক বা কি-ওয়ার্ড খুঁজুন (যেমন: সেট, বল, গতি, নিউটন, কোয়ান্টাম, সি প্রোগ্রামিং, ভেক্টর...)"
+            placeholder="যেকোনো বই, অধ্যায়, টপিক বা কি-ওয়ার্ড খুঁজুন (যেমন: পদার্থবিজ্ঞান, গতি, বোর মডেল, হিসাববিজ্ঞান, মুক্তিযুদ্ধ...)"
             className="w-full bg-slate-900/90 text-white pl-12 pr-4 py-3.5 rounded-2xl border border-slate-700/80 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm shadow-lg placeholder:text-slate-500"
           />
           {searchQuery && (
@@ -138,7 +153,7 @@ export const CurriculumBrowser: React.FC = () => {
         </div>
 
         {/* Class Filter Tabs */}
-        <div className="flex items-center space-x-1.5 overflow-x-auto pb-2 scrollbar-none">
+        <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 scrollbar-none">
           <button
             onClick={() => setSelectedClassTab('all')}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition ${
@@ -160,6 +175,31 @@ export const CurriculumBrowser: React.FC = () => {
               }`}
             >
               {c.nameBangla}
+            </button>
+          ))}
+        </div>
+
+        {/* Stream / Department Tabs */}
+        <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none text-xs border-t border-slate-800/60">
+          <span className="text-slate-400 font-medium whitespace-nowrap mr-1">বিভাগ ফিল্টার:</span>
+          {[
+            { id: 'all', label: 'সকল বিভাগ' },
+            { id: 'General / Compulsory', label: 'আবশ্যিক / সাধারণ' },
+            { id: 'Science', label: 'বিজ্ঞান (Science)' },
+            { id: 'Humanities', label: 'মানবিক (Humanities)' },
+            { id: 'Business Studies', label: 'ব্যবসায় শিক্ষা (Commerce)' },
+            { id: 'Optional', label: 'ঐচ্ছিক (Optional)' }
+          ].map(grp => (
+            <button
+              key={grp.id}
+              onClick={() => setSelectedGroupTab(grp.id)}
+              className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition text-xs ${
+                selectedGroupTab === grp.id
+                  ? 'bg-teal-500/20 text-teal-300 border border-teal-500/50 shadow-sm'
+                  : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800'
+              }`}
+            >
+              {grp.label}
             </button>
           ))}
         </div>
@@ -265,7 +305,9 @@ export const CurriculumBrowser: React.FC = () => {
                                           {lesson.point}
                                         </span>
                                         <span className="font-semibold text-slate-200">
-                                          {lesson.titleBangla}
+                                          {lesson.titleBangla.startsWith(lesson.point)
+                                            ? lesson.titleBangla.slice(lesson.point.length).trim()
+                                            : lesson.titleBangla}
                                         </span>
                                       </div>
                                       <p className="text-slate-400 text-[11px] pl-1">

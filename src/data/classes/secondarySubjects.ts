@@ -1,0 +1,3036 @@
+import { ClassGrade, Subject, Chapter, LessonPoint } from '../types';
+
+interface SecondaryLessonDef {
+  idSuffix: string;
+  point: string;
+  title: string;
+  titleBangla: string;
+  summary: string;
+  keywords: string[];
+}
+
+interface SecondaryChapterDef {
+  idSuffix: string;
+  chapterNumber: number;
+  title: string;
+  titleBangla: string;
+  lessons: SecondaryLessonDef[];
+}
+
+interface SecondarySubjectDef {
+  idSuffix: string;
+  codeBase: string;
+  name: string;
+  nameBangla: string;
+  group: string;
+  coverColor: string;
+  chapters: SecondaryChapterDef[];
+}
+
+export const SECONDARY_SUBJECT_DEFS: SecondarySubjectDef[] = [
+  // ==========================================
+  // 1. আবশ্যিক / সাধারণ বিষয় (General / Compulsory)
+  // ==========================================
+  {
+    idSuffix: "bangla-1",
+    codeBase: "BAN1",
+    name: "Bangla 1st Paper (Sahitya)",
+    nameBangla: "বাংলা ১ম পত্র (সাহিত্য)",
+    group: "General / Compulsory",
+    coverColor: "from-emerald-600 to-teal-850",
+    chapters: [
+      {
+        idSuffix: "b1-ch1",
+        chapterNumber: 1,
+        title: "Shobha by Rabindranath Tagore",
+        titleBangla: "১ম অধ্যায়: শোভা - রবীন্দ্রনাথ ঠাকুর (গল্প)",
+        lessons: [
+          {
+            idSuffix: "b1-ch1-l1",
+            point: "১.১",
+            title: "Analysis of Shobha's Non-verbal Expression",
+            titleBangla: "১.১ বাকপ্রতিবন্ধী কিশোরী শুভার প্রকৃতিপ্রেম ও অনুভূতির জগৎ",
+            summary: "রবীন্দ্রনাথ ঠাকুরের কালজয়ী ছোটগল্প 'শুভা'-র চরিত্র বিশ্লেষণ, প্রাকৃতিক সান্নিধ্য ও মূক অবলা প্রাণীদের সাথে শুভার গভীর মমত্ববোধ।",
+            keywords: ["শুভা", "রবীন্দ্রনাথ ঠাকুর", "বাকপ্রতিবন্ধী", "ছোটগল্প", "প্রকৃতি"]
+          },
+          {
+            idSuffix: "b1-ch1-l2",
+            point: "১.২",
+            title: "Social Attitude Towards Differently Abled",
+            titleBangla: "১.২ বিশেষ চাহিদাসম্পন্ন মানুষের প্রতি সামাজিক দৃষ্টিভঙ্গি ও মানবিকতাবোধ",
+            summary: "তৎকালীন বাঙালি সমাজে শারীরিক প্রতিবন্ধীদের প্রতি পারিপার্শ্বিক অবহেলা ও শুভার মনের সুপ্ত আকুতি।",
+            keywords: ["সামাজিক দৃষ্টিভঙ্গি", "মানবিকতা", "সহমর্মিতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch2",
+        chapterNumber: 2,
+        title: "Boi Pora by Pramatha Chowdhury",
+        titleBangla: "২য় অধ্যায়: বই পড়া - প্রমথ চৌধুরী (প্রবন্ধ)",
+        lessons: [
+          {
+            idSuffix: "b1-ch2-l1",
+            point: "২.১",
+            title: "Value of Self-Education and Libraries",
+            titleBangla: "২.১ স্বশিক্ষিত হওয়ার উপায় ও লাইব্রেরির গুরুত্ব",
+            summary: "প্রমথ চৌধুরীর বিখ্যাত প্রবন্ধ 'বই পড়া'-য় পাস করা বিদ্যার সীমাবদ্ধতা এবং আনন্দের সাথে বই পড়ার মাধ্যমে মানসিক মুক্তির গুরুত্ব।",
+            keywords: ["বই পড়া", "প্রমথ চৌধুরী", "লাইব্রেরি", "স্বশিক্ষা", "জ্ঞানচর্চা"]
+          },
+          {
+            idSuffix: "b1-ch2-l2",
+            point: "২.২",
+            title: "Flaws in Traditional Rote Learning",
+            titleBangla: "২.২ প্রচলিত মুখস্থ শিক্ষার সীমাবদ্ধতা ও সাহিত্যের রসাস্বাদন",
+            summary: "শিক্ষা প্রতিষ্ঠান থেকে সার্টিফিকেট অর্জনের চেয়ে মুক্ত জ্ঞানচর্চার প্রাধান্য ও আনন্দলাভ।",
+            keywords: ["শিক্ষা দর্শন", "রসাস্বাদন", "সৃজনশীলতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch3",
+        chapterNumber: 3,
+        title: "Manush Muhammad (pbuh) by Mohammad Wazed Ali",
+        titleBangla: "৩য় অধ্যায়: মানুষ মুহাম্মদ (স.) - মোহাম্মদ ওয়াজেদ আলী",
+        lessons: [
+          {
+            idSuffix: "b1-ch3-l1",
+            point: "৩.১",
+            title: "Human Qualities and Compassion of the Prophet",
+            titleBangla: "৩.১ মহানবী (স.)-এর মানবিক গুণাবলি, ক্ষমা ও উদারতা",
+            summary: "শত্রুকে ক্ষমা, তায়েফের ময়দানে চরম আঘাতের মুখেও বদদোয়া না করা এবং তাঁর অনুপম চারিত্রিক গুণাবলি।",
+            keywords: ["মানুষ মুহাম্মদ", "মোহাম্মদ ওয়াজেদ আলী", "ক্ষমা", "উদারতা", "আদর্শ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch4",
+        chapterNumber: 4,
+        title: "Shikkha O Monushotto by Motaher Hossain Chowdhury",
+        titleBangla: "৪র্থ অধ্যায়: শিক্ষা ও মনুষ্যত্ব - মোতাহের হোসেন চৌধুরী",
+        lessons: [
+          {
+            idSuffix: "b1-ch4-l1",
+            point: "৪.১",
+            title: "Human Entity vs Animal Entity",
+            titleBangla: "৪.১ জীবসত্তা ও মানবসত্তা উত্তরণের রূপক ব্যাখ্যা",
+            summary: "মোতাহের হোসেন চৌধুরীর দুইতলা ঘরের রূপক: নিচতলা জীবসত্তা থেকে মই রূপ শিক্ষার মাধ্যমে দোতলার মানবসত্তায় আরোহণ।",
+            keywords: ["শিক্ষা ও মনুষ্যত্ব", "জীবসত্তা", "মানবসত্তা", "মোতাহের হোসেন চৌধুরী"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch5",
+        chapterNumber: 5,
+        title: "Ekattorer Dinguli by Jahanara Imam",
+        titleBangla: "৫ম অধ্যায়: একাত্তরের দিনগুলি - জাহানারা ইমাম (স্মৃতিকথা)",
+        lessons: [
+          {
+            idSuffix: "b1-ch5-l1",
+            point: "৫.১",
+            title: "Heroic Chronicle of Liberation War 1971",
+            titleBangla: "৫.১ শহীদ জননী জাহানারা ইমামের দিনলিপিতে অবরুদ্ধ ঢাকার চিত্র ও রুমীর আত্মত্যাগ",
+            summary: "১৯৭১ সালের মুক্তিযুদ্ধ চলাকালে ঢাকায় পাকিস্তানি হানাদারদের অত্যাচার ও বীর গেরিলা মুক্তিযোদ্ধা রুমীর আত্মদানের করুণ ইতিহাস।",
+            keywords: ["একাত্তরের দিনগুলি", "জাহানারা ইমাম", "মুক্তিযুদ্ধ ১৯৭১", "রুমী", "গেরিলা যুদ্ধ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch6",
+        chapterNumber: 6,
+        title: "Kobadak River by Michael Madhusudan Dutt",
+        titleBangla: "৬ষ্ঠ অধ্যায়: কপোতাক্ষ নদ - মাইকেল মধুসূদন দত্ত (কবিতা)",
+        lessons: [
+          {
+            idSuffix: "b1-ch6-l1",
+            point: "৬.১",
+            title: "Nostalgia and Patriotism in Sonnet Structure",
+            titleBangla: "৬.১ চতুর্দশপদী সনেটে কবির প্রবাস জীবন ও স্বদেশের প্রতি ব্যাকুলতা",
+            summary: "দূর ফ্রান্সে বসে কবির জন্মভূমি যশোর জেলার কপোতাক্ষ নদের স্মৃতিতর্পণ এবং মাতৃভূমির প্রতি নিখাদ ভালোবাসা।",
+            keywords: ["কপোতাক্ষ নদ", "মাইকেল মধুসূদন দত্ত", "সনেট", "দেশপ্রেম", "অষ্টক-ষষ্ঠক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch7",
+        chapterNumber: 7,
+        title: "Manush by Kazi Nazrul Islam",
+        titleBangla: "৭ম অধ্যায়: মানুষ - কাজী নজরুল ইসলাম (কবিতা)",
+        lessons: [
+          {
+            idSuffix: "b1-ch7-l1",
+            point: "৭.১",
+            title: "Equality, Humanity and Religious Hypocrisy Protest",
+            titleBangla: "৭.১ সাম্যবাদ, ভণ্ড পুরোহিত-মোল্লাদের বিরুদ্ধে প্রতিবাদ ও মানবমহিমা",
+            summary: "জাতীয় কবি কাজী নজরুল ইসলামের সাম্যবাদী কবিতার প্রধান সুর—মানুষের চেয়ে বড় কিছু নাই, নহে কিছু মহীয়ান।",
+            keywords: ["মানুষ", "কাজী নজরুল ইসলাম", "সাম্যবাদ", "মানবতা", "ভণ্ডামি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch8",
+        chapterNumber: 8,
+        title: "Polli Janani by Jasimuddin",
+        titleBangla: "৮ম অধ্যায়: পল্লী জননী - জসীম উদ্দীন (কবিতা)",
+        lessons: [
+          {
+            idSuffix: "b1-ch8-l1",
+            point: "৮.১",
+            title: "Maternal Love and Rural Poverty",
+            titleBangla: "৮.১ রুগ্ণ সন্তানের শিয়রে বসে দরিদ্র মায়ের গভীর উদ্বেগ ও চিরন্তন মাতৃত্ব",
+            summary: "পল্লীকবি জসীম উদ্দীনের রচিত পল্লী জননীর বাৎসল্য প্রেম ও গ্রামীণ অভাব-অনটনের বাস্তব চিত্র।",
+            keywords: ["পল্লী জননী", "জসীম উদ্দীন", "বাৎসল্য", "মাতৃস্নেহ", "পল্লী জীবন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch9",
+        chapterNumber: 9,
+        title: "Kaktarua by Selina Hossain (Novel)",
+        titleBangla: "৯ম অধ্যায়: সহপাঠ উপন্যাস - কাকতাড়ুয়া (সেলিনা হোসেন)",
+        lessons: [
+          {
+            idSuffix: "b1-ch9-l1",
+            point: "৯.১",
+            title: "Budha's Guerilla Resistance in 1971",
+            titleBangla: "৯.১ এতিম কিশোর বুধার কাকতাড়ুয়া ছদ্মবেশে মুক্তিবাহিনীর গেরিলা অভিযানে সহায়তা",
+            summary: "মুক্তিযুদ্ধের পটভূমিতে রচিত সেলিনা হোসেনের উপন্যাস—স্বজনহারা নির্ভীক বালক বুধার পাকিস্তানি বাঙ্কার ধ্বংসের বীরত্বগাঁথা।",
+            keywords: ["কাকতাড়ুয়া", "সেলিনা হোসেন", "বুধা", "মুক্তিযুদ্ধ", "গেরিলা অভিযান"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b1-ch10",
+        chapterNumber: 10,
+        title: "Bohipir by Syed Waliullah (Drama)",
+        titleBangla: "১০ম অধ্যায়: সহপাঠ নাটক - বহিপীর (সৈয়দ ওয়ালীউল্লাহ)",
+        lessons: [
+          {
+            idSuffix: "b1-ch10-l1",
+            point: "১০.১",
+            title: "Religious Exploitation and Tahera's Resistance",
+            titleBangla: "১০.১ বহিপীরের ধর্মব্যবসা, কুসংস্কার এবং তরুণী তাহেরার প্রতিবাদী মনোভাব",
+            summary: "সমাজচেতনা ও কুসংস্কারবিরোধী সৈয়দ ওয়ালীউল্লাহর বিখ্যাত নাটক—তাহেরা ও হাসেম আলীর আধুনিক চিন্তার জয়গান।",
+            keywords: ["বহিপীর", "সৈয়দ ওয়ালীউল্লাহ", "নাটক", "তাহেরা", "কুসংস্কার"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "bangla-2",
+    codeBase: "BAN2",
+    name: "Bangla 2nd Paper (Grammar & Composition)",
+    nameBangla: "বাংলা ২য় পত্র (ব্যাকরণ ও নির্মিতি)",
+    group: "General / Compulsory",
+    coverColor: "from-teal-600 to-cyan-850",
+    chapters: [
+      {
+        idSuffix: "b2-ch1",
+        chapterNumber: 1,
+        title: "Language and Bangla Grammar Fundamentals",
+        titleBangla: "১ম অধ্যায়: ভাষা ও বাংলা ব্যাকরণের মৌলিক ধারণা",
+        lessons: [
+          {
+            idSuffix: "b2-ch1-l1",
+            point: "১.১",
+            title: "Origin, Evolution and Forms of Bangla Language",
+            titleBangla: "১.১ ভাষার সংজ্ঞা, উৎপত্তি এবং সাধু ও চলিত রীতির বৈশিষ্ট্য",
+            summary: "মাতৃভাষা ও রাষ্ট্রভাষার ধারণা, ইন্দো-ইউরোপীয় ভাষা বংশ থেকে বাংলা ভাষার উৎপত্তি এবং সাধু ও প্রমিত চলিত রীতির পার্থক্য।",
+            keywords: ["ভাষা", "সাধু রীতি", "চলিত রীতি", "ব্যাকরণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b2-ch2",
+        chapterNumber: 2,
+        title: "Phonology and Rules of Natwo & Shatwo Bidhan",
+        titleBangla: "২য় অধ্যায়: ধ্বনিতত্ত্ব এবং ন-ত্ব ও ষ-ত্ব বিধান",
+        lessons: [
+          {
+            idSuffix: "b2-ch2-l1",
+            point: "২.১",
+            title: "Rules of Natwo and Shatwo Bidhan",
+            titleBangla: "২.১ ণ-ত্ব ও ষ-ত্ব বিধানের নিয়মাবলি ও ব্যতিক্রম",
+            summary: "তৎসম শব্দে মূর্ধন্য 'ণ' এবং মূর্ধন্য 'ষ' ব্যবহারের সুনির্দিষ্ট ব্যাকরণিক নিয়ম এবং স্বভাবতই ণ/ষ হওয়া শব্দাবলি।",
+            keywords: ["ণ-ত্ব বিধান", "ষ-ত্ব বিধান", "তৎসম শব্দ", "উচ্চারণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b2-ch3",
+        chapterNumber: 3,
+        title: "Sandhi - Phonetic Euphonic Junction",
+        titleBangla: "৩য় অধ্যায়: সন্ধি (স্বরসন্ধি, ব্যঞ্জনসন্ধি ও বিসর্গ সন্ধি)",
+        lessons: [
+          {
+            idSuffix: "b2-ch3-l1",
+            point: "৩.১",
+            title: "Sandhi Formation Rules",
+            titleBangla: "৩.১ সন্ধির সংজ্ঞা, উদ্দেশ্য এবং স্বর ও ব্যঞ্জন সন্ধির নিয়ম",
+            summary: "ধ্বনির মিলনে নতুন শব্দ গঠনের নিয়মাবলি, উদাহরণ ও নিপাতনে সিদ্ধ সন্ধি।",
+            keywords: ["সন্ধি", "স্বরসন্ধি", "ব্যঞ্জনসন্ধি", "বিসর্গ সন্ধি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b2-ch4",
+        chapterNumber: 4,
+        title: "Samas - Compound Words in Bangla",
+        titleBangla: "৪র্থ অধ্যায়: সমাস ও সমাসের প্রকারভেদ",
+        lessons: [
+          {
+            idSuffix: "b2-ch4-l1",
+            point: "৪.১",
+            title: "Classification of Samas (Dwandwa, Karmadharaya, etc.)",
+            titleBangla: "৪.১ ব্যাসবাক্য ও ছয় প্রকার সমাসের বিশ্লেষণ",
+            summary: "দ্বন্দ্ব, কর্মধারয়, তৎপুরুষ, বহুব্রীহি, দ্বিগু ও অব্যয়ীভাব সমাসের নিয়ম ও ব্যাসবাক্য নির্ণয়।",
+            keywords: ["সমাস", "ব্যাসবাক্য", "দ্বন্দ্ব সমাস", "কর্মধারয়", "বহুব্রীহি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b2-ch5",
+        chapterNumber: 5,
+        title: "Prefix, Suffix and Karak-Bhibhakti",
+        titleBangla: "৫ম অধ্যায়: উপসর্গ, অনুসর্গ, কারক ও বিভক্তি",
+        lessons: [
+          {
+            idSuffix: "b2-ch5-l1",
+            point: "৫.১",
+            title: "Karak and Bhibhakti Identification",
+            titleBangla: "৫.১ কারকের প্রকারভেদ এবং বিভক্তি নির্ণয় পদ্ধতি",
+            summary: "কর্তৃকারক, কর্মকারক, করণকারক, সম্প্রদান, অপাদান ও অধিকরণ কারক চেনার উপায় ও বিভক্তির প্রয়োগ।",
+            keywords: ["কারক", "বিভক্তি", "উপসর্গ", "অনুসর্গ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "b2-ch6",
+        chapterNumber: 6,
+        title: "Sentence Structure and Composition",
+        titleBangla: "৬ষ্ঠ অধ্যায়: বাক্য প্রকরণ ও নির্মিতি (ভাবসম্প্রসারণ, সারাংশ, প্রতিবেদন)",
+        lessons: [
+          {
+            idSuffix: "b2-ch6-l1",
+            point: "৬.১",
+            title: "Simple, Complex and Compound Sentences & Formal Writing",
+            titleBangla: "৬.১ সরল, জটিল ও যৌগিক বাক্য রূপান্তর এবং প্রাতিষ্ঠানিক প্রতিবেদন লিখন",
+            summary: "বাক্যের গুণাবলি (আকাঙ্ক্ষা, আসত্তি, যোগ্যতা), বাক্য রূপান্তর এবং দরখাস্ত ও প্রতিবেদন প্রণয়ন শৈলী।",
+            keywords: ["সরল বাক্য", "জটিল বাক্য", "প্রতিবেদন", "ভাবসম্প্রসারণ"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "english-1",
+    codeBase: "ENG1",
+    name: "English 1st Paper (English for Today)",
+    nameBangla: "ইংরেজি ১ম পত্র",
+    group: "General / Compulsory",
+    coverColor: "from-blue-600 to-indigo-850",
+    chapters: [
+      {
+        idSuffix: "e1-ch1",
+        chapterNumber: 1,
+        title: "Unit 1: Good Citizens",
+        titleBangla: "Unit 1: Good Citizens (সুনাগরিক)",
+        lessons: [
+          {
+            idSuffix: "e1-ch1-l1",
+            point: "1.1",
+            title: "Can You Live Alone?",
+            titleBangla: "১.১ Can You Live Alone? (সমাজ ও পারিবারিক জীবনের গুরুত্ব)",
+            summary: "Reading comprehension on how human beings cannot live in isolation without family, cooperation, and mutual care.",
+            keywords: ["good citizens", "society", "cooperation", "morals"]
+          },
+          {
+            idSuffix: "e1-ch1-l2",
+            point: "1.2",
+            title: "Knowledge, Skills and Attitudes",
+            titleBangla: "১.২ নাগরিক দায়িত্ব, নৈতিক সচেতনতা ও একবিংশ শতাব্দীর দক্ষতা",
+            summary: "Understanding the balance between academic competence, constitutional rights, and civic duty for a progressive country.",
+            keywords: ["citizenship", "skills", "attitudes", "duties"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e1-ch2",
+        chapterNumber: 2,
+        title: "Unit 3: Events and Festivals",
+        titleBangla: "Unit 3: Events and Festivals (জাতীয় দিবস ও উৎসব)",
+        lessons: [
+          {
+            idSuffix: "e1-ch2-l1",
+            point: "3.1",
+            title: "International Mother Language Day & 21st February",
+            titleBangla: "৩.১ আন্তর্জাতিক মাতৃভাষা দিবস ও শহীদ দিবসের তাৎপর্য",
+            summary: "Historical significance of 21st February 1952 Language Movement and UNESCO's recognition as International Mother Language Day.",
+            keywords: ["mother language day", "language movement", "unesco", "shaheed minar"]
+          },
+          {
+            idSuffix: "e1-ch2-l2",
+            point: "3.2",
+            title: "Independence Day and Pahela Baishakh",
+            titleBangla: "৩.২ স্বাধীনতা দিবস ও পহেলা বৈশাখের সাংস্কৃতিক আবহ",
+            summary: "Celebrations of national sovereignty on 26 March and Bengali New Year's colorful Mangal Shobhajatra.",
+            keywords: ["independence day", "pahela baishakh", "culture", "bangladesh"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e1-ch3",
+        chapterNumber: 3,
+        title: "Unit 5: Nature and Environment",
+        titleBangla: "Unit 5: Nature and Environment (প্রকৃতি ও পরিবেশ)",
+        lessons: [
+          {
+            idSuffix: "e1-ch3-l1",
+            point: "5.1",
+            title: "The Greed of the Roaring Rivers & River Erosion",
+            titleBangla: "৫.১ নদীভাঙন, বাস্তুচ্যুত মানুষের জীবন ও জলবায়ু পরিবর্তন",
+            summary: "The story of Meherjan highlighting climate displacement along the Jamuna River and global warming consequences.",
+            keywords: ["river erosion", "climate change", "environment", "meherjan"]
+          },
+          {
+            idSuffix: "e1-ch3-l2",
+            point: "5.2",
+            title: "Renewable Energy Sources",
+            titleBangla: "৫.২ নবায়নযোগ্য জ্বালানি উৎস (সৌর, বায়ু ও জলবিদ্যুৎ)",
+            summary: "Exploring transition from fossil fuels to solar, wind, and green energy alternatives for sustainable Earth.",
+            keywords: ["renewable energy", "solar power", "green earth"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e1-ch4",
+        chapterNumber: 4,
+        title: "Unit 7: People Who Stand Out",
+        titleBangla: "Unit 7: People Who Stand Out (অনুপম ব্যক্তিত্ব)",
+        lessons: [
+          {
+            idSuffix: "e1-ch4-l1",
+            point: "7.1",
+            title: "Zainul Abedin - The Great Artist of Famine",
+            titleBangla: "৭.১ শিল্পাচার্য জয়নুল আবেদিন ও দুর্ভিক্ষের স্কেচ",
+            summary: "Life of Shilpacharya Zainul Abedin, his iconic 1943 famine sketches, and establishing Dhaka Art College.",
+            keywords: ["zainul abedin", "artist", "famine sketches", "art institute"]
+          },
+          {
+            idSuffix: "e1-ch4-l2",
+            point: "7.2",
+            title: "Mother Teresa - The Compassionate Soul",
+            titleBangla: "৭.২ মাদার তেরেসা ও নির্মল হৃদয় সেবা মিশন",
+            summary: "Mother Teresa's noble life dedicating herself to the poorest of the poor, dying destitutes, and winning Nobel Peace Prize.",
+            keywords: ["mother teresa", "nobel peace prize", "compassion", "service"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e1-ch5",
+        chapterNumber: 5,
+        title: "Unit 8: World Heritage Sites",
+        titleBangla: "Unit 8: World Heritage Sites (বিশ্ব ঐতিহ্য)",
+        lessons: [
+          {
+            idSuffix: "e1-ch5-l1",
+            point: "8.1",
+            title: "The Shat Gambuj Mosque & Somapura Mahavihara",
+            titleBangla: "৮.১ ষাট গম্বুজ মসজিদ ও সোমপুর মহাবিহারের ঐতিহাসিক মহিমা",
+            summary: "Architectural grandeur of Khan Jahan Ali's mosque in Bagerhat and the ancient Buddhist monastery of Paharpur.",
+            keywords: ["shat gambuj mosque", "bagerhat", "paharpur", "heritage"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "english-2",
+    codeBase: "ENG2",
+    name: "English 2nd Paper (Grammar & Composition)",
+    nameBangla: "ইংরেজি ২য় পত্র",
+    group: "General / Compulsory",
+    coverColor: "from-sky-600 to-blue-900",
+    chapters: [
+      {
+        idSuffix: "e2-ch1",
+        chapterNumber: 1,
+        title: "Right Form of Verbs and Subject-Verb Agreement",
+        titleBangla: "১ম অধ্যায়: Right Form of Verbs ও Subject-Verb Agreement",
+        lessons: [
+          {
+            idSuffix: "e2-ch1-l1",
+            point: "1.1",
+            title: "Core Verb Conjugation Rules",
+            titleBangla: "১.১ Verb ব্যবহারের সাধারণ নিয়মাবলি ও Subject-Verb সঙ্গতি",
+            summary: "Singular/plural subject rules, habitual facts, passive triggers, conditionals, and gerund/infinitive usage.",
+            keywords: ["right form of verbs", "subject-verb agreement", "grammar"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e2-ch2",
+        chapterNumber: 2,
+        title: "Transformation of Sentences",
+        titleBangla: "২য় অধ্যায়: Transformation of Sentences (বাক্য পরিবর্তন)",
+        lessons: [
+          {
+            idSuffix: "e2-ch2-l1",
+            point: "2.1",
+            title: "Simple, Complex, Compound & Degrees of Comparison",
+            titleBangla: "২.১ Simple-Complex-Compound এবং Degree রূপান্তরের কৌশল",
+            summary: "Converting clauses without changing meaning, positive-comparative-superlative transformations, and voice shifts.",
+            keywords: ["transformation", "simple complex compound", "degree", "active passive"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e2-ch3",
+        chapterNumber: 3,
+        title: "Completing Sentences and Connectors",
+        titleBangla: "৩য় অধ্যায়: Completing Sentences ও Sentence Connectors",
+        lessons: [
+          {
+            idSuffix: "e2-ch3-l1",
+            point: "3.1",
+            title: "Conditionals, Lest, So That, As If and Linking Words",
+            titleBangla: "৩.১ শর্তাধীন বাক্য (Conditionals) এবং লিঙ্কার্স এর প্রয়োগ",
+            summary: "Mastering zero, 1st, 2nd, and 3rd conditionals, 'lest...should', 'so that...may', 'as if', and paragraph cohesion markers.",
+            keywords: ["completing sentences", "conditionals", "connectors", "linking words"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e2-ch4",
+        chapterNumber: 4,
+        title: "Direct and Indirect Narration (Speech)",
+        titleBangla: "৪র্থ অধ্যায়: Narration (উক্তি পরিবর্তন)",
+        lessons: [
+          {
+            idSuffix: "e2-ch4-l1",
+            point: "4.1",
+            title: "Passage Narration Conversion Rules",
+            titleBangla: "৪.১ Passage Narration-এ Tense ও Pronoun পরিবর্তন",
+            summary: "Transforming statements, interrogative questions, imperatives, optatives, and exclamations in full passage context.",
+            keywords: ["narration", "reported speech", "passage narration"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e2-ch5",
+        chapterNumber: 5,
+        title: "Tag Questions, Suffix & Prefix, Punctuation",
+        titleBangla: "৫ম অধ্যায়: Tag Questions, Suffix-Prefix ও বিরামচিহ্ন",
+        lessons: [
+          {
+            idSuffix: "e2-ch5-l1",
+            point: "5.1",
+            title: "Tag Questions & Word Formation",
+            titleBangla: "৫.১ ট্যাগ প্রশ্ন তৈরি ও উপসর্গ-প্রত্যয় যোগে নতুন শব্দ গঠন",
+            summary: "Affirmative/negative auxiliary verb patterns, creating nouns/adjectives through suffixes/prefixes, and capitalization rules.",
+            keywords: ["tag questions", "suffix prefix", "punctuation", "capitalization"]
+          }
+        ]
+      },
+      {
+        idSuffix: "e2-ch6",
+        chapterNumber: 6,
+        title: "Composition, CV, Email and Formal Writing",
+        titleBangla: "৬ষ্ঠ অধ্যায়: Composition, CV with Cover Letter ও Formal Letters",
+        lessons: [
+          {
+            idSuffix: "e2-ch6-l1",
+            point: "6.1",
+            title: "Professional Writing Formats",
+            titleBangla: "৬.১ জীবনবৃত্তান্ত (CV), প্রাতিষ্ঠানিক দরখাস্ত ও প্যারাগ্রাফ লিখন",
+            summary: "Standard formats for job application with CV, complaint letters, official emails, and descriptive/argumentative essays.",
+            keywords: ["cv with cover letter", "formal letter", "email writing", "paragraph"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "general-math",
+    codeBase: "GMATH",
+    name: "General Mathematics",
+    nameBangla: "সাধারণ গণিত",
+    group: "General / Compulsory",
+    coverColor: "from-amber-600 to-orange-850",
+    chapters: [
+      {
+        idSuffix: "gm-ch1",
+        chapterNumber: 1,
+        title: "Real Numbers",
+        titleBangla: "১ম অধ্যায়: বাস্তব সংখ্যা (Real Numbers)",
+        lessons: [
+          {
+            idSuffix: "gm-ch1-l1",
+            point: "১.১",
+            title: "Proof of Irrational Numbers (√2, √3, √5)",
+            titleBangla: "১.১ অমূলদ সংখ্যার গাণিতিক প্রমাণ ও শ্রেণিবিন্যাস",
+            summary: "মূলদ ও অমূলদ সংখ্যার ধারণা, √2 একটি অমূলদ সংখ্যা তার প্রমাণ, আবৃত্ত দশমিককে সাধারণ ভগ্নাংশে রূপান্তর।",
+            keywords: ["বাস্তব সংখ্যা", "মূলদ", "অমূলদ সংখ্যা", "আবৃত্ত দশমিক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch2",
+        chapterNumber: 2,
+        title: "Sets and Functions",
+        titleBangla: "২য় অধ্যায়: সেট ও ফাংশন (Sets and Functions)",
+        lessons: [
+          {
+            idSuffix: "gm-ch2-l1",
+            point: "২.১",
+            title: "Set Operations, Power Sets and Venn Diagrams",
+            titleBangla: "২.১ সেট গঠন পদ্ধতি, শক্তি সেট P(A) এবং ভেনচিত্রের সাহায্যে সমাধান",
+            summary: "তালিকা ও গঠন পদ্ধতি, সংযোগ সেট (∪), ছেদ সেট (∩), ফাঁকা সেট, শক্তি সেটের উপাদান সংখ্যা 2^n প্রমাণ।",
+            keywords: ["সেট", "শক্তি সেট", "ভেনচিত্র", "ডোমেন", "রেঞ্জ"]
+          },
+          {
+            idSuffix: "gm-ch2-l2",
+            point: "২.২",
+            title: "Relations, Domain, Range and Functions",
+            titleBangla: "২.২ অন্বয় থেকে ফাংশন, ডোমেন ও রেঞ্জ নির্ণয়",
+            summary: "ক্রোমজোড়, কার্তেসীয় গুণজ, ফাংশনের মান f(x) ও ডোমেন-রেঞ্জ নির্ণয়ের গাণিতিক সমাধান।",
+            keywords: ["অন্বয়", "ফাংশন", "ডোমেন", "রেঞ্জ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch3",
+        chapterNumber: 3,
+        title: "Algebraic Expressions",
+        titleBangla: "৩য় অধ্যায়: বীজগাণিতিক রাশি (Algebraic Expressions)",
+        lessons: [
+          {
+            idSuffix: "gm-ch3-l1",
+            point: "৩.১",
+            title: "Square and Cube Formulas and Value Evaluation",
+            titleBangla: "৩.১ বর্গ ও ঘনের সূত্রাবলি এবং অনুসিদ্ধান্ত প্রয়োগে মান নির্ণয়",
+            summary: "a^2+b^2, a^3+b^3, x^4+1/x^4 এর মান নির্ণয় ও প্রমাণভিত্তিক সমস্যা সমাধান।",
+            keywords: ["বীজগাণিতিক রাশি", "মান নির্ণয়", "বর্গ", "ঘন সূত্র"]
+          },
+          {
+            idSuffix: "gm-ch3-l2",
+            point: "৩.২",
+            title: "Middle Term and Remainder Theorem Factorization",
+            titleBangla: "৩.২ উৎপাদকে বিশ্লেষণ (মিডল টার্ম ও ভাগশেষ উপপাদ্য)",
+            summary: "উৎপাদকে বিশ্লেষণের প্রচলিত কৌশল এবং f(x) এর মাধ্যমে ভাগশেষ উপপাদ্যের বাস্তব প্রয়োগ।",
+            keywords: ["উৎপাদক", "মিডল টার্ম", "ভাগশেষ উপপাদ্য"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch4",
+        chapterNumber: 4,
+        title: "Exponents and Logarithms",
+        titleBangla: "৪র্থ অধ্যায়: সূচক ও লগারিদম (Exponents & Logarithms)",
+        lessons: [
+          {
+            idSuffix: "gm-ch4-l1",
+            point: "৪.১",
+            title: "Laws of Exponents and Power Simplification",
+            titleBangla: "৪.১ সূচকের নিয়মাবলি ও সূচকীয় রাশি সরলীকরণ",
+            summary: "a^m × a^n, (a^m)^n, a^0=1, a^-n=1/a^n সংক্রান্ত জটিল রাশিমালার সরলীকরণ।",
+            keywords: ["সূচক", "সূচকের সূত্র", "সরলীকরণ"]
+          },
+          {
+            idSuffix: "gm-ch4-l2",
+            point: "৪.২",
+            title: "Logarithmic Identities, Characteristic and Mantissa",
+            titleBangla: "৪.২ লগারিদমের ভিত্তি রূপান্তর, পূর্ণক ও অংশক নির্ণয়",
+            summary: "log_a(xy), log_a(x/y), log_a(x^k) সূত্রাবলি এবং সাধারণ লগের পূর্ণক-অংশক হিসাব।",
+            keywords: ["লগারিদম", "পূর্ণক", "অংশক", "লগ সূত্র"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch5",
+        chapterNumber: 5,
+        title: "Circle and Geometry Theorems",
+        titleBangla: "৮ম অধ্যায়: বৃত্ত (Circle Theorems & Constructions)",
+        lessons: [
+          {
+            idSuffix: "gm-ch5-l1",
+            point: "৮.১",
+            title: "Theorems of Chords, Central & Inscribed Angles",
+            titleBangla: "৮.১ বৃত্তের কেন্দ্রস্থ কোণ বৃত্তস্থ কোণের দ্বিগুণ এবং জ্যা সম্পর্কিত উপপাদ্য",
+            summary: "বৃত্তের কেন্দ্র ও ব্যাস ভিন্ন জ্যা-এর মধ্যবিন্দুর সংযোগ রেখা জ্যা-এর ওপর লম্ব, কেন্দ্রস্থ কোণ = ২ × বৃত্তস্থ কোণ উপপাদ্য প্রমাণ।",
+            keywords: ["বৃত্ত", "জ্যা", "কেন্দ্রস্থ কোণ", "বৃত্তস্থ কোণ"]
+          },
+          {
+            idSuffix: "gm-ch5-l2",
+            point: "৮.২",
+            title: "Tangent, Cyclic Quadrilaterals & Circles",
+            titleBangla: "৮.২ স্পর্শক সংক্রান্ত উপপাদ্য ও বৃত্তে অন্তর্লিখিত চতুর্ভুজ",
+            summary: "স্পর্শবিন্দুগামী ব্যাসার্ধ স্পর্শকের ওপর লম্ব এবং বৃত্তস্থ চতুর্ভুজের বিপরীত কোণদ্বয়ের সমষ্টি ১৮০ ডিগ্রি।",
+            keywords: ["স্পর্শক", "বৃত্তস্থ চতুর্ভুজ", "সম্পাদ্য"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch6",
+        chapterNumber: 6,
+        title: "Trigonometric Ratios and Elevation",
+        titleBangla: "৯ম ও ১০ম অধ্যায়: ত্রিকোণমিতিক অনুপাত, দূরত্ব ও উচ্চতা",
+        lessons: [
+          {
+            idSuffix: "gm-ch6-l1",
+            point: "৯.১",
+            title: "Trigonometric Identities (sin²θ + cos²θ = 1)",
+            titleBangla: "৯.১ ত্রিকোণমিতিক অনুপাত, অভেদাবলি ও নির্দিষ্ট কোণের মান (০°-৯০°)",
+            summary: "sin, cos, tan, cot, sec, cosec এর সম্পর্ক এবং sin²θ+cos²θ=1, sec²θ-tan²θ=1 অভেদাবলি প্রমাণ।",
+            keywords: ["ত্রিকোণমিতি", "ত্রিকোণমিতিক অনুপাত", "অভেদ"]
+          },
+          {
+            idSuffix: "gm-ch6-l2",
+            point: "১০.১",
+            title: "Angle of Elevation, Depression and Height Calculation",
+            titleBangla: "১০.১ উন্নতি কোণ, অবনতি কোণ ও টাওয়ার-গাছের উচ্চতা ও দূরত্ব নির্ণয়",
+            summary: "বাস্তব ক্ষেত্রে উন্নতি ও অবনতি কোণের মাধ্যমে নদী প্রস্থ, মিনারের উচ্চতা ও ছায়ার দৈর্ঘ্য সংক্রান্ত সমস্যা সমাধান।",
+            keywords: ["উন্নতি কোণ", "অবনতি কোণ", "দূরত্ব ও উচ্চতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch7",
+        chapterNumber: 7,
+        title: "Finite Series (Arithmetic & Geometric)",
+        titleBangla: "১৩শ অধ্যায়: সসীম ধারা (সমান্তর ও গুণোত্তর ধারা)",
+        lessons: [
+          {
+            idSuffix: "gm-ch7-l1",
+            point: "১৩.১",
+            title: "Arithmetic Progression (n-th Term & Sum)",
+            titleBangla: "১৩.১ সমান্তর ধারার n-তম পদ ও প্রথম n পদের সমষ্টি Sn",
+            summary: "প্রথম পদ a ও সাধারণ অন্তর d বিশিষ্ট সমান্তর ধারার সূত্র a+(n-1)d এবং Sn = n/2{2a+(n-1)d} প্রয়োগ।",
+            keywords: ["সমান্তর ধারা", "সাধারণ অন্তর", "সমষ্টি", "পদ সংখ্যা"]
+          },
+          {
+            idSuffix: "gm-ch7-l2",
+            point: "১৩.২",
+            title: "Geometric Progression (n-th Term & Sum)",
+            titleBangla: "১৩.২ গুণোত্তর ধারার n-তম পদ ও সমষ্টির সূত্রাবলি",
+            summary: "সাধারণ অনুপাত r এবং a*r^(n-1) ও Sn = a(r^n - 1)/(r - 1) সূত্র প্রয়োগ।",
+            keywords: ["গুণোত্তর ধারা", "সাধারণ অনুপাত", "সমষ্টি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch8",
+        chapterNumber: 8,
+        title: "Mensuration (Triangles, Quadrilaterals, Cylinders)",
+        titleBangla: "১৬শ অধ্যায়: পরিমিতি (ক্ষেত্রফল, বৃত্ত ও ঘনবস্তু)",
+        lessons: [
+          {
+            idSuffix: "gm-ch8-l1",
+            point: "১৬.১",
+            title: "Area of Triangles, Trapezius and Regular Polygons",
+            titleBangla: "১৬.১ ত্রিভুজ, ট্রাপিজিয়াম ও বহুভুজের ক্ষেত্রফল নির্ণয়",
+            summary: "হেরনের সূত্র √{s(s-a)(s-b)(s-c)}, সমবাহু ত্রিভুজের ক্ষেত্রফল (√3/4)a^2 এবং ট্রাপিজিয়ামের ক্ষেত্রফল হিসাব।",
+            keywords: ["পরিমিতি", "ক্ষেত্রফল", "ত্রিভুজ", "ট্রাপিজিয়াম"]
+          },
+          {
+            idSuffix: "gm-ch8-l2",
+            point: "১৬.২",
+            title: "Circumference, Sector Area & Solid Cylinders",
+            titleBangla: "১৬.২ বৃত্তের পরিধি, বৃত্তাংশের ক্ষেত্রফল ও সিলিন্ডার-আয়তাকার ঘনবস্তুর আয়তন",
+            summary: "2πr, πr^2, θ/360 × πr^2 এবং বেলনের বক্রতলের ক্ষেত্রফল 2πrh ও আয়তন πr^2h হিসাব।",
+            keywords: ["পরিধি", "বৃত্তাংশ", "সিলিন্ডার", "আয়তন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gm-ch9",
+        chapterNumber: 9,
+        title: "Statistics - Mean, Median, Mode and Ogive Curve",
+        titleBangla: "১৭শ অধ্যায়: পরিসংখ্যান (গড়, মধ্যক, প্রচুরক ও লেখচিত্র)",
+        lessons: [
+          {
+            idSuffix: "gm-ch9-l1",
+            point: "১৭.১",
+            title: "Direct & Short-cut Mean, Median and Mode",
+            titleBangla: "১৭.১ সংক্ষিপ্ত পদ্ধতিতে গড়, মধ্যক ও প্রচুরক নির্ণয়",
+            summary: "শ্রেণিবিন্যস্ত উপাত্তের ক্ষেত্রে ধাপ বিচ্যুতি পদ্ধতি u_i = (x_i - a)/h দ্বারা গড় এবং L + {(f1)/(f1+f2)} × h দ্বারা প্রচুরক নির্ণয়।",
+            keywords: ["পরিসংখ্যান", "সংক্ষিপ্ত গড়", "মধ্যক", "প্রচুরক", "ধাপ বিচ্যুতি"]
+          },
+          {
+            idSuffix: "gm-ch9-l2",
+            point: "১৭.২",
+            title: "Histogram, Frequency Polygon and Ogive Curve",
+            titleBangla: "১৭.২ আয়তলেখ, গণসংখ্যা বহুভুজ ও ক্রমযোজিত গণসংখ্যা অজিভ রেখা",
+            summary: "লেখ কাগজে অবিচ্ছিন্ন শ্রেণিসীমা নিয়ে আয়তলেখ অঙ্কন এবং মধ্যক নির্ণয়ে ওজাইভ রেখার ব্যবহার।",
+            keywords: ["আয়তলেখ", "গণসংখ্যা বহুভুজ", "ওজাইভ রেখা", "লেখচিত্র"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "ict",
+    codeBase: "ICT",
+    name: "Information & Communication Technology",
+    nameBangla: "তথ্য ও যোগাযোগ প্রযুক্তি (ICT)",
+    group: "General / Compulsory",
+    coverColor: "from-cyan-600 to-blue-800",
+    chapters: [
+      {
+        idSuffix: "ict-ch1",
+        chapterNumber: 1,
+        title: "ICT and Our Bangladesh",
+        titleBangla: "১ম অধ্যায়: তথ্য ও যোগাযোগ প্রযুক্তি এবং আমাদের বাংলাদেশ",
+        lessons: [
+          {
+            idSuffix: "ict-ch1-l1",
+            point: "১.১",
+            title: "Milestones and Personalities in ICT",
+            titleBangla: "১.১ আইসিটি ব্যক্তিত্ব ও ডিজিটাল বাংলাদেশের রূপকল্প",
+            summary: "চার্লস ব্যাবেজ, অ্যাডা লাভলেস, জেমস ক্লার্ক ম্যাক্সওয়েল, টিম বার্নার্স লি এবং ডিজিটাল বাংলাদেশের অগ্রযাত্রা।",
+            keywords: ["আইসিটি", "ডিজিটাল বাংলাদেশ", "চার্লস ব্যাবেজ", "ই-লার্নিং", "ই-কমার্স"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ict-ch2",
+        chapterNumber: 2,
+        title: "Computer Security, Viruses and Safe Internet Use",
+        titleBangla: "২য় অধ্যায়: কম্পিউটার ও ব্যবহারকারীর নিরাপত্তা",
+        lessons: [
+          {
+            idSuffix: "ict-ch2-l1",
+            point: "২.১",
+            title: "Cyber Security, Antivirus and Password Protection",
+            titleBangla: "২.১ সাইবার নিরাপত্তা, পাসওয়ার্ড সুরক্ষা ও অ্যান্টিভাইরাসের ভূমিকা",
+            summary: "ম্যালওয়্যার, ট্রোজান হর্স, ফিশিং আক্রমণ প্রতিরোধ এবং শক্তিশালী পাসওয়ার্ড ও টু-ফ্যাক্টর অথেনটিকেশন।",
+            keywords: ["ম্যালওয়্যার", "ভাইরাস", "সাইবার নিরাপত্তা", "পাসওয়ার্ড", "কপিরাইট"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ict-ch3",
+        chapterNumber: 3,
+        title: "Word Processing and Spreadsheet Applications",
+        titleBangla: "৪র্থ অধ্যায়: আমার লেখালেখি ও হিসাব (Word & Excel)",
+        lessons: [
+          {
+            idSuffix: "ict-ch3-l1",
+            point: "৪.১",
+            title: "Word Processing Formatting & Excel Formulas",
+            titleBangla: "৪.১ ওয়ার্ড প্রসেসিং সম্পাদনা ও স্প্রেডশিটে ফর্মুলা প্রয়োগ",
+            summary: "ডকুমেন্ট ফরম্যাটিং, টেবিল তৈরি, স্প্রেডশিটে যোগ-বিয়োগ-গড়, SUM, AVERAGE এবং শতকরা হিসাব।",
+            keywords: ["ওয়ার্ড প্রসেসর", "স্প্রেডশিট", "এক্সেল ফর্মুলা", "টেবিল"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ict-ch4",
+        chapterNumber: 4,
+        title: "Multimedia, Graphics and Presentation",
+        titleBangla: "৫ম অধ্যায়: মাল্টিমিডিয়া ও গ্রাফিক্স (PowerPoint & Photoshop)",
+        lessons: [
+          {
+            idSuffix: "ict-ch4-l1",
+            point: "৫.১",
+            title: "Slide Design and Image Editing Principles",
+            titleBangla: "৫.১ পাওয়ারপয়েন্ট প্রেজেন্টেশন ও ফটোশপে ছবি সম্পাদনা",
+            summary: "ইন্টারেক্টিভ স্লাইড ডিজাইন, ট্রানজিশন, ফটোশপে লেয়ার, ক্রপ টুল এবং রেজোলিউশন নিয়ন্ত্রণ।",
+            keywords: ["মাল্টিমিডিয়া", "পাওয়ারপয়েন্ট", "ফটোশপ", "গ্রাফিক্স", "লেয়ার"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ict-ch5",
+        chapterNumber: 5,
+        title: "Database Management and Relational Systems",
+        titleBangla: "৬ষ্ঠ অধ্যায়: ডেটাবেজ এর ব্যবহার (Database & SQL Basics)",
+        lessons: [
+          {
+            idSuffix: "ict-ch5-l1",
+            point: "৬.১",
+            title: "Fields, Records, Tables and Queries",
+            titleBangla: "৬.১ ডেটাবেজের উপাদান, ফিল্ড, রেকর্ড এবং কুয়েরির ধারণা",
+            summary: "রিলেশনাল ডেটাবেজ ম্যানেজমেন্ট সিস্টেম (RDBMS), প্রাইমারি কি এবং ফিল্টারিং কুয়েরি চালনা।",
+            keywords: ["ডেটাবেজ", "RDBMS", "রেকর্ড", "ফিল্ড", "কুয়েরি"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "islam-edu",
+    codeBase: "ISL",
+    name: "Islam and Moral Education",
+    nameBangla: "ইসলাম ও নৈতিক শিক্ষা",
+    group: "General / Compulsory",
+    coverColor: "from-emerald-600 to-green-900",
+    chapters: [
+      {
+        idSuffix: "isl-ch1",
+        chapterNumber: 1,
+        title: "Aqaid and Moral Life",
+        titleBangla: "১ম অধ্যায়: আকাইদ ও নৈতিক জীবন",
+        lessons: [
+          {
+            idSuffix: "isl-ch1-l1",
+            point: "১.১",
+            title: "Tawheed, Shirk, Kufr and Nifaq",
+            titleBangla: "১.১ তাওহিদ, কুফর, শিরক ও নিফাকের পরিচয় ও কুফল",
+            summary: "আল্লাহর একত্ববাদ প্রতিষ্ঠা, শিরকের ভয়াবহ পরিণতি এবং মুনাফিকির সামাজিক ও পরকালীন ক্ষতি।",
+            keywords: ["আকাইদ", "তাওহিদ", "শিরক", "নিফাক", "আখিরাত"]
+          }
+        ]
+      },
+      {
+        idSuffix: "isl-ch2",
+        chapterNumber: 2,
+        title: "Ibadah - Worship and Righteous Living",
+        titleBangla: "২য় অধ্যায়: ইবাদত (সালাত, সাওম, জাকাত ও হজ)",
+        lessons: [
+          {
+            idSuffix: "isl-ch2-l1",
+            point: "২.১",
+            title: "Social and Spiritual Impact of Zakat and Salat",
+            titleBangla: "২.১ সালাত ও জাকাতের মাধ্যমে দারিদ্র্য বিমোচন ও সামাজিক সমতা",
+            summary: "সালাতের নিয়মানুবর্তিতা এবং জাকাত বণ্টনের আটটি খাত ও অর্থনৈতিক ভারসাম্য রক্ষা।",
+            keywords: ["ইবাদত", "সালাত", "জাকাত", "হজ", "দারিদ্র্য বিমোচন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "isl-ch3",
+        chapterNumber: 3,
+        title: "Akhlaq - Character and Morality",
+        titleBangla: "৩য় অধ্যায়: আখলাক (উত্তম চরিত্র ও নৈতিক মূল্যবোধ)",
+        lessons: [
+          {
+            idSuffix: "isl-ch3-l1",
+            point: "৩.১",
+            title: "Akhlaqe Hamida & Eradication of Sins",
+            titleBangla: "৩.১ সততা, আমানতদারি, পরোপকার ও মাদকাসক্তি বর্জন",
+            summary: "সততার গুরুত্ব, পিতা-মাতার সেবা, প্রতিবেশীর অধিকার রক্ষা এবং গিবত, পরশ্রীকাতরতা ও দুর্নীতির প্রতিরোধ।",
+            keywords: ["আখলাক", "সততা", "আমানত", "পরোপকার", "নৈতিকতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "isl-ch4",
+        chapterNumber: 4,
+        title: "Quran and Hadith Study",
+        titleBangla: "৪র্থ অধ্যায়: কুরআনের পরিচয় ও নির্বাচিত হাদিস",
+        lessons: [
+          {
+            idSuffix: "isl-ch4-l1",
+            point: "৪.১",
+            title: "Tajweed Rules and Selected Hadiths",
+            titleBangla: "৪.১ তাজবিদ বিধি ও নৈতিক চরিত্র গঠনে হাদিস শরিফের শিক্ষা",
+            summary: "কুরআন পাঠের বিশুদ্ধ নিয়ম এবং মানবকল্যাণ, সত্যবাদিতা ও ভ্রাতৃত্ববোধ বিষয়ক হাদিসের ব্যাখ্যা।",
+            keywords: ["কুরআন", "হাদিস", "তাজবিদ", "নৈতিক শিক্ষা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "isl-ch5",
+        chapterNumber: 5,
+        title: "Biographies of Exemplary Personalities",
+        titleBangla: "৫ম অধ্যায়: আদর্শ জীবনচরিত",
+        lessons: [
+          {
+            idSuffix: "isl-ch5-l1",
+            point: "৫.১",
+            title: "Life of Prophet Muhammad (pbuh) and Four Caliphs",
+            titleBangla: "৫.১ মহানবী (স.)-এর মদিনা সনদ ও খোলাফায়ে রাশেদীনের সুশাসন",
+            summary: "মদিনা সনদের সাম্প্রদায়িক সম্প্রীতি, বিদায় হজের ভাষণ এবং হজরত আবু বকর, উমর, উসমান ও আলীর (রা.) ন্যায়বিচার।",
+            keywords: ["মদিনা সনদ", "বিদায় হজ", "খোলাফায়ে রাশেদীন", "সুশাসন"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "hindu-edu",
+    codeBase: "HIN",
+    name: "Hindu Religion & Moral Education",
+    nameBangla: "হিন্দুধর্ম ও নৈতিক শিক্ষা",
+    group: "General / Compulsory",
+    coverColor: "from-orange-600 to-amber-900",
+    chapters: [
+      {
+        idSuffix: "hin-ch1",
+        chapterNumber: 1,
+        title: "Creator and Creation in Hinduism",
+        titleBangla: "১ম অধ্যায়: স্রষ্টা ও সৃষ্টি এবং হিন্দুধর্মের উৎপত্তি",
+        lessons: [
+          {
+            idSuffix: "hin-ch1-l1",
+            point: "১.১",
+            title: "Brahman, Avatar and Eternal Nature",
+            titleBangla: "১.১ ব্রহ্ম ও ঈশ্বরের স্বরূপ, অবতারবাদ এবং পরমাত্মার ধারণা",
+            summary: "সর্বভূতে ঈশ্বরের উপস্থিতি, গীতার অবতার তত্ত্ব এবং জীবের প্রতি দয়া প্রদর্শনের গুরুত্ব।",
+            keywords: ["ব্রহ্ম", "ঈশ্বর", "অবতার", "ভগবদ্গীতা", "জীবসেবা"]
+          },
+          {
+            idSuffix: "hin-ch1-l2",
+            point: "১.২",
+            title: "God as Nirguna and Saguna",
+            titleBangla: "১.২ নিরাকার ও সাকার ঈশ্বর ভাবনা এবং ভক্তিযোগ",
+            summary: "নির্গুণ ব্রহ্মের উপলব্ধি এবং ভক্তের হৃদয়ে সাকার রূপের আরাধনা ও আত্মনিবেদন।",
+            keywords: ["নির্গুণ", "সাকার", "ভক্তিযোগ", "আত্মনিবেদন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hin-ch2",
+        chapterNumber: 2,
+        title: "Hindu Scriptures and Philosophy",
+        titleBangla: "২য় অধ্যায়: হিন্দুধর্মগ্রন্থ ও আধ্যাত্মিক দর্শন",
+        lessons: [
+          {
+            idSuffix: "hin-ch2-l1",
+            point: "২.১",
+            title: "Vedas, Upanishads, and the Bhagavad Gita",
+            titleBangla: "২.১ বেদ, উপনিষদ, রামায়ণ, মহাভারত ও শ্রীমদ্ভগবদ্গীতা",
+            summary: "বেদসংহিতা ও উপনিষদের অধ্যাত্মচিন্তা, গীতার নিষ্কাম কর্মযোগ ও মোক্ষলাভের পথ।",
+            keywords: ["বেদ", "উপনিষদ", "গীতা", "নিষ্কাম কর্ম", "মোক্ষ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hin-ch3",
+        chapterNumber: 3,
+        title: "Deities, Worship and Religious Festivals",
+        titleBangla: "৩য় অধ্যায়: দেব-দেবী, পূজা-পার্বণ ও ধর্মীয় আচার",
+        lessons: [
+          {
+            idSuffix: "hin-ch3-l1",
+            point: "৩.১",
+            title: "Significance of Durga, Saraswati, Shiva and Krishna Worship",
+            titleBangla: "৩.১ প্রধান দেব-দেবী ও দুর্গোৎসব, সরস্বতী পূজা ও জন্মাষ্টমীর তাৎপর্য",
+            summary: "শক্তি, জ্ঞান, ধ্বংস ও সৃষ্টির প্রতীকী দেবতার পূজা এবং সর্বজনীন সৌহার্দ্যের বিস্তার।",
+            keywords: ["দুর্গাপূজা", "সরস্বতী", "শিব", "শ্রীকৃষ্ণ", "জন্মাষ্টমী"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hin-ch4",
+        chapterNumber: 4,
+        title: "Ethics, Values and Social Harmony",
+        titleBangla: "৪র্থ অধ্যায়: ধর্মীয় মূল্যবোধ, সদাচার ও সামাজিক সম্প্রীতি",
+        lessons: [
+          {
+            idSuffix: "hin-ch4-l1",
+            point: "৪.১",
+            title: "Truth, Ahimsa, Asteya and Universal Brotherhood",
+            titleBangla: "৪.১ সত্য, অহিংসা, অস্তেয়, ক্ষমা ও বিশ্বভ্রাতৃত্ববোধ",
+            summary: "সনাতন ধর্মের নৈতিক দশ লক্ষণ এবং সর্বভূতে মৈত্রী ও অহিংস আচরণের অনুশীলন।",
+            keywords: ["অহিংসা", "অস্তেয়", "ক্ষমা", "সদাচার", "সম্প্রীতি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hin-ch5",
+        chapterNumber: 5,
+        title: "Lives of Great Sages and Reformers",
+        titleBangla: "৫ম অধ্যায়: আদর্শ জীবনচরিত ও সমাজ সংস্কারক মনীষীগণ",
+        lessons: [
+          {
+            idSuffix: "hin-ch5-l1",
+            point: "৫.১",
+            title: "Sri Chaitanya, Ramakrishna, Vivekananda, and Vidyasagar",
+            titleBangla: "৫.১ শ্রীচৈতন্যদেব, শ্রীরামকৃষ্ণ, স্বামী বিবেকানন্দ ও ঈশ্বরচন্দ্র বিদ্যাসাগর",
+            summary: "প্রেমধর্মের প্রচার, নরনারায়ণ সেবা এবং কুসংস্কারমুক্ত আধুনিক সমাজ গঠনের প্রচেষ্টা।",
+            keywords: ["শ্রীচৈতন্য", "শ্রীরামকৃষ্ণ", "বিবেকানন্দ", "বিদ্যাসাগর", "সমাজ সংস্কার"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "buddhist-edu",
+    codeBase: "BUD",
+    name: "Buddhist Religion & Moral Education",
+    nameBangla: "বৌদ্ধধর্ম ও নৈতিক শিক্ষা",
+    group: "General / Compulsory",
+    coverColor: "from-amber-600 to-yellow-850",
+    chapters: [
+      {
+        idSuffix: "bud-ch1",
+        chapterNumber: 1,
+        title: "Life of Gautama Buddha and Enlightenment",
+        titleBangla: "১ম অধ্যায়: গৌতম বুদ্ধের জীবন ও বোধিলাভ",
+        lessons: [
+          {
+            idSuffix: "bud-ch1-l1",
+            point: "১.১",
+            title: "Prince Siddhartha's Renunciation and Nirvana",
+            titleBangla: "১.১ মহানিষ্ক্রমণ, বোধিবৃক্ষের তলে জ্ঞানলাভ ও ধর্মচক্র প্রবর্তন",
+            summary: "রাজভোগ ত্যাগ করে সংসার দুঃখ মুক্তির অন্বেষণ এবং সারনাথে প্রথম পঞ্চবর্গীয় শিষ্যের নিকট ধর্মদেশনা।",
+            keywords: ["মহানিষ্ক্রমণ", "বুদ্ধত্ব", "সারনাথ", "ধর্মচক্র প্রবর্তন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bud-ch2",
+        chapterNumber: 2,
+        title: "Tripitaka and Buddhist Scriptures",
+        titleBangla: "২য় অধ্যায়: ত্রিপিটক ও বৌদ্ধ সাহিত্য",
+        lessons: [
+          {
+            idSuffix: "bud-ch2-l1",
+            point: "২.১",
+            title: "Vinaya, Sutta, and Abhidhamma Pitaka",
+            titleBangla: "২.১ বিনয় পিটক, সূত্র পিটক ও অভিধর্ম পিটকের কাঠামো ও শিক্ষা",
+            summary: "ভিক্ষু সংঘের নিয়ম-কানুন, বুদ্ধের উপদেশমালা এবং বৌদ্ধ অধিবিদ্যার গভীর দার্শনিক ব্যাখ্যা।",
+            keywords: ["ত্রিপিটক", "বিনয় পিটক", "সূত্র পিটক", "অভিধর্ম পিটক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bud-ch3",
+        chapterNumber: 3,
+        title: "Four Noble Truths and Eightfold Path",
+        titleBangla: "৩য় অধ্যায়: চতুরার্য সত্য ও আর্য অষ্টাঙ্গিক মার্গ",
+        lessons: [
+          {
+            idSuffix: "bud-ch3-l1",
+            point: "৩.১",
+            title: "Four Noble Truths and Noble Eightfold Path",
+            titleBangla: "৩.১ চতুরার্য সত্য ও অষ্টাঙ্গিক মার্গ অনুশীলন",
+            summary: "দুঃখ, দুঃখের কারণ, দুঃখ নিরোধ ও দুঃখ নিরোধের আটটি পথ (অষ্টাঙ্গিক মার্গ) এর বিশদ আলোচনা।",
+            keywords: ["বুদ্ধ", "চতুরার্য সত্য", "অষ্টাঙ্গিক মার্গ", "নির্বাণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bud-ch4",
+        chapterNumber: 4,
+        title: "Buddhist Ethics, Sila and Meditation (Samadhi)",
+        titleBangla: "৪র্থ অধ্যায়: শীল, সমাধি, প্রজ্ঞা ও অহিংসা",
+        lessons: [
+          {
+            idSuffix: "bud-ch4-l1",
+            point: "৪.১",
+            title: "Five Precepts (Pancasila) and Vipassana Meditation",
+            titleBangla: "৪.১ পঞ্চশীল, অষ্টশীল ও বিপশ্যনা ভাবনার মাধ্যমে মানসিক প্রশান্তি",
+            summary: "কায়মনোবাক্যে অহিংসা পালন, চিত্তের একাগ্রতা বৃদ্ধি ও সার্বজনীন মৈত্রী ভাবনা।",
+            keywords: ["পঞ্চশীল", "বিপশ্যনা", "ধ্যান", "প্রজ্ঞা", "মৈত্রী"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bud-ch5",
+        chapterNumber: 5,
+        title: "Jataka Tales and Buddhist Culture",
+        titleBangla: "৫ম অধ্যায়: জাতকের নীতিশিক্ষা ও বৌদ্ধ ঐতিহাসিক নিদর্শন",
+        lessons: [
+          {
+            idSuffix: "bud-ch5-l1",
+            point: "৫.১",
+            title: "Jataka Moral Stories and Heritage of Paharpur, Mahasthangarh",
+            titleBangla: "৫.১ জাতকের আত্মত্যাগের দৃষ্টান্ত এবং সোমপুর মহাবিহার ও ময়নামতির ঐতিহ্য",
+            summary: "বোধনসত্ত্বের ত্যাগশীলতা এবং প্রাচীন বাংলার বৌদ্ধ সভ্যতা ও সংস্কৃতির গৌরবোজ্জ্বল ইতিহাস।",
+            keywords: ["জাতক", "সোমপুর মহাবিহার", "পাহাড়পুর", "ময়নামতি", "ঐতিহ্য"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "christian-edu",
+    codeBase: "CHR",
+    name: "Christian Religion & Moral Education",
+    nameBangla: "খ্রিস্টধর্ম ও নৈতিক শিক্ষা",
+    group: "General / Compulsory",
+    coverColor: "from-purple-600 to-indigo-900",
+    chapters: [
+      {
+        idSuffix: "chr-ch1",
+        chapterNumber: 1,
+        title: "God's Plan of Salvation and Jesus Christ",
+        titleBangla: "১ম অধ্যায়: ঈশ্বরের সৃষ্টি ও মুক্তি পরিকল্পনা",
+        lessons: [
+          {
+            idSuffix: "chr-ch1-l1",
+            point: "১.১",
+            title: "Creation, Fall of Man and Covenant with Prophets",
+            titleBangla: "১.১ নিখিল সৃষ্টির রহস্য, মানুষের পাপপতন ও আব্রাহামীয় চুক্তি",
+            summary: "ঈশ্বরের অসীম মহিমা ও মানবজাতিকে রক্ষায় নবী-পয়গম্বরদের মাধ্যমে প্রেরিত বার্তা।",
+            keywords: ["সৃষ্টি", "ঈশ্বরের চুক্তি", "আব্রাহাম", "মুক্তি পরিকল্পনা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "chr-ch2",
+        chapterNumber: 2,
+        title: "The Holy Bible as Divine Word",
+        titleBangla: "২য় অধ্যায়: পবিত্র বাইবেল: ঐশ্বরিক বাণী ও জীবনের নির্দেশিকা",
+        lessons: [
+          {
+            idSuffix: "chr-ch2-l1",
+            point: "২.১",
+            title: "Gospels, Epistles and Revelation in New Testament",
+            titleBangla: "২.১ চার সুসমাচার (মথি, মার্ক, লূক, যোহন) ও প্রেরিতদের পত্রাবলি",
+            summary: "যিশুর পার্থিব জীবনের প্রামাণ্য ইতিহাস, অলৌকিক কার্য ও প্রথম যুগের মণ্ডলীর বিস্তার।",
+            keywords: ["বাইবেল", "সুসমাচার", "নতুন নিয়ম", "প্রেরিতদের পত্র"]
+          }
+        ]
+      },
+      {
+        idSuffix: "chr-ch3",
+        chapterNumber: 3,
+        title: "Life, Crucifixion and Resurrection of Jesus",
+        titleBangla: "৩য় অধ্যায়: প্রভু যিশু খ্রিস্টের আত্মদান ও পুনরুত্থান",
+        lessons: [
+          {
+            idSuffix: "chr-ch3-l1",
+            point: "৩.১",
+            title: "Crucifixion, Forgiveness and the Power of Resurrection",
+            titleBangla: "৩.১ ক্রুশারোহণ, শত্রুকে ক্ষমা এবং পুনরুত্থানের মাধ্যমে আশার বিজয়",
+            summary: "মানবজাতির পরিত্রাণে যিশুর মহোচ্চ আত্মত্যাগ, ক্রুশে শেষ বাণী ও পুনরুজ্জীবনের তাৎপর্য।",
+            keywords: ["ক্রুশারোহণ", "পুনরুত্থান", "ক্ষমা", "পরিত্রাণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "chr-ch4",
+        chapterNumber: 4,
+        title: "Christian Morality and Social Justice",
+        titleBangla: "৪র্থ অধ্যায়: খ্রিস্টীয় নৈতিকতা, দশ আজ্ঞা ও সামাজিক ন্যায়বিচার",
+        lessons: [
+          {
+            idSuffix: "chr-ch4-l1",
+            point: "৪.১",
+            title: "Ten Commandments, Sermon on Mount and Serving Marginalized",
+            titleBangla: "৪.১ দশ আজ্ঞা, পাহাড়ি উপদেশ ও দীন-দরিদ্রের প্রতি দায়িত্ব",
+            summary: "পবিত্র বাইবেলের দশ আজ্ঞা, পাহাড়ি উপদেশ (Sermon on the Mount) এবং পরোপকারের মূল্যবোধ।",
+            keywords: ["দশ আজ্ঞা", "পাহাড়ি উপদেশ", "সামাজিক ন্যায়বিচার", "মানবসেবা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "chr-ch5",
+        chapterNumber: 5,
+        title: "The Church and Saints' Lives",
+        titleBangla: "৫ম অধ্যায়: খ্রিস্টীয় মণ্ডলী ও মহৎ সাধু-সাধ্বীদের আদর্শ",
+        lessons: [
+          {
+            idSuffix: "chr-ch5-l1",
+            point: "৫.১",
+            title: "Saint Paul, Saint Francis of Assisi, and Mother Teresa",
+            titleBangla: "৫.১ সাধু পল, ফ্রান্সিস অব আসিসি ও মাদার তেরেসার আত্মনিবেদিত জীবন",
+            summary: "বিশ্বব্যাপী মানবসেবার প্রসার, শান্তির দূত হিসেবে কাজ ও নিঃস্বার্থ আত্মোৎসর্গ।",
+            keywords: ["সাধু পল", "মাদার তেরেসা", "ফ্রান্সিস অব আসিসি", "সেবাব্রত"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "physical-edu",
+    codeBase: "PHE",
+    name: "Physical Education, Health & Sports",
+    nameBangla: "শারীরিক শিক্ষা, স্বাস্থ্যবিজ্ঞান ও খেলাধুলা",
+    group: "General / Compulsory",
+    coverColor: "from-red-600 to-rose-900",
+    chapters: [
+      {
+        idSuffix: "phe-ch1",
+        chapterNumber: 1,
+        title: "Physical Education and Healthy Living",
+        titleBangla: "১ম অধ্যায়: শারীরিক শিক্ষা ও সুস্থ জীবন",
+        lessons: [
+          {
+            idSuffix: "phe-ch1-l1",
+            point: "১.১",
+            title: "Objectives of Physical Education and Fitness Components",
+            titleBangla: "১.১ শারীরিক শিক্ষার লক্ষ্য, উদ্দেশ্য ও শারীরিক সক্ষমতার উপাদান",
+            summary: "মাংসপেশির শক্তি, সহনশীলতা, নমনীয়তা ও কার্ডিওভাসকুলার সুস্থতা বৃদ্ধির বিজ্ঞানসম্মত উপায়।",
+            keywords: ["শারীরিক শিক্ষা", "সক্ষমতা", "সহনশীলতা", "নমনীয়তা", "সুস্থ জীবন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phe-ch2",
+        chapterNumber: 2,
+        title: "Exercise, Rest, Sleep and Personal Hygiene",
+        titleBangla: "২য় অধ্যায়: শরীরচর্চা, বিশ্রাম ও ব্যক্তিগত স্বাস্থ্যবিধি",
+        lessons: [
+          {
+            idSuffix: "phe-ch2-l1",
+            point: "২.১",
+            title: "Warming Up, Cool Down, Posture and Balanced Sleep",
+            titleBangla: "২.১ ব্যায়ামের পূর্বে ওয়ার্ম-আপ, পোস্টার বা অঙ্গবিন্যাস এবং পর্যাপ্ত ঘুম",
+            summary: "শারীরিক ক্লান্তি দূরীকরণ, মেরুদণ্ডের সুরক্ষা এবং সঠিক দেহভঙ্গি বজায় রাখার অভ্যাস।",
+            keywords: ["ওয়ার্ম-আপ", "দেহভঙ্গি", "বিশ্রাম", "স্বাস্থ্যবিধি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phe-ch3",
+        chapterNumber: 3,
+        title: "Mental Health and Stress Management",
+        titleBangla: "৩য় অধ্যায়: মানসিক স্বাস্থ্য ও বয়ঃসন্ধিকালীন মানসিক চাপ মোকাবিলা",
+        lessons: [
+          {
+            idSuffix: "phe-ch3-l1",
+            point: "৩.১",
+            title: "Adolescent Mental Wellness, Anxiety, and Positive Mindset",
+            titleBangla: "৩.১ বয়ঃসন্ধিকালের মানসিক পরিবর্তন, উদ্বেগ নিয়ন্ত্রণ ও ইতিবাচক দৃষ্টিভঙ্গি",
+            summary: "পরীক্ষার ভয় ও সামাজিক চাপ মোকাবিলা, পারিবারিক যোগাযোগ এবং আত্মবিশ্বাস বৃদ্ধি।",
+            keywords: ["মানসিক স্বাস্থ্য", "বয়ঃসন্ধি", "উদ্বেগ নিয়ন্ত্রণ", "ইতিবাচক চিন্তা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phe-ch4",
+        chapterNumber: 4,
+        title: "Nutrition, Balanced Diet and Preventing Drug Abuse",
+        titleBangla: "৪র্থ অধ্যায়: সুষম খাদ্য, পুষ্টি ও মাদকাসক্তি প্রতিরোধ",
+        lessons: [
+          {
+            idSuffix: "phe-ch4-l1",
+            point: "৪.১",
+            title: "Calorie Requirement, Malnutrition and Anti-Drug Awareness",
+            titleBangla: "৪.১ দৈনিক ক্যালরি চাহিদা, অপুষ্টি দূরীকরণ ও মাদকের ভয়াবহ পরিণতি রোধ",
+            summary: "কৈশোরে পুষ্টিকর খাদ্যাভ্যাস এবং ধূমপান, তামাক ও মাদকদ্রব্যের কুফল সম্পর্কে সচেতনতা।",
+            keywords: ["সুষম খাদ্য", "ক্যালরি", "পুষ্টি", "মাদক প্রতিরোধ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phe-ch5",
+        chapterNumber: 5,
+        title: "Rules of Major Sports and Safety",
+        titleBangla: "৫ম অধ্যায়: প্রধান প্রধান খেলাধুলার নিয়মাবলি ও মাঠ নিরাপত্তা",
+        lessons: [
+          {
+            idSuffix: "phe-ch5-l1",
+            point: "৫.১",
+            title: "Football, Cricket, Volleyball, Badminton and Athletics Rules",
+            titleBangla: "৫.১ ফুটবল, ক্রিকেট, ভলিবল, ব্যাডমিন্টন ও অ্যাথলেটিক্সের অফিসিয়াল নিয়ম",
+            summary: "খেলার মাঠের পরিমাপ, রেফারির সংকেত, স্কোরিং নিয়ম ও ক্রীড়াসুলভ মনোভাব প্রদর্শন।",
+            keywords: ["ফুটবল", "ক্রিকেট", "অ্যাথলেটিক্স", "খেলার নিয়ম", "স্পোর্টসম্যানশিপ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phe-ch6",
+        chapterNumber: 6,
+        title: "First Aid, Sports Injuries and Safety (RICE Method)",
+        titleBangla: "৬ষ্ঠ অধ্যায়: প্রাথমিক চিকিৎসা, ক্রীড়াজনিত আঘাত ও RICE পদ্ধতি",
+        lessons: [
+          {
+            idSuffix: "phe-ch6-l1",
+            point: "৬.১",
+            title: "RICE Protocol, Sprains, Fractures and CPR Basics",
+            titleBangla: "৬.১ মচকে যাওয়া, হাড় ভাঙা, অতিরিক্ত তাপজনিত অবসাদ ও RICE প্রাথমিক চিকিৎসা",
+            summary: "Rest, Ice, Compression, Elevation পদ্ধতি প্রয়োগ এবং শ্বাসকষ্টে জরুরি সহায়তার কৌশল।",
+            keywords: ["RICE পদ্ধতি", "প্রাথমিক চিকিৎসা", "মচকে যাওয়া", "হাড় ভাঙা", "জরুরি সেবা"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "career-edu",
+    codeBase: "CAR",
+    name: "Career Education",
+    nameBangla: "ক্যারিয়ার শিক্ষা",
+    group: "General / Compulsory",
+    coverColor: "from-violet-600 to-purple-900",
+    chapters: [
+      {
+        idSuffix: "car-ch1",
+        chapterNumber: 1,
+        title: "Me and My Career",
+        titleBangla: "১ম অধ্যায়: আমি ও আমার ক্যারিয়ার",
+        lessons: [
+          {
+            idSuffix: "car-ch1-l1",
+            point: "১.১",
+            title: "Self-Exploration and Interest-Skills Alignment",
+            titleBangla: "১.১ আত্মমূল্যায়ন, সহজাত আগ্রহ, যোগ্যতা ও মূল্যবোধ চিহ্নিতকরণ",
+            summary: "নিজের শক্তি ও দুর্বলতা বিশ্লেষণ এবং পছন্দের পেশা নির্ধারণে আত্মবিশ্লেষণের ভূমিকা।",
+            keywords: ["ক্যারিয়ার", "আত্মমূল্যায়ন", "যোগ্যতা", "পেশা নির্বাচন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "car-ch2",
+        chapterNumber: 2,
+        title: "Essential Skills for 21st Century Career",
+        titleBangla: "২য় অধ্যায়: ক্যারিয়ার গঠনে গুণাবলি ও একবিংশ শতাব্দীর দক্ষতা",
+        lessons: [
+          {
+            idSuffix: "car-ch2-l1",
+            point: "২.১",
+            title: "Communication, Critical Thinking and Digital Literacy",
+            titleBangla: "২.১ যোগাযোগ দক্ষতা, সূক্ষ্ম চিন্তা, দলগত সমঝোতা ও ডিজিটাল সাক্ষরতা",
+            summary: "আধুনিক কর্মক্ষেত্রের জন্য সফট স্কিলস, সমস্যার সৃজনশীল সমাধান ও প্রযুক্তিগত অভিযোজন।",
+            keywords: ["সফট স্কিলস", "সমস্যা সমাধান", "দলগত কাজ", "ডিজিটাল সাক্ষরতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "car-ch3",
+        chapterNumber: 3,
+        title: "Networking, Opportunities and Information Gathering",
+        titleBangla: "৩য় অধ্যায়: সংযোগ ও নেটওয়ার্কিং এবং কর্মক্ষেত্রের সন্ধান",
+        lessons: [
+          {
+            idSuffix: "car-ch3-l1",
+            point: "৩.১",
+            title: "Professional Networking, Mentorship and Job Market Trends",
+            titleBangla: "৩.১ পেশাগত নেটওয়ার্কিং, মেন্টরশিপ ও সমকালীন শ্রমবাজারের প্রবণতা",
+            summary: "পেশাজীবীদের সাথে সংযোগ স্থাপন, ইন্টার্নশিপ ও ভবিষ্যৎ চাহিদাসম্পন্ন পেশা অনুসন্ধান।",
+            keywords: ["নেটওয়ার্কিং", "মেন্টর", "শ্রমবাজার", "পেশাগত সংযোগ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "car-ch4",
+        chapterNumber: 4,
+        title: "Action Plan and Achieving Career Goals",
+        titleBangla: "৪র্থ অধ্যায়: স্বপ্নপূরণ, লক্ষ্য নির্ধারণ ও বাস্তব কর্মপরিকল্পনা",
+        lessons: [
+          {
+            idSuffix: "car-ch4-l1",
+            point: "৪.১",
+            title: "SMART Goals, Time Management and Resilience",
+            titleBangla: "৪.১ স্মার্ট (SMART) লক্ষ্য নির্ধারণ, সময় ব্যবস্থাপনা ও ব্যর্থতা পেরিয়ে সাফল্য",
+            summary: "নির্দিষ্ট, পরিমাপযোগ্য ও সময়াবদ্ধ কর্মপরিকল্পনা তৈরি এবং প্রতিকূলতায় ঘুরে দাঁড়ানোর মানসিকতা।",
+            keywords: ["SMART লক্ষ্য", "সময় ব্যবস্থাপনা", "কর্মপরিকল্পনা", "সাফল্য"]
+          }
+        ]
+      }
+    ]
+  },
+
+  // ==========================================
+  // 2. বিজ্ঞান বিভাগ (Science Group)
+  // ==========================================
+  {
+    idSuffix: "physics",
+    codeBase: "PHY",
+    name: "Physics",
+    nameBangla: "পদার্থবিজ্ঞান",
+    group: "Science",
+    coverColor: "from-blue-600 to-cyan-900",
+    chapters: [
+      {
+        idSuffix: "phy-ch1",
+        chapterNumber: 1,
+        title: "Physical Quantities and Measurement",
+        titleBangla: "১ম অধ্যায়: ভৌত রাশি ও পরিমাপ",
+        lessons: [
+          {
+            idSuffix: "phy-ch1-l1",
+            point: "১.১",
+            title: "Fundamental Quantities, Vernier Constant and Screw Gauge",
+            titleBangla: "১.১ মৌলিক রাশি, স্লাইড ক্যালিপার্স ও স্ক্রু গজ দ্বারা পরিমাপ",
+            summary: "এসআই একক (SI units), ভার্নিয়ার ধ্রুবক VC = s/n, লঘিষ্ঠ গণন (Least Count) এবং গোলকের আয়তন পরিমাপে ত্রুটি বিশ্লেষণ।",
+            keywords: ["ভৌত রাশি", "স্লাইড ক্যালিপার্স", "স্ক্রু গজ", "ভার্নিয়ার ধ্রুবক", "পরিমাপ ত্রুটি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch2",
+        chapterNumber: 2,
+        title: "Motion and Kinematics",
+        titleBangla: "২য় অধ্যায়: গতি (Motion)",
+        lessons: [
+          {
+            idSuffix: "phy-ch2-l1",
+            point: "২.১",
+            title: "Kinematic Equations (v = u + at, s = ut + ½at²)",
+            titleBangla: "২.১ দূরুত্ব, সরণ, দ্রুতি, বেগ, ত্বরণ এবং গতির সমীকরণ",
+            summary: "গতির চারটি মৌলিক সমীকরণ প্রতিপাদন ও গাণিতিক সমস্যা সমাধান: v=u+at, s=(u+v)/2×t, s=ut+½at², v²=u²+2as।",
+            keywords: ["গতি", "সরণ", "বেগ", "ত্বরণ", "গতির সমীকরণ"]
+          },
+          {
+            idSuffix: "phy-ch2-l2",
+            point: "২.২",
+            title: "Freely Falling Bodies & Galileo's Laws",
+            titleBangla: "২.২ অভিকর্ষজ ত্বরণ 'g' ও গ্যালিলিওর পরন্ত বস্তুর সূত্র",
+            summary: "বায়ুশূন্য স্থানে পরন্ত বস্তুর বেগ ও দূরুত্বের অনুপাত এবং উল্লম্বভাবে নিক্ষিপ্ত বস্তুর গতি সমীকরণ।",
+            keywords: ["পরন্ত বস্তু", "গ্যালিলিও", "অভিকর্ষজ ত্বরণ", "সর্বোচ্চ উচ্চতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch3",
+        chapterNumber: 3,
+        title: "Force and Newton's Laws of Motion",
+        titleBangla: "৩য় অধ্যায়: বল (Force)",
+        lessons: [
+          {
+            idSuffix: "phy-ch3-l1",
+            point: "৩.১",
+            title: "Inertia and Newton's Three Laws (F = ma)",
+            titleBangla: "৩.১ জড়তা, বলের পরিমাপ (F = ma) এবং ক্রিয়াপ্রতিক্রিয়া",
+            summary: "স্থিতিজড়তা ও গতিজড়তার বাস্তব উদাহরণ, ভরবেগ p=mv, দ্বিতীয় সূত্র থেকে F=ma প্রতিপাদন ও তৃতীয় সূত্রের বন্দুকের পশ্চাৎবেগ।",
+            keywords: ["জড়তা", "নিউটনের গতিসূত্র", "ভরবেগ", "বল F=ma", "সংঘর্ষ"]
+          },
+          {
+            idSuffix: "phy-ch3-l2",
+            point: "৩.২",
+            title: "Friction and Safe Road Dynamics",
+            titleBangla: "৩.২ ঘর্ষণ বলের প্রকারভেদ ও সড়কে নিরাপদ ভ্রমণ",
+            summary: "স্থিতি ঘর্ষণ, গতি ঘর্ষণ, আবর্ত ঘর্ষণ ও প্রবাহী ঘর্ষণ এবং টায়ার ও রাস্তার ব্যাংকিং ব্যবস্থার প্রয়োজনীয়তা।",
+            keywords: ["ঘর্ষণ", "গতি ঘর্ষণ", "টায়ার", "ব্যাংকিং", "সড়ক নিরাপত্তা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch4",
+        chapterNumber: 4,
+        title: "Work, Power and Energy",
+        titleBangla: "৪র্থ অধ্যায়: কাজ, ক্ষমতা ও শক্তি",
+        lessons: [
+          {
+            idSuffix: "phy-ch4-l1",
+            point: "৪.১",
+            title: "Work, Kinetic Energy and Potential Energy",
+            titleBangla: "৪.১ কাজের গাণিতিক রূপ (W = Fs cosθ), গতিশক্তি ও বিভব শক্তি",
+            summary: "কাজ W=Fs, গতিশক্তি Ek = ½mv², বিভব শক্তি Ep = mgh এবং মুক্তভাবে পরন্ত বস্তুর যান্ত্রিক শক্তির সংরক্ষণশীলতা নীতি প্রমাণ।",
+            keywords: ["কাজ", "গতিশক্তি", "বিভব শক্তি", "শক্তির সংরক্ষণশীলতা"]
+          },
+          {
+            idSuffix: "phy-ch4-l2",
+            point: "৪.২",
+            title: "Power and Work Efficiency (η = Output / Input)",
+            titleBangla: "৪.২ ক্ষমতা (P = W/t) এবং মোট কর্মদক্ষতা (Efficiency) নির্ণয়",
+            summary: "পাম্প ও ইঞ্জিনের কার্যকর ক্ষমতা, ওয়াট ও কিলোওয়াট একক এবং অপচয়কৃত শক্তির আলোকে শতকরা কর্মদক্ষতা η নির্ণয়।",
+            keywords: ["ক্ষমতা", "ওয়াট", "কর্মদক্ষতা", "শক্তি রূপান্তর"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch5",
+        chapterNumber: 5,
+        title: "State of Matter and Pressure",
+        titleBangla: "৫ম অধ্যায়: পদার্থের অবস্থা ও চাপ",
+        lessons: [
+          {
+            idSuffix: "phy-ch5-l1",
+            point: "৫.১",
+            title: "Pressure, Density and Pascal's Law",
+            titleBangla: "৫.১ চাপ (P = F/A), তরলের অভ্যন্তরে চাপ (P = hρg) ও প্যাসকেলের সূত্র",
+            summary: "হাইড্রলিক প্রেস ও বল বৃদ্ধিকরণ নীতি F2/F1 = A2/A1, ব্যারোমিটার ও বায়ুমণ্ডলীয় চাপ পরিমাপ।",
+            keywords: ["চাপ", "ঘনত্ব", "প্যাসকেলের সূত্র", "হাইড্রলিক প্রেস"]
+          },
+          {
+            idSuffix: "phy-ch5-l2",
+            point: "৫.২",
+            title: "Archimedes' Principle and Buoyancy",
+            titleBangla: "৫.২ আর্কিমিডিসের নীতি, প্লবতা ও বস্তুর ভাসন-নিমজ্জন",
+            summary: "উর্ধ্বমুখী প্লবতা বল FB = Vρg, অপসারিত তরলের ওজন এবং জাহাজ ভাসার বৈজ্ঞানিক ব্যাখ্যা।",
+            keywords: ["আর্কিমিডিস", "প্লবতা", "ভাসন", "নিমজ্জন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch6",
+        chapterNumber: 6,
+        title: "Waves and Sound",
+        titleBangla: "৭ম অধ্যায়: তরঙ্গ ও শব্দ",
+        lessons: [
+          {
+            idSuffix: "phy-ch6-l1",
+            point: "৭.১",
+            title: "Wave Characteristics and Equation (v = fλ)",
+            titleBangla: "৭.১ অনুপ্রস্থ ও অনুদৈর্ঘ্য তরঙ্গ, পর্যায়কাল, কম্পাঙ্ক ও তরঙ্গ সমীকরণ v = fλ",
+            summary: "তরঙ্গদৈর্ঘ্য λ, বিস্তার, দশা এবং তরঙ্গের বেগ, কম্পাঙ্ক ও তরঙ্গদৈর্ঘ্যের সম্পর্ক বিষয়ক সমস্যা।",
+            keywords: ["তরঙ্গ", "কম্পাঙ্ক", "তরঙ্গ সমীকরণ v=fλ", "অনুপ্রস্থ তরঙ্গ"]
+          },
+          {
+            idSuffix: "phy-ch6-l2",
+            point: "৭.২",
+            title: "Echo, Velocity of Sound and Ultrasound",
+            titleBangla: "৭.২ প্রতিধ্বনি সৃষ্টির শর্ত (ন্যূনতম দূরত্ব ১৬.৬ মিটার) ও আল্ট্রাসাউন্ডের প্রয়োগ",
+            summary: "প্রতিধ্বনির সাহায্যে কূপের গভীরতা নির্ণয় d = vt/2 এবং বাদুড়ের পথচলা ও চিকিৎসা ক্ষেত্রে আল্ট্রাসনোগ্রাফি।",
+            keywords: ["প্রতিধ্বনি", "শব্দের বেগ", "আল্ট্রাসাউন্ড", "কূপের গভীরতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch7",
+        chapterNumber: 7,
+        title: "Reflection and Refraction of Light",
+        titleBangla: "৮ম ও ৯ম অধ্যায়: আলোর প্রতিফলন ও প্রতিসরণ",
+        lessons: [
+          {
+            idSuffix: "phy-ch7-l1",
+            point: "৮.১",
+            title: "Spherical Mirrors and Mirror Formula",
+            titleBangla: "৮.১ অবতল ও উত্তল দর্পণ, প্রতিবিম্ব গঠন এবং সূত্র ১/u + ১/v = ১/f",
+            summary: "প্রধান অক্ষ, ফোকাস দূরত্ব f = r/2, অবতল দর্পণে বাস্তব ও অবাস্তব প্রতিবিম্ব এবং বিবর্ধন m = -v/u।",
+            keywords: ["আলোর প্রতিফলন", "অবতল দর্পণ", "দর্পণের সূত্র", "বিবর্ধন"]
+          },
+          {
+            idSuffix: "phy-ch7-l2",
+            point: "৯.১",
+            title: "Snell's Law, Refractive Index & Total Internal Reflection",
+            titleBangla: "৯.১ স্নেলের সূত্র (n1 sinθ1 = n2 sinθ2), সংকট কোণ ও পূর্ণ অভ্যন্তরীণ প্রতিফলন",
+            summary: "আলোর প্রতিসরণাঙ্ক, সংকট কোণ θc = sin^-1(1/n), অপটিক্যাল ফাইবার ও মরুভূমির মরীচিকা।",
+            keywords: ["প্রতিসরণ", "স্নেলের সূত্র", "সংকট কোণ", "অপটিক্যাল ফাইবার", "মরীচিকা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch8",
+        chapterNumber: 8,
+        title: "Current Electricity and Circuits",
+        titleBangla: "১১শ অধ্যায়: চল বিদ্যুৎ (Current Electricity)",
+        lessons: [
+          {
+            idSuffix: "phy-ch8-l1",
+            point: "১১.১",
+            title: "Ohm's Law, Resistance and Specific Resistivity",
+            titleBangla: "১১.১ ওহমের সূত্র (V = IR), রোধের নির্ভরশীলতা ও আপেক্ষিক রোধ ρ = RA/L",
+            summary: "তড়িৎ প্রবাহ I=Q/t, বিভব পার্থক্য, ওহমের সূত্র এবং রোধের সূত্রাবলি (দৈর্ঘ্য ও প্রস্থচ্ছেদের ক্ষেত্রফলের প্রভাব)।",
+            keywords: ["ওহমের সূত্র", "রোধ", "আপেক্ষিক রোধ", "তড়িৎ প্রবাহ"]
+          },
+          {
+            idSuffix: "phy-ch8-l2",
+            point: "১১.২",
+            title: "Series & Parallel Combination and Electric Power Cost",
+            titleBangla: "১১.২ শ্রেণি ও সমান্তরাল সমবায় (Rs, Rp) এবং বিদ্যুৎ বিল হিসাব (kWh ইউনিট)",
+            summary: "Rs = R1+R2+..., 1/Rp = 1/R1+1/R2+... এবং বিদ্যুৎ শক্তি E = Pt / 1000 কিলোওয়াট-ঘণ্টা হিসাব।",
+            keywords: ["তুল্য রোধ", "শ্রেণি সমবায়", "সমান্তরাল সমবায়", "বিদ্যুৎ বিল", "কিলোওয়াট ঘণ্টা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "phy-ch9",
+        chapterNumber: 9,
+        title: "Modern Physics, Electronics and Medical Physics",
+        titleBangla: "১৩শ ও ১৪শ অধ্যায়: আধুনিক পদার্থবিজ্ঞান ও জীবন বাঁচাতে পদার্থবিজ্ঞান",
+        lessons: [
+          {
+            idSuffix: "phy-ch9-l1",
+            point: "১৩.১",
+            title: "Radioactivity, Alpha-Beta-Gamma Rays and Medical Imaging",
+            titleBangla: "১৩.১ তেজস্ক্রিয়তা, অর্ধায়ু এবং এক্স-রে, সিটি স্ক্যান ও এমআরআই (MRI) প্রযুক্তি",
+            summary: "আলফা, বিটা, গামা রশ্মির বৈশিষ্ট্য, অর্ধায়ু T1/2 এবং মানবদেহের রোগ নির্ণয়ে এক্স-রে, আল্ট্রাসাউন্ড, সিটি স্ক্যান ও রেডিওথেরাপি।",
+            keywords: ["তেজস্ক্রিয়তা", "অর্ধায়ু", "এক্স-রে", "সিটি স্ক্যান", "এমআরআই"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "chemistry",
+    codeBase: "CHEM",
+    name: "Chemistry",
+    nameBangla: "রসায়ন",
+    group: "Science",
+    coverColor: "from-indigo-600 to-violet-900",
+    chapters: [
+      {
+        idSuffix: "ch-ch1",
+        chapterNumber: 1,
+        title: "States of Matter and Kinetic Theory",
+        titleBangla: "২য় অধ্যায়: পদার্থের অবস্থা ও কণার গতিতত্ত্ব",
+        lessons: [
+          {
+            idSuffix: "ch-ch1-l1",
+            point: "২.১",
+            title: "Kinetic Particle Theory, Diffusion and Effusion",
+            titleBangla: "২.১ কণার গতিতত্ত্ব, ব্যাপন ও নিঃসরণের পার্থক্য এবং গ্রাহামের সূত্র",
+            summary: "আন্তঃকণা আকর্ষণ ও গতিশক্তি, পদার্থের কঠিন-তরল-বায়বীয় অবস্থা এবং আণবিক ভরের সাথে ব্যাপন হারের ব্যস্তানুপাতিক সম্পর্ক।",
+            keywords: ["কণার গতিতত্ত্ব", "ব্যাপন", "নিঃসরণ", "ঊর্ধ্বপাতন", "গলনাঙ্ক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ch-ch2",
+        chapterNumber: 2,
+        title: "Structure of Matter and Atomic Models",
+        titleBangla: "৩য় অধ্যায়: পদার্থের গঠন ও পরমাণুর মডেল",
+        lessons: [
+          {
+            idSuffix: "ch-ch2-l1",
+            point: "৩.১",
+            title: "Rutherford and Bohr Atomic Models",
+            titleBangla: "৩.১ রাদারফোর্ডের আলফা কণা বিচ্ছুরণ পরীক্ষা ও বোর পরমাণু মডেল",
+            summary: "পরমাণুর নিউক্লিয়াস আবিষ্কার, রাদারফোর্ড মডেলের সাফল্য ও সৌরজগতীয় সীমাবদ্ধতা, বোরের নির্দিষ্ট শক্তিস্তর ও বর্ণালি ব্যাখ্যা।",
+            keywords: ["রাদারফোর্ড মডেল", "বোর মডেল", "নিউক্লিয়াস", "শক্তিস্তর", "বর্ণালি"]
+          },
+          {
+            idSuffix: "ch-ch2-l2",
+            point: "৩.২",
+            title: "Electronic Configuration (Aufbau Principle & Orbitals)",
+            titleBangla: "৩.২ ইলেকট্রন বিন্যাস (s, p, d, f অরবিটাল ও ব্যতিক্রম Cr, Cu)",
+            summary: "আউফবাউ নীতি অনুসারে শক্তিস্তরে ইলেকট্রন প্রবেশ (1s 2s 2p 3s 3p 4s 3d) এবং ক্রোমিয়াম (24) ও কপারের (29) অর্ধপূর্ণ/পূর্ণ স্থিতিশীল বিন্যাস।",
+            keywords: ["ইলেকট্রন বিন্যাস", "আউফবাউ নীতি", "অরবিটাল", "ক্রোমিয়াম", "কপার"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ch-ch3",
+        chapterNumber: 3,
+        title: "Periodic Table and Periodic Properties",
+        titleBangla: "৪র্থ অধ্যায়: পর্যায় সারণি ও পর্যাবৃত্ত ধর্ম",
+        lessons: [
+          {
+            idSuffix: "ch-ch3-l1",
+            point: "৪.১",
+            title: "Periodic Classification and Determining Period & Group",
+            titleBangla: "৪.১ ইলেকট্রন বিন্যাসের মাধ্যমে মৌলের পর্যায় ও গ্রুপ নির্ণয়",
+            summary: "আধুনিক পর্যায় সূত্র (পারমাণবিক সংখ্যাভিত্তিক), ১৮টি গ্রুপ ও ৭টি পর্যায় এবং ক্ষার ধাতু, মৃৎক্ষার ধাতু, হ্যালোজেন ও নিষ্ক্রিয় গ্যাস।",
+            keywords: ["পর্যায় সারণি", "গ্রুপ", "পর্যায়", "ক্ষার ধাতু", "হ্যালোজেন"]
+          },
+          {
+            idSuffix: "ch-ch3-l2",
+            point: "৪.২",
+            title: "Atomic Radius, Ionization Energy & Electronegativity",
+            titleBangla: "৪.২ পারমাণবিক ব্যাসার্ধ, আয়নীকরণ শক্তি ও তড়িৎ ঋণাত্মকতার পরিবর্তন",
+            summary: "একই পর্যায়ে বাম থেকে ডানে এবং একই গ্রুপে উপর থেকে নিচে আকার, আয়নীকরণ শক্তি ও ইলেকট্রন আসক্তির পর্যায়ক্রমিক পরিবর্তন।",
+            keywords: ["পারমাণবিক ব্যাসার্ধ", "আয়নীকরণ শক্তি", "তড়িৎ ঋণাত্মকতা", "পর্যাবৃত্ত ধর্ম"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ch-ch4",
+        chapterNumber: 4,
+        title: "Chemical Bonds and Valence",
+        titleBangla: "৫ম অধ্যায়: রাসায়নিক বন্ধন (Ionic, Covalent & Metallic)",
+        lessons: [
+          {
+            idSuffix: "ch-ch4-l1",
+            point: "৫.১",
+            title: "Octet Rule, Duplet Rule & Ionic Bond Formation",
+            titleBangla: "৫.১ অষ্টক ও দুইয়ের নিয়ম এবং ক্যাটায়ন-অ্যানায়ন সহযোগে আয়নিক বন্ধন",
+            summary: "ইলেকট্রন আদান-প্রদানের মাধ্যমে আয়ন সৃষ্টি, NaCl, MgO গঠন এবং আয়নিক যৌগের উচ্চ গলনাঙ্ক ও পানিতে দ্রবণীয়তা।",
+            keywords: ["আয়নিক বন্ধন", "অষ্টক নিয়ম", "ক্যাটায়ন", "অ্যানায়ন", "কেলাস"]
+          },
+          {
+            idSuffix: "ch-ch4-l2",
+            point: "৫.২",
+            title: "Covalent Bond and Metallic Bond",
+            titleBangla: "৫.২ ইলেকট্রন শেয়ারিং-এ সমযোজী বন্ধন (H2O, CH4) ও ধাতব বন্ধন",
+            summary: "একক, দ্বৈত ও ত্রিবন্ধন, পোলার সমযোজী যৌগ এবং মুক্ত ইলেকট্রন সমুদ্র মডেলের সাহায্যে ধাতুর বিদ্যুৎ ও তাপ পরিবাহিতা ব্যাখ্যা।",
+            keywords: ["সমযোজী বন্ধন", "ধাতব বন্ধন", "পোলারিটি", "পরিবাহিতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ch-ch5",
+        chapterNumber: 5,
+        title: "Concept of Mole and Chemical Calculations",
+        titleBangla: "৬ষ্ঠ অধ্যায়: মোলের ধারণা ও রাসায়নিক গণনা (Stoichiometry)",
+        lessons: [
+          {
+            idSuffix: "ch-ch5-l1",
+            point: "৬.১",
+            title: "Avogadro's Number, Molar Mass and Formula n = w/M",
+            titleBangla: "৬.১ অ্যাভোগাড্রো সংখ্যা (৬.০২ × ১০²³), মোলার আয়তন ও মোল সংখ্যা হিসাব",
+            summary: "n = w/M = V/22.4 = N/(6.02×10²³) সূত্রাবলি এবং প্রমাণ তাপমাত্রা ও চাপে (STP) মোলার আয়তন ২২.৪ লিটার।",
+            keywords: ["মোল", "অ্যাভোগাড্রো সংখ্যা", "মোলার ভর", "মোলার আয়তন", "STP"]
+          },
+          {
+            idSuffix: "ch-ch5-l2",
+            point: "৬.২",
+            title: "Empirical Formula, Molecular Formula and Limiting Reactant",
+            titleBangla: "৬.২ শতকরা সংযুতি থেকে স্থূল ও আণবিক সংকেত এবং লিমিটিং বিক্রিয়ক",
+            summary: "শতকরা সংযুতি হতে মৌলের অনুপাত নির্ণয় এবং বিক্রিয়ায় যে বিক্রিয়কটি সর্বপ্রথম নিঃশেষিত হয় তার ভিত্তিতে উৎপাদের পরিমাণ হিসাব।",
+            keywords: ["স্থূল সংকেত", "আণবিক সংকেত", "শতকরা সংযুতি", "লিমিটিং বিক্রিয়ক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ch-ch6",
+        chapterNumber: 6,
+        title: "Chemical Reactions and Energy Shifts",
+        titleBangla: "৭ম ও ৮ম অধ্যায়: রাসায়নিক বিক্রিয়া, জারণ-বিজারণ ও তড়িৎ রসায়ন",
+        lessons: [
+          {
+            idSuffix: "ch-ch6-l1",
+            point: "৭.১",
+            title: "Redox Reactions - Electron Transfer & Oxidation Number",
+            titleBangla: "৭.১ জারণ-বিজারণ যুগপৎ ঘটে এবং জারণ সংখ্যা গণনা পদ্ধতি",
+            summary: "ইলেকট্রন ত্যাগে জারণ ও গ্রহণে বিজারণ, জারক ও বিজারক শনাক্তকরণ এবং যৌগে নির্দিষ্ট মৌলের জারণ সংখ্যা নির্ণয়।",
+            keywords: ["জারণ", "বিজারণ", "রেডক্স", "জারণ সংখ্যা", "জারক"]
+          },
+          {
+            idSuffix: "ch-ch6-l2",
+            point: "৮.১",
+            title: "Exothermic/Endothermic Reactions and Galvanic Cells",
+            titleBangla: "৮.১ তাপোৎপাদী ও তাপহারী বিক্রিয়া (ΔH) এবং গ্যালভানিক কোষ ও ড্রাইসেল",
+            summary: "বন্ধন ভাঙতে শক্তি শোষণ ও বন্ধন তৈরিতে শক্তি নির্গমন, রাসায়নিক শক্তি থেকে তড়িৎ শক্তিতে রূপান্তরের ড্যানিয়েল সেল কৌশল।",
+            keywords: ["তাপোৎপাদী বিক্রিয়া", "ΔH", "তড়িৎ রাসায়নিক কোষ", "ড্রাইসেল"]
+          }
+        ]
+      },
+      {
+        idSuffix: "ch-ch7",
+        chapterNumber: 7,
+        title: "Mineral Resources and Organic Chemistry (Fossils)",
+        titleBangla: "১১শ অধ্যায়: খনিজ সম্পদ: জীবাশ্ম (হাইড্রোকার্বন ও জৈব রসায়ন)",
+        lessons: [
+          {
+            idSuffix: "ch-ch7-l1",
+            point: "১১.১",
+            title: "Alkanes, Alkenes, Alkynes and Polymerization",
+            titleBangla: "১১.১ সম্পৃক্ত ও অসম্পৃক্ত হাইড্রোকার্বন প্রস্তুতি, ব্রোমিন পরীক্ষা ও পলিমারকরণ",
+            summary: "অ্যালকেন, অ্যালকিন ও অ্যালকাইনের সাধারণ সংকেত, ব্রোমিন দ্রবণ দ্বারা দ্বিবন্ধন শনাক্তকরণ এবং ইথিন থেকে পলিথিন উৎপাদন।",
+            keywords: ["হাইড্রোকার্বন", "অ্যালকেন", "অ্যালকিন", "ব্রোমিন পরীক্ষা", "পলিথিন"]
+          },
+          {
+            idSuffix: "ch-ch7-l2",
+            point: "১১.২",
+            title: "Alcohols, Aldehydes, Fatty Acids and Environmental Hazards",
+            titleBangla: "১১.২ অ্যালকোহল, অ্যালডিহাইড ও জৈব এসিড এবং প্লাস্টিক দূষণ",
+            summary: "ইথানল, ফরমালিন ও ইথানয়িক এসিডের প্রস্তুতি, ভিনেগার এবং অপচনশীল প্লাস্টিকের পরিবেশগত প্রভাব।",
+            keywords: ["ইথানল", "ফরমালিন", "ভিনেগার", "পলিমার", "পরিবেশ দূষণ"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "biology",
+    codeBase: "BIO",
+    name: "Biology",
+    nameBangla: "জীববিজ্ঞান",
+    group: "Science",
+    coverColor: "from-emerald-600 to-green-950",
+    chapters: [
+      {
+        idSuffix: "bio-ch1",
+        chapterNumber: 1,
+        title: "Cells and Tissues of Organisms",
+        titleBangla: "২য় অধ্যায়: জীবকোষ ও টিস্যু",
+        lessons: [
+          {
+            idSuffix: "bio-ch1-l1",
+            point: "২.১",
+            title: "Plant and Animal Cell Organelles (Mitochondria, Plastids)",
+            titleBangla: "২.১ উদ্ভিদ ও প্রাণী কোষের অঙ্গাণু (প্লাস্টিড, মাইটোকন্ড্রিয়া, গলগি বস্তু)",
+            summary: "কোষ প্রাচীর, প্রোটোপ্লাজম, ক্লোরোপ্লাস্ট ও সালোকসংশ্লেষণ, মাইটোকন্ড্রিয়াকে শক্তিঘর (Powerhouse) বলার কারণ ও সেন্ট্রোসোমের ভূমিকা।",
+            keywords: ["উদ্ভিদ কোষ", "প্রাণী কোষ", "মাইটোকন্ড্রিয়া", "প্লাস্টিড", "ক্লোরোপ্লাস্ট"]
+          },
+          {
+            idSuffix: "bio-ch1-l2",
+            point: "২.২",
+            title: "Plant & Animal Tissues (Xylem, Phloem, Muscular, Nervous)",
+            titleBangla: "২.২ জটিল টিস্যু (জাইলেম ও ফ্লোয়েম) এবং স্নায়ু ও পেশি টিস্যু",
+            summary: "ট্রাকিড, ভেসেল, সিভনল ও সঙ্গীকোষ এবং ঐচ্ছিক, অনৈচ্ছিক ও হৃদপেশির গঠন ও কাজের তুলনা।",
+            keywords: ["জাইলেম", "ফ্লোয়েম", "টিস্যু", "হৃদপেশি", "স্নায়ুকোষ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bio-ch2",
+        chapterNumber: 2,
+        title: "Cell Division (Mitosis and Meiosis)",
+        titleBangla: "৩য় অধ্যায়: কোষ বিভাজন (মাইটোটিক ও মায়োসিস বিভাজন)",
+        lessons: [
+          {
+            idSuffix: "bio-ch2-l1",
+            point: "৩.১",
+            title: "Five Stages of Mitosis (Prophase to Telophase)",
+            titleBangla: "৩.১ মাইটোসিসের পর্যায়সমূহ (প্রোফেজ, মেটাফেজ, অ্যানাফেজ, টেলোফেজ)",
+            summary: "সমীকরণিক বিভাজন, ক্রোমোজোমের সেন্ট্রোমিয়ারে স্পিন্ডল তন্তুর সংযুক্তি, ক্রোমাটিড পৃথকীকরণ ও সাইটোকাইনেসিস।",
+            keywords: ["মাইটোসিস", "মেটাফেজ", "ক্রোমোজোম", "স্পিন্ডল তন্তু", "সমীকরণিক বিভাজন"]
+          },
+          {
+            idSuffix: "bio-ch2-l2",
+            point: "৩.২",
+            title: "Meiosis and Crossing Over in Heredity",
+            titleBangla: "৩.২ মায়োসিস হ্রাসমূলক বিভাজন ও ক্রসিং ওভারের মাধ্যমে বৈচিত্র্য সৃষ্টি",
+            summary: "জনন মাতৃকোষে ক্রোমোজোম সংখ্যা অর্ধেকে রূপান্তর (2n → n) এবং হোমোলোগাস ক্রোমোজোমে ক্রসিং ওভার ও জেনেটিক রিকম্বিনেশন।",
+            keywords: ["মায়োসিস", "হ্রাসমূলক বিভাজন", "ক্রসিং ওভার", "জনন কোষ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bio-ch3",
+        chapterNumber: 3,
+        title: "Bioenergetics - Photosynthesis and Respiration",
+        titleBangla: "৪র্থ অধ্যায়: জীবনীশক্তি (সালোকসংশ্লেষণ ও শ্বসন)",
+        lessons: [
+          {
+            idSuffix: "bio-ch3-l1",
+            point: "৪.১",
+            title: "Light Dependent & Calvin Cycle (C3 and C4 Plants)",
+            titleBangla: "৪.১ আলোক পর্যায়, কেলভিন চক্র (C3) এবং হ্যাচ ও স্ল্যাক চক্র (C4)",
+            summary: "সূর্যালোকের ফোটন কণা শোষণ, পানির ফটোলাইসিস, ATP ও NADPH তৈরি এবং অন্ধকার পর্যায়ে গ্লুকোজ সংশ্লেষণ।",
+            keywords: ["সালোকসংশ্লেষণ", "কেলভিন চক্র", "C3 উদ্ভিদ", "C4 উদ্ভিদ", "ক্লোরোফিল"]
+          },
+          {
+            idSuffix: "bio-ch3-l2",
+            point: "৪.২",
+            title: "Aerobic Respiration - Glycolysis and Krebs Cycle",
+            titleBangla: "৪.২ সবাত শ্বসনের ধাপসমূহ (গ্লাইকোলাইসিস, ক্রেবস চক্র ও মোট ৩৮টি ATP)",
+            summary: "সাইটোপ্লাজমে গ্লুকোজ ভেঙে পাইরুভিক এসিড তৈরি এবং মাইটোকন্ড্রিয়ায় এসিটাইল কো-এ ও ক্রেবস চক্রে সর্বোচ্চ শক্তি উৎপাদন।",
+            keywords: ["সবাত শ্বসন", "গ্লাইকোলাইসিস", "ক্রেবস চক্র", "ATP", "শক্তি উৎপাদন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bio-ch4",
+        chapterNumber: 4,
+        title: "Human Organ Systems (Digestion, Blood Circulation, Kidney)",
+        titleBangla: "৫ম, ৬ষ্ঠ ও ৮ম অধ্যায়: মানব শারীরস্থান (পরিপাক, রক্ত সংবহন ও রেচন)",
+        lessons: [
+          {
+            idSuffix: "bio-ch4-l1",
+            point: "৫.১",
+            title: "Human Digestive System and Enzyme Action",
+            titleBangla: "৫.১ পৌষ্টিকতন্ত্র, পাচক রস এবং যকৃৎ ও অগ্ন্যাশয়ের এনজাইম কার্যাবলি",
+            summary: "মুখগহ্বরে টায়ালিন, পাকস্থলীতে পেপসিন ও হাইড্রোক্লোরিক এসিড, এবং ক্ষুদ্রান্ত্রে ট্রিপসিন, লাইপেজ ও অ্যামাইলেজ দ্বারা পরিপাক।",
+            keywords: ["পরিপাকতন্ত্র", "এনজাইম", "যকৃৎ", "অগ্ন্যাশয়", "ক্ষুদ্রান্ত্র"]
+          },
+          {
+            idSuffix: "bio-ch4-l2",
+            point: "৬.১",
+            title: "Structure of Heart, Cardiac Cycle and Blood Pressure",
+            titleBangla: "৬.১ মানব হৃৎপিণ্ডের গঠন, অলিন্দ-নিলয়ের কার্যপ্রণালী ও রক্ত সংবহন",
+            summary: "ডান ও বাম অলিন্দ-নিলয়, কপাটিকাসমূহ (Tricuspid, Bicuspid), ফুসফুসীয় ও সংবহনতন্ত্র এবং সিস্টোলিক-ডায়াস্টোলিক রক্তচাপ।",
+            keywords: ["হৃৎপিণ্ড", "রক্ত সংবহন", "অলিন্দ", "নিলয়", "রক্তচাপ"]
+          },
+          {
+            idSuffix: "bio-ch4-l3",
+            point: "৮.১",
+            title: "Kidney Structure, Nephron and Dialysis",
+            titleBangla: "৮.১ বৃক্কের গঠন, নেফ্রনের আল্ট্রাফিল্ট্রেশন ও ডায়ালাইসিস পদ্ধতি",
+            summary: "বোম্যান্স ক্যাপসুল, গ্লোমেরুলাস, হেনলির লুপ দ্বারা ইউরিয়া ও বর্জ্য নিষ্কাশন এবং কিডনি বিকল হলে হেমোডায়ালাইসিস।",
+            keywords: ["বৃক্ক", "নেফ্রন", "গ্লোমেরুলাস", "রেচন", "ডায়ালাইসিস"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bio-ch5",
+        chapterNumber: 5,
+        title: "Genetics, Evolution and Biotechnology",
+        titleBangla: "১২শ ও ১৪শ অধ্যায়: বংশগতি, বিবর্তন ও জীবপ্রযুক্তি",
+        lessons: [
+          {
+            idSuffix: "bio-ch5-l1",
+            point: "১২.১",
+            title: "DNA Double Helix, Watson-Crick Model and Mendel's Laws",
+            titleBangla: "১২.১ ডিএনএ ডাবল হেলিক্স মডেল, ক্রোমোজোম ও মেন্ডেলের বংশগতির সূত্র",
+            summary: "ওয়াটসন ও ক্রিকের ডিএনএ গঠন (অ্যাডেনিন, গুয়ানিন, সাইটোসিন, থাইমিন), জিনের ভূমিকা এবং প্রকট ও প্রচ্ছন্ন বৈশিষ্ট্যের বংশানুক্রমিক প্রকাশ।",
+            keywords: ["ডিএনএ", "ওয়াটসন ক্রিক মডেল", "মেন্ডেলের সূত্র", "জিন", "ক্রোমোজোম"]
+          },
+          {
+            idSuffix: "bio-ch5-l2",
+            point: "১৪.১",
+            title: "Tissue Culture and Recombinant DNA Technology (GMO)",
+            titleBangla: "১৪.১ টিস্যু কালচার ও রিকম্বিনেন্ট ডিএনএ প্রযুক্তি (প্লাজমিড ও জিএমও)",
+            summary: "এক্সপ্ল্যান্ট থেকে ক্যালাস ও অণুচারা উৎপাদন এবং রেস্ট্রিকশন এনজাইম ও লাইগেজের মাধ্যমে মানব ইনসুলিন তৈরি ও গোল্ডেন রাইস উদ্ভাবন।",
+            keywords: ["জীবপ্রযুক্তি", "টিস্যু কালচার", "রিকম্বিনেন্ট ডিএনএ", "প্লাজমিড", "ইনসুলিন"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "higher-math",
+    codeBase: "HMATH",
+    name: "Higher Mathematics",
+    nameBangla: "উচ্চতর গণিত",
+    group: "Science",
+    coverColor: "from-fuchsia-600 to-purple-900",
+    chapters: [
+      {
+        idSuffix: "hm-ch1",
+        chapterNumber: 1,
+        title: "Sets, Functions and One-to-One / Onto Relations",
+        titleBangla: "১ম অধ্যায়: সেট ও ফাংশন (এক-এক ও সার্বিক ফাংশন)",
+        lessons: [
+          {
+            idSuffix: "hm-ch1-l1",
+            point: "১.১",
+            title: "Injective, Surjective and Inverse Function f⁻¹(x)",
+            titleBangla: "১.১ এক-এক ফাংশন ও বিপরীত ফাংশন নির্ণয়",
+            summary: "f(x1)=f(x2) => x1=x2 দ্বারা এক-এক যাচাই, রেঞ্জ=কোডোমেন হলে সার্বিক বা অনটু এবং বিপরীত ফাংশন f^-1(x) প্রতিপাদন।",
+            keywords: ["এক-এক ফাংশন", "সার্বিক ফাংশন", "বিপরীত ফাংশন", "ডোমেন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch2",
+        chapterNumber: 2,
+        title: "Algebraic Expressions and Symmetric Polynomials",
+        titleBangla: "২য় অধ্যায়: বীজগাণিতিক রাশি (বহুপদী, সমমাত্রিক ও প্রতিসম রাশি)",
+        lessons: [
+          {
+            idSuffix: "hm-ch2-l1",
+            point: "২.১",
+            title: "Partial Fractions and Cyclic Factorization",
+            titleBangla: "২.১ আংশিক ভগ্নাংশে রূপান্তর ও চক্র-ক্রমিক রাশির উৎপাদক",
+            summary: "প্রকৃত ও অপ্রকৃত ভগ্নাংশকে আংশিক ভগ্নাংশে রূপান্তরের চারটি নিয়ম এবং a³(b-c)+b³(c-a)+c³(a-b) এর উৎপাদকে বিশ্লেষণ।",
+            keywords: ["আংশিক ভগ্নাংশ", "বহুপদী", "চক্র-ক্রমিক রাশি", "ভাগশেষ উপপাদ্য"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch3",
+        chapterNumber: 3,
+        title: "Geometric Theorems (Apollonius & Ptolemy)",
+        titleBangla: "৩য় অধ্যায়: জ্যামিতি (অ্যাপোলোনিয়াস ও টলেমির উপপাদ্য)",
+        lessons: [
+          {
+            idSuffix: "hm-ch3-l1",
+            point: "৩.১",
+            title: "Apollonius Theorem and Relation with Medians",
+            titleBangla: "৩.১ অ্যাপোলোনিয়াসের উপপাদ্য ও ত্রিভুজের বাহু ও মধ্যমার সম্পর্ক",
+            summary: "ত্রিভুজের যেকোনো দুই বাহুর বর্গের সমষ্টি = ২ × (মধ্যমার বর্গ + তৃতীয় বাহুর অর্ধেকের বর্গ): AB² + AC² = 2(AD² + BD²)।",
+            keywords: ["অ্যাপোলোনিয়াস", "উপপাদ্য", "মধ্যমা", "লম্ব অভিক্ষেপ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch4",
+        chapterNumber: 4,
+        title: "Infinite Series and Recurring Decimals",
+        titleBangla: "৭ম অধ্যায়: অসীম ধারা (অসীমতক সমষ্টি S∞)",
+        lessons: [
+          {
+            idSuffix: "hm-ch4-l1",
+            point: "৭.১",
+            title: "Convergence Condition (|r| < 1) and S∞ Formula",
+            titleBangla: "৭.১ গুণোত্তর ধারার অসীমতক সমষ্টির শর্ত (|r| < 1) ও S∞ = a / (1 - r)",
+            summary: "সাধারণ অনুপাত |r| < 1 হলে অসীম গুণোত্তর ধারার সমষ্টি বিদ্যমান এবং পৌনঃপুনিক দশমিককে মূলদ ভগ্নাংশে রূপান্তর।",
+            keywords: ["অসীম ধারা", "অসীমতক সমষ্টি", "পৌনঃপুনিক", "সাধারণ অনুপাত"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch5",
+        chapterNumber: 5,
+        title: "Trigonometry - Radian Measure and Quadrants",
+        titleBangla: "৮ম অধ্যায়: ত্রিকোণমিতি (রেডিয়ান পরিমাপ ও সংযুক্ত কোণ)",
+        lessons: [
+          {
+            idSuffix: "hm-ch5-l1",
+            point: "৮.১",
+            title: "Arc Length (s = rθ) and Circular Angle Measures",
+            titleBangla: "৮.১ বৃত্তচাপের দৈর্ঘ্য s = rθ এবং ষাটমূলক ও বৃত্তীয় কোণের সম্পর্ক",
+            summary: "রেডিয়ান একটি ধ্রুব কোণ প্রমাণ, পৃথিবীর ব্যাসার্ধ ও কোণ নির্ণয় এবং বিভিন্ন চতুর্ভাগে (All-Sin-Tan-Cos) ত্রিকোণমিতিক চিহ্নের পরিবর্তন।",
+            keywords: ["রেডিয়ান কোণ", "s=rθ", "চতুর্ভাগ", "ত্রিকোণমিতি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch6",
+        chapterNumber: 6,
+        title: "Binomial Expansion (Pascal's Triangle)",
+        titleBangla: "১০ম অধ্যায়: দ্বিপদী বিস্তৃতি (প্যাসকেলের ত্রিভুজ ও দ্বিপদী উপপাদ্য)",
+        lessons: [
+          {
+            idSuffix: "hm-ch6-l1",
+            point: "১০.১",
+            title: "General Term Tr+1 and Binomial Coefficients nCr",
+            titleBangla: "১০.১ সাধারণ পদ T_{r+1} = nCr a^{n-r} b^r এবং মধ্যপদ নির্ণয়",
+            summary: "প্যাসকেলের ত্রিভুজ বিধি, (1+y)^n এবং (a+b)^n এর বিস্তৃতি ও x-বর্জিত পদের মান নির্ণয়।",
+            keywords: ["দ্বিপদী বিস্তৃতি", "প্যাসকেলের ত্রিভুজ", "সাধারণ পদ", "nCr"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch7",
+        chapterNumber: 7,
+        title: "Coordinate Geometry (Slope, Distance, Area of Polygon)",
+        titleBangla: "১১শ অধ্যায়: স্থানাঙ্ক জ্যামিতি (ঢাল, দূরত্ব ও সরলরেখা)",
+        lessons: [
+          {
+            idSuffix: "hm-ch7-l1",
+            point: "১১.১",
+            title: "Distance Formula, Slope m = (y2-y1)/(x2-x1) and Area",
+            titleBangla: "১১.১ দুই বিন্দুর দূরত্ব, সরলরেখার ঢাল ও শীর্ষবিন্দু দিয়ে বহুভুজের ক্ষেত্রফল",
+            summary: "d = √{(x2-x1)² + (y2-y1)²}, শীর্ষবিন্দুগুলোকে ঘড়ির কাঁটার বিপরীত দিকে সাজিয়ে ত্রিভুজের ক্ষেত্রফল এবং সরলরেখার সমীকরণ y = mx + c।",
+            keywords: ["স্থানাঙ্ক জ্যামিতি", "দূরত্ব সূত্র", "ঢাল", "ত্রিভুজের ক্ষেত্রফল", "সরলরেখা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hm-ch8",
+        chapterNumber: 8,
+        title: "Planar Vectors and Probability",
+        titleBangla: "১২শ ও ১৪শ অধ্যায়: সমতলীয় ভেক্টর এবং সম্ভাবনা (Probability)",
+        lessons: [
+          {
+            idSuffix: "hm-ch8-l1",
+            point: "১২.১",
+            title: "Vector Addition Triangle Law and Geometric Proofs",
+            titleBangla: "১২.১ ভেক্টর যোগের ত্রিভুজ বিধি ও জ্যামিতিক উপপাদ্য প্রমাণ",
+            summary: "অবস্থান ভেক্টর, ধারক রেখা এবং ভেক্টরের সাহায্যে ত্রিভুজ ও ট্রাপিজিয়ামের মধ্যমা সম্পর্কিত উপপাদ্য প্রমাণ।",
+            keywords: ["ভেক্টর", "ত্রিভুজ বিধি", "অবস্থান ভেক্টর", "জ্যামিতিক প্রমাণ"]
+          },
+          {
+            idSuffix: "hm-ch8-l2",
+            point: "১৪.১",
+            title: "Sample Space, Probability Tree and P(A) = n(A)/n(S)",
+            titleBangla: "১৪.১ নমুনা ক্ষেত্র (Sample Space), প্রোবাবিলিটি ট্রি ও মুদ্রা-ছক্কার সম্ভাবনা",
+            summary: "একটি ছক্কা ও দুইটি মুদ্রা নিক্ষেপ পরীক্ষার নমুনা ক্ষেত্র তৈরি এবং অনুকূল ফলাফল ও মোট সম্ভাব্য ফলাফলের অনুপাত দ্বারা সম্ভাবনা গণনা।",
+            keywords: ["সম্ভাবনা", "নমুনা ক্ষেত্র", "প্রোবাবিলিটি ট্রি", "ছক্কা", "মুদ্রা"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "bgs",
+    codeBase: "BGS",
+    name: "Bangladesh and Global Studies",
+    nameBangla: "বাংলাদেশ ও বিশ্বপরিচয়",
+    group: "Science",
+    coverColor: "from-rose-600 to-red-950",
+    chapters: [
+      {
+        idSuffix: "bgs-ch1",
+        chapterNumber: 1,
+        title: "Movement for Autonomy & Rise of Bengali Nationalism",
+        titleBangla: "১ম অধ্যায়: পূর্ব বাংলার আন্দোলন ও জাতীয়তাবাদের উত্থান (১৯৪৭-১৯৭০)",
+        lessons: [
+          {
+            idSuffix: "bgs-ch1-l1",
+            point: "১.১",
+            title: "Language Movement 1952, United Front & Six-Point Movement 1966",
+            titleBangla: "১.১ ভাষা আন্দোলন, ১৯৫৪-এর যুক্তফ্রন্ট ও ১৯৬৬-এর ৬ দফা দাবি",
+            summary: "বাঙালি জাতীয়তাবাদের ভিত্তিপ্রস্তর, যুক্তফ্রন্টের ২১ দফা, বঙ্গবন্ধুর ঐতিহাসিক ৬ দফা দাবি—বাঙালির মুক্তির সনদ ও ১৯৬৯-এর গণঅভ্যুত্থান।",
+            keywords: ["ভাষা আন্দোলন", "যুক্তফ্রন্ট", "৬ দফা দাবি", "গণঅভ্যুত্থান", "বাঙালি জাতীয়তাবাদ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bgs-ch2",
+        chapterNumber: 2,
+        title: "Independent Bangladesh and Liberation War 1971",
+        titleBangla: "২য় অধ্যায়: স্বাধীন বাংলাদেশ ও মহান মুক্তিযুদ্ধ",
+        lessons: [
+          {
+            idSuffix: "bgs-ch2-l1",
+            point: "২.১",
+            title: "7th March Speech, Operation Searchlight & Mujibnagar Government",
+            titleBangla: "২.১ ৭ই মার্চের কালজয়ী ভাষণ, মুজিবনগর সরকার গঠন ও চূড়ান্ত বিজয়",
+            summary: "বঙ্গবন্ধুর ৭ই মার্চের ঐতিহাসিক ডাক, ২৫শে মার্চের কালরাতে গণহত্যা, ১০ই এপ্রিল মুজিবনগর সরকার শপথ এবং ১৬ই ডিসেম্বর হানাদার বাহিনীর আত্মসমর্পণ।",
+            keywords: ["৭ই মার্চের ভাষণ", "মুজিবনগর সরকার", "মুক্তিযুদ্ধ ১৯৭১", "বুদ্ধিজীবী হত্যা", "বিজয় দিবস"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bgs-ch3",
+        chapterNumber: 3,
+        title: "Geography, Climate and Natural Resources of Bangladesh",
+        titleBangla: "৪র্থ ও ৫ম অধ্যায়: বাংলাদেশের ভূপ্রকৃতি, জলবায়ু ও প্রাকৃতিক সম্পদ",
+        lessons: [
+          {
+            idSuffix: "bgs-ch3-l1",
+            point: "৪.১",
+            title: "Tertiary Hills, Pleistocene Terraces and Floodplains",
+            titleBangla: "৪.১ টারশিয়ারি যুগের পাহাড়, প্লাইস্টোসিন সোপান ও সাম্প্রতিক পলল সমভূমি",
+            summary: "বাংলাদেশের তিন ধরনের ভূপ্রাকৃতিক বৈশিষ্ট্য, মৌসুমি বায়ুর প্রভাব এবং নদ-নদী, সুন্দরবনের ম্যানগ্রোভ বন ও প্রাকৃতিক গ্যাস সম্পদ।",
+            keywords: ["ভূপ্রকৃতি", "টারশিয়ারি পাহাড়", "প্লাইস্টোসিন সোপান", "মৌসুমি বায়ু", "সুন্দরবন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bgs-ch4",
+        chapterNumber: 4,
+        title: "State, Citizenship, Constitution and Governance",
+        titleBangla: "৬ষ্ঠ ও ৭ম অধ্যায়: রাষ্ট্র, নাগরিকতা, সংবিধান ও শাসনব্যবস্থা",
+        lessons: [
+          {
+            idSuffix: "bgs-ch4-l1",
+            point: "৬.১",
+            title: "Organs of State (Executive, Legislature, Judiciary) & 1972 Constitution",
+            titleBangla: "৬.১ সংবিধানের মূলনীতি, জাতীয় সংসদ, নির্বাহী বিভাগ ও বিচার ব্যবস্থার স্বাধীনতা",
+            summary: "১৯৭২ সালের মূল সংবিধানের চার মূলনীতি (জাতীয়তাবাদ, সমাজতন্ত্র, গণতন্ত্র, ধর্মনিরপেক্ষতা) এবং সরকারের তিনটি অঙ্গের পারস্পরিক ভারসাম্য।",
+            keywords: ["সংবিধান", "জাতীয় সংসদ", "বিচার বিভাগ", "মৌলিক অধিকার", "সুশাসন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bgs-ch5",
+        chapterNumber: 5,
+        title: "National Economy, Banking and Sustainable Development Goals",
+        titleBangla: "১০ম ও ১১শ অধ্যায়: জাতীয় সম্পদ, টেকসই উন্নয়ন অভীষ্ট (SDG) ও অর্থনীতি",
+        lessons: [
+          {
+            idSuffix: "bgs-ch5-l1",
+            point: "১০.১",
+            title: "SDG 17 Goals, GDP and Financial Institutions in Bangladesh",
+            titleBangla: "১০.১ টেকসই উন্নয়ন লক্ষ্যমাত্রা (SDG), মাথাপিছু আয় ও ব্যাংকিং ব্যবস্থা",
+            summary: "দারিদ্র্য দূরীকরণ, মানসম্মত শিক্ষা ও জলবায়ু সুরক্ষায় এসডিজি লক্ষ্য এবং বাংলাদেশ ব্যাংকের ভূমিকা ও রাজস্ব আয়।",
+            keywords: ["এসডিজি", "SDG", "জিডিপি", "মাথাপিছু আয়", "বাংলাদেশ ব্যাংক"]
+          }
+        ]
+      }
+    ]
+  },
+
+  // ==========================================
+  // 3. মানবিক বিভাগ (Humanities / Arts Group)
+  // ==========================================
+  {
+    idSuffix: "history",
+    codeBase: "HIST",
+    name: "History of Bangladesh & World Civilization",
+    nameBangla: "বাংলাদেশের ইতিহাস ও বিশ্বসভ্যতা",
+    group: "Humanities",
+    coverColor: "from-amber-700 to-stone-900",
+    chapters: [
+      {
+        idSuffix: "hist-ch1",
+        chapterNumber: 1,
+        title: "Concept of History and World Civilizations",
+        titleBangla: "১ম ও ২য় অধ্যায়: ইতিহাস পরিচিতি ও বিশ্বসভ্যতা (মিশর, সিন্ধু, গ্রিস ও রোম)",
+        lessons: [
+          {
+            idSuffix: "hist-ch1-l1",
+            point: "১.১",
+            title: "Egyptian, Indus, Greek and Roman Civilizations",
+            titleBangla: "১.১ প্রাচীন মিশরীয় হায়ারোগ্লিফিক্স, সিন্ধু নগরায়ন ও গ্রিক গণতন্ত্র",
+            summary: "নীলনদের দান মিশরীয় পিরামিড, মহেঞ্জোদারো-হরপ্পার পরিকল্পিত নগর এবং এথেন্সের গণতন্ত্র ও স্পার্টার সামরিক শাসন।",
+            keywords: ["ইতিহাস", "মিশরীয় সভ্যতা", "সিন্ধু সভ্যতা", "গ্রিক সভ্যতা", "রোমান সভ্যতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hist-ch2",
+        chapterNumber: 2,
+        title: "Ancient Bengal and Janapadas",
+        titleBangla: "৩য় ও ৪র্থ অধ্যায়: প্রাচীন বাংলার জনপদ ও রাজনৈতিক ইতিহাস",
+        lessons: [
+          {
+            idSuffix: "hist-ch2-l1",
+            point: "৩.১",
+            title: "Ancient Janapadas (Vanga, Pundra, Gauda, Samatata) & Sasanka",
+            titleBangla: "৩.১ প্রাচীন জনপদ (বঙ্গ, পুণ্ড্র, গৌড়, সমতট) এবং রাজা শশাঙ্কের শাসন",
+            summary: "ভৌগোলিক সীমানা, পুণ্ড্রনগর (মহাস্থানগড়), স্বাধীন গৌড় রাজ্যের প্রতিষ্ঠাতা শশাঙ্ক এবং মাৎস্যন্যায় ও পাল বংশের প্রতিষ্ঠা।",
+            keywords: ["প্রাচীন জনপদ", "পুণ্ড্র", "গৌড়", "শশাঙ্ক", "মাৎস্যন্যায়", "পাল বংশ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hist-ch3",
+        chapterNumber: 3,
+        title: "Medieval Bengal, Sultans and Mughal Rule",
+        titleBangla: "৬ষ্ঠ ও ৭ম অধ্যায়: মধ্যযুগের বাংলা: সুলতানি আমল ও বারো ভূঁইয়া",
+        lessons: [
+          {
+            idSuffix: "hist-ch3-l1",
+            point: "৬.১",
+            title: "Bakhtiyar Khilji, Ilyas Shahi Dynasty and Isa Khan",
+            titleBangla: "৬.১ বখতিয়ার খলজির বাংলা বিজয়, ইলিয়াস শাহ ও ঈসা খাঁর প্রতিরোধ",
+            summary: "১২০৪ সালে মুসলিম শাসনের সূচনা, স্বাধীন সুলতানি আমলে বাংলার সমৃদ্ধি এবং মুঘলদের বিরুদ্ধে বারো ভূঁইয়া প্রধান ঈসা খাঁর সংগ্রাম।",
+            keywords: ["বখতিয়ার খলজি", "ইলিয়াস শাহ", "বারো ভূঁইয়া", "ঈসা খাঁ", "সোনারগাঁও"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hist-ch4",
+        chapterNumber: 4,
+        title: "British Colonial Rule and Renaissance in Bengal",
+        titleBangla: "৮ম ও ৯ম অধ্যায়: ইংরেজ শাসন প্রতিষ্ঠা ও বাংলার নবজাগরণ",
+        lessons: [
+          {
+            idSuffix: "hist-ch4-l1",
+            point: "৮.১",
+            title: "Battle of Plassey 1757, Raja Rammohan Roy and Vidyasagar",
+            titleBangla: "৮.১ পলাশীর যুদ্ধ, চিরস্থায়ী বন্দোবস্ত এবং রাজা রামমোহন রায় ও বিদ্যাসাগর",
+            summary: "নবাব সিরাজউদ্দৌলার পরাজয় ও পরাধীনতার সূচনা, লর্ড কর্নওয়ালিসের চিরস্থায়ী বন্দোবস্ত এবং সতীদাহ নিবারণ ও বিধবা বিবাহ আন্দোলন।",
+            keywords: ["পলাশীর যুদ্ধ", "সিরাজউদ্দৌলা", "চিরস্থায়ী বন্দোবস্ত", "রামমোহন রায়", "বিদ্যাসাগর"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hist-ch5",
+        chapterNumber: 5,
+        title: "Struggle for Self-Determination and Liberation War 1971",
+        titleBangla: "১২শ ও ১৪শ অধ্যায়: বাঙালির স্বাধিকার আন্দোলন ও মহান মুক্তিযুদ্ধ ১৯৭১",
+        lessons: [
+          {
+            idSuffix: "hist-ch5-l1",
+            point: "১২.১",
+            title: "1952 Language Movement to 1971 Victory",
+            titleBangla: "১২.১ ভাষা আন্দোলন, ১১ দফা, বঙ্গবন্ধুর নেতৃত্ব ও স্বাধীন বাংলাদেশের অভ্যুদয়",
+            summary: "১৯৪৭-১৯৭১ এর অবিরাম সংগ্রামের ফসল, ৩০ লাখ শহীদের রক্তে অর্জিত লাল-সবুজের স্বাধীন সার্বভৌমিক বাংলাদেশ।",
+            keywords: ["মুক্তিযুদ্ধ", "বঙ্গবন্ধু", "স্বাধিকার আন্দোলন", "বিজয় ১৯৭১"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "geography",
+    codeBase: "GEO",
+    name: "Geography and Environment",
+    nameBangla: "ভূগোল ও পরিবেশ",
+    group: "Humanities",
+    coverColor: "from-teal-700 to-slate-900",
+    chapters: [
+      {
+        idSuffix: "geo-ch1",
+        chapterNumber: 1,
+        title: "The Universe, Solar System and Our Earth",
+        titleBangla: "১ম ও ২য় অধ্যায়: ভূগোল পরিচিতি, মহাবিশ্ব ও পৃথিবী",
+        lessons: [
+          {
+            idSuffix: "geo-ch1-l1",
+            point: "১.১",
+            title: "Solar System, Latitude, Longitude and Earth's Motions",
+            titleBangla: "১.১ সৌরজগৎ, অক্ষাংশ-দ্রাঘিমাংশ এবং আহ্নিক ও বার্ষিক গতির ফলাফল",
+            summary: "সৌরজগতের গ্রহসমূহ, স্থানীয় সময় ও প্রমাণ সময় নির্ণয়, দিন-রাত্রির হ্রাস-বৃদ্ধি এবং ঋতু পরিবর্তনের কারণ।",
+            keywords: ["সৌরজগৎ", "অক্ষাংশ", "দ্রাঘিমাংশ", "আহ্নিক গতি", "বার্ষিক গতি", "ঋতু পরিবর্তন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "geo-ch2",
+        chapterNumber: 2,
+        title: "Internal and External Structure of the Earth",
+        titleBangla: "৪র্থ অধ্যায়: পৃথিবীর অভ্যন্তরীণ ও বাহ্যিক গঠন",
+        lessons: [
+          {
+            idSuffix: "geo-ch2-l1",
+            point: "৪.১",
+            title: "Crust, Mantle, Core, Plate Tectonics and Earthquakes",
+            titleBangla: "৪.১ ভূত্বক, গুরুমণ্ডল, কেন্দ্রমণ্ডল ও প্লেট টেকটনিক্স তত্ত্ব",
+            summary: "শিলা ও খনিজ, আগ্নেয় ও পাললিক শিলা, আগ্নেয়গিরির অগ্ন্যুৎপাত এবং ভূমিকম্পের কারণ ও সতর্কতা।",
+            keywords: ["ভূত্বক", "প্লেট টেকটনিক্স", "ভূমিকম্প", "আগ্নেয়গিরি", "শিলা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "geo-ch3",
+        chapterNumber: 3,
+        title: "Atmosphere, Climate Zones and Ocean Currents",
+        titleBangla: "৫ম ও ৬ষ্ঠ অধ্যায়: বায়ুমণ্ডল, বারিমণ্ডল ও জলবায়ু",
+        lessons: [
+          {
+            idSuffix: "geo-ch3-l1",
+            point: "৫.১",
+            title: "Layers of Atmosphere, Monsoon Climate and Ocean Tides",
+            titleBangla: "৫.১ ট্রপোস্ফিয়ার, স্ট্র্যাটোস্ফিয়ার, মৌসুমি বায়ু ও জোয়ার-ভাটা",
+            summary: "বায়ুমণ্ডলের স্তরবিন্যাস, বায়ুচাপ বলয়, বৃষ্টিপাতের প্রকারভেদ এবং চাঁদ-সূর্যের আকর্ষণে তেজ কটাল ও মরা কটাল।",
+            keywords: ["বায়ুমণ্ডল", "ট্রপোস্ফিয়ার", "মৌসুমি জলবায়ু", "জোয়ার-ভাটা", "সমুদ্র স্রোত"]
+          }
+        ]
+      },
+      {
+        idSuffix: "geo-ch4",
+        chapterNumber: 4,
+        title: "Geography, Rivers and Natural Hazards of Bangladesh",
+        titleBangla: "১০ম ও ১৪শ অধ্যায়: বাংলাদেশের ভূগোল ও প্রাকৃতিক দুর্যোগ ব্যবস্থাপনা",
+        lessons: [
+          {
+            idSuffix: "geo-ch4-l1",
+            point: "১০.১",
+            title: "River Systems of Bangladesh, Cyclones and Flood Management",
+            titleBangla: "১০.১ পদ্মা-মেঘনা-যমুনা নদীপ্রণালী এবং বন্যা ও ঘূর্ণিঝড় মোকাবিলা",
+            summary: "বাংলাদেশের প্রধান নদ-নদী, পলিমাটির সঞ্চয়, ঘূর্ণিঝড় সতর্কবার্তা সংকেত এবং দুর্যোগকালীন আশ্রয়কেন্দ্র ব্যবস্থাপনা।",
+            keywords: ["পদ্মা", "মেঘনা", "যমুনা", "বন্যা", "ঘূর্ণিঝড়", "দুর্যোগ ব্যবস্থাপনা"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "civics",
+    codeBase: "CIV",
+    name: "Civics and Citizenship",
+    nameBangla: "পৌরনীতি ও নাগরিকতা",
+    group: "Humanities",
+    coverColor: "from-blue-700 to-slate-900",
+    chapters: [
+      {
+        idSuffix: "civ-ch1",
+        chapterNumber: 1,
+        title: "Civics, Family, Society and the State",
+        titleBangla: "১ম ও ৪র্থ অধ্যায়: পৌরনীতি, পরিবার, সমাজ ও রাষ্ট্র",
+        lessons: [
+          {
+            idSuffix: "civ-ch1-l1",
+            point: "১.১",
+            title: "Forms of Family and Four Elements of State",
+            titleBangla: "১.১ পরিবারের শ্রেণিবিভাগ এবং রাষ্ট্রের চারটি উপাদান (জনসমষ্টি, ভূখণ্ড, সরকার, সার্বভৌমত্ব)",
+            summary: "একক ও যৌথ পরিবার, রাষ্ট্রের সংজ্ঞা এবং সর্বোচ্চ ক্ষমতা হিসেবে সার্বভৌমিকতার অভ্যন্তরীণ ও বাহ্যিক রূপ।",
+            keywords: ["পৌরনীতি", "পরিবার", "রাষ্ট্রের উপাদান", "সার্বভৌমত্ব", "নাগরিকতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "civ-ch2",
+        chapterNumber: 2,
+        title: "Law, Liberty, Equality and Rights",
+        titleBangla: "৩য় অধ্যায়: আইন, স্বাধীনতা ও সাম্য",
+        lessons: [
+          {
+            idSuffix: "civ-ch2-l1",
+            point: "৩.১",
+            title: "Rule of Law, Constitutional Rights and Duties",
+            titleBangla: "৩.১ আইনের অনুশাসন, স্বাধীনতার প্রকারভেদ ও পারস্পরিক সম্পর্ক",
+            summary: "আইনের শাসন প্রতিষ্ঠা, বাকস্বাধীনতা, সাম্য ও নাগরিকের ভোটাধিকার এবং কর প্রদানের আবশ্যিক কর্তব্য।",
+            keywords: ["আইনের শাসন", "স্বাধীনতা", "সাম্য", "মৌলিক কর্তব্য", "অধিকার"]
+          }
+        ]
+      },
+      {
+        idSuffix: "civ-ch3",
+        chapterNumber: 3,
+        title: "Constitution and Organs of Bangladesh Government",
+        titleBangla: "৫ম ও ৬ষ্ঠ অধ্যায়: বাংলাদেশের সংবিধান ও সরকারের অঙ্গসমূহ",
+        lessons: [
+          {
+            idSuffix: "civ-ch3-l1",
+            point: "৫.১",
+            title: "Key Features of Bangladesh Constitution and Judiciary",
+            titleBangla: "৫.১ লিখিত সংবিধানের বৈশিষ্ট্য এবং সুপ্রিম কোর্টের কর্তৃত্ব ও ভূমিকা",
+            summary: "১৯৭২ সালের সংবিধানের বৈশিষ্ট্য, মৌলিক অধিকার সুরক্ষা, সুপ্রিম কোর্টের আপিল ও হাইকোর্ট বিভাগ এবং রিট আবেদন।",
+            keywords: ["সংবিধান", "মৌলিক অধিকার", "সুপ্রিম কোর্ট", "হাইকোর্ট", "শাসন বিভাগ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "civ-ch4",
+        chapterNumber: 4,
+        title: "Local Government and Democracy in Bangladesh",
+        titleBangla: "৭ম ও ৮ম অধ্যায়: রাজনৈতিক দল, নির্বাচন ও স্থানীয় সরকার",
+        lessons: [
+          {
+            idSuffix: "civ-ch4-l1",
+            point: "৭.১",
+            title: "Election Commission, Union Parishad and City Corporation",
+            titleBangla: "৭.১ নির্বাচন কমিশনের দায়িত্ব এবং স্থানীয় স্বায়ত্তশাসন ব্যবস্থার কাঠামো",
+            summary: "সুষ্ঠু নির্বাচনের শর্ত, ইউনিয়ন পরিষদ, উপজেলা পরিষদ ও সিটি কর্পোরেশনের কার্যাবলি ও নাগরিক সেবা।",
+            keywords: ["নির্বাচন কমিশন", "ইউনিয়ন পরিষদ", "সিটি কর্পোরেশন", "গণতন্ত্র", "সুশাসন"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "economics",
+    codeBase: "ECON",
+    name: "Economics",
+    nameBangla: "অর্থনীতি",
+    group: "Humanities",
+    coverColor: "from-emerald-700 to-stone-900",
+    chapters: [
+      {
+        idSuffix: "econ-ch1",
+        chapterNumber: 1,
+        title: "Fundamental Concepts, Scarcity and Choice",
+        titleBangla: "১ম অধ্যায়: অর্থনীতি পরিচিতি, দুষ্প্রাপ্যতা ও অসীম অভাব",
+        lessons: [
+          {
+            idSuffix: "econ-ch1-l1",
+            point: "১.১",
+            title: "Robbins' Definition, Scarcity and Opportunity Cost",
+            titleBangla: "১.১ এল রবিন্সের সংজ্ঞা, দুষ্প্রাপ্যতা ও সুযোগ ব্যয়ের ধারণা",
+            summary: "সীমাবদ্ধ সম্পদ দিয়ে অসীম অভাব পূরণের নির্বাচন সমস্যা এবং সুযোগ ব্যয় (Opportunity Cost) এর রেখাচিত্র।",
+            keywords: ["অর্থনীতি", "দুষ্প্রাপ্যতা", "সুযোগ ব্যয়", "নির্বাচন সমস্যা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "econ-ch2",
+        chapterNumber: 2,
+        title: "Utility, Demand, Supply and Market Equilibrium",
+        titleBangla: "৩য় অধ্যায়: উপযোগ, চাহিদা, জোগান ও বাজার ভারসাম্য",
+        lessons: [
+          {
+            idSuffix: "econ-ch2-l1",
+            point: "৩.১",
+            title: "Law of Diminishing Marginal Utility and Law of Demand",
+            titleBangla: "৩.১ ক্রমহ্রাসমান প্রান্তিক উপযোগ বিধি ও চাহিদা রেখা অঙ্কন",
+            summary: "ভোগ বৃদ্ধির সাথে প্রান্তিক উপযোগ হ্রাসের নিয়ম, দাম ও চাহিদার বিপরীতমুখী সম্পর্ক এবং চাহিদা সূচি থেকে রেখা অঙ্কন।",
+            keywords: ["উপযোগ", "প্রান্তিক উপযোগ", "চাহিদা বিধি", "চাহিদা রেখা"]
+          },
+          {
+            idSuffix: "econ-ch2-l2",
+            point: "৩.২",
+            title: "Law of Supply and Market Equilibrium Price",
+            titleBangla: "৩.২ জোগান বিধি এবং চাহিদা ও জোগানের সমতায় ভারসাম্য দাম নির্ধারণ",
+            summary: "দাম ও জোগানের সমমুখী সম্পর্ক এবং চাহিদা ও জোগান রেখার ছেদবিন্দুতে ভারসাম্য দাম ও পরিমাণ নির্ণয়।",
+            keywords: ["জোগান বিধি", "ভারসাম্য দাম", "বাজার মূল্য", "রেখাচিত্র"]
+          }
+        ]
+      },
+      {
+        idSuffix: "econ-ch3",
+        chapterNumber: 3,
+        title: "National Income, GDP, Money and Banking",
+        titleBangla: "৬ষ্ঠ ও ৭ম অধ্যায়: জাতীয় আয় (GDP, GNP), অর্থ ও ব্যাংক ব্যবস্থা",
+        lessons: [
+          {
+            idSuffix: "econ-ch3-l1",
+            point: "৬.১",
+            title: "GDP, GNP, NNI and Commercial vs Central Bank",
+            titleBangla: "৬.১ জিডিপি ও জিএনপি নির্ণয় এবং বাংলাদেশ ব্যাংকের মুদ্রানীতি",
+            summary: "মোট দেশজ উৎপাদন (GDP) পরিমাপ পদ্ধতি, কেন্দ্রীয় ব্যাংকের নোট প্রচলন ও ঋণ নিয়ন্ত্রণ এবং বাণিজ্যিক ব্যাংকের আমানত সৃষ্টি।",
+            keywords: ["জিডিপি", "GDP", "GNP", "মুদ্রাস্ফীতি", "কেন্দ্রীয় ব্যাংক", "বাণিজ্যিক ব্যাংক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "econ-ch4",
+        chapterNumber: 4,
+        title: "Bangladesh Economy, Budget and Remittances",
+        titleBangla: "৮ম ও ১১শ অধ্যায়: সরকারের আয়-ব্যয় (বাজেট) ও বৈদেশিক বাণিজ্য",
+        lessons: [
+          {
+            idSuffix: "econ-ch4-l1",
+            point: "৮.১",
+            title: "National Budget, Tax Revenue and Remittance Growth",
+            titleBangla: "৮.১ জাতীয় বাজেট, কর ও কর-বহির্ভূত রাজস্ব এবং রেমিট্যান্সের ভূমিকা",
+            summary: "উন্নয়ন ও অনুন্নয়ন বাজেট, প্রত্যক্ষ ও পরোক্ষ কর (ভ্যাট) এবং প্রবাসী আয়ের মাধ্যমে বৈদেশিক মুদ্রার রিজার্ভ বৃদ্ধি।",
+            keywords: ["বাজেট", "রাজস্ব", "ভ্যাট", "রেমিট্যান্স", "বৈদেশিক রিজার্ভ"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "general-science",
+    codeBase: "GSCI",
+    name: "General Science",
+    nameBangla: "সাধারণ বিজ্ঞান",
+    group: "Humanities",
+    coverColor: "from-green-700 to-teal-950",
+    chapters: [
+      {
+        idSuffix: "gsci-ch1",
+        chapterNumber: 1,
+        title: "Healthier Lifestyle, Balanced Diet and Nutrition",
+        titleBangla: "১ম অধ্যায়: উন্নততর জীবনধারা (খাদ্য উপাদান ও পুষ্টি)",
+        lessons: [
+          {
+            idSuffix: "gsci-ch1-l1",
+            point: "১.১",
+            title: "Carbohydrates, Proteins, Vitamins and BMI Calculation",
+            titleBangla: "১.১ খাদ্যের ছয়টি উপাদান, সুষম খাদ্য ও বডি ম্যাস ইনডেক্স (BMI) নির্ণয়",
+            summary: "শর্করা, আমিষ, স্নেহ, ভিটামিন, খনিজ লবণ ও পানি এবং BMI = ওজন(কেজি) / উচ্চতা²(মিটার) এর ভিত্তিতে স্বাস্থ্য মূল্যায়ন।",
+            keywords: ["পুষ্টি", "সুষম খাদ্য", "ভিটামিন", "BMI", "খাদ্য উপাদান"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gsci-ch2",
+        chapterNumber: 2,
+        title: "Water for Life and Safe Drinking Water",
+        titleBangla: "২য় অধ্যায়: জীবনের জন্য পানি",
+        lessons: [
+          {
+            idSuffix: "gsci-ch2-l1",
+            point: "২.১",
+            title: "Water Purification Methods, Water Cycle and Pollution",
+            titleBangla: "২.১ পানি বিশুদ্ধকরণ পদ্ধতি (ক্লোরিনেশন, ফিল্টারিং) ও পানি দূষণ রোধ",
+            summary: "পানিবাহিত রোগ (কলেরা, টাইফয়েড) প্রতিরোধ, আর্সেনিক সমস্যা ও জলজ বাস্তুতন্ত্রের ভারসাম্য রক্ষা।",
+            keywords: ["পানি বিশুদ্ধকরণ", "ক্লোরিনেশন", "আর্সেনিক", "পানি দূষণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gsci-ch3",
+        chapterNumber: 3,
+        title: "All About the Heart and Cardiovascular Health",
+        titleBangla: "৩য় অধ্যায়: হৃদযন্ত্রের যত কথা",
+        lessons: [
+          {
+            idSuffix: "gsci-ch3-l1",
+            point: "৩.১",
+            title: "Blood Components, Heart Attack and Blood Pressure",
+            titleBangla: "৩.১ রক্তের উপাদান (লোহিত, শ্বেত ও অণুচক্রিকা), রক্তচাপ ও হার্ট অ্যাটাক প্রতিরোধ",
+            summary: "হিমোগ্লোবিন, রক্তজমাট বাঁধা, উচ্চ রক্তচাপের লক্ষণ, কোলেস্টেরল নিয়ন্ত্রণ ও ইসিজি (ECG) পরীক্ষার প্রয়োজনীয়তা।",
+            keywords: ["রক্ত", "হৃদযন্ত্র", "রক্তচাপ", "হার্ট অ্যাটাক", "কোলেস্টেরল"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gsci-ch4",
+        chapterNumber: 4,
+        title: "Polymers, Plastics and Fiber in Daily Life",
+        titleBangla: "৬ষ্ঠ অধ্যায়: পলিমার (প্রাকৃতিক ও কৃত্রিম তন্তু)",
+        lessons: [
+          {
+            idSuffix: "gsci-ch4-l1",
+            point: "৬.১",
+            title: "Natural Fibers (Cotton, Jute, Silk) vs Synthetic Plastics",
+            titleBangla: "৬.১ সুতি, পাট, রেশম এবং পলিথিন ও মেলামাইন পলিমার ব্যবহার",
+            summary: "প্রাকৃতিক তন্তুর স্বাস্থ্যকর গুণাবলি এবং অপচনশীল প্লাস্টিকের পুনর্ব্যবহার (Recycle) ও পরিবেশ সংরক্ষণ।",
+            keywords: ["পলিমার", "পাট", "রেশম", "প্লাস্টিক", "রিসাইকেল"]
+          }
+        ]
+      },
+      {
+        idSuffix: "gsci-ch5",
+        chapterNumber: 5,
+        title: "Acids, Bases, Salts and Household Safety",
+        titleBangla: "৭ম অধ্যায়: অম্ল, ক্ষারক ও লবণের ব্যবহার",
+        lessons: [
+          {
+            idSuffix: "gsci-ch5-l1",
+            point: "৭.১",
+            title: "pH Scale, Antacids and Acid Rain Consequences",
+            titleBangla: "৭.১ পিএইচ (pH) স্কেলের মান, অ্যান্টাসিডের কার্যপ্রণালী ও অ্যাসিডের অপব্যবহার",
+            summary: "নিরপেক্ষ দ্রবণ pH=7, পাকস্থলীর অ্যাসিডিটি কমাতে ম্যাগনেসিয়াম হাইড্রক্সাইড অ্যান্টাসিড এবং এসিড দগ্ধের শাস্তি ও চিকিৎসা।",
+            keywords: ["অম্ল", "ক্ষারক", "pH স্কেল", "অ্যান্টাসিড", "এসিড বৃষ্টি"]
+          }
+        ]
+      }
+    ]
+  },
+
+  // ==========================================
+  // 4. ব্যবসায় শিক্ষা বিভাগ (Business Studies / Commerce Group)
+  // ==========================================
+  {
+    idSuffix: "accounting",
+    codeBase: "ACC",
+    name: "Accounting",
+    nameBangla: "হিসাববিজ্ঞান",
+    group: "Business Studies",
+    coverColor: "from-emerald-700 to-cyan-950",
+    chapters: [
+      {
+        idSuffix: "acc-ch1",
+        chapterNumber: 1,
+        title: "Introduction to Accounting and Accounting Equation",
+        titleBangla: "১ম ও ২য় অধ্যায়: হিসাববিজ্ঞান পরিচিতি, লেনদেন ও হিসাব সমীকরণ (A = L + E)",
+        lessons: [
+          {
+            idSuffix: "acc-ch1-l1",
+            point: "১.১",
+            title: "Accounting Equation: Assets = Liabilities + Owner's Equity",
+            titleBangla: "১.১ হিসাব সমীকরণ A = L + E বিশ্লেষণ ও লেনদেন চিহ্নিতকরণ",
+            summary: "আর্থিক ঘটনার বৈশিষ্ট্য, লেনদেনের দ্বৈতসত্তা এবং প্রতিটি লেনদেনের ফলে সম্পদ, দায় ও মালিকানাস্বত্বে পরিবর্তন প্রমাণ।",
+            keywords: ["হিসাববিজ্ঞান", "লেনদেন", "হিসাব সমীকরণ", "সম্পদ", "দায়", "মালিকানাস্বত্ব"]
+          }
+        ]
+      },
+      {
+        idSuffix: "acc-ch2",
+        chapterNumber: 2,
+        title: "Double Entry System and Classification of Accounts",
+        titleBangla: "৩য় ও ৫ম অধ্যায়: দুতরফা দাখিলা পদ্ধতি ও হিসাবের শ্রেণিবিভাগ",
+        lessons: [
+          {
+            idSuffix: "acc-ch2-l1",
+            point: "৩.১",
+            title: "Debit and Credit Rules for Assets, Expenses, Revenue & Liabilities",
+            titleBangla: "৩.১ ডেবিট-ক্রেডিট নির্ণয়ের স্বর্ণসূত্র ও আধুনিক নিয়ম",
+            summary: "সম্পদ ও ব্যয় বৃদ্ধি পেলে ডেবিট ও হ্রাস পেলে ক্রেডিট; আয়, দায় ও মালিকানাস্বত্ব বৃদ্ধি পেলে ক্রেডিট ও হ্রাস পেলে ডেবিট।",
+            keywords: ["দুতরফা দাখিলা", "ডেবিট", "ক্রেডিট", "ডেবিট-ক্রেডিট নিয়ম"]
+          }
+        ]
+      },
+      {
+        idSuffix: "acc-ch3",
+        chapterNumber: 3,
+        title: "Journal, Ledger and Cash Book",
+        titleBangla: "৬ষ্ঠ, ৭ম ও ৮ম অধ্যায়: জাবেদা, খতিয়ান ও নগদান বই",
+        lessons: [
+          {
+            idSuffix: "acc-ch3-l1",
+            point: "৬.১",
+            title: "General Journal, T-Account / Continuous Balance Ledger & 3-Column Cash Book",
+            titleBangla: "৬.১ সাধারণ জাবেদা, খতিয়ান প্রস্তুতকরণ এবং তিনঘরা নগদান বই",
+            summary: "হিসাবের প্রাথমিক বই জাবেদা, পাকা বই খতিয়ান এবং নগদ ও ব্যাংক কলাম সহযোগে কন্ট্রা দাখিলা (Contra Entry) পোস্টিং।",
+            keywords: ["জাবেদা", "খতিয়ান", "নগদান বই", "কন্ট্রা এন্ট্রি", "জের"]
+          }
+        ]
+      },
+      {
+        idSuffix: "acc-ch4",
+        chapterNumber: 4,
+        title: "Trial Balance and Financial Statements",
+        titleBangla: "৯ম ও ১০ম অধ্যায়: রেওয়ামিল ও চূড়ান্ত আর্থিক বিবরণী",
+        lessons: [
+          {
+            idSuffix: "acc-ch4-l1",
+            point: "৯.১",
+            title: "Preparation of Trial Balance and Locating Accounting Errors",
+            titleBangla: "৯.১ রেওয়ামিলের উদ্দেশ্য, প্রস্তুতপ্রণালী ও ভুল সংশোধন (অনিশ্চিত হিসাব)",
+            summary: "গাণিতিক নির্ভুলতা যাচাই, যে সকল ভুল রেওয়ামিলে ধরা পড়ে না (করণিক ভুল ও নীতিগত ভুল) এবং সাময়িক হিসাব খোলা।",
+            keywords: ["রেওয়ামিল", "অনিশ্চিত হিসাব", "করণিক ভুল", "নীতিগত ভুল"]
+          },
+          {
+            idSuffix: "acc-ch4-l2",
+            point: "১০.১",
+            title: "Comprehensive Income Statement and Balance Sheet",
+            titleBangla: "১০.১ বিশদ আয় বিবরণী (মোট লাভ ও নিট লাভ) এবং আর্থিক অবস্থার বিবরণী",
+            summary: "বিক্রিত পণ্যের ব্যয় বাদ দিয়ে মোট লাভ, পরিচালন ব্যয় সমন্বয় করে নিট লাভ এবং সমাপনী উদ্বৃত্তপত্র প্রস্তুত।",
+            keywords: ["আর্থিক বিবরণী", "বিশদ আয় বিবরণী", "মোট লাভ", "নিট লাভ", "আর্থিক অবস্থার বিবরণী"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "business-ent",
+    codeBase: "BENT",
+    name: "Business Entrepreneurship",
+    nameBangla: "ব্যবসায় উদ্যোগ",
+    group: "Business Studies",
+    coverColor: "from-teal-700 to-emerald-950",
+    chapters: [
+      {
+        idSuffix: "bent-ch1",
+        chapterNumber: 1,
+        title: "Concept of Business and Entrepreneurship",
+        titleBangla: "১ম ও ২য় অধ্যায়: ব্যবসায় পরিচিতি ও ব্যবসায় উদ্যোগের গুণাবলি",
+        lessons: [
+          {
+            idSuffix: "bent-ch1-l1",
+            point: "১.১",
+            title: "Entrepreneurial Qualities, Risk Taking and Self-Employment",
+            titleBangla: "১.১ উদ্যোক্তার বৈশিষ্ট্য, আত্মকর্মসংস্থান ও অর্থনৈতিক অবদান",
+            summary: "উদ্ভাবনী চিন্তা, পরিমিত ঝুঁকি গ্রহণ, কঠোর পরিশ্রম এবং বেকারত্ব দূরীকরণে আত্মকর্মসংস্থানের ভূমিকা।",
+            keywords: ["ব্যবসায় উদ্যোগ", "উদ্যোক্তা", "আত্মকর্মসংস্থান", "ঝুঁকি গ্রহণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bent-ch2",
+        chapterNumber: 2,
+        title: "Forms of Business Ownership and Legal Aspects",
+        titleBangla: "৪র্থ ও ৫ম অধ্যায়: মালিকানার ভিত্তিতে ব্যবসায়ের ধরন ও আইনগত দিক",
+        lessons: [
+          {
+            idSuffix: "bent-ch2-l1",
+            point: "৪.১",
+            title: "Sole Proprietorship, Partnership, Joint Stock Companies & Trade License",
+            titleBangla: "৪.১ একমালিকানা, অংশীদারি ও যৌথ মূলধনি কোম্পানি এবং ট্রেড লাইসেন্স-পেটেন্ট",
+            summary: "ব্যবসায় সংগঠনের প্রকারভেদ, স্মারকলিপি ও পরিমেল নিয়মাবলি এবং কপিরাইট ও ট্রেডমার্ক রেজিস্ট্রেশন প্রক্রিয়া।",
+            keywords: ["একমালিকানা", "অংশীদারি ব্যবসায়", "কোম্পানি", "ট্রেড লাইসেন্স", "পেটেন্ট", "ট্রেডমার্ক"]
+          }
+        ]
+      },
+      {
+        idSuffix: "bent-ch3",
+        chapterNumber: 3,
+        title: "Business Planning and Marketing Management",
+        titleBangla: "৬ষ্ঠ ও ৯ম অধ্যায়: ব্যবসায় পরিকল্পনা প্রণয়ন ও বিপণন কৌশল",
+        lessons: [
+          {
+            idSuffix: "bent-ch3-l1",
+            point: "৬.১",
+            title: "Business Plan Components, 4Ps of Marketing and Promotion",
+            titleBangla: "৬.১ কার্যকর ব্যবসায় পরিকল্পনা এবং বিপণনের ৪টি উপাদান (Product, Price, Place, Promotion)",
+            summary: "বাজার সমীক্ষা, উৎপাদন ব্যয় প্রাক্কলন এবং পণ্য বিক্রয় ও প্রসারে বিজ্ঞাপন ও আধুনিক বিক্রয়কলার কৌশল।",
+            keywords: ["ব্যবসায় পরিকল্পনা", "বিপণন", "মার্কেটিং 4P", "বিজ্ঞাপন", "বিক্রয়িকতা"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "finance",
+    codeBase: "FIN",
+    name: "Finance and Banking",
+    nameBangla: "ফিন্যান্স ও ব্যাংকিং",
+    group: "Business Studies",
+    coverColor: "from-cyan-700 to-blue-950",
+    chapters: [
+      {
+        idSuffix: "fin-ch1",
+        chapterNumber: 1,
+        title: "Business Finance and Sources of Capital",
+        titleBangla: "১ম ও ২য় অধ্যায়: অর্থায়ন ও অর্থায়নের উৎস",
+        lessons: [
+          {
+            idSuffix: "fin-ch1-l1",
+            point: "১.১",
+            title: "Principles of Finance, Short-term and Long-term Funding",
+            titleBangla: "১.১ অর্থায়নের নীতিসমূহ (তারল্য বনাম মুনাফা নীতি) ও তহবিলের উৎস",
+            summary: "চলতি মূলধন ও স্থায়ী মূলধন ব্যবস্থাপনা এবং নিজস্ব মূলধন বনাম ঋণ তহবিলের ভারসাম্য রক্ষা।",
+            keywords: ["অর্থায়ন", "তারল্য বনাম মুনাফা", "স্বল্পমেয়াদি তহবিল", "দীর্ঘমেয়াদি ঋণ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "fin-ch2",
+        chapterNumber: 2,
+        title: "Time Value of Money (PV and FV)",
+        titleBangla: "৩য় অধ্যায়: অর্থের সময়মূল্য (Time Value of Money)",
+        lessons: [
+          {
+            idSuffix: "fin-ch2-l1",
+            point: "৩.১",
+            title: "Present Value, Future Value and Compounding (FV = PV(1+i)^n)",
+            titleBangla: "৩.১ সরল ও চক্রবৃদ্ধি সুদে বর্তমান মূল্য ও ভবিষ্যৎ মূল্য নির্ণয়",
+            summary: "সুদের হারের প্রভাব, বার্ষিক ও বছরে একাধিকবার চক্রবৃদ্ধিকরণ FV = PV(1 + i/m)^(n×m) এবং বিনিয়োগের সুযোগ বিবেচনা।",
+            keywords: ["অর্থের সময়মূল্য", "ভবিষ্যৎ মূল্য", "বর্তমান মূল্য", "চক্রবৃদ্ধি সুদ", "সুদের হার"]
+          }
+        ]
+      },
+      {
+        idSuffix: "fin-ch3",
+        chapterNumber: 3,
+        title: "Capital Budgeting and Risk Assessment",
+        titleBangla: "৪র্থ ও ৫ম অধ্যায়: মূলধনী আয়-ব্যয় প্রাক্কলন ও ঝুঁকি পরিমাপ",
+        lessons: [
+          {
+            idSuffix: "fin-ch3-l1",
+            point: "৫.১",
+            title: "Payback Period (PBP) and Average Rate of Return (ARR)",
+            titleBangla: "৫.১ গড় মুনাফার হার (ARR) ও পে-ব্যাক সময় পদ্ধতি",
+            summary: "বিনিয়োগ সিদ্ধান্তের মূল্যায়ন, বিনিয়োগের মূল টাকা ফেরত আসার সময়কাল হিসাব এবং ঝুঁকি ও অনিশ্চয়তার পার্থক্য।",
+            keywords: ["মূলধনী বাজেট", "পে-ব্যাক সময়", "গড় মুনাফার হার", "ঝুঁকি পরিমাপ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "fin-ch4",
+        chapterNumber: 4,
+        title: "Commercial Banking, Central Banking & Electronic Services",
+        titleBangla: "৮ম, ১০ম ও ১৩শ অধ্যায়: ব্যাংক ব্যবস্থা, কেন্দ্রীয় ব্যাংক ও আধুনিক ব্যাংকিং",
+        lessons: [
+          {
+            idSuffix: "fin-ch4-l1",
+            point: "৮.১",
+            title: "Central Bank Functions, Commercial Accounts & Mobile Financial Services (MFS)",
+            titleBangla: "৮.১ কেন্দ্রীয় ব্যাংকের ঋণ নিয়ন্ত্রণ, ব্যাংক হিসাবের ধরন ও ডিজিটাল ব্যাংকিং (ATM, MFS)",
+            summary: "বাংলাদেশ ব্যাংকের ব্যাঙ্কারদের ব্যাঙ্ক হিসেবে ভূমিকা, চলতি ও সঞ্চয়ী হিসাব এবং এটিএম কার্ড ও মোবাইল ব্যাংকিং সেবা।",
+            keywords: ["কেন্দ্রীয় ব্যাংক", "বাণিজ্যিক ব্যাংক", "সঞ্চয়ী হিসাব", "ATM", "মোবাইল ব্যাংকিং"]
+          }
+        ]
+      }
+    ]
+  },
+
+  // ==========================================
+  // 5. ঐচ্ছিক বিষয় (Optional / Applied)
+  // ==========================================
+  {
+    idSuffix: "agriculture",
+    codeBase: "AGRI",
+    name: "Agriculture Studies",
+    nameBangla: "কৃষি শিক্ষা",
+    group: "Optional",
+    coverColor: "from-lime-700 to-green-950",
+    chapters: [
+      {
+        idSuffix: "agri-ch1",
+        chapterNumber: 1,
+        title: "Agricultural Technology, Soil and Seed Management",
+        titleBangla: "১ম অধ্যায়: কৃষি প্রযুক্তি ও বীজ ব্যবস্থাপনা",
+        lessons: [
+          {
+            idSuffix: "agri-ch1-l1",
+            point: "১.১",
+            title: "Soil Fertility, Organic Farming and Modern Seed Processing",
+            titleBangla: "১.১ মাটির বুনট, জৈব সার প্রস্তুতকরণ ও উন্নত বীজ সংরক্ষণ পদ্ধতি",
+            summary: "কম্পোস্ট ও ভার্মিকম্পোস্ট সার তৈরি, রোগমুক্ত বীজ শোধন এবং আধুনিক কৃষি প্রযুক্তির বাস্তবায়ন।",
+            keywords: ["কৃষি শিক্ষা", "জৈব সার", "ভার্মিকম্পোস্ট", "বীজ শোধন", "মাটির উর্বরতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "agri-ch2",
+        chapterNumber: 2,
+        title: "Agricultural Inputs: Seeds, Fertilizers and Irrigation",
+        titleBangla: "২য় অধ্যায়: কৃষি উপকরণ: বীজ, সার ও আধুনিক সেচ প্রযুক্তি",
+        lessons: [
+          {
+            idSuffix: "agri-ch2-l1",
+            point: "২.১",
+            title: "Certified Seed Production, Balanced Fertilizer and Drip Irrigation",
+            titleBangla: "২.১ প্রত্যয়িত বীজ উৎপাদন, সুষম সার প্রয়োগ ও ড্রিপ-স্প্রিংকলার সেচ",
+            summary: "ইউরিয়া, টিএসপি, এমওপি সারের পরিমিত প্রয়োগ এবং সেচের পানির অপচয় রোধে আধুনিক প্রযুক্তি।",
+            keywords: ["কৃষি উপকরণ", "সুষম সার", "ড্রিপ সেচ", "সেচ প্রযুক্তি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "agri-ch3",
+        chapterNumber: 3,
+        title: "Agriculture and Climate: Disaster Resilient Crops",
+        titleBangla: "৩য় অধ্যায়: কৃষি ও জলবায়ু: প্রতিকূল পরিবেশ সহনশীল ফসল চাষ",
+        lessons: [
+          {
+            idSuffix: "agri-ch3-l1",
+            point: "৩.১",
+            title: "Saline, Drought and Flood Tolerant Crop Varieties",
+            titleBangla: "৩.১ লবণাক্ততা, খরা ও জলমগ্নতা সহনশীল ধানের জাত ও ভাসমান সবজি চাষ",
+            summary: "ব্রি ধান-৪৭, ৬৭ ও বিনা ধান চাষাবাদ এবং জলবায়ু পরিবর্তনের ঝুঁকি মোকাবিলায় আধুনিক কৃষি।",
+            keywords: ["জলবায়ু সহনশীল", "লবণাক্ততা", "ভাসমান সবজি", "ব্রি ধান"]
+          }
+        ]
+      },
+      {
+        idSuffix: "agri-ch4",
+        chapterNumber: 4,
+        title: "Agricultural Production: Fisheries, Poultry and Livestock",
+        titleBangla: "৪র্থ অধ্যায়: কৃষিজ উৎপাদন: মৎস্য চাষ, হাঁস-মুরগি ও গবাদিপশু পালন",
+        lessons: [
+          {
+            idSuffix: "agri-ch4-l1",
+            point: "৪.১",
+            title: "Composite Carp Culture, Broiler-Layer Rearing and Dairy Care",
+            titleBangla: "৪.১ রুই-কাতলার মিশ্র চাষ, পোল্ট্রি খামার ব্যবস্থাপনা ও উন্নত জাতের গাভী পালন",
+            summary: "পুকুর প্রস্তুতি, মাছের সম্পূরক খাদ্য, মুরগির টিকা প্রদান এবং ডেইরি ফার্মের বৈজ্ঞানিক পরিচালনা।",
+            keywords: ["মৎস্য চাষ", "পোল্ট্রি", "ডেইরি", "টিকা প্রদান", "মিশ্র চাষ"]
+          }
+        ]
+      },
+      {
+        idSuffix: "agri-ch5",
+        chapterNumber: 5,
+        title: "Forestry: Social, Agro-forestry and Coastal Afforestation",
+        titleBangla: "৫ম অধ্যায়: বনায়ন: সামাজিক বনায়ন, কৃষি বনায়ন ও ম্যানগ্রোভ বন",
+        lessons: [
+          {
+            idSuffix: "agri-ch5-l1",
+            point: "৫.১",
+            title: "Social Forestry, Agro-forestry Models and Sundarbans Ecology",
+            titleBangla: "৫.১ সামাজিক বনায়নের ভূমিকা, কৃষি বনায়ন মডেল ও সুন্দরবনের বাস্তুতন্ত্র সংরক্ষণ",
+            summary: "রাস্তার পাশে বৃক্ষরোপণ, ফসলি জমিতে বৃক্ষায়ন এবং উপকূলীয় এলাকায় সবুজ বেষ্টনী নির্মাণ।",
+            keywords: ["সামাজিক বনায়ন", "কৃষি বনায়ন", "সুন্দরবন", "সবুজ বেষ্টনী"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    idSuffix: "home-science",
+    codeBase: "HSCI",
+    name: "Home Science",
+    nameBangla: "গার্হস্থ্য বিজ্ঞান",
+    group: "Optional",
+    coverColor: "from-pink-700 to-rose-950",
+    chapters: [
+      {
+        idSuffix: "hsci-ch1",
+        chapterNumber: 1,
+        title: "Home Management and Interior Design",
+        titleBangla: "১ম অধ্যায়: গৃহ ব্যবস্থাপনা ও নান্দনিক গৃহসজ্জা",
+        lessons: [
+          {
+            idSuffix: "hsci-ch1-l1",
+            point: "১.১",
+            title: "Principles of Interior Decoration, Budgeting and Space Organization",
+            titleBangla: "১.১ গৃহ ব্যবস্থাপনার ধাপসমূহ, আলোকসজ্জা, বর্ণ পরিকল্পনা ও আসবাবপত্র বিন্যাস",
+            summary: "পরিকল্পনা, নিয়ন্ত্রণ ও মূল্যায়নের মাধ্যমে পরিবারের লক্ষ্য অর্জন ও নান্দনিক পরিবেশ সৃষ্টি।",
+            keywords: ["গৃহ ব্যবস্থাপনা", "আসবাবপত্র বিন্যাস", "বর্ণ পরিকল্পনা", "নান্দনিকতা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hsci-ch2",
+        chapterNumber: 2,
+        title: "Family Resources and Time-Energy Budgeting",
+        titleBangla: "২য় অধ্যায়: পারিবারিক সম্পদ ও সময়-শক্তি ব্যবস্থাপনা",
+        lessons: [
+          {
+            idSuffix: "hsci-ch2-l1",
+            point: "২.১",
+            title: "Financial Budget, Income Planning, and Time-Energy Conservation",
+            titleBangla: "২.১ পারিবারিক মাসিক বাজেট, সঞ্চয় পরিকল্পনা এবং সময় ও শক্তির কার্যকর ব্যবহার",
+            summary: "আয়ের মধ্যে ব্যয়ের সীমাবদ্ধতা, জরুরি তহবিল গঠন এবং কর্মপদ্ধতি সহজীকরণ (Work Simplification)।",
+            keywords: ["পারিবারিক বাজেট", "সঞ্চয়", "সময় ব্যবস্থাপনা", "কর্মপদ্ধতি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hsci-ch3",
+        chapterNumber: 3,
+        title: "Child Development and Family Relationships",
+        titleBangla: "৩য় অধ্যায়: শিশু বিকাশ ও সুস্থ পারিবারিক পরিবেশ",
+        lessons: [
+          {
+            idSuffix: "hsci-ch3-l1",
+            point: "৩.১",
+            title: "Stages of Child Growth, Cognitive Development and Positive Discipline",
+            titleBangla: "৩.১ শিশুর বিভিন্ন বিকাশের স্তর, বুদ্ধিবৃত্তিক যত্ন ও ইতিবাচক শাসন",
+            summary: "শৈশব ও কৈশোরের বিকাশ, সৃজনশীল খেলাধুলা এবং পিতা-মাতার সাথে বন্ধুত্বপূর্ণ সম্পর্ক।",
+            keywords: ["শিশু বিকাশ", "ইতিবাচক শাসন", "বুদ্ধিবৃত্তিক যত্ন", "পারিবারিক বন্ধন"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hsci-ch4",
+        chapterNumber: 4,
+        title: "Food Nutrition, Meal Planning and Food Preservation",
+        titleBangla: "৪র্থ অধ্যায়: খাদ্য পুষ্টিবিজ্ঞান, মেনু পরিকল্পনা ও খাদ্য সংরক্ষণ",
+        lessons: [
+          {
+            idSuffix: "hsci-ch4-l1",
+            point: "৪.১",
+            title: "Six Food Nutrients, Daily Meal Balancing and Jam/Jelly Preservation",
+            titleBangla: "৪.১ ছয়টি খাদ্য উপাদান, সুষম মেনু তৈরি ও ফল-সবজি সংরক্ষণ পদ্ধতি",
+            summary: "ক্যালরি ও প্রোটিন-ভিটামিনের ভারসাম্য এবং আচার, মোরব্বা, জ্যাম-জেলি তৈরিতে বিজ্ঞানসম্মত সংরক্ষণ।",
+            keywords: ["পুষ্টিবিজ্ঞান", "মেনু পরিকল্পনা", "খাদ্য সংরক্ষণ", "জ্যাম জেলি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "hsci-ch5",
+        chapterNumber: 5,
+        title: "Textiles, Clothing Selection and Garment Care",
+        titleBangla: "৫ম অধ্যায়: বস্ত্রবিজ্ঞান, পোশাক নির্বাচন ও পোশাকের যত্ন",
+        lessons: [
+          {
+            idSuffix: "hsci-ch5-l1",
+            point: "৫.১",
+            title: "Fiber Classification (Cotton, Silk, Wool, Synthetic) and Stain Removal",
+            titleBangla: "৫.১ প্রাকৃতিক ও কৃত্রিম তন্তু, উপযুক্ত পোশাক নির্বাচন এবং দাগ মোচন ও ইস্ত্রি",
+            summary: "তুলা, রেশম, পশম ও পলিয়েস্টার তন্তুর বৈশিষ্ট্য, বয়ন এবং পোশাকের স্থায়িত্ব বৃদ্ধির যত্ন।",
+            keywords: ["বস্ত্রবিজ্ঞান", "প্রাকৃতিক তন্তু", "দাগ মোচন", "পোশাকের যত্ন"]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+export function generateSecondaryGrade(
+  numericGrade: 9 | 10,
+  classId: 'class-9' | 'class-10',
+  nameBangla: string,
+  description: string
+): ClassGrade {
+  const prefix = numericGrade === 9 ? 'c9' : 'c10';
+  const codeSuffix = numericGrade === 9 ? '09' : '10';
+
+  const subjects: Subject[] = SECONDARY_SUBJECT_DEFS.map((subDef) => {
+    const chapters: Chapter[] = subDef.chapters.map((chDef) => {
+      const lessons: LessonPoint[] = chDef.lessons.map((lesDef) => ({
+        id: `${prefix}-${lesDef.idSuffix}`,
+        point: lesDef.point,
+        title: lesDef.title,
+        titleBangla: lesDef.titleBangla,
+        summary: lesDef.summary,
+        keywords: lesDef.keywords
+      }));
+
+      return {
+        id: `${prefix}-${chDef.idSuffix}`,
+        chapterNumber: chDef.chapterNumber,
+        title: chDef.title,
+        titleBangla: chDef.titleBangla,
+        lessons
+      };
+    });
+
+    return {
+      id: `${prefix}-${subDef.idSuffix}`,
+      code: `${subDef.codeBase}-${codeSuffix}`,
+      name: subDef.name,
+      nameBangla: subDef.nameBangla,
+      group: subDef.group,
+      coverColor: subDef.coverColor,
+      chapters
+    };
+  });
+
+  return {
+    id: classId,
+    numeric: numericGrade,
+    name: `Class ${numericGrade}`,
+    nameBangla: nameBangla,
+    stage: "Secondary (SSC)",
+    stageBangla: "মাধ্যমিক (এসএসসি)",
+    description: description,
+    subjects: subjects
+  };
+}
