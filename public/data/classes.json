@@ -1,65 +1,97 @@
-[
-  {
-    "id": "class-6",
-    "numeric": 6,
-    "name": "Class 6",
-    "nameBangla": "৬ষ্ঠ শ্রেণি",
-    "stage": "Junior Secondary",
-    "stageBangla": "নিম্ন মাধ্যমিক",
-    "subjectCount": 11
-  },
-  {
-    "id": "class-7",
-    "numeric": 7,
-    "name": "Class 7",
-    "nameBangla": "৭ম শ্রেণি",
-    "stage": "Junior Secondary",
-    "stageBangla": "নিম্ন মাধ্যমিক",
-    "subjectCount": 14
-  },
-  {
-    "id": "class-8",
-    "numeric": 8,
-    "name": "Class 8",
-    "nameBangla": "৮ম শ্রেণি",
-    "stage": "Junior Secondary",
-    "stageBangla": "নিম্ন মাধ্যমিক",
-    "subjectCount": 14
-  },
-  {
-    "id": "class-9",
-    "numeric": 9,
-    "name": "Class 9",
-    "nameBangla": "৯ম শ্রেণি",
-    "stage": "Secondary (SSC)",
-    "stageBangla": "মাধ্যমিক (এসএসসি)",
-    "subjectCount": 27
-  },
-  {
-    "id": "class-10",
-    "numeric": 10,
-    "name": "Class 10",
-    "nameBangla": "১০ম শ্রেণি (SSC)",
-    "stage": "Secondary (SSC)",
-    "stageBangla": "মাধ্যমিক (এসএসসি)",
-    "subjectCount": 27
-  },
-  {
-    "id": "class-11",
-    "numeric": 11,
-    "name": "Class 11",
-    "nameBangla": "একাদশ শ্রেণি (HSC ১ম বর্ষ)",
-    "stage": "Higher Secondary (HSC)",
-    "stageBangla": "উচ্চ মাধ্যমিক",
-    "subjectCount": 19
-  },
-  {
-    "id": "class-12",
-    "numeric": 12,
-    "name": "Class 12",
-    "nameBangla": "দ্বাদশ শ্রেণি (HSC ২য় বর্ষ ও পরীক্ষার্থী)",
-    "stage": "Higher Secondary (HSC)",
-    "stageBangla": "উচ্চ মাধ্যমিক",
-    "subjectCount": 19
-  }
-]
+{
+  "success": true,
+  "total": 7,
+  "data": [
+    {
+      "id": "class-6",
+      "numeric": 6,
+      "name": "Class 6",
+      "nameBangla": "৬ষ্ঠ শ্রেণি",
+      "stage": "Junior Secondary",
+      "stageBangla": "নিম্ন মাধ্যমিক",
+      "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত ষষ্ঠ শ্রেণির সকল পাঠ্যপুস্তক, পূর্ণাঙ্গ অধ্যায় ও সুনির্দিষ্ট লেসন পয়েন্টের পূর্ণাঙ্গ ডেটাসেট",
+      "subjectCount": 14,
+      "chapterCount": 78,
+      "lessonCount": 140,
+      "subjectsUrl": "/api/subjects?classId=class-6"
+    },
+    {
+      "id": "class-7",
+      "numeric": 7,
+      "name": "Class 7",
+      "nameBangla": "৭ম শ্রেণি",
+      "stage": "Junior Secondary",
+      "stageBangla": "নিম্ন মাধ্যমিক",
+      "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত সপ্তম শ্রেণির সকল পাঠ্যপুস্তক, পূর্ণাঙ্গ অধ্যায় ও সুনির্দিষ্ট লেসন পয়েন্টের পূর্ণাঙ্গ ডেটাসেট",
+      "subjectCount": 14,
+      "chapterCount": 102,
+      "lessonCount": 171,
+      "subjectsUrl": "/api/subjects?classId=class-7"
+    },
+    {
+      "id": "class-8",
+      "numeric": 8,
+      "name": "Class 8",
+      "nameBangla": "৮ম শ্রেণি",
+      "stage": "Junior Secondary",
+      "stageBangla": "নিম্ন মাধ্যমিক",
+      "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত অষ্টম শ্রেণির সকল পাঠ্যপুস্তক, পূর্ণাঙ্গ অধ্যায় ও সুনির্দিষ্ট লেসন পয়েন্টের পূর্ণাঙ্গ ডেটাসেট",
+      "subjectCount": 14,
+      "chapterCount": 101,
+      "lessonCount": 234,
+      "subjectsUrl": "/api/subjects?classId=class-8"
+    },
+    {
+      "id": "class-9",
+      "numeric": 9,
+      "name": "Class 9",
+      "nameBangla": "৯ম শ্রেণি",
+      "stage": "Secondary (SSC)",
+      "stageBangla": "মাধ্যমিক (এসএসসি)",
+      "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত নবম শ্রেণির বিজ্ঞান, মানবিক, ব্যবসায় শিক্ষা ও আবশ্যিক বিভাগের সকল পাঠ্যবই, পূর্ণাঙ্গ অধ্যায় ও শিখনফল পয়েন্ট",
+      "subjectCount": 28,
+      "chapterCount": 152,
+      "lessonCount": 189,
+      "subjectsUrl": "/api/subjects?classId=class-9"
+    },
+    {
+      "id": "class-10",
+      "numeric": 10,
+      "name": "Class 10",
+      "nameBangla": "১০ম শ্রেণি (SSC)",
+      "stage": "Secondary (SSC)",
+      "stageBangla": "মাধ্যমিক (এসএসসি)",
+      "description": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত দশম শ্রেণির বিজ্ঞান, মানবিক, ব্যবসায় শিক্ষা ও আবশ্যিক বিভাগের সকল পাঠ্যবই, পূর্ণাঙ্গ অধ্যায় ও শিখনফল পয়েন্ট",
+      "subjectCount": 28,
+      "chapterCount": 152,
+      "lessonCount": 189,
+      "subjectsUrl": "/api/subjects?classId=class-10"
+    },
+    {
+      "id": "class-11",
+      "numeric": 11,
+      "name": "Class 11",
+      "nameBangla": "একাদশ শ্রেণি (HSC ১ম বর্ষ)",
+      "stage": "Higher Secondary (HSC)",
+      "stageBangla": "উচ্চ মাধ্যমিক",
+      "description": "এইচএসসি ১ম বর্ষের বিজ্ঞান, মানবিক, ব্যবসায় শিক্ষা ও ঐচ্ছিক বিভাগের জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত সকল বোর্ড বই, অধ্যায় এবং পাঠ্যবিন্দুভিত্তিক পূর্ণাঙ্গ কারিকুলাম",
+      "subjectCount": 24,
+      "chapterCount": 144,
+      "lessonCount": 172,
+      "subjectsUrl": "/api/subjects?classId=class-11"
+    },
+    {
+      "id": "class-12",
+      "numeric": 12,
+      "name": "Class 12",
+      "nameBangla": "দ্বাদশ শ্রেণি (HSC ২য় বর্ষ ও পরীক্ষার্থী)",
+      "stage": "Higher Secondary (HSC)",
+      "stageBangla": "উচ্চ মাধ্যমিক",
+      "description": "এইচএসসি ২য় বর্ষ ও পরীক্ষার্থীদের জন্য জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) অনুমোদিত বিজ্ঞান, মানবিক, ব্যবসায় শিক্ষা ও ঐচ্ছিক বিভাগের সকল ২য় পত্র পাঠ্যবই, বোর্ড সিলেবাস ও অধ্যায়ভিত্তিক লেসন পয়েন্ট",
+      "subjectCount": 24,
+      "chapterCount": 153,
+      "lessonCount": 169,
+      "subjectsUrl": "/api/subjects?classId=class-12"
+    }
+  ]
+}

@@ -2705,6 +2705,116 @@ export const CLASS_11_DATA: ClassGrade = {
           ]
         }
       ]
+    },
+
+    // ==========================================
+    // ২৪. পরিসংখ্যান ১ম পত্র (Statistics 1st)
+    // ==========================================
+    {
+      id: "c11-statistics",
+      code: "STAT-11",
+      name: "Statistics 1st Paper",
+      nameBangla: "পরিসংখ্যান ১ম পত্র",
+      group: "Science",
+      coverColor: "from-sky-700 to-indigo-950",
+      chapters: [
+        {
+          id: "c11-stat1-ch1",
+          chapterNumber: 1,
+          title: "Introduction to Statistics, Variables and Scales",
+          titleBangla: "১ম অধ্যায়: পরিসংখ্যান, চলক ও বিভিন্ন প্রতীকের ধারণা",
+          lessons: [
+            {
+              id: "c11-stat1-ch1-l1",
+              point: "১.১",
+              title: "Discrete vs Continuous Variables, Scales of Measurement",
+              titleBangla: "১.১ বিচ্ছিন্ন ও অবিচ্ছিন্ন চলক, গুণবাচক ও সংখ্যাবাচক তথ্য এবং পরিমাপের স্কেল",
+              summary: "পরিসংখ্যানের কার্যক্ষেত্র, নামসূচক (Nominal), ক্রমসূচক (Ordinal), ব্যবধান (Interval) ও অনুপাত (Ratio) স্কেল এবং সামেশন (Σ) প্রতীকের বৈশিষ্ট্য।",
+              keywords: ["পরিসংখ্যান", "চলক", "বিচ্ছিন্ন চলক", "পরিমাপ স্কেল", "সামেশন"]
+            }
+          ]
+        },
+        {
+          id: "c11-stat1-ch2",
+          chapterNumber: 2,
+          title: "Collection, Organization and Graphical Presentation",
+          titleBangla: "২য় অধ্যায়: তথ্য সংগ্রহ, সংক্ষিপ্তকরণ ও উপস্থাপন",
+          lessons: [
+            {
+              id: "c11-stat1-ch2-l1",
+              point: "২.১",
+              title: "Frequency Distribution, Histogram, Frequency Polygon & Ogive Curve",
+              titleBangla: "২.১ গণসংখ্যা নিবেশন প্রস্তুতকরণ, আয়তলেখ, গণসংখ্যা বহুভুজ ও ওজাইভ রেখা",
+              summary: "শ্রেণি ব্যবধান নির্ধারণ, ট্যালি চিহ্ন, ক্রমযোজিত গণসংখ্যা সারণি এবং ওজাইভ রেখার মাধ্যমে মধ্যমা নির্ণয়।",
+              keywords: ["গণসংখ্যা নিবেশন", "আয়তলেখ", "ওজাইভ রেখা", "লেখচিত্র"]
+            }
+          ]
+        },
+        {
+          id: "c11-stat1-ch3",
+          chapterNumber: 3,
+          title: "Measures of Central Tendency",
+          titleBangla: "৩য় অধ্যায়: কেন্দ্রীয় প্রবণতার পরিমাপ",
+          lessons: [
+            {
+              id: "c11-stat1-ch3-l1",
+              point: "৩.১",
+              title: "Arithmetic Mean, Geometric Mean, Harmonic Mean, Median, and Mode",
+              titleBangla: "৩.১ গাণিতিক গড় (AM), জ্যামিতিক গড় (GM), তরঙ্গ গড় (HM), মধ্যমা ও প্রচুরক",
+              summary: "AM ≥ GM ≥ HM সম্পর্কের প্রমাণ, অসঙ্গতিপূর্ণ মানে মধ্যমার শ্রেষ্ঠত্ব এবং মূল ও মাপনী পরিবর্তনের প্রভাব।",
+              keywords: ["গাণিতিক গড়", "জ্যামিতিক গড়", "মধ্যমা", "প্রচুরক", "কেন্দ্রীয় প্রবণতা"]
+            }
+          ]
+        },
+        {
+          id: "c11-stat1-ch4",
+          chapterNumber: 4,
+          title: "Measures of Dispersion",
+          titleBangla: "৪র্থ অধ্যায়: বিস্তার পরিমাপ (Dispersions)",
+          lessons: [
+            {
+              id: "c11-stat1-ch4-l1",
+              point: "৪.১",
+              title: "Range, Quartile Deviation, Mean Deviation, Standard Deviation (SD) & CV",
+              titleBangla: "৪.১ পরিমিত ব্যবধান (σ), ভেদাঙ্ক (σ^2) ও ব্যবধানাঙ্ক (CV)",
+              summary: "পরম ও আপেক্ষিক বিস্তার পরিমাপ, পরিমিত ব্যবধানের বৈশিষ্ট্য এবং দুটি তথ্যসারির ধারাবাহিকতা বা সামঞ্জস্য যাচাইয়ে ব্যবধানাঙ্কের (CV) ব্যবহার।",
+              keywords: ["পরিমিত ব্যবধান", "ভেদাঙ্ক", "ব্যবধানাঙ্ক", "CV", "বিস্তার পরিমাপ"]
+            }
+          ]
+        },
+        {
+          id: "c11-stat1-ch5",
+          chapterNumber: 5,
+          title: "Moments, Skewness and Kurtosis",
+          titleBangla: "৫ম অধ্যায়: পরিঘাত, বঙ্কিমতা ও সুচালোতা",
+          lessons: [
+            {
+              id: "c11-stat1-ch5-l1",
+              point: "৫.১",
+              title: "Raw and Central Moments, Karl Pearson's Skewness, Beta1 and Beta2",
+              titleBangla: "৫.১ অশোধিত ও শোধিত পরিঘাত এবং প্রতিসম, ধনাত্মক-ঋণাত্মক বঙ্কিমতা",
+              summary: "প্রথম চার শোধিত পরিঘাত (μ1=0, μ2=σ^2, μ3, μ4), বঙ্কিমতাঙ্ক β1 ও কার্ল পিয়ারসনের সহগ এবং মধ্যম, অতি ও অনতি সুচালোতা (β2=3)।",
+              keywords: ["পরিঘাত", "বঙ্কিমতা", "সুচালোতা", "প্রতিসম নিবেশন"]
+            }
+          ]
+        },
+        {
+          id: "c11-stat1-ch6",
+          chapterNumber: 6,
+          title: "Correlation and Regression Analysis",
+          titleBangla: "৬ষ্ঠ অধ্যায়: সংশ্লেষ ও নির্ভরণ (Correlation & Regression)",
+          lessons: [
+            {
+              id: "c11-stat1-ch6-l1",
+              point: "৬.১",
+              title: "Pearson's Correlation Coefficient (r) and Linear Regression Lines",
+              titleBangla: "৬.১ কার্ল পিয়ারসনের সংশ্লেষাঙ্ক (-১ ≤ r ≤ +১) ও নির্ভরণ সমীকরণ (Y on X)",
+              summary: "দুইটি চলকের সহসম্পর্ক, রৈখিক নির্ভরণ রেখা Y = a + bX এবং নির্ভরণ সহগদ্বয়ের গুণিতক থেকে সংশ্লেষাঙ্ক নির্ণয় (r = ±√(byx · bxy))।",
+              keywords: ["সংশ্লেষ", "নির্ভরণ", "পিয়ারসনের সংশ্লেষাঙ্ক", "নির্ভরণ সহগ"]
+            }
+          ]
+        }
+      ]
     }
   ]
 };

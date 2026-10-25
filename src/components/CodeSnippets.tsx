@@ -249,75 +249,112 @@ export default function CurriculumSelector() {
     js: `// আধুনিক JavaScript (Async/Await) ফেচ ফাংশন
 const API_BASE = '${baseUrl}';
 
-// অল-ইন-ওয়ান ক্যাসকেড কল
+// ১. সবগুলো ক্লাস একসাথে ফেচ করার উদাহরণ (Master Unified API)
+async function fetchAllCurriculum() {
+  const res = await fetch(\`\${API_BASE}/api/curriculum\`);
+  const json = await res.json();
+  console.log('মোট ক্লাস:', json.stats.totalClasses, 'বই:', json.stats.totalSubjects);
+  return json.data;
+}
+
+// ২. একটি নির্দিষ্ট ক্লাসের পূর্ণ ডেটা ফেচ (Individual Class API)
+async function fetchSingleClass(classNumericOrId) {
+  // উদাহরণ: fetchSingleClass(9) বা fetchSingleClass('class-9')
+  const res = await fetch(\`\${API_BASE}/api/classes/\${classNumericOrId}\`);
+  const json = await res.json();
+  console.log(\`\${json.nameBangla} এর বিষয়সমূহ:\`, json.subjects);
+  return json;
+}
+
+// ৩. বিভাগ অনুযায়ী ফিল্টার (যেমন: ৯ম শ্রেণির বিজ্ঞান বিভাগ)
+async function fetchClassWithGroup(classId, group = 'science') {
+  const res = await fetch(\`\${API_BASE}/api/classes/\${classId}?group=\${group}\`);
+  return await res.json();
+}
+
+// ৪. ক্যাসকেডিং ড্রপডাউন ফেচ (ধাপে ধাপে অপশন)
 async function fetchCurriculumStep(params = {}) {
   const query = new URLSearchParams(params).toString();
   const url = \`\${API_BASE}/api/cascade?\${query}\`;
-  
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
-}
+  const res = await fetch(url);
+  return await res.json();
+}`,
 
-// উদাহরণ ১: সকল শ্রেণি ফেচ
-const classes = await fetchCurriculumStep();
-console.log('Classes:', classes.options);
+    curl: `# ========================================================
+# ১. সবগুলো ক্লাস একসাথে ফেচ (Master Unified API)
+# ========================================================
+curl "${baseUrl}/api/curriculum"
 
-// উদাহরণ ২: ক্লাস ৬ এর বিষয়সমূহ ফেচ
-const subjects = await fetchCurriculumStep({ classId: 'class-6' });
-console.log('Subjects for Class 6:', subjects.options);
+# অল্টারনেটিভ রুট
+curl "${baseUrl}/api/classes/all"
 
-// উদাহরণ ৩: ক্লাস ৬ গণিতের অধ্যায়সমূহ ফেচ
-const chapters = await fetchCurriculumStep({ classId: 'class-6', subjectId: 'class-6-math' });
-console.log('Chapters:', chapters.options);
+# ========================================================
+# ২. আলাদা আলাদা ক্লাস ফেচ (Individual Class APIs)
+# ========================================================
+# ৬ষ্ঠ শ্রেণির পূর্ণাঙ্গ ডেটা (১৪টি বই ও অধ্যায়)
+curl "${baseUrl}/api/classes/6"
 
-// উদাহরণ ৪: ১ম অধ্যায়ের লেসন পয়েন্ট ফেচ
-const lessons = await fetchCurriculumStep({ classId: 'class-6', subjectId: 'class-6-math', chapterId: 'c6-math-ch1' });
-console.log('Lesson Points:', lessons.options);`,
+# ৯ম শ্রেণির পূর্ণাঙ্গ ডেটা (বিজ্ঞান, মানবিক ও বাণিজ্য সহ)
+curl "${baseUrl}/api/classes/9"
 
-    curl: `# ১. সকল শ্রেণির তালিকা ফেচ
+# ৯ম শ্রেণির শুধুমাত্র বিজ্ঞান (Science) বিভাগের বই ও অধ্যায়
+curl "${baseUrl}/api/classes/9?group=science"
+
+# একাদশ শ্রেণি (HSC ১ম বর্ষ - ২৪টি বিষয়)
+curl "${baseUrl}/api/classes/11"
+
+# দ্বাদশ শ্রেণি (HSC ২য় বর্ষ - ২৪টি বিষয়)
+curl "${baseUrl}/api/classes/12"
+
+# ========================================================
+# ৩. ড্রপডাউন ও ক্যাসকেডিং এন্ডপয়েন্টস
+# ========================================================
+# ড্রপডাউন ১: সকল শ্রেণির সংক্ষিপ্ত তালিকা
 curl "${baseUrl}/api/classes"
 
-# ২. নবম শ্রেণির সকল বইয়ের তালিকা ফেচ
+# ড্রপডাউন ২: নির্দিষ্ট শ্রেণির বইসমূহ
 curl "${baseUrl}/api/subjects?classId=class-9"
 
-# ৩. নবম শ্রেণির গণিত বইয়ের অধ্যায় ফেচ
+# ড্রপডাউন ৩: বইয়ের অধ্যায়সমূহ
 curl "${baseUrl}/api/chapters?subjectId=class-9-math"
 
-# ৪. ১ম অধ্যায়ের সকল লেসন পয়েন্ট ফেচ
-curl "${baseUrl}/api/lessons?chapterId=c9-math-ch1"
-
-# ৫. ক্যাসকেড এন্ডপয়েন্ট টেস্ট
-curl "${baseUrl}/api/cascade?classId=class-9&subjectId=class-9-math&chapterId=c9-math-ch1"`,
+# ড্রপডাউন ৪: অধ্যায়ের লেসন পয়েন্ট
+curl "${baseUrl}/api/lessons?chapterId=c9-math-ch1"`,
 
     python: `import requests
 
 BASE_URL = "${baseUrl}"
 
-def get_classes():
-    res = requests.get(f"{BASE_URL}/api/classes")
-    return res.json()['data']
+# ১. সবগুলো ক্লাস একসাথে ফেচ (Master All-Classes Endpoint)
+def get_all_curriculum():
+    res = requests.get(f"{BASE_URL}/api/curriculum")
+    data = res.json()
+    print(f"Total classes: {data['stats']['totalClasses']}")
+    return data['data']
 
-def get_subjects(class_id):
-    res = requests.get(f"{BASE_URL}/api/subjects", params={'classId': class_id})
-    return res.json()['data']
+# ২. আলাদা আলাদা ক্লাসের ডেটা ফেচ (Individual Class Endpoint)
+def get_class_data(class_id_or_number, group=None):
+    # উদাহরণ: get_class_data(9) অথবা get_class_data(9, group='science')
+    params = {'group': group} if group else {}
+    res = requests.get(f"{BASE_URL}/api/classes/{class_id_or_number}", params=params)
+    return res.json()
 
-def get_chapters(subject_id):
-    res = requests.get(f"{BASE_URL}/api/chapters", params={'subjectId': subject_id})
-    return res.json()['data']
+# ৩. ক্যাসকেডিং ড্রপডাউন ফেচ
+def get_cascade_step(class_id=None, subject_id=None, chapter_id=None):
+    params = {}
+    if class_id: params['classId'] = class_id
+    if subject_id: params['subjectId'] = subject_id
+    if chapter_id: params['chapterId'] = chapter_id
+    res = requests.get(f"{BASE_URL}/api/cascade", params=params)
+    return res.json()
 
-def get_lessons(chapter_id):
-    res = requests.get(f"{BASE_URL}/api/lessons", params={'chapterId': chapter_id})
-    return res.json()['data']
-
-# ডেমো এক্সিকিউশন
 if __name__ == "__main__":
-    classes = get_classes()
-    print(f"Total Classes: {len(classes)}")
+    # টেস্ট ১: সকল ক্লাস একসাথে
+    all_data = get_all_curriculum()
     
-    first_class = classes[0]['id']
-    subjects = get_subjects(first_class)
-    print(f"Subjects in {first_class}: {len(subjects)}")
+    # টেস্ট ২: ৯ম শ্রেণি আলাদা
+    class9 = get_class_data(9)
+    print(f"Class 9 Name: {class9['nameBangla']}, Total Subjects: {class9['stats']['totalSubjects']}")
 `
   };
 

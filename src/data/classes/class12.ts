@@ -2753,6 +2753,116 @@ export const CLASS_12_DATA: ClassGrade = {
           ]
         }
       ]
+    },
+
+    // ==========================================
+    // ২৪. পরিসংখ্যান ২য় পত্র (Statistics 2nd)
+    // ==========================================
+    {
+      id: "c12-statistics",
+      code: "STAT2-12",
+      name: "Statistics 2nd Paper",
+      nameBangla: "পরিসংখ্যান ২য় পত্র (সম্ভাবনা ও ফলিত পরিসংখ্যান)",
+      group: "Science",
+      coverColor: "from-sky-700 to-indigo-950",
+      chapters: [
+        {
+          id: "c12-stat2-ch1",
+          chapterNumber: 1,
+          title: "Probability and Laws of Probability",
+          titleBangla: "১ম অধ্যায়: সম্ভাবনা (Probability)",
+          lessons: [
+            {
+              id: "c12-stat2-ch1-l1",
+              point: "১.১",
+              title: "Addition & Multiplication Theorems, Conditional Probability & Bayes' Theorem",
+              titleBangla: "১.১ যোগ ও গুণন সূত্র, শর্তাধীন সম্ভাবনা ও বেইজের উপপাদ্য P(A|B)",
+              summary: "নমুনা ক্ষেত্র, পরস্পর বর্জনশীল ও অবর্জনশীল ঘটনা, স্বাধীন ঘটনা এবং বেইজের উপপাদ্যের বাস্তব সমস্যায় প্রয়োগ।",
+              keywords: ["সম্ভাবনা", "যোগ সূত্র", "গুণন সূত্র", "শর্তাধীন সম্ভাবনা", "বেইজের উপপাদ্য"]
+            }
+          ]
+        },
+        {
+          id: "c12-stat2-ch2",
+          chapterNumber: 2,
+          title: "Random Variable and Probability Distribution",
+          titleBangla: "২য় অধ্যায়: দৈব চলক ও গাণিতিক প্রত্যাশা",
+          lessons: [
+            {
+              id: "c12-stat2-ch2-l1",
+              point: "২.১",
+              title: "Discrete/Continuous Random Variables, Mathematical Expectation E(X) and Var(X)",
+              titleBangla: "২.১ বিচ্ছিন্ন-অবিচ্ছিন্ন দৈব চলক, গাণিতিক প্রত্যাশা E(X) ও ভেদাঙ্ক নির্ণয়",
+              summary: "সম্ভাবনা ফাংশন (PMF/PDF), প্রত্যাশার ধর্মাবলি E(aX + b) = aE(X) + b এবং Var(aX + b) = a^2Var(X) প্রমাণ।",
+              keywords: ["দৈব চলক", "গাণিতিক প্রত্যাশা", "ভেদাঙ্ক", "সম্ভাবনা ঘনত্ব ফাংশন"]
+            }
+          ]
+        },
+        {
+          id: "c12-stat2-ch3",
+          chapterNumber: 3,
+          title: "Binomial Distribution",
+          titleBangla: "৩য় অধ্যায়: দ্বিপদী বিন্যাস (Binomial Distribution)",
+          lessons: [
+            {
+              id: "c12-stat2-ch3-l1",
+              point: "৩.১",
+              title: "Bernoulli Trials, Binomial PMF: P(X=r) = nCr p^r q^(n-r), Mean and Variance",
+              titleBangla: "৩.১ বার্নোলি চেষ্টা, দ্বিপদী বিন্যাসের গড় (np) ও ভেদাঙ্ক (npq)",
+              summary: "দ্বিপদী বিন্যাসের শর্তাবলি, গড় সর্বদা ভেদাঙ্ক অপেক্ষা বৃহত্তর (np > npq) এবং এর বাস্তব প্রয়োগ।",
+              keywords: ["দ্বিপদী বিন্যাস", "বার্নোলি চেষ্টা", "গড় np", "ভেদাঙ্ক npq"]
+            }
+          ]
+        },
+        {
+          id: "c12-stat2-ch4",
+          chapterNumber: 4,
+          title: "Poisson Distribution",
+          titleBangla: "৪র্থ অধ্যায়: পয়সন বিন্যাস (Poisson Distribution)",
+          lessons: [
+            {
+              id: "c12-stat2-ch4-l1",
+              point: "৪.১",
+              title: "Poisson PMF, Rare Events Approximation (n -> inf, p -> 0), Mean = Variance = m",
+              titleBangla: "৪.১ পয়সন বিন্যাসের গড় ও ভেদাঙ্কের সমতা (Mean = Variance = m) ও বিরল ঘটনা",
+              summary: "সড়ক দুর্ঘটনা, টাইপিং ভুল বা কল সেন্টারের কলের মতো বিরল ঘটনার সম্ভাবনায় পয়সন বিন্যাসের ব্যবহার।",
+              keywords: ["পয়সন বিন্যাস", "বিরল ঘটনা", "গড় ভেদাঙ্ক সমান", "প্যারামিটার m"]
+            }
+          ]
+        },
+        {
+          id: "c12-stat2-ch5",
+          chapterNumber: 5,
+          title: "Normal Distribution",
+          titleBangla: "৫ম অধ্যায়: পরিমিত বিন্যাস (Normal Distribution)",
+          lessons: [
+            {
+              id: "c12-stat2-ch5-l1",
+              point: "৫.১",
+              title: "Bell-shaped Curve, Standard Normal Variable Z = (X - μ)/σ and Area Under Curve",
+              titleBangla: "৫.১ ঘণ্টাকৃতির প্রতিসম বক্ররেখা, আদর্শ পরিমিত চলক (Z) ও ক্ষেত্রফল নির্ণয়",
+              summary: "μ ± 1σ (৬৮.২৬%), μ ± 2σ (৯৫.৪৪%), μ ± 3σ (৯৯.৭৩%) ক্ষেত্রফল নীতি এবং সাধারণ পরীক্ষার নম্বর বিশ্লেষণে পরিমিত বিন্যাস।",
+              keywords: ["পরিমিত বিন্যাস", "আদর্শ পরিমিত চলক Z", "ঘণ্টাকৃতি রেখা", "ক্ষেত্রফল"]
+            }
+          ]
+        },
+        {
+          id: "c12-stat2-ch6",
+          chapterNumber: 6,
+          title: "Vital Statistics and Demography",
+          titleBangla: "৬ষ্ঠ অধ্যায়: জীবন পরিসংখ্যান (Vital Statistics)",
+          lessons: [
+            {
+              id: "c12-stat2-ch6-l1",
+              point: "৬.১",
+              title: "Crude Birth Rate (CBR), Infant Mortality Rate (IMR), and Life Table (lx, qx, ex)",
+              titleBangla: "৬.১ স্থূল জন্মহার (CBR), শিশুমৃত্যু হার (IMR) ও পূর্ণাঙ্গ জীবন সারণি",
+              summary: "জনসংখ্যা প্রক্ষেপণ, মৃত্যুর সম্ভাবনা qx, আয়ুষ্কাল প্রত্যাশা ex এবং জাতীয় জনসংখ্যা পরিকল্পনার রূপরেখা।",
+              keywords: ["জীবন পরিসংখ্যান", "CBR", "IMR", "জীবন সারণি", "প্রত্যাশিত আয়ু"]
+            }
+          ]
+        }
+      ]
     }
   ]
 };

@@ -14,8 +14,8 @@ apiRouter.use((req, res, next) => {
   next();
 });
 
-// 1. Full database JSON
-apiRouter.get(['/api/curriculum', '/curriculum'], (req: Request, res: Response) => {
+// 1. Full database JSON (Unified Master Endpoint - All Classes Together)
+apiRouter.get(['/api/curriculum', '/curriculum', '/api/all', '/all', '/api/classes/all'], (req: Request, res: Response) => {
   let totalSubjects = 0;
   let totalChapters = 0;
   let totalLessons = 0;
@@ -32,6 +32,7 @@ apiRouter.get(['/api/curriculum', '/curriculum'], (req: Request, res: Response) 
 
   res.json({
     success: true,
+    type: "all_classes_master",
     count: CURRICULUM_DATA.length,
     stats: {
       totalClasses: CURRICULUM_DATA.length,
@@ -44,13 +45,14 @@ apiRouter.get(['/api/curriculum', '/curriculum'], (req: Request, res: Response) 
       curriculum: "National Curriculum & Textbook Board (NCTB) Bangladesh",
       classes: "6 to 12 (Comprehensive Secondary & Higher Secondary)",
       source: "NCTB Curriculum API Service",
-      deployReady: "Vercel / GitHub / Cloud Run Ready"
+      deployReady: "Vercel / GitHub / Cloud Run Ready",
+      individualEndpointsExample: "/api/classes/6, /api/classes/7, /api/classes/8, /api/classes/9, /api/classes/10, /api/classes/11, /api/classes/12"
     },
     data: CURRICULUM_DATA
   });
 });
 
-// 2. Classes list (Dropdown 1)
+// 2. Classes list summary (Dropdown 1)
 apiRouter.get(['/api/classes', '/classes'], (req: Request, res: Response) => {
   const classes = CURRICULUM_DATA.map((c) => {
     let totalLessons = 0;
@@ -73,6 +75,8 @@ apiRouter.get(['/api/classes', '/classes'], (req: Request, res: Response) => {
       subjectCount: c.subjects.length,
       chapterCount: totalChapters,
       lessonCount: totalLessons,
+      directEndpoint: `/api/classes/${c.numeric}`,
+      staticJsonUrl: `/data/${c.id}.json`,
       subjectsUrl: `/api/subjects?classId=${c.id}`
     };
   });
@@ -80,7 +84,126 @@ apiRouter.get(['/api/classes', '/classes'], (req: Request, res: Response) => {
   res.json({
     success: true,
     total: classes.length,
+    endpoints: {
+      allClassesUnified: '/api/curriculum',
+      allClassesAlternative: '/api/classes/all',
+      individualExample: '/api/classes/6'
+    },
     data: classes
+  });
+});
+
+// 2b. Individual Class Endpoint (Single Class Full Data - Books, Chapters, Lessons)
+// Supports: /api/classes/6, /api/classes/class-6, /api/class/6, etc.
+apiRouter.get(['/api/classes/:classId', '/api/class/:classId'], (req: Request, res: Response) => {
+  const param = req.params.classId.toLowerCase().trim();
+
+  // If "all" was passed to /api/classes/all, redirect or return all
+  if (param === 'all' || param === 'curriculum') {
+    let totalSubjects = 0;
+    let totalChapters = 0;
+    let totalLessons = 0;
+
+    CURRICULUM_DATA.forEach(c => {
+      totalSubjects += c.subjects.length;
+      c.subjects.forEach(s => {
+        totalChapters += s.chapters.length;
+        s.chapters.forEach(ch => {
+          totalLessons += ch.lessons.length;
+        });
+      });
+    });
+
+    return res.json({
+      success: true,
+      type: "all_classes_master",
+      count: CURRICULUM_DATA.length,
+      stats: { totalClasses: CURRICULUM_DATA.length, totalSubjects, totalChapters, totalLessons },
+      data: CURRICULUM_DATA
+    });
+  }
+
+  const targetClass = CURRICULUM_DATA.find(
+    (c) => c.id.toLowerCase() === param || 
+           String(c.numeric) === param || 
+           c.name.toLowerCase().replace(/\s+/g, '-') === param
+  );
+
+  if (!targetClass) {
+    return res.status(404).json({
+      success: false,
+      error: `Class '${req.params.classId}' not found.`,
+      availableClassEndpoints: [
+        { class: "Class 6 (৬ষ্ঠ শ্রেণি)", endpoints: ["/api/classes/6", "/api/classes/class-6"] },
+        { class: "Class 7 (৭ম শ্রেণি)", endpoints: ["/api/classes/7", "/api/classes/class-7"] },
+        { class: "Class 8 (৮ম শ্রেণি)", endpoints: ["/api/classes/8", "/api/classes/class-8"] },
+        { class: "Class 9 (৯ম শ্রেণি)", endpoints: ["/api/classes/9", "/api/classes/class-9"] },
+        { class: "Class 10 (১০ম শ্রেণি)", endpoints: ["/api/classes/10", "/api/classes/class-10"] },
+        { class: "Class 11 (একাদশ শ্রেণি)", endpoints: ["/api/classes/11", "/api/classes/class-11"] },
+        { class: "Class 12 (দ্বাদশ শ্রেণি)", endpoints: ["/api/classes/12", "/api/classes/class-12"] },
+        { class: "All Classes Combined", endpoints: ["/api/curriculum", "/api/classes/all", "/api/all"] }
+      ]
+    });
+  }
+
+  // Support optional group filter: ?group=science / humanities / business
+  const groupQuery = req.query.group ? String(req.query.group).toLowerCase().trim() : null;
+  const filterByGroup = (subGroup?: string) => {
+    if (!groupQuery) return true;
+    const g = (subGroup || '').toLowerCase();
+    if (groupQuery === 'science' || groupQuery === 'বিজ্ঞান') return g.includes('science');
+    if (groupQuery === 'humanities' || groupQuery === 'arts' || groupQuery === 'মানবিক') return g.includes('humanities');
+    if (groupQuery === 'business' || groupQuery === 'commerce' || groupQuery === 'ব্যবসায়') return g.includes('business');
+    if (groupQuery === 'compulsory' || groupQuery === 'general' || groupQuery === 'সাধারণ' || groupQuery === 'আবশ্যিক') return g.includes('general') || g.includes('compulsory');
+    if (groupQuery === 'optional' || groupQuery === 'ঐচ্ছিক') return g.includes('optional');
+    return g.includes(groupQuery);
+  };
+
+  const filteredSubjects = targetClass.subjects.filter(s => filterByGroup(s.group));
+
+  let totalChapters = 0;
+  let totalLessons = 0;
+  filteredSubjects.forEach((s) => {
+    totalChapters += s.chapters.length;
+    s.chapters.forEach((ch) => {
+      totalLessons += ch.lessons.length;
+    });
+  });
+
+  res.json({
+    success: true,
+    type: "single_class_full",
+    classId: targetClass.id,
+    numeric: targetClass.numeric,
+    name: targetClass.name,
+    nameBangla: targetClass.nameBangla,
+    stage: targetClass.stage,
+    stageBangla: targetClass.stageBangla,
+    description: targetClass.description,
+    groupFilter: groupQuery || null,
+    stats: {
+      totalSubjects: filteredSubjects.length,
+      totalChapters,
+      totalLessons
+    },
+    endpoints: {
+      numericRoute: `/api/classes/${targetClass.numeric}`,
+      stringRoute: `/api/classes/${targetClass.id}`,
+      staticJsonUrl: `/data/${targetClass.id}.json`,
+      downloadUrl: `/api/download/${targetClass.id}.json`,
+      allClassesCombined: `/api/curriculum`
+    },
+    subjects: filteredSubjects,
+    data: {
+      id: targetClass.id,
+      numeric: targetClass.numeric,
+      name: targetClass.name,
+      nameBangla: targetClass.nameBangla,
+      stage: targetClass.stage,
+      stageBangla: targetClass.stageBangla,
+      description: targetClass.description,
+      subjects: filteredSubjects
+    }
   });
 });
 
@@ -435,7 +558,30 @@ apiRouter.get(['/api/search', '/search'], (req: Request, res: Response) => {
   });
 });
 
-// 8. Raw Download / Export endpoint
+// 8. Raw Download / Export endpoint (All or Individual)
+apiRouter.get(['/api/download/:target', '/download/:target'], (req: Request, res: Response) => {
+  const target = req.params.target.replace(/\.json$/i, '').toLowerCase().trim();
+
+  if (target === 'curriculum' || target === 'all' || target === 'classes') {
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Disposition', 'attachment; filename="nctb-curriculum-class-6-12.json"');
+    return res.send(JSON.stringify(CURRICULUM_DATA, null, 2));
+  }
+
+  const targetClass = CURRICULUM_DATA.find(
+    (c) => c.id.toLowerCase() === target || String(c.numeric) === target
+  );
+
+  if (!targetClass) {
+    return res.status(404).json({ error: `File or class '${req.params.target}' not found.` });
+  }
+
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', `attachment; filename="nctb-${targetClass.id}.json"`);
+  res.send(JSON.stringify(targetClass, null, 2));
+});
+
+// Fallback for default curriculum download
 apiRouter.get(['/api/download/curriculum.json', '/download/curriculum.json'], (req: Request, res: Response) => {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Content-Disposition', 'attachment; filename="nctb-curriculum-class-6-12.json"');

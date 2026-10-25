@@ -1407,6 +1407,80 @@ export const SECONDARY_SUBJECT_DEFS: SecondarySubjectDef[] = [
       }
     ]
   },
+  {
+    idSuffix: "art-craft",
+    codeBase: "ART",
+    name: "Art and Crafts",
+    nameBangla: "চারু ও কারুকলা",
+    group: "General / Compulsory",
+    coverColor: "from-pink-600 to-rose-900",
+    chapters: [
+      {
+        idSuffix: "art-ch1",
+        chapterNumber: 1,
+        title: "Elements of Visual Art and Principles of Design",
+        titleBangla: "১ম অধ্যায়: চারুকলার উপাদান ও দৃশ্যশিল্পের নীতি",
+        lessons: [
+          {
+            idSuffix: "art-ch1-l1",
+            point: "১.১",
+            title: "Line, Shape, Form, Color, Light-Shade, Texture, and Space",
+            titleBangla: "১.১ রেখা, রূপ, বর্ণ, আলো-ছায়া (Tone), জমিন ও পরিপ্রেক্ষিত",
+            summary: "দৃশ্যকলার মৌলিক উপাদান, প্রাথমিক ও মাধ্যমিক রঙের মিশ্রণ এবং পরিপ্রেক্ষিত (Perspective) বোঝায় গভীরতা সৃষ্টির কৌশল।",
+            keywords: ["চারুকলা", "রেখা", "বর্ণচক্র", "আলো-ছায়া", "পরিপ্রেক্ষিত"]
+          }
+        ]
+      },
+      {
+        idSuffix: "art-ch2",
+        chapterNumber: 2,
+        title: "Folk Arts and Crafts of Bangladesh",
+        titleBangla: "২য় অধ্যায়: বাংলাদেশের ঐতিহ্যবাহী লোকশিল্প ও কারুকলা",
+        lessons: [
+          {
+            idSuffix: "art-ch2-l1",
+            point: "২.১",
+            title: "Nakshi Kantha, Pottery, Shokher Hari, and Jamdani Weaving",
+            titleBangla: "২.১ নকশিকাঁথা, পোড়ামাটির ফলকচিত্র (টেরাকোটা), শখের হাঁড়ি ও জামদানি",
+            summary: "বাঙালির চিরায়ত লোকজ মোটিফ, গ্রামীণ মৃৎশিল্পীদের কারুকাজ এবং ঐতিহ্যবাহী তাঁতবস্ত্রের নান্দনিকতা।",
+            keywords: ["লোকশিল্প", "নকশিকাঁথা", "টেরাকোটা", "শখের হাঁড়ি", "জামদানি"]
+          }
+        ]
+      },
+      {
+        idSuffix: "art-ch3",
+        chapterNumber: 3,
+        title: "Lives and Works of Eminent Master Artists",
+        titleBangla: "৩য় অধ্যায়: প্রখ্যাত শিল্পীদের জীবনী ও শিল্পকর্ম",
+        lessons: [
+          {
+            idSuffix: "art-ch3-l1",
+            point: "৩.১",
+            title: "Shilpacharya Zainul Abedin, Quamrul Hassan, and SM Sultan",
+            titleBangla: "৩.১ শিল্পাচার্য জয়নুল আবেদিন, কামরুল হাসান ও এস এম সুলতানের অবদান",
+            summary: "১৯৪৩-এর দুর্ভিক্ষ চিত্রমালা, লোকশিল্প পুনরুজ্জীবন এবং বাংলার বলিষ্ঠ কৃষকদের চিত্রায়নে সুলতানের অনন্য শৈলী।",
+            keywords: ["জয়নুল আবেদিন", "কামরুল হাসান", "এস এম সুলতান", "দুর্ভিক্ষ চিত্রমালা"]
+          }
+        ]
+      },
+      {
+        idSuffix: "art-ch4",
+        chapterNumber: 4,
+        title: "Drawing, Water Color Painting and Graphic Design",
+        titleBangla: "৪র্থ অধ্যায়: অঙ্কন ও চিত্রাঙ্কন কৌশল এবং গ্রাফিক ডিজাইন",
+        lessons: [
+          {
+            idSuffix: "art-ch4-l1",
+            point: "৪.১",
+            title: "Still Life Pencil Sketching, Water Color Wash, and Poster Design",
+            titleBangla: "৪.১ স্থিরচিত্র স্কেচ, জলরং ওয়াশ এবং সচেতনতামূলক পোস্টার ও লোগো ডিজাইন",
+            summary: "পেনসিল শেডিং (2B, 4B, 6B), রঙের স্বচ্ছতা রক্ষা এবং টাইপোগ্রাফি ও সামাজিক পোস্টার তৈরির নিয়ম।",
+            keywords: ["স্কেচ", "জলরং", "পোস্টার ডিজাইন", "লোগো", "টাইপোগ্রাফি"]
+          }
+        ]
+      }
+    ]
+  },
 
   // ==========================================
   // 2. বিজ্ঞান বিভাগ (Science Group)
